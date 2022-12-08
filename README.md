@@ -18,7 +18,7 @@ Chancho Va! es un E-commerce que se dedica a la venta de juegos de mesa para dis
 ## ¿Quién será nuestra audiencia?
 Apuntamos a toda clase de público. La página se ajustará a cada uno de ellos según rangos de edad y temática, desde juegos para niños, clásicos juegos de mesa para todas las edades, así como también juegos con temáticas para adultos.
 ## ¿Objetivo?
-
+Lograr aumentar las ventas del negocio ofreciendo una interfaz amigable con el usuario que además de la fácil navegación, ofrezca servicios de envíos y pasarelas de pago donde se pueda observar todo con claridad y de cómodo acceso y comprensión.
 ## ¿Cómo ajustaremos nuestra oferta a ese público?
 
 
