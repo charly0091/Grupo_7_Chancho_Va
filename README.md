@@ -23,7 +23,7 @@ Lograr aumentar las ventas del negocio ofreciendo una interfaz amigable con el u
 
 
 
-##Sitios de referencia
+## Sitios de referencia
 
 ● https://store.steampowered.com/?l=spanish (steam - carrito)
 
