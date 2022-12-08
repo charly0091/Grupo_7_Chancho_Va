@@ -17,3 +17,14 @@ Nicolas Sosa:
 
 Carlos Pinto (Charly):
 31 años, de Mar del Plata. Estudiante de Full Stack node.js en Fundación Formar y en Tecnicatura en Programación en UTN. Gastronómico (cocinero) desde hace 12 años. Amante de los videojuegos ( principalmente RPG ), el fútbol ( hincha de Boca Juniors ), la programación ( principalmente Backend ) y el Rock ( fanatico de Metallica )
+
+
+Sitios de referencia
+
+● https://store.steampowered.com/?l=spanish (steam - carrito)
+
+● https://www.bureaudejuegos.com/ (fotos)
+
+● https://www.playxfun.com/  (paleta de colores)
+
+● https://juguetibici.com/collections/juegos-de-mesa  (fotos on hover)
