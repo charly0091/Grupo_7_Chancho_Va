@@ -6,6 +6,7 @@
 Mi nombre es Braian, tengo 28 años, soy de José C. Paz, Buenos Aires, de profesión Herrero, Electricista, hago reparación de PC, hice un curso de reparación de celulares y estoy haciendo uno de programación y desarrollo web de la mano de Programa Fundación Formar.
 
 ### Javier Arias:
+Tengo 22 años, actualmente vivo en Lanús, era un apasionado de los videojuegos y eso fue lo que me inclinó al mundo de la programación. Hice un curso en Egg coperation, bastante introductorio porque no vimos ningún lenguaje en especifico sino que trabajamos con un pseudo-codigo llamado Pseint. Actualmente estoy capacitandome en paralelo, a la mañana con la Fundacion Pescar y Salesforce en programación orientada a la administración en la Gestión de la relación con el cliente (CRM), habilidades blandas, tecnicas e inglés. Además me asignaron una beca de Data Analytics de Google en Coursera que pude completar con éxito.
 
 ### Veronica Vargas:
 Mi nombre es Verónica Vargas, estudiante de la Tecnicatura en Desarrollo web y aplicaciones digitales en el Instituto Superior Politécnico de Córdoba y Desarrollo web con Node Js en Digital House. 
