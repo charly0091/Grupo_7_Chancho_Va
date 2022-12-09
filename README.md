@@ -7,6 +7,8 @@
 ### Javier Arias:
 
 ### Veronica Vargas:
+Mi nombre es Verónica Vargas, estudiante de la Tecnicatura en Desarrollo web y aplicaciones digitales en el Instituto Superior Politécnico de Córdoba y Desarrollo web con Node Js en Digital House. 
+Diseñadora ux/ui egresada del programa Codo a Codo.
 
 ### Nicolas Sosa:
 Graduado de secundaria tecnica EEST Nº 7 Republica Del Panama. Estudiante de Desarollo Web Full Stack en Fundacion Formar. Mis unicos hobbies son jugar videojuegos, ver anime y jugar a la pelota. Y me estoy incursionando cada dia mas en el mundo de la programación que es algo que me encanta.
