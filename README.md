@@ -3,6 +3,7 @@
 ### ¿Quienes son nuestros integrantes?
 
 ### Braian Briseña:
+Mi nombre es Braian, tengo 28 años, soy de José C. Paz, Buenos Aires, de profesión Herrero, Electricista, hago reparación de PC, hice un curso de reparación de celulares y estoy haciendo uno de programación y desarrollo web de la mano de Programa Fundación Formar.
 
 ### Javier Arias:
 
