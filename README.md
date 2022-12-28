@@ -14,6 +14,7 @@ Diseñadora ux/ui egresada del programa Codo a Codo.
 
 ### Nicolas Sosa:
 Graduado de secundaria tecnica EEST Nº 7 Republica Del Panama. Estudiante de Desarollo Web Full Stack en Fundacion Formar. Mis unicos hobbies son jugar videojuegos, ver anime y jugar a la pelota. Y me estoy incursionando cada dia mas en el mundo de la programación que es algo que me encanta.
+
 ### Carlos Pinto (Charly):
 31 años, de Mar del Plata. Estudiante de Full Stack node.js en Fundación Formar y en Tecnicatura en Programación en UTN. Gastronómico (cocinero) desde hace 12 años. Amante de los videojuegos ( principalmente RPG ), el fútbol ( hincha de Boca Juniors ), la programación ( principalmente Backend ) y el Rock ( fanatico de Metallica )
 
