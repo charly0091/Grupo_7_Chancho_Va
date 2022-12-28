@@ -27,6 +27,9 @@ Lograr aumentar las ventas del negocio ofreciendo una interfaz amigable con el u
 ## ¿Cómo ajustaremos nuestra oferta a ese público?
 La página se ajustará a cada uno de ellos según rangos de edad y temática, desde juegos para niños, clásicos juegos de mesa para todas las edades, así como también juegos con temáticas para adultos.
 
+## Link de tablero de trabajo (Trello)
+
+https://trello.com/b/juzKydrf/grupo7chanchova
 
 ## Sitios de referencia
 
