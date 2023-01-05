@@ -1,0 +1,90 @@
+@import url('login.css');
+@import url('register.css');
+@import url('editProfile.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'source sans pro', sans-serif;
+    padding: 6rem 3rem;
+    height: 100vh;
+    background-image: url('../images/fondo.jpg');
+}
+
+a{
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+h2{
+    margin-bottom: 1rem;
+}
+
+hr{
+    background: tomato;
+    height: 3px;
+    margin-bottom: 2rem;
+    
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-text{
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.input-container , .button-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+
+}
+
+.btn-submit{
+    background: tomato;
+    border: 1px solid white;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 0.1rem rgb(40,40,40);
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 2.4em;
+    margin: 1rem 2.4rem;
+    text-transform: capitalize;
+
+}
+
+span.error-message{
+    color: tomato;
+    font-size: 0.8rem;
+}
+
+input.input-style{
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    height: 1.8rem;
+    padding: 0 0.5rem;
+}
+
+input.input-style::placeholder{
+    color: lightgray;
+}
+
+.text-remember{
+    font-size: 0.8rem;
+}
+
+#noCuenta{
+    margin-top: 1.5rem;
+}

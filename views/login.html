@@ -5,34 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
-    <title>Document</title>
+    <title>Chancho va! - Login</title>
 </head>
 <body>
     <main class="mainLogin">
-        <h1>Login</h1>
-        <section>
-            <form class="loginFields">
-                <p id="ingresaID">Ingresa tu dirección de correo electrónico y la contraseña para loguear.</p>
-                <label for="username">Dirección de correo electrónico</label>
-                <input type="text" name="username" id="username">
-                <label for="password">Contraseña</label>
-                <input type="password" name="password" id="password">
-                <input type="submit" value="Login" id="botonLogin">
-            </form>
-        </section>
-        <div class="recuerdame">
-            <input type="checkbox" name="remember" id="remember">
-            <label for="remember">Recordar mi usuario</label>
-        </div>
-        <div class="resetPass">
-            <p><a href="reset-password.html">¿Olvidaste tu contraseña?</a></p>
-        </div>
-        <div class="crearCuenta">
-            <p>¿Aun no tienes cuenta?</p>
-            <input type="submit" value="Crear cuenta">
-        </div>
-        <p>Vuelve a la <a href="index.html">Pagina principal</a></p>
-
+        <h2>Login</h2>
+        <hr>
+        <form action="" method="">
+            <div class="form">
+                <div class="input-container">
+                    <p class="input-text">Dirección de correo electrónico.</p>
+                    <input class="input-style" type="email" name="email" placeholder="ej: veronikos@lomejor.com">
+                    <span class="error-message">Debe ingresar su email</span>
+                </div>
+                <div class="input-container">
+                    <p class="input-text">Contraseña.</p>
+                    <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña">
+                    <span class="error-message">Debe ingresar su contraseña</span>
+                </div>
+                <div class="check">
+                    <input type="checkbox" name="remember" id="remember">
+                    <label class="text-remember" for="remember">Recordar mi usuario</label>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="btn-submit">Ingresar</button>
+                    <span class="error-message">Credenciales inválidas</span>
+                </div>
+                <div class="resetPass">
+                    <p class="text-remember"><a href="reset-password.html">¿Olvidaste tu contraseña?</a></p>
+                </div>
+                <p class="text-remember" id="noCuenta">¿Aun no tienes cuenta?</p>
+                <div class="button-container">
+                    <input type="button" value="Crear cuenta" class="btn-submit">
+                </div>
+                <p class="text-remember">Vuelve a la <a href="index.html">Pagina principal</a></p>
+            </div>
+        </form>
     </main>
 </body>
 </html>
