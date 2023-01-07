@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
     <title>Chancho va! - Login</title>
+     <!-- FontAwesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+
 </head>
 <body>
     <main class="mainLogin">
@@ -25,8 +28,8 @@
                         <span class="error-message">Debe ingresar su contraseña</span>
                     </div>
                     <div class="check">
+                        <label class="text-remember" for="remember">Recordarme</label>
                         <input type="checkbox" name="remember" id="remember">
-                        <label class="text-remember" for="remember">Recordar mi usuario</label>
                     </div>
                     <div class="button-container">
                         <button type="submit" class="btn-submit">Ingresar</button>
@@ -49,11 +52,23 @@
             <h3>Chancho va!</h3>
             <p>Copyright © 1999-2023</p>
             <p>Chancho va! S.R.L.</p>
+            <p class="noPhone">Monroe 860, C1428 CABA</p>
         </div>
-        <ul>
+        <ul class="footerUl">
+            <li class="noPhone"><a href="about.html">Nosotros</a></li>
+            <li class="noPhone"><a href="help.html">Ayuda</a></li>
             <li><a href="terms.html">Términos y condiciones</a></li>
-            <li><a href="contact.html">Contacto</a></li>
+            <li class="noOther"><a href="contact.html">Contacto</a></li>
         </ul>
+        <div class="noPhone">
+            <p class="noPhone">Contacto</p>
+            <p class="noPhone"><i class="fa-brands fa-whatsapp"></i> 0800-123-4567</p>
+            <p class="noPhone"><i class="fa-regular fa-envelope"></i> chancho-va@gmail.com </p>
+            <p class="noPhone"><i class="fa-brands fa-instagram"></i> Chancho-va</p>
+        </div>
+        <div class="desktop">
+            <img class="qr" src="images/qr.jpg" alt="qr"> 
+        </div>
 
     </footer>
 </body>
