@@ -9,38 +9,52 @@
 </head>
 <body>
     <main class="mainLogin">
-        <h2>Login</h2>
-        <hr>
-        <form action="" method="">
-            <div class="form">
-                <div class="input-container">
-                    <p class="input-text">Dirección de correo electrónico.</p>
-                    <input class="input-style" type="email" name="email" placeholder="ej: veronikos@lomejor.com">
-                    <span class="error-message">Debe ingresar su email</span>
+        <div class="form-container">
+            <h2>Login</h2>
+            <hr>
+            <form action="" method="">
+                <div class="form">
+                    <div class="input-container">
+                        <p class="input-text">Dirección de correo electrónico.</p>
+                        <input class="input-style" type="email" name="email" placeholder="ej: veronikos@lomejor.com">
+                        <span class="error-message">Debe ingresar su email</span>
+                    </div>
+                    <div class="input-container">
+                        <p class="input-text">Contraseña.</p>
+                        <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña">
+                        <span class="error-message">Debe ingresar su contraseña</span>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="remember" id="remember">
+                        <label class="text-remember" for="remember">Recordar mi usuario</label>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" class="btn-submit">Ingresar</button>
+                        <span class="error-message">Credenciales inválidas</span>
+                    </div>
+                    <div class="resetPass">
+                        <p class="text-remember"><a href="reset-password.html">¿Olvidaste tu contraseña?</a></p>
+                    </div>
+                    <p class="text-remember" id="noTienesCuenta">¿Aun no tienes cuenta?</p>
+                    <div class="button-container">
+                        <input type="button" value="Crear cuenta" class="btn-submit">
+                    </div>
+                    <p class="text-remember">Vuelve a la <a href="index.html">Pagina principal</a></p>
                 </div>
-                <div class="input-container">
-                    <p class="input-text">Contraseña.</p>
-                    <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña">
-                    <span class="error-message">Debe ingresar su contraseña</span>
-                </div>
-                <div class="check">
-                    <input type="checkbox" name="remember" id="remember">
-                    <label class="text-remember" for="remember">Recordar mi usuario</label>
-                </div>
-                <div class="button-container">
-                    <button type="submit" class="btn-submit">Ingresar</button>
-                    <span class="error-message">Credenciales inválidas</span>
-                </div>
-                <div class="resetPass">
-                    <p class="text-remember"><a href="reset-password.html">¿Olvidaste tu contraseña?</a></p>
-                </div>
-                <p class="text-remember" id="noCuenta">¿Aun no tienes cuenta?</p>
-                <div class="button-container">
-                    <input type="button" value="Crear cuenta" class="btn-submit">
-                </div>
-                <p class="text-remember">Vuelve a la <a href="index.html">Pagina principal</a></p>
-            </div>
-        </form>
+            </form>
+        </div>
     </main>
+    <footer>
+        <div>
+            <h3>Chancho va!</h3>
+            <p>Copyright © 1999-2023</p>
+            <p>Chancho va! S.R.L.</p>
+        </div>
+        <ul>
+            <li><a href="terms.html">Términos y condiciones</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+
+    </footer>
 </body>
 </html>

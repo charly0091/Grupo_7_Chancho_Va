@@ -1,6 +1,10 @@
-@import url('login.css');
-@import url('register.css');
-@import url('editProfile.css');
+/* variables */
+
+:root{
+    --primario: #ff5656;
+    --secundario: #494953;
+    --terciario: #6A7EFC;
+}
 
 * {
     margin: 0;
@@ -10,14 +14,33 @@
 
 body{
     font-family: 'source sans pro', sans-serif;
-    padding: 6rem 3rem;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('../images/fondo.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    border-radius: 1rem;
+    box-shadow: 0px 0px 12px var(--secundario);
+    padding: 3rem;
+    width: 100%;
+    max-width: 400px;
 }
 
 a{
     font-size: 0.8rem;
     text-decoration: none;
+    color: var(--terciario);
 }
 
 h2{
@@ -25,7 +48,7 @@ h2{
 }
 
 hr{
-    background: tomato;
+    background: var(--primario);
     height: 3px;
     margin-bottom: 2rem;
     
@@ -52,15 +75,15 @@ hr{
 }
 
 .btn-submit{
-    background: tomato;
-    border: 1px solid white;
+    background: var(--primario);
+    border: 2px solid white;
     border-radius: 0.8rem;
-    box-shadow: 0 0.2rem 0.1rem rgb(40,40,40);
+    box-shadow: 5px 5px 12px rgb(40,40,40);
     color: black;
     font-size: 1rem;
     font-weight: bold;
-    height: 2.4em;
-    margin: 1rem 2.4rem;
+    height: 2.4rem;
+    margin: 0.8rem 2rem;
     text-transform: capitalize;
 
 }
@@ -81,10 +104,54 @@ input.input-style::placeholder{
     color: lightgray;
 }
 
+input.input-style:focus{
+    border: 1px solid var(--primario);
+    box-shadow: 0 0 6px var(--primario);
+}
+
 .text-remember{
     font-size: 0.8rem;
 }
 
-#noCuenta{
+#noTienesCuenta{
     margin-top: 1.5rem;
 }
+
+/* footer */
+
+footer{
+    padding: 0;
+    width: 100vw;
+    height: 5rem;
+    background: var(--secundario);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+footer p{
+    font-size: 0.8rem;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: var(--primario);
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    width: 15rem;
+}
+
+footer h3{
+    color: var(--terciario);
+}
+
