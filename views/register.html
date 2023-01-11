@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <div class="imagen">
+           <a href="/views/homePage"><img src="/image/sinfondo.png" alt="logo"></a>
+           <h3>Juegos de mesa</h3>
+        </div>
+        <div class="buscador">
+            <input class="busqueda" type="text" placeholder="¿A qué queres jugar?" >
+        </div>
+        <div class="item">
+            <div class="signUp">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="carrito">
+                <i class="fa-brands fa-opencart"></i>
+            </div>
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <main class="registro">
+        <div class="contenedor">
+            <h2>Registrate</h2>
+            <hr>
+            <form action="">
+                <div class="input">
+                    <label for="correo">Correo electrónico</label>
+                    <input class="estiloInput" type="email" name="correo" required>
+                    <span class="mensajeError">Debe ingresar correo electrónico</span>
+                </div>
+                <div class="input">
+                    <label for="contraseña">Contraseña</label>
+                    <input class="estiloInput" type="password" id="contraseña" name="contraseña" required>
+                    <span class="mensajeError">Debe ingresar una contraseña</span>
+                </div>
+                <div class="input">
+                    <label for="contraseña2">Confirme contraseña</label>
+                    <input class="estiloInput" type="password" id="contraseña2" name="contraseña2" required>
+                    <span class="mensajeError">Las contraseñas no son identicas</span>
+                </div>
+                <div class="input">
+                    <label for="telefono">Número de teléfono</label>
+                    <input class="estiloInput" type="text" id="telefono" name="telefono" required>
+                    <span class="mensajeError">Debe ingresar un numero telefónico</span>
+                </div>
+                <div class="terminos">
+                    <div>
+                        <label for="recordar">  Acepto los <a href="">términos y condiciones</a> </label>
+                        <input type="checkbox" name="terminos" id="recordar"> 
+                    </div>
+                    <span class="mensajeError">Debe aceptar los términos y condiciones</span>
+                </div>
+                <div class="boton">
+                    <span class="mensajeError">Credenciales inválidas</span>
+                    <button type="submit" class="registrar">Continuar</button>
+                </div>
+                <span><a href="login.html">Ya tengo cuenta</a></span>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <h3>Chancho va!</h3>
+            <p>Copyright © 1999-2023</p>
+            <p>Chancho va! S.R.L.</p>
+            <p class="noPhone">Monroe 860, C1428 CABA</p>
+        </div>
+        <ul class="footerUl">
+            <li class="noPhone"><a href="about.html">Nosotros</a></li>
+            <li class="noPhone"><a href="help.html">Ayuda</a></li>
+            <li><a href="terms.html">Términos y condiciones</a></li>
+            <li class="noOther"><a href="contact.html">Contacto</a></li>
+        </ul>
+        <div class="noPhone">
+            <p class="noPhone">Contacto</p>
+            <p class="noPhone"><i class="fa-brands fa-whatsapp"></i> 0800-123-4567</p>
+            <p class="noPhone"><i class="fa-regular fa-envelope"></i> chancho-va@gmail.com </p>
+            <p class="noPhone"><i class="fa-brands fa-instagram"></i> Chancho-va</p>
+        </div>
+        <div class="desktop">
+            <img class="qr" src="images/qr.jpg" alt="qr"> 
+        </div>
+    </footer>
+</body>
+</html>
