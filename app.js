@@ -7,7 +7,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/', (req, res) => {
-    res.send('Holis Veronikos');
+    res.sendFile(path.join(__dirname, '/views/home.html'));
     }
 );
 
@@ -24,6 +24,11 @@ app.get('/detalleProducto', (req, res) => {
 
 app.get('/carrito', (req, res) => {
     res.sendFile(path.join(__dirname , '/views/carrito.html'));
+    }
+);
+
+app.get('/register', (req, res) => {
+    res.sendFile(path.join(__dirname , '/views/register.html'));
     }
 );
 

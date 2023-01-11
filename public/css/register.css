@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+:root {
+    /*Paleta de colores*/
+    --rojo: #ff5656;
+    --gris: #edf2f6;
+    --azul: #6a7efc;
+    --negro: #494953;
+    /* Fuentes */
+    --fuente:'Source Sans Pro', sans-serif;  
+    /* Tamaños tipográficos */
+    --parrafos: 12px;
+    --titulos: 24px;
+    --precio: 18px;
+    --descuento: 16px;
+    --descripcion: 16px;
+    
+}
+/* HEADER */
+
+header {
+    background-color: var(--rojo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+header div.buscador input.busqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    padding: 0 5px 0;
+    outline: none;
+    height: 25px;
+    max-width: 100%;
+    width: 100%;
+}
+
+header div.imagen {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    max-width: 100px;
+
+    max-width: 22vw;
+}
+
+header div.imagen a img {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    height: 80px;
+}
+
+header h3 {
+    display: none;
+}
+
+header div.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px 0;
+}
+
+
+header div.item div.carrito {
+    padding-left: 15px;
+}
+
+header div.item div.burger-menu {
+    padding-left: 15px;
+}
+
+/* END HEADER */
+
+
+/* MAIN */
+
+main.registro {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    background: url(/image/fondo.jpg) no-repeat center top;
+    background-size: cover;
+    width: 100vw;
+}
+
+
+
+hr {
+    height: 3px;
+    background: linear-gradient(#ff5656, #edf2f6);
+    margin-bottom: 2rem;
+
+}
+
+main.registro div.contenedor{
+    max-width: 350px;
+    width: 100%;
+}
+
+main.registro div.contenedor h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+main.registro div.contenedor form div.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0 20px;
+}
+
+main.registro div.contenedor form div.input label {
+    margin-bottom: 7px;
+}
+
+main.registro div.contenedor form div.input input.estiloInput {
+    box-shadow: 0 0 10px;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    max-width: 350px;
+    width: 100%;
+    height:30px;
+    outline: none;
+    padding:0 15px 0;
+}
+
+main.registro div.contenedor form div.input span.mensajeError {
+    color: red;
+    padding: 5px;
+    font-size: small;
+}
+
+main.registro div.contenedor form div.terminos {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main.registro div.contenedor form div.terminos div{
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+}
+
+main.registro div.contenedor form div.terminos label{
+    padding: 0 5px 0;
+}
+
+main.registro div.contenedor form div.terminos label a{
+    color: blue;
+    text-decoration: none;
+}
+
+main.registro div.contenedor form div.terminos span.mensajeError {
+    color: red;
+    font-size: small;
+    margin-bottom: 1rem;
+}
+
+main.registro div.contenedor form div.boton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main.registro div.contenedor form div.boton button{
+    width: 170px;
+    height: 50px;
+    border: none;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    font-size: 20px;
+    padding-bottom: 5px;
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+main.registro div.contenedor form div.boton button.registrar:hover{
+    color: white;
+    background: linear-gradient(93deg,#ff5656, #6a7efc)
+}
+
+main.registro div.contenedor form div.boton span.mensajeError {
+    color: red;
+    font-size: small;
+    padding: 5px;
+}
+
+main.registro div.contenedor form span a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    text-decoration: none;
+}
+
+/* END MAIN */
+
+/*footer css*/
+ 
+footer{
+    padding: 0;
+    width: 100vw;
+    height: 7rem;
+    background: var(--negro);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+footer p{
+    font-size: 0.8rem;
+}
+ 
+footer a{
+    color: white;
+}
+ 
+footer a:hover{
+    color: var(--rojo);
+}
+ 
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    width: 15rem;
+}
+ 
+footer h3{
+    color: var(--azul);
+}
+ 
+footer i{
+    background: var(--negro);
+}
+ 
+.footerUl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+.desktop{
+    display:none;
+}
+ 
+@media screen and (max-width: 768px){
+ 
+    .noPhone{
+        display: none;
+    }
+}
+ 
+@media screen and (min-width: 769px) {
+ 
+    .noOther{
+        display: none;
+    }
+ 
+}
+ 
+@media screen and (min-width: 992px){
+ 
+    .desktop{
+        display: flex;
+    }
+}

@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap'); 
+:root {
+    /* Variables de colores */
+    --rojo: #FF5656;
+    --azul: #6A7EFC;
+    --negro: #494953;
+    --gris: #edf2f6;
+    
+      /* Fuentes */
+      --fuente:'Source Sans Pro', sans-serif;  /* Tamaños tipográficos */
+      --parrafos: 12px;
+      --titulos: 24px;
+      --precio: 18px;
+      --descuento: 16px;
+      --descripcion: 16px;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--fuente);
+}
+
+body {
+    width: 100vw;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.home__carrusel {
+    width: 100%;
+}
+.home__carrusel img {
+    width: 100vw;
+    margin-bottom: 2px;
+}
+
+.home__menu--tematico {
+    margin: 15px;
+    padding: 0px;
+    
+    } 
+.home__menu--tematico img {
+    width: 90vw;
+}
+
+section div.home__container--ofertas {
+    width: 100%;
+    justify-content: center;
+    border-top: black 2px solid;
+}
+
+section div.home__container--ofertas img {
+    width: 150px;
+    height: 150px;
+    padding: 0%;
+
+}
+
+section div.home__container--ofertas article.home__tarjeta--producto {
+
+    display: flex;
+    flex-direction: row;
+    padding: 1px;
+    margin: 2px;
+    width: 30px;
+    font-size:var(--descripcion);
+}
+
+section div.home__container--ofertas article.home__tarjeta--producto div.home__tarjeta--img {
+   padding: 0px;
+   margin-bottom: 2px;
+   width: 200px;
+   height: 200px;
+   
+}
+
+section div.home__container--ofertas article.home__tarjeta--producto div.home__tarjeta--descripcion {
+   /* display: flex;
+    flex-direction: column;*/
+    text-align: center;
+    margin: auto; 
+    padding: 3px; 
+    justify-content: space-evenly;
+}
+
+section div.home__container--ofertas article.home__tarjeta--producto div.home__tarjeta--descripcion p {
+    font-size: var(--precio);
+    margin: 4px;
+}
+ h2 {
+    text-align: center; 
+     padding: 10px;  
+    border-top: black solid 2px;
+    width: 100%;
+    font-size: var(--titulos);
+    background-color: var(--azul)    
+    }
+
+.home__ofertas {
+    display: flex;
+
+    margin-top: 15px;   
+    justify-content: center;  
+    align-items: center; 
+    width: 50%;
+    
+}
+
+.home__ofertas img {
+    margin: 0px;
+    justify-content: left;  
+    align-items: left; 
+    
+    
+}
+ 
+ 
+
+.home__tarjeta {
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.home__tarjeta .fotojuego {
+    display: flex;
+    align-items: flex-start;
+
+}
+
+
+.home__tarjeta  .juegodescripcion {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+} 
+
+ 
+
+p {
+    font-size: var(--parrafos);
+}
+
+ button {
+    border-radius: 20px;
+    text-align: center;
+    background-color:var(--rojo);  
+    padding: 3px;  
+    width: 150px;
+    height: 40px;
+    font-size: var(--descripcion);
+    box-shadow: 5px;
+    
+}
+
+
+
+.home__tarjeta img {
+padding: 0;
+margin: 0;
+border: 0;
+
+}
+
+@media (min-width: 768px) {
+    .home__menu--tematico {
+        display: flex; 
+        flex-direction: row;   
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .home__menu--tematico img {
+        width: 100%;
+    }
+
+    section div.home__container--ofertas {        
+        margin: 0px;
+        border-top: black solid 2px;
+
+    }
+    
+    section div.home__container--ofertas article.home__tarjeta--producto {
+        display: flex;   
+        justify-content: center;
+        text-align: center;
+        flex-direction: row;
+        height: auto;
+    }
+
+    section div.home__container--ofertas article.home__tarjeta--producto div.home__tarjeta--descripcion {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        justify-content: space-around;
+    }
+     
+    .home__tarjeta {
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
+        margin-top: 70px;
+    }
+    .home__tarjeta {
+        display: flex;   
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .home__tarjeta p {
+        text-align: center;
+        margin: 5px;
+    }
+    
+    .home__tarjeta button {
+        width: 182px;
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+        background-color:var(--rojo);    
+        
+    }
+    
+    .home__tarjeta button .fa-solid fa-cart-shopping {
+        border: black solid 50px;    
+    
+    }
+    
+    .home__tarjeta img {
+      height: 250px
+    
+    }
+}
+
+
+@media (min-width: 1200px) {
+    
+    .home__menu--tematico {
+        display: flex; 
+        flex-direction: row;   
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0px;
+    }
+
+    .home__menu--tematico img {
+        width: 100%;
+    }
+
+    section div.home__container--ofertas {
+        display: flex;
+        flex-direction: row;   
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0px;
+        margin: 0px;  
+        width: 100vw;        
+
+    }
+    section div.home__container--ofertas article.home__tarjeta--producto  {
+        height: 500px;
+        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+
+    section div.home__container--ofertas article.home__tarjeta--producto div.home__tarjeta--img {
+        display: flex;
+        flex-direction: row;   
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0px;
+        margin: 0px;
+        margin-top: 5px;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+        
+    }
+
+    section div.home__container--ofertas article.home__tarjeta--producto div.home__tarjeta--img img {
+        margin-top: 10px;
+        width: 200px;
+        height: 200px;
+
+    }
+
+    section div.home__container--ofertas article.home__tarjeta--producto div.home__tarjeta--descripcion {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;       
+        text-align: center;
+
+    }
+    
+    .home__tarjeta p {
+
+        text-align: center;
+        margin: 5px;
+    }
+    
+    .home__tarjeta button {
+        width: 182px;
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+        background-color:var(--rojo);    
+        
+    }
+   
+}
