@@ -141,10 +141,7 @@ section div.home__container--ofertas article.home__tarjeta--producto div.home__t
     padding: 10px;
 } 
 
-.home__tarjeta p {
-    
-
-}
+ 
 
 p {
     font-size: var(--parrafos);
@@ -162,10 +159,7 @@ p {
     
 }
 
-.home__tarjeta button .fa-solid fa-cart-shopping {
-    
 
-}
 
 .home__tarjeta img {
 padding: 0;
@@ -208,10 +202,7 @@ border: 0;
         padding: 15px;
         justify-content: space-around;
     }
-        .home__ofertas {
-       
-        
-    }
+     
     .home__tarjeta {
         justify-content: center;
         text-align: center;
