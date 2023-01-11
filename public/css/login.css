@@ -1,9 +1,18 @@
-/* variables */
-
-:root{
-    --primario: #ff5656;
-    --secundario: #494953;
-    --terciario: #6A7EFC;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap'); 
+:root {
+    /* Variables de colores */
+    --rojo: #FF5656;
+    --azul: #6A7EFC;
+    --negro: #494953;
+    --gris: #EDF2F6;
+    
+      /* Fuentes */
+      --fuente:'Source Sans Pro', sans-serif;  /* Tamaños tipográficos */
+      --parrafos: 12px;
+      --titulos: 24px;
+      --precio: 18px;
+      --descuento: 16px;
+      --descripcion: 16px;
 }
 
 * {
@@ -29,7 +38,7 @@ main{
     justify-content: center;
     align-items: center;
     border-radius: 1rem;
-    box-shadow: 0px 0px 12px var(--secundario);
+    box-shadow: 0px 0px 12px var(--negro);
     padding: 3rem;
     width: 100%;
     max-width: 400px;
@@ -39,7 +48,7 @@ main{
 a{
     font-size: 0.8rem;
     text-decoration: none;
-    color: var(--terciario);
+    color: var(--azul);
 }
 
 h2{
@@ -47,7 +56,7 @@ h2{
 }
 
 hr{
-    background: var(--primario);
+    background: var(--rojo);
     height: 3px;
     margin-bottom: 2rem;
     
@@ -74,7 +83,7 @@ hr{
 }
 
 .btn-submit{
-    background: var(--primario);
+    background: var(--rojo);
     border: 2px solid white;
     border-radius: 0.8rem;
     box-shadow: 5px 5px 12px rgb(40,40,40);
@@ -88,8 +97,8 @@ hr{
 }
 
 .btn-submit:hover{
-    background: var(--terciario);
-    border: 2px solid var(--primario);
+    background: var(--azul);
+    border: 2px solid var(--rojo);
     color: white;
     cursor: pointer;
 }
@@ -118,8 +127,8 @@ input.input-style::placeholder{
 }
 
 input.input-style:focus{
-    border: 1px solid var(--primario);
-    box-shadow: 0 0 6px var(--primario);
+    border: 1px solid var(--rojo);
+    box-shadow: 0 0 6px var(--rojo);
 }
 
 .text-remember{
@@ -137,12 +146,11 @@ footer{
     padding: 0;
     width: 100vw;
     height: 7rem;
-    background: var(--secundario);
+    background: var(--negro);
     color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 footer p{
@@ -154,7 +162,7 @@ footer a{
 }
 
 footer a:hover{
-    color: var(--primario);
+    color: var(--rojo);
 }
 
 footer ul{
@@ -166,11 +174,11 @@ footer ul{
 }
 
 footer h3{
-    color: var(--terciario);
+    color: var(--azul);
 }
 
 footer i{
-    background: var(--secundario);
+    background: var(--negro);
 }
 
 .footerUl{
