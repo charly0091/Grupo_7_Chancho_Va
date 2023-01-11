@@ -17,11 +17,18 @@ app.get('/login', (req, res) => {
     }
 );
 
+app.get('/detalleProducto', (req, res) => {
+    res.sendFile(path.join(__dirname , '/views/detalleProducto.html'));
+    }
+);
+
+app.get('/carrito', (req, res) => {
+    res.sendFile(path.join(__dirname , '/views/carrito.html'));
+    }
+);
+
 
 app.listen(port, () => {
     console.log(`servidor levantado en http://localhost:${port}`);
     }
 );
-
-
-
