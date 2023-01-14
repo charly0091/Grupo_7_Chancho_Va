@@ -1,0 +1,116 @@
+/* variables */
+
+:root{
+    --primario: #ff5656;
+    --secundario: #494953;
+    --terciario: #6A7EFC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'source sans pro', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 3rem 0 3rem;
+}
+
+body main section div {
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.precio {
+    font-size: 2.2rem;
+}
+
+.titulo-producto {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.precio {
+    
+}
+
+/* footer */
+
+footer{
+    padding: 0;
+    width: 100vw;
+    height: 7rem;
+    background: var(--secundario);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+footer p{
+    font-size: 0.8rem;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: var(--primario);
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    width: 15rem;
+}
+
+footer h3{
+    color: var(--terciario);
+}
+
+footer i{
+    background: var(--secundario);
+}
+
+.footerUl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.desktop{
+    display:none;
+}
+
+@media screen and (max-width: 768px){
+
+    .noPhone{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+    .noOther{
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 992px){
+
+    .desktop{
+        display: flex;
+    }
+}

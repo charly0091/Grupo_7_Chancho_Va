@@ -11,6 +11,26 @@
 
 </head>
 <body>
+    <header>
+        <div class="imagen">
+           <a href="/views/homePage"><img src="/image/sinfondo.png" alt="logo"></a>
+           <h3>Juegos de mesa</h3>
+        </div>
+        <div class="buscador">
+            <input class="busqueda" type="text" placeholder="¿A qué queres jugar?" >
+        </div>
+        <div class="item">
+            <div class="signUp">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="carrito">
+                <i class="fa-brands fa-opencart"></i>
+            </div>
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
     <main class="mainLogin">
         <div class="form-container">
             <h2>Login</h2>
@@ -40,9 +60,10 @@
                     </div>
                     <p class="text-remember" id="noTienesCuenta">¿Aun no tienes cuenta?</p>
                     <div class="button-container">
-                        <input type="button" value="Crear cuenta" class="btn-submit">
+                        <a href="register" class="btn-submit btn-acc">Crear cuenta</a>
                     </div>
-                    <p class="text-remember">Vuelve a la <a href="index.html">Pagina principal</a></p>
+
+                    <p class="text-remember">Vuelve a la <a href="/">Pagina principal</a></p>
                 </div>
             </form>
         </div>
