@@ -10,22 +10,49 @@
 </head>
 <body>
     <header>
-        <div class="imagen">
-           <a href="/views/homePage"><img src="/image/sinfondo.png" alt="logo"></a>
-           <h3>Juegos de mesa</h3>
+        <div class="head">
+            <a href="/views/homePage"><img src="/image/sinfondo.png" alt="logo"></a>
+            <h3 class="oculto">Juegos de mesa</h3>
+        </div>
+        <div class="menu">
+            <div class="barra">
+               <span class="linea1"></span>
+               <span class="linea2"></span>
+               <span class="linea3"></span>
+            </div>
         </div>
         <div class="buscador">
             <input class="busqueda" type="text" placeholder="¿A qué queres jugar?" >
         </div>
+        <div class="lista">
+            <ul>
+                <li><a href="/categorias.html">Categorías</a></li>
+                <li><a href="/ofertas.html">Ofertas</a></li>
+                <li><a href="/envios.html">Envíos</a></li>
+                <li><a href="/ayuda.html">Cómo comprar</a></li>
+                <li><a href="/pago.html">Métodos de pago</a></li>
+            </ul>
+        </div>
         <div class="item">
-            <div class="signUp">
+            <div class="usuario">
                 <i class="fa-regular fa-user"></i>
             </div>
             <div class="carrito">
                 <i class="fa-brands fa-opencart"></i>
             </div>
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
+            <div class="prueba">
+                   <div class="link"> 
+                       <a href="/views/login.html">Ingresa</a>
+                   </div>
+                   <div class="signUp">
+                    <i class="fa-regular fa-user"></i>
+                   </div>
+                   <div class="imagen-oculta">
+                      <div class="contenedor">
+                          <a href="/views/homePage"><img src="/image/sinfondo.png" alt="logo"></a>
+                          <h3 class="oculto">Juegos de mesa</h3>
+                      </div>
+                   </div>
             </div>
         </div>
     </header>
@@ -92,5 +119,6 @@
             <img class="qr" src="images/qr.jpg" alt="qr"> 
         </div>
     </footer>
+    <script src="/efecto.js"></script>
 </body>
 </html>
