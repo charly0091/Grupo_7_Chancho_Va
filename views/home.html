@@ -11,15 +11,31 @@
 </head>
 <body>
     <header>
-        <nav>
-
-        </nav>
+        <div class="imagen">
+           <a href="/views/homePage"><img src="/image/sinfondo.png" alt="logo"></a>
+           <h3>Juegos de mesa</h3>
+        </div>
+        <div class="buscador">
+            <input class="busqueda" type="text" placeholder="¿A qué queres jugar?" >
+        </div>
+        <div class="item">
+            <div class="signUp">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="carrito">
+                <i class="fa-brands fa-opencart"></i>
+            </div>
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+        <nav>        
         <section class="home__carrusel">
             <a href="/"><img src="/images/envio.png" alt=""></a>
 
         </section>
-
-    </header>
+    </nav>
     <main>
         <section class="home__menu--tematico">
             <article>
@@ -35,16 +51,17 @@
 
         
 
-        <section> 
+        <section class="home__productos"> 
             <h2>Ofertas</h2>  
-            <div class="home__container--ofertas">
-            <article class="home__tarjeta--producto">
+            <div class="home__container--productos">
+            <article class="home__tarjeta--producto">               
                 <div class="home__tarjeta--img">
-                <a href="/ofertas.html"><img src="/images/red.png" alt=""></a></div>       
+                <a href="/ofertas.html"><img src="/images/red.png" alt=""></a></div> 
+               <!-- <a href="/ofertas.html"><img class="verMas" src="/images/verMas.png" alt=""></a>  -->  
                 <div class="home__tarjeta--descripcion">
                 <h3>Red7</h3>
-                <p>$1234</p>
-                <button><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <p class="home_precio">$1234</p>
+                <button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                 </div>
             </article>
             <article class="home__tarjeta--producto">
@@ -52,8 +69,8 @@
                 <a href="/ofertas.html"><img src="/images/nolotesteamos.png" alt=""></a></div>
                 <div class="home__tarjeta--descripcion">
                 <h3>No lo testeamos ni un poco</h3>
-                <p>$1234</p>                
-                <button> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <p class="home_precio">$1234</p>                
+                <button class="btn-agregarAlCarrito"> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                 </div>
             </article>
             <article class="home__tarjeta--producto">
@@ -61,49 +78,49 @@
                 <a href="/ofertas.html"><img src="/images/littletown.png" alt=""></a></div>
                 <div class="home__tarjeta--descripcion">
                 <h3>Little Town</h3>
-                <p>$1234</p>
-                <button> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <p class="home_precio">$1234</p>
+                <button class="btn-agregarAlCarrito"> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                  </div>    
             </article>
             <article class="home__tarjeta--producto">
                 <div class="home__tarjeta--img">
-                <a href="/ofertas.html"><img src="/images/red.png" alt=""></a></div>       
+                <a href="/ofertas.html"><img src="/images/misty.png" alt=""></a></div>       
                 <div class="home__tarjeta--descripcion">
-                <h3>Red7</h3>
-                <p>$1234</p>
-                <button><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <h3>Misty</h3>
+                <p class="home_precio">$2.565,50</p>
+                <button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                 </div>
             </article>
         </section>
 
-        <section  class="home__tarjeta--producto"> 
+        <section  class="home__productos"> 
             <h2>Más vendidos</h2>  
-            <div class="home__container--ofertas">
+            <div class="home__container--productos">
             <article class="home__tarjeta--producto">
                 <div class="home__tarjeta--img">
-                <a href="/ofertas.html"><img src="/images/red.png" alt=""></a></div>       
+                <a href="/ofertas.html"><img src="/images/twister.png" alt=""></a></div>       
                 <div class="home__tarjeta--descripcion">
-                <h3>Red7</h3>
-                <p>$1234</p>
-                <button><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <h3>Twister</h3>
+                <p class="home_precio">$6.395,82</p>
+                <button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                 </div>
             </article>
             <article class="home__tarjeta--producto">
                 <div class="home__tarjeta--img">
-                <a href="/ofertas.html"><img src="/images/nolotesteamos.png" alt=""></a></div>
+                <a href="/ofertas.html"><img src="/images/topgram.png" alt=""></a></div>
                 <div class="home__tarjeta--descripcion">
-                <h3>No lo testeamos ni un poco</h3>
-                <p>$1234</p>                
-                <button> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <h3>Topgram</h3>
+                <p class="home_precio">$1.522,52</p>                
+                <button class="btn-agregarAlCarrito"> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                 </div>
             </article>
             <article class="home__tarjeta--producto">
                 <div class="home__tarjeta--img">
-                <a href="/ofertas.html"><img src="/images/littletown.png" alt=""></a></div>
+                <a href="/ofertas.html"><img src="/images/tresJuegos.png" alt=""></a></div>
                 <div class="home__tarjeta--descripcion">
-                <h3>Little Town</h3>
-                <p>$1234</p>
-                <button> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <h3>Tres juegos en uno</h3>
+                <p class="home_precio">$2.565,50</p>
+                <button class="btn-agregarAlCarrito"> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                  </div>    
             </article>
             <article class="home__tarjeta--producto">
@@ -111,96 +128,101 @@
                 <a href="/ofertas.html"><img src="/images/red.png" alt=""></a></div>       
                 <div class="home__tarjeta--descripcion">
                 <h3>Red7</h3>
-                <p>$1234</p>
-                <button><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <p class="home_precio">$1234</p>
+                <button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                 </div>
             </article>
         </section>
 
-        <section> 
+        <section class="home__productos"> 
             <h2>Clásicos</h2>  
-            <div class="home__container--ofertas">
+            <div class="home__container--productos">
             <article class="home__tarjeta--producto">
                 <div class="home__tarjeta--img">
-                <a href="/ofertas.html"><img src="/images/red.png" alt=""></a></div>       
+                <a href="/ofertas.html"><img src="/images/loteria.png" alt=""></a></div>       
                 <div class="home__tarjeta--descripcion">
-                <h3>Red7</h3>
-                <p>$1234</p>
-                <button><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <h3>Loteria Familiar</h3>
+                <p class="home_precio">$1.626,24</p>
+                <button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                 </div>
             </article>
             <article class="home__tarjeta--producto">
                 <div class="home__tarjeta--img">
-                <a href="/ofertas.html"><img src="/images/nolotesteamos.png" alt=""></a></div>
+                <a href="/ofertas.html"><img src="/images/ajedrez.png" alt=""></a></div>
                 <div class="home__tarjeta--descripcion">
-                <h3>No lo testeamos ni un poco</h3>
-                <p>$1234</p>                
-                <button> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <h3>Ajedrez</h3>
+                <p class="home_precio">$3.872,00</p>                
+                <button class="btn-agregarAlCarrito"> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                 </div>
             </article>
             <article class="home__tarjeta--producto">
                 <div class="home__tarjeta--img">
-                <a href="/ofertas.html"><img src="/images/littletown.png" alt=""></a></div>
+                <a href="/ofertas.html"><img src="/images/damas.png" alt=""></a></div>
                 <div class="home__tarjeta--descripcion">
-                <h3>Little Town</h3>
-                <p>$1234</p>
-                <button> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <h3>Damas</h3>
+                <p class="home_precio">$1.626,24</p>
+                <button class="btn-agregarAlCarrito"> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                  </div>    
             </article>
             <article class="home__tarjeta--producto">
                 <div class="home__tarjeta--img">
-                <a href="/ofertas.html"><img src="/images/red.png" alt=""></a></div>       
+                <a href="/ofertas.html"><img src="/images/bingo.png" alt=""></a></div>       
                 <div class="home__tarjeta--descripcion">
-                <h3>Red7</h3>
-                <p>$1234</p>
-                <button><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <h3>Bingo</h3>
+                <p class="home_precio">$3.897,74</p>
+                <button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                 </div>
             </article>
         </section>
 
-        <section> 
+        <section class="home__productos"> 
             <h2>Didácticos y educativos</h2>  
-            <div class="home__container--ofertas">
+            <div class="home__container--productos">
             <article class="home__tarjeta--producto">
                 <div class="home__tarjeta--img">
-                <a href="/ofertas.html"><img src="/images/red.png" alt=""></a></div>       
+                <a href="/ofertas.html"><img src="/images/primerosNumeros.png" alt=""></a></div>       
                 <div class="home__tarjeta--descripcion">
-                <h3>Red7</h3>
-                <p>$1234</p>
-                <button><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <h3>Mis primeros numeros</h3>
+                <p class="home_precio">$2.611,19</p>
+                <button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                 </div>
             </article>
             <article class="home__tarjeta--producto">
                 <div class="home__tarjeta--img">
-                <a href="/ofertas.html"><img src="/images/nolotesteamos.png" alt=""></a></div>
+                <a href="/ofertas.html"><img src="/images/memotest.png" alt=""></a></div>
                 <div class="home__tarjeta--descripcion">
-                <h3>No lo testeamos ni un poco</h3>
-                <p>$1234</p>                
-                <button> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <h3>Mi primer memotest</h3>
+                <p class="home_precio">$2.910,90</p>                
+                <button class="btn-agregarAlCarrito"> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                 </div>
             </article>
             <article class="home__tarjeta--producto">
                 <div class="home__tarjeta--img">
-                <a href="/ofertas.html"><img src="/images/littletown.png" alt=""></a></div>
+                <a href="/ofertas.html"><img src="/images/descubriendoPalabras.png" alt=""></a></div>
                 <div class="home__tarjeta--descripcion">
-                <h3>Little Town</h3>
-                <p>$1234</p>
-                <button> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <h3>Descubriendo palabras</h3>
+                <p class="home_precio">$1234</p>
+                <button class="btn-agregarAlCarrito"> <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                  </div>    
             </article>
             <article class="home__tarjeta--producto">
                 <div class="home__tarjeta--img">
-                <a href="/ofertas.html"><img src="/images/red.png" alt=""></a></div>       
+                <a href="/ofertas.html"><img src="/images/oficiosYprofesiones.png" alt=""></a></div>       
                 <div class="home__tarjeta--descripcion">
-                <h3>Red7</h3>
-                <p>$1234</p>
-                <button><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <h3>Oficios y Profesiones</h3>
+                <p class="home_precio">$1.234,00</p>
+                <button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                 </div>
             </article>
         </section>
 
     </main>
- <!----   <footer>
+    <div class="container-btn-wp">
+        <a href="https://wa.me/987654321?text=Quiero%20realizar%20un%20proyecto%20web%20php" target="_blank">
+            <img class="btn-wp" src="/images/iconowp.png" alt="">
+        </a>
+    </div>
+    <footer>
             <div>
                 <h3>Chancho va!</h3>
                 <p>Copyright © 1999-2023</p>
@@ -222,6 +244,6 @@
             <div class="desktop">
                 <img class="qr" src="images/qr.jpg" alt="qr"> 
             </div>
-        </footer> -->
+        </footer>
 </body>
 </html>
