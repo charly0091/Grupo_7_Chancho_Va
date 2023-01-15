@@ -146,11 +146,12 @@ section div.home__container--productos {
 }
 
 section div.home__container--productos img {
-    width: 150px;
-    height: 150px;
+   /* width: 150px;
+    height: 150px;*/
     padding: 0%;
 
 }
+
 
 section div.home__container--productos article.home__tarjeta--producto {
     display: flex;
@@ -490,9 +491,9 @@ footer i{
         display: flex;
         flex-direction: row;   
         flex-wrap: wrap;
-        justify-content: space-evenly ;      
-
+        justify-content: space-evenly; 
     }
+
     .home__productos h2 {
         text-align: center; 
         border-top: black solid 1px;
@@ -500,7 +501,7 @@ footer i{
         background-color: var(--azul) ;
         margin-top: 20px;
         margin-bottom: 20px;
-        }
+    }
 
     section div.home__container--productos article.home__tarjeta--producto  {
         display: inline-block;
@@ -509,6 +510,8 @@ footer i{
         padding: 5px;
         height: 370px;
         justify-content: space-evenly;
+        position: relative;
+        
     }
 
     section div.home__container--productos article.home__tarjeta--producto:hover{
@@ -521,9 +524,8 @@ footer i{
         display: flex;
         flex-direction: row;   
         flex-wrap: wrap;
-        justify-content: flex-start;   
-
-        
+        justify-content: flex-start;     
+          
     }
 
     section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--img img {
@@ -532,6 +534,22 @@ footer i{
         height: 230px;
         align-items: center;
         justify-content: center;
+    }
+    
+    
+    .verMas {
+        position: absolute;
+        color: #ff5656;
+        top: 0;
+        right: 0;
+        width: 100px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    img .verMas {
+        width: 100px;
+        height: 50px;
     }
 
     section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--descripcion {
@@ -602,6 +620,5 @@ footer i{
     100%{
         box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
     }
-}
 }
 }
