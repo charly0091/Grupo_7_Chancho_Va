@@ -349,8 +349,6 @@ header div.item div.prueba div.imagen-oculta div.contenedor h3.oculto {
 
 /* END HEADER */
 
-
-
 body{
     font-family: 'source sans pro', sans-serif;
     min-height: 100vh;
@@ -553,11 +551,11 @@ footer i{
     .noOther{
     display: none;
     }
-
+    
     main{
     width: 100%;
     border-radius: 1rem;
-    max-width: 400px;
+    max-width: 650px;
     box-shadow: 0px 0px 12px var(--negro);
     padding: 3rem;
     }

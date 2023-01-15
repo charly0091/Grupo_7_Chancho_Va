@@ -465,7 +465,7 @@ main.registro div.contenedor form div.boton button{
 
 main.registro div.contenedor form div.boton button.registrar:hover{
     color: white;
-    background: linear-gradient(93deg,#ff5656, #6a7efc)
+    background: linear-gradient(93deg,#ff5656, #6a7efc);
 }
 
 
