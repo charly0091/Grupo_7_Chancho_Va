@@ -37,6 +37,21 @@ app.get('/about', (req, res) => {
     }
 );
 
+app.get('/terms', (req, res) => {
+    res.sendFile(path.join(__dirname , '/views/terms.html'));
+    }
+);
+
+app.get('/help', (req, res) => {
+    res.sendFile(path.join(__dirname , '/views/help.html'));
+    }
+);
+
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname , '/views/contact.html'));
+    }
+);
+
 
 app.listen(port, () => {
     console.log(`servidor levantado en http://localhost:${port}`);
