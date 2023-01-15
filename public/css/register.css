@@ -489,7 +489,6 @@ main.registro div.contenedor form span a{
     main.registro {
         align-items: start;
         background: url(/image/fondo.jpg) no-repeat right;
-        margin-left: 65px;
     }
 }
 
