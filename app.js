@@ -52,6 +52,11 @@ app.get('/contact', (req, res) => {
     }
 );
 
+app.get('/reset-password', (req, res) => {
+    res.sendFile(path.join(__dirname , '/views/reset-password.html'));
+    }
+);
+
 
 app.listen(port, () => {
     console.log(`servidor levantado en http://localhost:${port}`);

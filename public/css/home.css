@@ -146,8 +146,8 @@ section div.home__container--productos {
 }
 
 section div.home__container--productos img {
-   /* width: 150px;
-    height: 150px;*/
+   width: 150px;
+    height: 150px;
     padding: 0%;
 
 }
@@ -198,6 +198,20 @@ section div.home__container--productos article.home__tarjeta--producto div.home_
 button.btn-agregarAlCarrito:hover{
     color: white;
     background: linear-gradient(93deg,#ff5656, #6a7efc); 
+}
+
+.verMas {
+    position: absolute;
+    left: 0px;
+    color: #ff5656;
+    width: 100px;
+    padding: 0px;
+    margin: 0px;
+}
+
+img.verMas {
+    width: 100px !important ;
+    height: 50px !important ;
 }
 
 /* BOTON WHATSAPP*/
