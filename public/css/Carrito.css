@@ -19,7 +19,7 @@
   --descripcion: 16px;
 }
 
-/* HEADER */
+/* START HEADER */
 
 header {
   background-color: var(--rojo);
@@ -91,7 +91,7 @@ header div.menu.active {
   order: 1;
 }
 
-header div.lista {
+header div.lista{
   display: none;
 }
 
@@ -106,7 +106,7 @@ header div.barra {
 }
 
 
-header div.barra span {
+header div.barra span{
   display: block;
   width: 100%;
   height: 2px;
@@ -114,14 +114,14 @@ header div.barra span {
   background-color: black;
   transition: 300ms;
   transform-origin: 0px 100%;
-
+  
 }
 
-header div.barra span.activelinea1 {
-  transform: rotate(45deg) translate(-1px, 2px);
+header div.barra span.activelinea1{
+  transform: rotate(45deg) translate(-1px, 2px);   
 }
 
-header div.barra span.activelinea2 {
+header div.barra span.activelinea2{
   opacity: 0;
   margin-left: -50px;
 }
@@ -145,10 +145,10 @@ header div.item div.prueba.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0 25px 25px 0;
+  border-radius: 0 25px 25px 0; 
 }
 
-header div.item div.prueba div.link a {
+header div.item div.prueba div.link a{
   position: absolute;
   top: 0;
   margin-top: 100px;
@@ -174,7 +174,7 @@ header div.item div.prueba div.signUp i {
   color: black;
 }
 
-header div.item div.prueba div.imagen-oculta {
+header div.item div.prueba div.imagen-oculta{
   position: absolute;
   top: 0;
   left: 0;
@@ -210,145 +210,160 @@ header div.item div.prueba div.imagen-oculta div.contenedor h3.oculto {
 
 @media (min-width: 768px) {
 
-  header div.lista {
-    display: none;
-  }
+      header div.lista{
+          display: none;
+      }
 
-  header div.item div.usuario {
-    display: none;
-  }
+      header div.item div.usuario {
+          display: none;
+      }
 
-  header div.menu {
-    order: 1;
-  }
+      header div.menu {
+          order: 1;
+      }
 
-  header div.barra span {
-    display: flex;
-    order: 3;
-  }
+      header div.barra span{
+          display: flex;
+          order: 3;
+      }
 
-  header div.head h3 {
-    display: none;
-  }
+      header div.head h3 {
+          display: none;
+      }
 
-  header div.head {
-    display: flex;
-    max-width: 100px;
-    max-height: 100px;
-    padding-left: 10px;
-  }
+      header div.head {
+          display: flex;
+          max-width: 100px;
+          max-height: 100px;
+          padding-left: 10px;
+      }
+  
+      header div.head a img {
+          height: 100px;
+      }
+  
+      header div.item div.carrito {
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin-top: 22px;
+          margin-right: 75px;
+      }
 
-  header div.head a img {
-    height: 100px;
-  }
-
-  header div.item div.carrito {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 22px;
-    margin-right: 75px;
-  }
-
-  header div.buscador {
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-  }
-
-  header div.buscador input.busqueda {
-    height: 30px;
-
-  }
+      header div.buscador {
+          position: absolute;
+          margin: auto;
+          left: 0;
+          right: 0;
+      }
+  
+      header div.buscador input.busqueda {
+          height: 30px;
+          
+      } 
 }
 
 
 @media (min-width: 1240px) {
 
   header {
-    height: 110px;
+      height: 110px;
   }
 
   header div.head {
-    flex-direction: column;
-    max-width: 150px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
+      flex-direction: column;
+      max-width: 150px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
   }
 
   header div.head a {
-    margin-bottom: -15px;
+      margin-bottom: -15px;
   }
 
   header div.head h3 {
-    display: flex;
+      display: flex;
   }
 
   header div.buscador {
-    top: 30px;
+      top: 30px;
   }
 
   header div.menu {
-    display: none;
+      display: none;
   }
 
   header div.item div.carrito {
-    margin-top: 36px;
+      margin-top: 36px;
   }
 
   header div.item div.usuario {
-    display: flex;
-    font-size: 25px;
-    margin-left: 0;
-    width: 40px;
-    padding-bottom: 4px;
+      display: flex;
+      font-size: 25px;
+      margin-left: 0;
+      width: 40px;
+      padding-bottom: 4px;
   }
 
   header div.item div.usuario i {
-    text-decoration: none;
-    color: black;
+      text-decoration: none;
+      color: black;
   }
 
-  header div.lista {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-top: 55px;
+  header div.lista{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-top: 55px;
   }
 
-  header div.lista ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  header div.lista ul{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
   }
 
   header div.lista ul li {
-    text-decoration: none;
-    margin: 0 25px;
-    overflow: hidden;
+      text-decoration: none;
+      margin: 0 25px;
+      overflow: hidden;     
   }
 
   header div.lista ul li a {
-    text-decoration: none;
-    color: black;
+      text-decoration: none;
+      color: black;
   }
 
   header div.lista ul li a:hover {
-    color: var(--azul);
+      color: var(--azul);
   }
 }
 
+/* END MEDIA HEADER */
 /* END HEADER */
 
+/* START PAGE CONTENT */
 
-/* FOOTER */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--fuente);
+}
 
-footer {
+body {
+  width: 100vw;
+}
+
+/* END PAGE CONTENT */
+
+/* START FOOTER */
+
+footer{
   padding: 1rem;
   width: 100vw;
   background: var(--negro);
@@ -358,19 +373,19 @@ footer {
   align-items: center;
 }
 
-footer p {
+footer p{
   font-size: 0.8rem;
 }
 
-footer a {
+footer a{
   color: white;
 }
 
-footer a:hover {
+footer a:hover{
   color: var(--rojo);
 }
 
-footer ul {
+footer ul{
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -378,52 +393,52 @@ footer ul {
   width: 15rem;
 }
 
-footer h3 {
+footer h3{
   color: var(--azul);
 }
 
-footer i {
+footer i{
   background: var(--negro);
 }
 
-.footerUl {
+.footerUl{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-.desktop {
-  display: none;
+.desktop{
+  display:none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
 
-  .noPhone {
-    display: none;
+  .noPhone{
+      display: none;
   }
 }
 
 @media screen and (min-width: 769px) {
 
-  .noOther {
-    display: none;
+  .noOther{
+  display: none;
   }
 
-  main {
-    width: 100%;
-    border-radius: 1rem;
-    max-width: 400px;
-    box-shadow: 0px 0px 12px var(--negro);
-    padding: 3rem;
+  main{
+  width: 100%;
+  border-radius: 1rem;
+  max-width: 400px;
+  box-shadow: 0px 0px 12px var(--negro);
+  padding: 3rem;
   }
 
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px){
 
-  .desktop {
-    display: flex;
+  .desktop{
+      display: flex;
   }
 }
 
