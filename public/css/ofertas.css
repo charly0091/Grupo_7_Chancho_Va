@@ -1121,7 +1121,6 @@ background: linear-gradient(93deg,#ff5656, #6a7efc)
         font-weight: bold;
         text-align: center;
         background-color:var(--rojo);  
-        opacity: 0.8;
         padding: 5px;  
         width: 200px;
         height: 40px;

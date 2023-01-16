@@ -32,6 +32,35 @@ app.get('/register', (req, res) => {
     }
 );
 
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname , '/views/about.html'));
+    }
+);
+
+app.get('/terms', (req, res) => {
+    res.sendFile(path.join(__dirname , '/views/terms.html'));
+    }
+);
+
+app.get('/help', (req, res) => {
+    res.sendFile(path.join(__dirname , '/views/help.html'));
+    }
+);
+
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname , '/views/contact.html'));
+    }
+);
+
+app.get('/reset-password', (req, res) => {
+    res.sendFile(path.join(__dirname , '/views/reset-password.html'));
+    }
+);
+
+app.get('/ofertas', (req, res) => {
+    res.sendFile(path.join(__dirname , '/views/ofertas.html'));
+    }
+);
 
 app.listen(port, () => {
     console.log(`servidor levantado en http://localhost:${port}`);

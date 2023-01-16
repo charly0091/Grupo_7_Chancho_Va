@@ -349,8 +349,6 @@ header div.item div.prueba div.imagen-oculta div.contenedor h3.oculto {
 
 /* END HEADER */
 
-
-
 body{
     font-family: 'source sans pro', sans-serif;
     min-height: 100vh;
@@ -410,10 +408,6 @@ hr{
 
 }
 
-.button-container{
-    text-align: center;
-}
-
 .btn-submit{
     background: var(--rojo);
     border: 2px solid white;
@@ -425,14 +419,14 @@ hr{
     height: 2.4rem;
     margin: 0.8rem 2rem;
     text-transform: capitalize;
-    transition: all 1s ease;
-    cursor: pointer;
+
 }
 
 .btn-submit:hover{
-    background: linear-gradient(93deg,#ff5656, #6a7efc);
+    background: var(--azul);
     border: 2px solid var(--rojo);
     color: white;
+    cursor: pointer;
 }
 
 .btn-acc{
@@ -446,13 +440,6 @@ hr{
     justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
-}
-
-.checkbox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0.5rem;
 }
 
 span.error-message{
@@ -553,11 +540,10 @@ footer i{
     .noOther{
     display: none;
     }
-
     main{
     width: 100%;
     border-radius: 1rem;
-    max-width: 400px;
+    max-width: 650px;
     box-shadow: 0px 0px 12px var(--negro);
     padding: 3rem;
     }
