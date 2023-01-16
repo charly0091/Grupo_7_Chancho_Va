@@ -355,8 +355,58 @@ header div.item div.prueba div.imagen-oculta div.contenedor h3.oculto {
   font-family: var(--fuente);
 }
 
-body {
-  width: 100vw;
+section.product-detail {
+  font-family: 'source sans pro', sans-serif;
+  min-height: 100vh;
+  background: url(/image/fondo.jpg) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem 0 3rem;
+}
+
+/* div.order {
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 10px;
+} */
+
+div.order {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  border: 2px solid white;
+  border-radius: 0.8rem;
+  box-shadow: 5px 5px 12px rgb(40,40,40);
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 2.4rem;
+  margin: 0.8rem 2rem;
+}
+
+.primary-button{
+  background: var(--rojo);
+  border: 2px solid white;
+  border-radius: 0.8rem;
+  box-shadow: 5px 5px 12px rgb(40,40,40);
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 2.4rem;
+  margin: 0.8rem 2rem;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.primary-button:hover{
+  background: linear-gradient(93deg,#ff5656, #6a7efc);
+  border: 2px solid var(--rojo);
+  color: white;
 }
 
 /* END PAGE CONTENT */
