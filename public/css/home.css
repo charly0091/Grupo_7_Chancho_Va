@@ -91,7 +91,7 @@ header div.item div.burger-menu {
     padding-left: 15px;
 }
 
-main {
+.home__main {
     width: 100%;
     margin: 0 auto;
 }
