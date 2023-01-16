@@ -249,7 +249,7 @@ header div.item div.prueba div.imagen-oculta div.contenedor h3.oculto {
 
     header div.head {
         flex-direction: column;
-        max-width: 150px;
+        max-width: 160px;
         justify-content: center;
         align-items: center;
         margin-bottom: 15px;
