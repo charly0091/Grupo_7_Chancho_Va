@@ -362,10 +362,11 @@ section.product-detail {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
-  /* align-items: center; */
-  
   padding: 0 3rem 0 3rem;
+}
+
+h1.title {
+  margin-top: 0.2rem;
 }
 
 section hr {
@@ -456,6 +457,22 @@ div.pay {
   color: white;
 }
 
+/* MEDIAQUERIES */
+
+@media screen and (max-width: 475px) {
+
+  div.shopping-cart {
+    flex-direction: column;
+  }
+
+  div.order {
+    align-items: center;
+    height: 3.4rem;
+    margin: 0.8rem 2rem;
+  }
+}
+
+/* END MEDIAQUERIES */
 /* END PAGE CONTENT */
 
 /* START FOOTER */
@@ -509,6 +526,7 @@ footer i{
   display:none;
 }
 
+/* MEDIA QUERIES FOOTER */
 @media screen and (max-width: 768px){
 
   .noPhone{
@@ -538,5 +556,5 @@ footer i{
       display: flex;
   }
 }
-
+/* END MEDIA QUERIES FOOTER */
 /* END FOOTER */
