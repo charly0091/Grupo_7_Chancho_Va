@@ -1,9 +1,9 @@
 /* variables */
 
 :root{
-    --primario: #ff5656;
-    --secundario: #494953;
-    --terciario: #6A7EFC;
+    --rojo: #ff5656;
+    --negro: #494953;
+    --azul: #6A7EFC;
 }
 
 /* Generales */
@@ -139,7 +139,7 @@ footer{
     padding: 0;
     width: 100%;
     height: 7rem;
-    background: var(--secundario);
+    background: var(--negro);
     color: white;
     display: flex;
     justify-content: space-around;
