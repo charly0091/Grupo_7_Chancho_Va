@@ -62,6 +62,11 @@ app.get('/ofertas', (req, res) => {
     }
 );
 
+app.get('/construccion', (req, res) => {
+    res.sendFile(path.join(__dirname , '/views/construccion.html'));
+    }
+);
+
 app.listen(port, () => {
     console.log(`servidor levantado en http://localhost:${port}`);
     }

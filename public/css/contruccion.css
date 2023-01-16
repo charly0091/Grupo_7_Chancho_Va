@@ -211,7 +211,7 @@ header div.item div.prueba div.imagen-oculta div.contenedor h3.oculto {
 
  /* MEDIA HEADER */
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 
         header div.lista{
             display: none;
@@ -312,6 +312,7 @@ header div.item div.prueba div.imagen-oculta div.contenedor h3.oculto {
     header div.item div.usuario i {
         text-decoration: none;
         color: black;
+        font-size: 24px;
     }
 
     header div.lista{
@@ -339,6 +340,7 @@ header div.item div.prueba div.imagen-oculta div.contenedor h3.oculto {
     header div.lista ul li a {
         text-decoration: none;
         color: black;
+        font-size: 16px;
     }
 
     header div.lista ul li a:hover {
@@ -349,6 +351,8 @@ header div.item div.prueba div.imagen-oculta div.contenedor h3.oculto {
 
 /* END HEADER */
 
+
+
 body{
     font-family: 'source sans pro', sans-serif;
     min-height: 100vh;
@@ -356,9 +360,10 @@ body{
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 0 3rem 0 3rem;
+
 }
 
 main{
@@ -551,13 +556,14 @@ footer i{
     .noOther{
     display: none;
     }
+
     main{
-    width: 100%;
+    /* width: 100%;
     border-radius: 1rem;
-    max-width: 650px;
+    max-width: 400px;
     box-shadow: 0px 0px 12px var(--negro);
     padding: 3rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); */
     }
 
 }
@@ -566,5 +572,6 @@ footer i{
 
     .desktop{
         display: flex;
+        
     }
 }
