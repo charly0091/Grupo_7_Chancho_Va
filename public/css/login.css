@@ -360,7 +360,7 @@ body{
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 0 3rem 0 3rem;
 }
@@ -564,6 +564,11 @@ footer i{
     padding: 3rem;
     backdrop-filter: blur(10px);
     }
+    body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
 
 }
 
@@ -572,5 +577,10 @@ footer i{
     .desktop{
         display: flex;
         
+    }
+    body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     }
 }
