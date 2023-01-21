@@ -44,9 +44,14 @@ main {
     flex-wrap: wrap;
 }
 
+main section {
+    width: 100%;
+}
+
 body main section div {
     flex-wrap: wrap;
     text-align: center;
+    width: 100vw;
 }
 
 .precio {
@@ -90,11 +95,12 @@ h2 {
     padding-bottom: 2rem;
     padding-top: 2rem;
     font-size: 2rem;
-    width: 100wh;
+    width: 100%;
 }
 
 img {
     padding: 10px;
+    width: 100%;
 }
 
 .medios {

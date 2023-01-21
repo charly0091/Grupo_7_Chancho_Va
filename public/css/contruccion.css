@@ -382,18 +382,6 @@ a{
     color: var(--azul);
 }
 
-main a{
-    font-size: 1.5rem;
-}
-
-main p{
-    font-size: 1.5rem;
-    display: flexbox;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
 h2{
     margin-bottom: 1rem;
 }
