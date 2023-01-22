@@ -51,7 +51,7 @@ main section {
 body main section div {
     flex-wrap: wrap;
     text-align: center;
-    width: 100vw;
+    width: 100%;
 }
 
 .precio {
@@ -79,13 +79,25 @@ main section div.carrito {
     padding: 2rem 0;
 }
 
-button {
-    display: block;
-    height: 80px;
+button.btn-agregarAlCarrito {
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color:var(--rojo);  
+    opacity: 0.8;
+    padding: 3px;  
     width: 300px;
+    height: 80px;
     font-size: 1.8rem;
-    border-radius: 5px;
+    box-shadow: 5px;
     margin: 0 auto;
+    display: block;
+    transition: all 1s;
+}
+
+button.btn-agregarAlCarrito:hover {
+    color: white;
+    background: linear-gradient(93deg,#ff5656, #6a7efc); 
 }
 
 h2 {
@@ -115,11 +127,6 @@ img {
     padding: 1rem;
 }
 
-.articulo {
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
 .articulo h3 {
     justify-content: center;
     text-align: center;
@@ -128,11 +135,15 @@ img {
 section.articulos {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 section.articulos article.articulo {
     width: 100%;
     max-width: 320px;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 section.articulos article.articulo div.imagen-producto img {
@@ -142,13 +153,12 @@ section.articulos article.articulo div.imagen-producto img {
 /* footer */
 
 footer{
-    padding: 0;
-    width: 100%;
-    height: 7rem;
+    padding: 1rem;
+    width: 100vw;
     background: var(--negro);
     color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -201,9 +211,8 @@ footer i{
 @media screen and (min-width: 769px) {
 
     .noOther{
-        display: none;
+    display: none;
     }
-
 }
 
 @media screen and (min-width: 992px){
