@@ -2,7 +2,7 @@
   "name": "trabajo-integrador-formar",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/charly0091/Grupo_7_VeronikosGames#readme",
   "dependencies": {
+    "ejs": "^3.1.8",
     "express": "^4.18.2",
     "nodemon": "^2.0.20"
   }
