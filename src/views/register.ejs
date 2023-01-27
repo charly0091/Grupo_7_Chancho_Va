@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/contruccion.css">
-    <title>Document</title>
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
     <header>
         <div class="head">
-            <a href="/"><img src="/image/sinfondo.png" alt="logo"></a>
+            <a href="/"><img src="/images/sinfondo.png" alt="logo"></a>
             <h3 class="oculto">Juegos de mesa</h3>
         </div>
         <div class="menu">
@@ -34,7 +35,7 @@
         </div>
         <div class="item">
             <div class="usuario">
-                <a href="/login"><i class="fa-regular fa-user"></i></a>
+                <a href="/perfil"><i class="fa-regular fa-user"></i></a>
             </div>
             <div class="carrito">
                 <a href="/carrito"><i class="fa-brands fa-opencart"></i></a>
@@ -48,25 +49,52 @@
                    </div>
                    <div class="imagen-oculta">
                       <div class="contenedor">
-                          <a href="/home"><img src="/image/sinfondo.png" alt="logo"></a>
+                          <a href="/"><img src="/image/sinfondo.png" alt="logo"></a>
                           <h3 class="oculto">Juegos de mesa</h3>
                       </div>
                    </div>
             </div>
         </div>
     </header>
-    <main>
-        <div class="text">
-            <h1>Página en construcción</h1>
-            <p>Volver a <a href="/">inicio</a><p>
+    <main class="registro">
+        <div class="contenedor">
+            <h2>Registrate</h2>
+            <hr>
+            <form action="">
+                <div class="input">
+                    <label for="correo">Correo electrónico</label>
+                    <input class="estiloInput" type="email" name="correo" required>
+                    <span class="mensajeError">Debe ingresar correo electrónico</span>
+                </div>
+                <div class="input">
+                    <label for="contraseña">Contraseña</label>
+                    <input class="estiloInput" type="password" id="contraseña" name="contraseña" required>
+                    <span class="mensajeError">Debe ingresar una contraseña</span>
+                </div>
+                <div class="input">
+                    <label for="contraseña2">Confirme contraseña</label>
+                    <input class="estiloInput" type="password" id="contraseña2" name="contraseña2" required>
+                    <span class="mensajeError">Las contraseñas no son identicas</span>
+                </div>
+                <div class="input">
+                    <label for="telefono">Número de teléfono</label>
+                    <input class="estiloInput" type="text" id="telefono" name="telefono" required>
+                    <span class="mensajeError">Debe ingresar un numero telefónico</span>
+                </div>
+                <div class="terminos">
+                    <div>
+                        <label for="recordar">  Acepto los <a href="/terms">términos y condiciones</a> </label>
+                        <input type="checkbox" name="terminos" id="recordar"> 
+                    </div>
+                    <span class="mensajeError">Debe aceptar los términos y condiciones</span>
+                </div>
+                <div class="boton">
+                    <span class="mensajeError">Credenciales inválidas</span>
+                    <button type="submit" class="registrar">Continuar</button>
+                </div>
+                <span><a href="/users/login">Ya tengo cuenta</a></span>
+            </form>
         </div>
-        <div class="image">
-            <img src="/image/problemas.gif" alt="construccion">
-        </div>
-
-
-
-
     </main>
     <footer>
         <div>
@@ -82,7 +110,7 @@
             <li class="noOther"><a href="/contact">Contacto</a></li>
         </ul>
         <div class="noPhone">
-            <a class="noPhone" href="/contact">Contacto</a></li>
+            <p class="noPhone">Contacto</p>
             <p class="noPhone"><i class="fa-brands fa-whatsapp"></i> 0800-123-4567</p>
             <p class="noPhone"><i class="fa-regular fa-envelope"></i> chancho-va@gmail.com </p>
             <p class="noPhone"><i class="fa-brands fa-instagram"></i> Chancho-va</p>
@@ -90,7 +118,7 @@
         <div class="desktop">
             <img class="qr" src="images/qr.jpg" alt="qr"> 
         </div>
-
     </footer>
+    <script src="/efecto.js"></script>
 </body>
 </html>

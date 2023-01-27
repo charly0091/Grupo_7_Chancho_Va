@@ -3,10 +3,24 @@ const app = express();
 const port = 3000;
 const path = require('path');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static("public"));
+
+/* Template engine config */
+app.set('view engine', 'ejs');
+app.set('views', "./src/views");
+
+/* Routers */
+const mainRouter = require('./routes/main');
+const productsRouter = require('./routes/products');
+const usersRouter = require('./routes/users');
+
+/* Routers Middlewares */
+app.use('/', mainRouter);
+app.use('/products', productsRouter);
+app.use('/users', usersRouter);
 
 
-app.get('/', (req, res) => {
+/* app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/home.html'));
     }
 );
@@ -65,7 +79,7 @@ app.get('/ofertas', (req, res) => {
 app.get('/construccion', (req, res) => {
     res.sendFile(path.join(__dirname , '/views/construccion.html'));
     }
-);
+); */
 
 app.listen(port, () => {
     console.log(`servidor levantado en http://localhost:${port}`);

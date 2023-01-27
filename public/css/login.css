@@ -356,7 +356,7 @@ header div.item div.prueba div.imagen-oculta div.contenedor h3.oculto {
 body{
     font-family: 'source sans pro', sans-serif;
     min-height: 100vh;
-    background: url(/image/fondo.jpg) no-repeat center center fixed;
+    background: url(/images/fondo.jpg) no-repeat center center fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
