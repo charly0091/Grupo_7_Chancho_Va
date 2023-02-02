@@ -5,7 +5,7 @@ module.exports = {
         res.render("products")
     },
     detail: (req, res) => {
-        res.render("detail")
+        res.render("detalleProducto")
     },
     create: (req, res) => {
         res.render("create")
