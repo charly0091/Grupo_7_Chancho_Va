@@ -1,21 +1,21 @@
 module.exports = {
     
     main: (req, res) => {
-        res.render("home")
+        res.render("home" , { style : "home.css" })
     },
     about: (req, res) => {
-        res.render("about")
+        res.render("about" , { style : "styles.css" })
     },
     terms: (req, res) => {
-        res.render("terms")
+        res.render("terms" , { style : "styles.css" })
     },
     help: (req, res) => {
-        res.render("help")
+        res.render("help" , { style : "styles.css" })
     },
     construccion: (req, res) => {
-        res.render("construccion")
+        res.render("construccion" , { style : "styles.css" })
     },
     contact: (req, res) => {
-        res.render("contact")
+        res.render("contact" , { style : "styles.css" })
     }
 }
