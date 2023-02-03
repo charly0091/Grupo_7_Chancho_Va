@@ -8,10 +8,10 @@ module.exports = {
         res.render("detail")
     },
     create: (req, res) => {
-        res.render("create")
+        res.render("./admin/createProduct")
     },
     edit: (req, res) => {
-        res.render("edit")
+         res.render("./admin/editProduct")
     },
     carrito: (req, res) => {
         res.render("carrito")

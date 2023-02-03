@@ -15,6 +15,7 @@ module.exports = {
     construccion: (req, res) => {
         res.render("construccion")
     },
+  
     contact: (req, res) => {
         res.render("contact")
     }

@@ -13,11 +13,13 @@ app.set('views', "./src/views");
 const mainRouter = require('./routes/main');
 const productsRouter = require('./routes/products');
 const usersRouter = require('./routes/users');
+const adminRouter = require('./routes/admin');
 
 /* Routers Middlewares */
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
+app.use('/admin', adminRouter);
 
 
 /* app.get('/', (req, res) => {
