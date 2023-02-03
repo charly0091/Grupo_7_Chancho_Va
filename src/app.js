@@ -8,6 +8,7 @@ app.use(express.static("public"));
 /* Template engine config */
 app.set('view engine', 'ejs');
 app.set('views', "./src/views");
+app.set('views', "./src/views/users")
 
 /* Routers */
 const mainRouter = require('./routes/main');
