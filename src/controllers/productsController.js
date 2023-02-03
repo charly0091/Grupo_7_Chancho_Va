@@ -5,7 +5,7 @@ module.exports = {
         res.render("products")
     },
     detail: (req, res) => {
-        res.render("detail")
+        res.render("products/detalleProducto" , { style : "detalleProducto.css" } )
     },
     create: (req, res) => {
         res.render("./admin/createProduct")
@@ -14,7 +14,7 @@ module.exports = {
          res.render("./admin/editProduct")
     },
     carrito: (req, res) => {
-        res.render("carrito")
+        res.render("products/carrito" , { style : "Carrito.css" })
     }
 
 }

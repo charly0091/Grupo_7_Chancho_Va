@@ -1,15 +1,15 @@
 module.exports = {
     
     users: (req, res) => {
-        res.render("construccion")
+        res.render("users/construccion" , { style : "styles.css" })
     },
     register: (req, res) => {
-        res.render("register")
+        res.render("users/register" , { style : "register.css" })
     },
     login: (req, res) => {
-        res.render("login")
+        res.render("users/login" , { style : "styles.css" })
     },
     resetPassword: (req, res) => {
-        res.render("reset-password")
+        res.render("users/reset-password" , { style : "styles.css" })
     }
 }
