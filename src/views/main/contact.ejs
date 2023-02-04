@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include("../partials/head") %> 
+
+<body>
+    <%- include("../partials/header") %> 
+    <main class="main2">
+        <div class="contacto">
+            <h1>Contacto</h1>
+            <p>¿Tenés alguna duda? ¿Necesitás ayuda? ¿Querés hacernos una consulta? ¡No dudes en contactarnos!</p>
+        </div>
+        <div class="formulario">
+            <form action="">
+                <div class="input-container">
+                    <label class="input-text" for="nombre">Nombre</label>
+                    <input class="input-style" type="text" name="nombre" id="nombre">
+                </div>
+                <div class="input-container">
+                    <label class="input-text" for="apellido">Apellido</label>
+                    <input class="input-style" type="text" name="apellido" id="apellido">
+                </div>
+                <div class="input-container">
+                    <label class="input-text" for="email">Email</label>
+                    <input class="input-style" type="email" name="email" id="email">
+                </div>
+                <div class="input-container">
+                    <label class="input-text" for="consulta">Consulta</label>
+                    <textarea class="input-style" name="consulta" id="consulta" cols="30" rows="10"></textarea>
+                </div>
+                <div class="button-container">
+                    <button class="btn-submit" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+
+
+    </main>
+    <%- include("../partials/footer") %> 
+</body>
+</html>
