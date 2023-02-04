@@ -344,7 +344,7 @@ header div.item div.prueba div.imagen-oculta div.contenedor h3.oculto {
     header div.lista ul li a:hover {
         color: var(--azul);
     }
-}
+}*/
 
 
 /* END HEADER */
@@ -353,7 +353,7 @@ body {
 }
 /*HEADER*/
 
-/*header {
+header {
     background-color: var(--rojo);
     display: flex;
     justify-content: space-between;
@@ -416,7 +416,7 @@ header div.item div.burger-menu {
     padding-left: 15px;
 }*/
 
-.home__main {
+.main2 {
     width: 100%;
     margin: 0 auto;
 }

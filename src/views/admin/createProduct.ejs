@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<%- include("../partials/head") %>
+    <%- include("../partials/head") %> 
 
 <body>
+    <%- include("../partials/header") %> 
   
         <main class="registro">
             <div class="contenedor">
@@ -17,7 +17,7 @@
                     </div>
                     <div class="input">
                         <label for="productDescription">Descripción del producto</label>
-                        <input class="estiloInput" type="text" name="productDescription" id="productDescription" placeholder="Descripción del producto" required>                
+                        <textarea name="" id="" cols="30" rows="10" class="estiloInput" type="text" name="productDescription" id="productDescription" placeholder="Descripción del producto" required></textarea></textarea>                
                         <span class="mensajeError">Debe ingresar le descripcion del producto</span>
                     </div>    
                     <div class="input">
@@ -45,5 +45,6 @@
             </div>
         </main>
         <%- include("../partials/footer") %> 
+        <script src="/js/efecto.js"></script>
 </body>
 </html>

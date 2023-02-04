@@ -1,63 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chancho Va!</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="CSS/home.css">
-
+    <%- include("../partials/head") %> 
 </head>
+<%- include("../partials/header") %> 
 <body>
-    <header>
-        <div class="head">
-            <a href="/"><img src="/image/sinfondo.png" alt="logo"></a>
-            <h3 class="oculto">Juegos de mesa</h3>
-        </div>
-        <div class="menu">
-            <div class="barra">
-               <span class="linea1"></span>
-               <span class="linea2"></span>
-               <span class="linea3"></span>
-            </div>
-        </div>
-        <div class="buscador">
-            <input class="busqueda" type="text" placeholder="¿A qué queres jugar?" >
-        </div>
-        <div class="lista">
-            <ul>
-                <li><a href="/categorias">Categorías</a></li>
-                <li><a href="/ofertas">Ofertas</a></li>
-                <li><a href="/envios">Envíos</a></li>
-                <li><a href="/ayuda">Cómo comprar</a></li>
-                <li><a href="/pago">Métodos de pago</a></li>
-            </ul>
-        </div>
-        <div class="item">
-            <div class="usuario">
-                <a href="/login"><i class="fa-regular fa-user"></i></a>
-            </div>
-            <div class="carrito">
-                <a href="/carrito"><i class="fa-brands fa-opencart"></i></a>
-            </div>
-            <div class="prueba">
-                   <div class="link"> 
-                       <a href="/login">Ingresa</a>
-                   </div>
-                   <div class="signUp">
-                    <a href="/perfil"><i class="fa-regular fa-user"></i></a>
-                   </div>
-                   <div class="imagen-oculta">
-                      <div class="contenedor">
-                          <a href="/home"><img src="/image/sinfondo.png" alt="logo"></a>
-                          <h3 class="oculto">Juegos de mesa</h3>
-                      </div>
-                   </div>
-            </div>
-        </div>
-    </header>
+  
         <nav>        
         <section class="home__carrusel">
             <a href="/"><img src="/images/envio.png" alt=""></a>
