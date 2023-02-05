@@ -39,6 +39,7 @@ body {
 
 a {
     display: inline;
+    text-decoration: none;
 }
 
 /* CARRUSEL*/
@@ -370,12 +371,10 @@ background: linear-gradient(93deg,#ff5656, #6a7efc)
 .home__menu--tematico img {
     width: 90%;
     height: 370px;
-}
-
-.home__menu--tematico img:hover {
-    box-shadow: 0 0 5px grey;
+      box-shadow: 0 0 5px grey;
     border-radius: 20px;
 }
+
 
 /*PRODUCTOS*/
 
@@ -564,13 +563,11 @@ background: linear-gradient(93deg,#ff5656, #6a7efc)
         padding: 5px;
         height: 370px;
         justify-content: space-evenly;
-    }
-
-    section div.home__container--productos article.home__tarjeta--producto:hover{
         border: 1px solid grey;
         box-shadow: 0 0 5px;
         border-radius: 15px;
     }
+  
 
     section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--img {
         display: flex;

@@ -7,7 +7,7 @@
   
         <main class="registro">
             <div class="contenedor">
-                <h2>Formulario de creación de productos</h2>
+                <h2>Agregar producto</h2>
                 <hr>
                 <form method="POST" action="/createProduct">
                     <div class="input">
@@ -17,7 +17,7 @@
                     </div>
                     <div class="input">
                         <label for="productDescription">Descripción del producto</label>
-                        <textarea name="" id="" cols="30" rows="10" class="estiloInput" type="text" name="productDescription" id="productDescription" placeholder="Descripción del producto" required></textarea></textarea>                
+                        <input name="productDescription" id="productDescription" cols="30" rows="10" class="estiloInput" type="text" name="productDescription" id="productDescription" placeholder="Descripción del producto" required>                
                         <span class="mensajeError">Debe ingresar le descripcion del producto</span>
                     </div>    
                     <div class="input">
@@ -26,12 +26,12 @@
                         <span class="mensajeError">La extensión de la imágen no es compatible</span>
                     </div>
                     <div class="input">
-                        <label for="productCategory">Nombre del producto</label>
+                        <label for="productCategory">Categoria del producto</label>
                         <input class="estiloInput" type="text" name="productCategory" id="productCategory" placeholder="Categoria del producto" required>                
                         <span class="mensajeError">Debe ingresar la categoria del producto</span>
                     </div>
                     <div class="input">
-                        <label for="productPrice">Nombre del producto</label>
+                        <label for="productPrice">Precio del producto</label>
                         <input class="estiloInput" type="number" name="productPrice" id="productPrice" placeholder="Precio del producto"  step="0.01" min="0" required>                
                         <span class="mensajeError">Debe ingresar el precio del producto</span>
                     </div>

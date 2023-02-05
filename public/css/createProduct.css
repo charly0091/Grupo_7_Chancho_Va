@@ -362,7 +362,7 @@ main.registro {
     align-items: center;
     flex-direction: column;
     padding: 2rem;
-    background: url(/image/fondo.jpg) no-repeat center top;
+   
     background-size: cover;
     width: 100vw;
 }
@@ -416,6 +416,7 @@ main.registro div.contenedor form div.input span.mensajeError {
     color: red;
     padding: 5px;
     font-size: small;
+    display: none;
 }
 
 main.registro div.contenedor form div.terminos {
@@ -476,6 +477,7 @@ main.registro div.contenedor form div.boton span.mensajeError {
     color: red;
     font-size: small;
     padding: 5px;
+    display: none;
 }
 
 main.registro div.contenedor form span a{
@@ -484,15 +486,21 @@ main.registro div.contenedor form span a{
     align-items: center;
     padding-top: 25px;
     text-decoration: none;
+    display: none;
 }
-
+span.mensajeError {
+    display: none;
+}
 /* MEDIA MAIN */
 
 @media (min-width: 1240px) {
     main.registro {
         align-items: start;
-        background: url(/image/fondo.jpg) no-repeat right;
     }
+ 
+    span.mensajeError {
+            display: none;
+        }
 }
 
 
