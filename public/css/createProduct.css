@@ -412,6 +412,7 @@ main.registro div.contenedor form div.input input.estiloInput {
     padding:0 15px 0;
 }
 
+
 main.registro div.contenedor form div.input span.mensajeError {
     color: red;
     padding: 5px;

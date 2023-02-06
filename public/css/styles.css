@@ -3,6 +3,7 @@
 @import url(login.css);
 @import url(register.css);
 @import url(home.css);
+@import url(slideshow.css);
 
 
 @media screen and (min-width: 769px) {

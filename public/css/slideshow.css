@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap'); 
+@import url("header.css");
+
+div.home__carrusel-contenedor {
+    width: 100vw;
+    position: relative;
+    margin: auto;
+    height: 150px;
+   
+  }
+
+  
+  /* Hide the images by default */
+  .home__carrusel-fotos {
+    width: 100vw;
+    display: none;
+    
+
+  }
+
+  div.home__carrusel-contenedor .home__carrusel-fotos img {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+
+  }
