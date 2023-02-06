@@ -4,6 +4,7 @@ const controller = require("../controllers/usersController");
 
 router.get("/", controller.users); 
 router.get("/register", controller.register);
+router.post("/", controller.crear);
 router.get("/login", controller.login);
 router.get("/reset-password", controller.resetPassword);
 
