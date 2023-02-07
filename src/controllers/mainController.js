@@ -15,6 +15,7 @@ module.exports = {
     construccion: (req, res) => {
         res.render("main/construccion" , { style : "styles.css" })
     },
+  
     contact: (req, res) => {
         res.render("main/contact" , { style : "styles.css" })
     }

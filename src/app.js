@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port= process.env.PORT || 3000; 
 const path = require('path');
+const methodOverride =  require('method-override');
 
 app.use(express.static("public"));
-
+app.use(methodOverride('_method'));
 /* Template engine config */
 app.set('view engine', 'ejs');
 app.set('views', "./src/views");
@@ -13,11 +14,13 @@ app.set('views', "./src/views");
 const mainRouter = require('./routes/main');
 const productsRouter = require('./routes/products');
 const usersRouter = require('./routes/users');
+const adminRouter = require('./routes/admin');
 
 /* Routers Middlewares */
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
+app.use('/admin', adminRouter);
 
 
 /* app.get('/', (req, res) => {

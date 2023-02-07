@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head") %> 
+
+<body>
+    <%- include("../partials/header") %> 
+  
+        <main class="registro">
+            <div class="contenedor">
+                <h2>Agregar producto</h2>
+                <hr>
+                <form method="POST" action="/createProduct">
+                    <div class="input">
+                        <label for="productName">Nombre del producto</label>
+                        <input class="estiloInput" type="text" name="productName" id="productName" placeholder="Nombre del producto" required>                
+                        <span class="mensajeError">Debe ingresar el nombre del producto</span>
+                    </div>
+                    <div class="input">
+                        <label for="productDescription">Descripción del producto</label>
+                        <input class="estiloInput" type="text" name="productDescription" id="productDescription" placeholder="Descripción del producto" required> 
+                        <span class="mensajeError">Debe ingresar le descripcion del producto</span>
+                    </div>    
+                    <div class="input">
+                        <label for="productPhoto">Foto del producto</label>
+                        <input class="estiloInput" type="file"  accept=".jpg, .png"  id="productPhoto" name="productPhoto"  placeholder="Foto del producto" required>
+                        <span class="mensajeError">La extensión de la imágen no es compatible</span>
+                    </div>
+                    <div class="input">
+                        <label for="productCategory">Categoria del producto</label>
+                        <input class="estiloInput" type="text" name="productCategory" id="productCategory" placeholder="Categoria del producto" required>                
+                        <span class="mensajeError">Debe ingresar la categoria del producto</span>
+                    </div>
+                    <div class="input">
+                        <label for="productPrice">Precio del producto</label>
+                        <input class="estiloInput" type="number" name="productPrice" id="productPrice" placeholder="Precio del producto"  step="0.01" min="0" required>                
+                        <span class="mensajeError">Debe ingresar el precio del producto</span>
+                    </div>
+                   
+                    <div class="boton">
+                        <span class="mensajeError"> Debe completar todos los campos</span>
+                        <button type="submit" class="registrar">Crear</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </main>
+        <%- include("../partials/footer") %> 
+        <script src="/js/efecto.js"></script>
+</body>
+</html>

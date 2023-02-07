@@ -18,15 +18,17 @@ const controller = {
         res.render("products/detail", { product, style : "detail.css" , toThousand});
     },
     create: (req, res) => {
-        res.render("create")
+        res.render("./admin/createProduct")
     },
     edit: (req, res) => {
-        res.render("edit")
+         res.render("./admin/editProduct")
     },
     carrito: (req, res) => {
         res.render("products/carrito" , { style : "Carrito.css" })
     }
-}
+ 
+    }
+
 
 
 module.exports = controller;
