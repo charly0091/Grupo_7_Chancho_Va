@@ -6,10 +6,10 @@ const path = require('path');
 
 module.exports = {
 create: (req, res) => {
-    res.render("./admin/createProduct" , { style : "styles.css" })
+    res.render("./admin/createProduct" , { style : "register.css" })
 },
 edit: (req, res) => {
-     res.render("./admin/editProduct" , { style : "styles.css" })
+     res.render("./admin/editProduct" , { style : "register.css" })
 
 }
 
