@@ -15,15 +15,15 @@ module.exports = {
         res.render("users/register" , { style : "register.css" });
     },
     crear: (req, res) => {
-        let newUser = {
+        let user = {
+            id: users.length + 1,
             email: req.body.email,
             password: req.body.password,
-            password2: req.body.password2,
-            cel: req.body.cel
+            phone: req.body.phone,
         }
-        users.push(newUser);
+        users.push(user);
         writeJson(users);
-        res.send("usuario creado Exitosamente")
+        res.redirect("/users/login");
     },
     login: (req, res) => {
         res.render("users/login" , { style : "styles.css" })

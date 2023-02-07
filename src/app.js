@@ -10,6 +10,9 @@ app.use(methodOverride('_method'));
 app.set('view engine', 'ejs');
 app.set('views', "./src/views");
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 /* Routers */
 const mainRouter = require('./routes/main');
 const productsRouter = require('./routes/products');
@@ -21,6 +24,7 @@ app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
+
 
 
 /* app.get('/', (req, res) => {
