@@ -24,7 +24,7 @@ const controller = {
          res.render("./admin/editProduct")
     },
     carrito: (req, res) => {
-        res.render("products/carrito" , { style : "Carrito.css" })
+        res.render("products/carrito" , { style : "carrito.css" })
     }
  
     }
