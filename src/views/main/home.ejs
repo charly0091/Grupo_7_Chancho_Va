@@ -6,13 +6,14 @@
 <%- include("../partials/header") %> 
 <body>
   
-        <nav>        
-        <section class="home__carrusel">
-            <a href="/"><img src="/images/envio.png" alt=""></a>
-
-        </section>
-    </nav>
+       
     <main class="home__main">
+        <nav>        
+            <section class="home__carrusel">
+                <a href="/"><img src="/images/envio.png" alt=""></a>
+    
+            </section>
+        </nav>
         <section class="home__menu--tematico">
             <article>
                 <a href="/familiares.html"><img src="/images/juegos familiares.png" alt=""></a>
@@ -26,7 +27,7 @@
         </section>      
 
         <section class="home__productos"> 
-            <a href="/ofertas"><h2>Ofertas</h2></a>
+            <a href="/products/ofertas"><h2>Ofertas</h2></a>
             <div class="home__container--productos">
             <article class="home__tarjeta--producto">               
                 <div class="home__tarjeta--img">
@@ -35,7 +36,7 @@
                 <div class="home__tarjeta--descripcion">
                 <h3>Red7</h3>
                 <p class="home_precio">$3.990</p>
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
+                <a href="/products/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
                 </div>
             </article>
             <article class="home__tarjeta--producto">
@@ -213,5 +214,6 @@
     </div>
     <%- include("../partials/footer") %> 
     <script src="/efecto.js"></script>
+    <script src="/slideshow.js"></script>
 </body>
 </html>

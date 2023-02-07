@@ -7,31 +7,31 @@
         <div class="contenedor">
             <h2>Registrate</h2>
             <hr>
-            <form action="">
+            <form action="/users" method="POST">
                 <div class="input">
-                    <label for="correo">Correo electrónico</label>
-                    <input class="estiloInput" type="email" name="correo" required>
+                    <label for="email">Correo electrónico</label>
+                    <input class="estiloInput" type="email" name="email" id="email" required>
                     <span class="mensajeError">Debe ingresar correo electrónico</span>
                 </div>
                 <div class="input">
-                    <label for="contraseña">Contraseña</label>
-                    <input class="estiloInput" type="password" id="contraseña" name="contraseña" required>
+                    <label for="password">Contraseña</label>
+                    <input class="estiloInput" type="password" name="password" id="password" required>
                     <span class="mensajeError">Debe ingresar una contraseña</span>
                 </div>
                 <div class="input">
-                    <label for="contraseña2">Confirme contraseña</label>
-                    <input class="estiloInput" type="password" id="contraseña2" name="contraseña2" required>
+                    <label for="password2">Confirme contraseña</label>
+                    <input class="estiloInput" type="password" id="password2" name="password2" required>
                     <span class="mensajeError">Las contraseñas no son identicas</span>
                 </div>
                 <div class="input">
-                    <label for="telefono">Número de teléfono</label>
-                    <input class="estiloInput" type="text" id="telefono" name="telefono" required>
+                    <label for="cel">Número de teléfono</label>
+                    <input class="estiloInput" type="text" id="cel" name="cel" required>
                     <span class="mensajeError">Debe ingresar un numero telefónico</span>
                 </div>
                 <div class="terminos">
                     <div>
                         <label for="recordar">  Acepto los <a href="/terms">términos y condiciones</a> </label>
-                        <input type="checkbox" name="terminos" id="recordar"> 
+                        <input type="checkbox" name="terminos" id="recordar" required> 
                     </div>
                     <span class="mensajeError">Debe aceptar los términos y condiciones</span>
                 </div>
@@ -43,29 +43,7 @@
             </form>
         </div>
     </main>
-    <footer>
-        <div>
-            <h3>Chancho va!</h3>
-            <p>Copyright © 1999-2023</p>
-            <p>Chancho va! S.R.L.</p>
-            <p class="noPhone">Monroe 860, C1428 CABA</p>
-        </div>
-        <ul class="footerUl">
-            <li class="noPhone"><a href="/about">Nosotros</a></li>
-            <li class="noPhone"><a href="/help">Ayuda</a></li>
-            <li><a href="/terms">Términos y condiciones</a></li>
-            <li class="noOther"><a href="/contact">Contacto</a></li>
-        </ul>
-        <div class="noPhone">
-            <p class="noPhone">Contacto</p>
-            <p class="noPhone"><i class="fa-brands fa-whatsapp"></i> 0800-123-4567</p>
-            <p class="noPhone"><i class="fa-regular fa-envelope"></i> chancho-va@gmail.com </p>
-            <p class="noPhone"><i class="fa-brands fa-instagram"></i> Chancho-va</p>
-        </div>
-        <div class="desktop">
-            <img class="qr" src="/images/qr.jpg" alt="qr"> 
-        </div>
-    </footer>
+    <%- include("../partials/footer") %>
     <script src="/js/efecto.js"></script>
 </body>
 </html>

@@ -26,7 +26,9 @@ const controller = {
     carrito: (req, res) => {
         res.render("products/carrito" , { style : "Carrito.css" })
     }
-}
+ 
+    }
+
 
 
 module.exports = controller;
