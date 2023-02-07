@@ -1,65 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/carrito.css">
-    <title>Chancho va! - Carrito</title>
-    <!-- FontAwesome-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
-</head>
+<%- include("../partials/head") %> 
 
 <body>
-
-    <header>
-        <div class="head">
-            <a href="/"><img src="/image/sinfondo.png" alt="logo"></a>
-            <h3 class="oculto">Juegos de mesa</h3>
-        </div>
-        <div class="menu">
-            <div class="barra">
-                <span class="linea1"></span>
-                <span class="linea2"></span>
-                <span class="linea3"></span>
-            </div>
-        </div>
-        <div class="buscador">
-            <input class="busqueda" type="text" placeholder="¿A qué queres jugar?">
-        </div>
-        <div class="lista">
-            <ul>
-                <li><a href="/categorias">Categorías</a></li>
-                <li><a href="/ofertas">Ofertas</a></li>
-                <li><a href="/envios">Envíos</a></li>
-                <li><a href="/ayuda">Cómo comprar</a></li>
-                <li><a href="/pago">Métodos de pago</a></li>
-            </ul>
-        </div>
-        <div class="item">
-            <div class="usuario">
-                <a href="/perfil"><i class="fa-regular fa-user"></i></a>
-            </div>
-            <div class="carrito">
-                <a href="/carrito"><i class="fa-brands fa-opencart"></i></a>
-            </div>
-            <div class="prueba">
-                <div class="link">
-                    <a href="/login">Ingresa</a>
-                </div>
-                <div class="signUp">
-                    <a href="/perfil"><i class="fa-regular fa-user"></i></a>
-                </div>
-                <div class="imagen-oculta">
-                    <div class="contenedor">
-                        <a href="/"><img src="/image/sinfondo.png" alt="logo"></a>
-                        <h3 class="oculto">Juegos de mesa</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <%- include("../partials/header") %>
 
     <section class="product-detail">
         <div class="title-container">
