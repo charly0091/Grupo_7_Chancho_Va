@@ -3,7 +3,7 @@ let linea1 = document.querySelector(".linea1");
 let linea2 = document.querySelector(".linea2");
 let linea3 = document.querySelector(".linea3");
 let link = document.querySelector(".contenedorOculto");
-let menu = document.querySelector(".palabra")
+let menus = document.querySelector(".palabra")
 let producto = document.querySelector(".categoriaProductos")
 let iconoBuscardor = document.querySelector(".iconoBuscador")
 let barraBuscadora = document.querySelector(".barraBuscadora")
@@ -16,7 +16,7 @@ barra.addEventListener("click", () => {
     link.classList.toggle("active")
 });
 
-menu.addEventListener("click",() => {
+menus.addEventListener("click",() => {
     producto.classList.toggle("active")
 })
 

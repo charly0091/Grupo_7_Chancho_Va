@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url(header.css);
+@import url(footer.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+:root {
+    /*Paleta de colores*/
+    --rojo: #ff5656;
+    --gris: #edf2f6;
+    --azul: #6a7efc;
+    --negro: #494953;
+    /* Fuentes */
+    --fuente:'Source Sans Pro', sans-serif;  
+    /* Tamaños tipográficos */
+    --parrafos: 12px;
+    --titulos: 24px;
+    --precio: 18px;
+    --descuento: 16px;
+    --descripcion: 16px;
+}
+
+main.userPerfilContainer {
+    display: flex;
+}
+
+main.userPerfilContainer div.contenedorMenuUser {
+    width: 30%;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.fotoPerfil {
+    width: 100%;;
+    padding: 15px;
+    background: linear-gradient(90deg, #6a7efc ,#494953 );
+    display: flex;
+    justify-content: center;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.fotoPerfil img.foto {
+    height: 300px;
+    width: 300px;
+    cursor: pointer;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu {
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    background: linear-gradient(90deg, #6a7efc ,#494953 );
+    box-shadow: 0 0 3px;
+    cursor: pointer;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu:hover{
+    background: linear-gradient(90deg, #edf2f6 ,#ff5656 );
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu img.item {
+    height: 50px;
+    width: 50px;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu h4.nombreMenu {
+    font-size: 25px;
+    height: 100%;
+    width: 100%;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu h4.nombreMenu2 {
+    font-size: 25px;
+    height: 100%;
+    width: 100%;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu h4.nombreMenu3 {
+    font-size: 25px;
+    height: 100%;
+    width: 100%;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu h4.nombreMenu4 {
+    font-size: 25px;
+    height: 100%;
+    width: 100%;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu h4.nombreMenu5 {
+    font-size: 25px;
+    height: 100%;
+    width: 100%;
+}
+
+main.userPerfilContainer div.contenedorDatosUser {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    background: url(/images/fondo.jpg) no-repeat center;
+    background-size: cover;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.contenedorBienvenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido img.animacionPoker {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido img.corazon {
+    top: 10%;
+    left: 10%;
+    animation-name: movimientoLeft;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido img.pikas {
+    top: 9%;
+    right: 10%;
+    animation-name: movimientoRight;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido img.trebol {
+    bottom: 10%;
+    left: 10%;
+    animation-name: movimientoLeft;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido img.diamante {
+    bottom: 10%;
+    right: 10%;
+    animation-name: movimientoRight;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido h1.inicio {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 0 0 25px;
+    background: linear-gradient(90deg, #494953, #edf2f6);
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido h1.inicio:hover {
+    background: linear-gradient(90deg,#edf2f6,  #494953);
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido h1.inicio p {
+    display: none;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido.active {
+    display: none;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin {
+    display: none;
+    height: 100%;
+    
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin h1 {
+    padding-top: 15px;
+    padding-bottom:15px ;
+    font-size: 45px;
+    animation-name: colores;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background: linear-gradient(90deg, #494953, #ff5656);
+    border-radius: 0 0 10px 10px;
+}
+
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin div.nombre {
+    align-items: start;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.usuariosRegistrados {
+    display: none;
+    width: 100%;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.usuariosRegistrados h1 {
+    padding-top: 15px;
+    font-size: 45px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.usuariosRegistrados.active {
+    display: flex;
+    justify-content: center;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios {
+    display: none;
+    width: 100%;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios h1 {
+    padding-top: 15px;
+    font-size: 45px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios.active {
+    display: flex;
+    justify-content: center;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.enviosPendientes {
+    display: none;
+    width: 100%;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.enviosPendientes h1 {
+    padding-top: 15px;
+    font-size: 45px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.enviosPendientes.active {
+    display: flex;
+    justify-content: center;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.paquetesDevueltos {
+    display: none;
+    width: 100%;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.paquetesDevueltos h1 {
+    padding-top: 15px;
+    font-size: 45px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.paquetesDevueltos.active {
+    display: flex;
+    justify-content: center;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.reclamos {
+    display: none;
+    width: 100%;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.reclamos h1 {
+    padding-top: 15px;
+    font-size: 45px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.reclamos.active {
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes movimientoLeft{
+    0%{opacity: 0;}
+    15%{opacity: 0.5;
+        transform: translateY(-50px);}
+    30%{opacity: 1;
+        transform: translateY(50px);}
+    45%{transform: translateY(-50px);
+        transform:rotate(-180deg);}
+    60%{transform: translateY(50px);
+        transform:rotate(180deg);}
+    75%{transform: translateY(-50px);}
+    90%{transform: translateY(50px);}
+    100%{transform: translateY(-50px);}
+}
+
+@keyframes movimientoRight {
+    0%{opacity: 0;}
+    15%{opacity: 0.5;
+        transform: translateY(-50px);}
+    30%{opacity: 1;
+        transform: translateY(50px);}
+    45%{transform: translateY(-50px);
+        transform:rotate(180deg);}
+    60%{transform: translateY(50px);
+        transform:rotate(-180deg);}
+    75%{transform: translateY(-50px);}
+    90%{transform: translateY(50px);}
+    100%{transform: translateY(-50px);}
+}
+
+@keyframes colores {
+    0%{color: #494953;}
+    25%{color: #edf2f6;}
+    50%{color: #494953;}
+    75%{color: #edf2f6;}
+    100%{color: #494953;}
+}

@@ -32,4 +32,8 @@ module.exports = {
     edit: (req, res) => {
         res.render("./admin/editProduct" , { style : "register.css" })
     },
+
+    admin: (req, res) =>{
+        res.render("./admin/adminPerfil")
+    },
 }

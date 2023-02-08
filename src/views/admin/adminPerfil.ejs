@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/adminPerfil.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <title>Chancho va! </title>
+         <!-- FontAwesome-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" /> 
+    </head>
+<body>
+    <%- include('../partials/header')  %>
+    <main class="userPerfilContainer">
+        <div class="contenedorMenuUser">
+            <div class="fotoPerfil">
+                <img class="foto" src="/images/defaultImagePerfil.png" alt="Imagen De Perfil">
+            </div>
+            <div class="menuPerfil">
+                <div class="menu">
+                    <img class="item" src="/images/fichasinfondo.png" alt="item">
+                    <h4 class="nombreMenu">Usuarios Registrados</h4>
+                </div>
+                <div class="menu">
+                    <img class="item" src="/images/fichasinfondo.png" alt="item">
+                    <h4 class="nombreMenu2">Preguntas De Usuarios</h4>
+                </div>
+                <div class="menu">
+                    <img class="item" src="/images/fichasinfondo.png" alt="item">
+                    <h4 class="nombreMenu3">Envios Pendientes</h4>
+                </div>
+                <div class="menu">
+                    <img class="item" src="/images/fichasinfondo.png" alt="item">
+                    <h4 class="nombreMenu4">Paquetes Devueltos</h4>
+                </div>
+                <div class="menu">
+                    <img class="item" src="/images/fichasinfondo.png" alt="item">
+                    <h4 class="nombreMenu5">Reclamos</h4>
+                </div>
+            </div>
+        </div>
+        <div class="contenedorDatosUser">
+            <div class="contenedorBienvenido">
+                <div class="bienvenido">
+                    <img class="animacionPoker corazon" src="/images/corazonPoker.PNG" alt="">
+                    <img class="animacionPoker pikas" src="/images/pikasPoker.PNG" alt="">
+                    <img class="animacionPoker trebol" src="/images/trebolPoker.PNG" alt="">
+                    <img class="animacionPoker diamante" src="/images/diamantePoker.PNG" alt="">
+                    <h1 class="inicio">Bienvenido Admin</h1>
+                </div>
+            </div>
+            <div class="perfilAdmin">  
+                <div class="nombre">
+                    <h1>Edición de Datos</h1>
+                </div>
+                <div class="formulario">
+                    <form action="">
+                        <input type="text">
+                    </form>
+                </div>
+            </div>
+            <div class="usuariosRegistrados">
+                <h1>no hay usuarios</h1>
+            </div>
+            <div class="preguntasUsuarios">
+                <h1>no hay preguntas</h1>
+            </div>
+            <div class="enviosPendientes">
+                <h1>no hay envios pendientes</h1>
+            </div>
+            <div class="paquetesDevueltos">
+                <h1>no hay paquetes devueltos</h1>
+            </div>
+            <div class="reclamos">
+                <h1>no hay reclamos</h1>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer')  %>
+    <script src="/js/admin.js"></script>
+    <script src="/js/efecto.js"></script>
+</body>
+</html>
