@@ -208,7 +208,7 @@ header.contenedor div.contenedorHeader div.contenedorOculto div.categoriaProduct
 }
 
 
-@media (min-width: 1240px) {
+@media (min-width: 1039px) {
 
     header.contenedor {
         height: 110px;
@@ -276,7 +276,7 @@ header.contenedor div.contenedorHeader div.contenedorOculto div.categoriaProduct
     }
 
     header.contenedor div.contenedorHeader div.contenedorOculto div.categorias {
-        margin-top: 6px
+        margin-top: 6px;
     }
 
     header.contenedor div.contenedorHeader div.contenedorOculto div.ofertas {

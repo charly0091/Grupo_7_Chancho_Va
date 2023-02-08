@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 @import url(header.css);
+@import url(footer.css);
 * {
     padding: 0;
     margin: 0;
@@ -174,77 +175,3 @@ main.registro div.contenedor form span a{
 
 
 /* END MAIN */
-
-/*footer css*/
- 
-footer{
-    padding: 0;
-    width: 100vw;
-    height: 7rem;
-    background: var(--negro);
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
- 
-footer p{
-    font-size: 0.8rem;
-}
- 
-footer a{
-    color: white;
-}
- 
-footer a:hover{
-    color: var(--rojo);
-}
- 
-footer ul{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: space-around;
-    width: 15rem;
-}
- 
-footer h3{
-    color: var(--azul);
-}
- 
-footer i{
-    background: var(--negro);
-}
- 
-.footerUl{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
- 
-.desktop{
-    display:none;
-}
- 
-@media screen and (max-width: 767px){
- 
-    .noPhone{
-        display: none;
-    }
-}
- 
-@media screen and (min-width: 769px) {
- 
-    .noOther{
-        display: none;
-    }
- 
-}
- 
-@media screen and (min-width: 992px){
- 
-    .desktop{
-        display: flex;
-    }
-}
