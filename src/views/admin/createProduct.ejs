@@ -17,7 +17,7 @@
          <div class="contenedor">
             <h2>Agregar producto</h2>
             <hr>
-            <form method="POST" action="/createProduct">
+            <form method="POST" action="/admin/createProduct">
                 <div class="input">
                     <label for="productName">Nombre del producto</label>
                     <input class="estiloInput" type="text" name="productName" id="productName" placeholder="Nombre del producto" required>                
@@ -42,7 +42,7 @@
                 <span class="mensajeError">La extensión de la imágen no es compatible</span>
                 <div class="input">
                     <label for="productDescription">Descripción del producto</label>
-                    <textarea name="Descripción del producto" class="estiloInput" cols="30" rows="10" required></textarea>
+                    <textarea name="productDescription" class="estiloInput" cols="30" rows="10" required></textarea>
                     <span class="mensajeError">Debe ingresar le descripcion del producto</span>
                 </div>    
                 <div class="boton">
