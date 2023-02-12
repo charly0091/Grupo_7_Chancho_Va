@@ -28,7 +28,7 @@
                 </div>
                 <div class="menu">
                     <img class="item" src="/images/fichasinfondo.png" alt="item">
-                    <h4 class="nombreMenu3">Envios Pendientes</h4>
+                    <h4 class="nombreMenu3">Envíos Pendientes</h4>
                 </div>
                 <div class="menu">
                     <img class="item" src="/images/fichasinfondo.png" alt="item">
@@ -56,24 +56,163 @@
                 </div>
                 <div class="formulario">
                     <form action="">
-                        <input type="text">
+                        <div class="divInput">
+                            <label class="label" for="name">Nombre de Usuario</label>
+                            <input class="input" type="text" name="name" required>
+                        </div>
+                        <div class="divInput">
+                            <label class="label" for="email">E-mail</label>
+                            <input class="input" type="email" name="email" required>
+                        </div>
+                        <div class="divInput">
+                            <label class="label" for="password">Contraseña</label>
+                            <input class="input" type="password" name="password" required>
+                        </div>
+                        <div class="divInput">
+                            <label class="label" for="password2">Confirmar Contraseña</label>
+                            <input class="input" type="password" name="password2" required>
+                        </div>
+                        <div class="divInput">
+                            <label class="label" for="cel">Número de Teléfono</label>
+                            <input class="input" type="text" name="cel" required>
+                        </div>
+                        <div class="divInput">
+                            <label class="label" for="cel2">Número de Teléfono Alternativo</label>
+                            <input class="input" type="text" name="cel2" required>
+                        </div>
+                        <div class="boton">
+                            <button type="submit" class="guardar">Guardar Cambios</button>
+                        </div>
                     </form>
                 </div>
             </div>
             <div class="usuariosRegistrados">
-                <h1>no hay usuarios</h1>
+                <div class="nombre">
+                    <h1>Usuarios Registrados</h1>
+                </div>
+                <div class="buscador">
+                    <input class="input" type="search" name="search" placeholder="¿Qué usuario buscas?">
+                </div>
+                <div class="contenedorDeTargetas">
+                    <div class="targetaUsuario">
+                        <figure class="cajaImagen">
+                            <img class="foto2" src="/images/defaultImagePerfil.png" alt="Imagen De Perfil">
+                        </figure>
+                        <article class="datos">
+                            <h2 class="nombre">Nombre de Usuario</h2>
+                            <p class="dato">Email</p>
+                            <p class="dato">Contraseña</p>
+                            <p class="dato">Número de Teléfono</p>
+                            <p class="dato">Número Alternativo</p>
+                        </article>
+                    </div>
+                    <div class="usuarioGrande">
+                        <div class="targetaUsuarioGrande">
+                            <figure class="cajaImagenGrande">
+                                <img class="fotoGrande" src="/images/defaultImagePerfil.png" alt="Imagen De Perfil">
+                            </figure>
+                            <article class="datos">
+                                <h2 class="nombre">Nombre de Usuario</h2>
+                                <p class="dato">Email</p>
+                                <p class="dato">Contraseña</p>
+                                <p class="dato">Número de Teléfono</p>
+                                <p class="dato">Número Alternativo</p>
+                            </article>
+                        </div>
+                        <div class="botones">
+                            <div class="boton">
+                                <button type="submit" class="borrar">Borrar Usuario</button>
+                            </div>
+                            <div class="boton">
+                                <button type="submit" class="guardar">Blanquear Contraseña</button>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
             </div>
             <div class="preguntasUsuarios">
-                <h1>no hay preguntas</h1>
+                <div class="nombre">
+                    <h1>Preguntas de Usuarios</h1>
+                </div>
+                <div class="contenedorPreguntas">
+                    <h2 class="nombreUsuario">Usuario a hecho esta pregunta</h2>
+                    <article class="preguntaProducto">
+                        <img class="fotoArticulo" src="/images/imageDefault.jpg" alt="Imagen De Producto">
+                        <p class="datoProducto">Nombre Del Producto</p>
+                        <p class="datoProducto">Precio</p>
+                        <div class="botonPregunta">
+                            <p class="verPregunta">Ver pregunta</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="contenedorRespuesta">
+                    <div class="ventanaPregunta">
+                        <p class="pregunta">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis sed quasi maxime praesentium enim ex ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis sed quasi maxime praesentium enim ex ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis sed quasi maxime praesentium enim ex ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="responder">
+                        <input class="input" type="text" name="respuesta" placeholder="Responder Pregunta">
+                        <button type="submit" class="enviarRespuesta">Enviar</button>
+                    </div>
+                </div>
             </div>
             <div class="enviosPendientes">
-                <h1>no hay envios pendientes</h1>
+                <div class="nombre">
+                    <h1>Envíos Pendientes</h1>
+                </div>
+                <div class="contenedorEnvios">
+                    <h2 class="nombreUsuarioEnvio">Envío Pendiente a Usuario</h2>
+                    <article class="productoEnviar">
+                        <img class="fotoArticuloEnviar" src="/images/imageDefault.jpg" alt="Imagen De Producto">
+                        <p class="datoProductoEnviar">Nombre Del Producto</p>
+                        <p class="datoProductoEnviar">Tipo de Envío</p>
+                        <div class="botonEnvio">
+                            <p class="verEnvio">Ver Opciones De Envío</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="contenedorMediosEnvios">
+                    <div class="ventanaEnvio">
+                        <div class="botonEnviar">
+                            <p class="enviarPaquete">Moto Mensajería</p>
+                        </div>
+                        <div class="botonEnviar">
+                            <p class="enviarPaquete2">Correo Argentino</p>
+                        </div>
+                        <div class="botonEnviar">
+                            <p class="enviarPaquete3">Correo Privado</p>
+                        </div>
+                    </div>
+                    <div class="envioCorrecto">
+                        <p class="enviado">Producto Enviado Correctamente Muchas Gracias</p>
+                    </div>
+                </div>
             </div>
             <div class="paquetesDevueltos">
-                <h1>no hay paquetes devueltos</h1>
+                <div class="nombre">
+                    <h1>Paquetes Devueltos</h1>
+                </div>
+                <div class="contenedorPaquete">
+                    <h2 class="nombreUsuarioPaquete">Paquete Devuelto Por Usuario</h2>
+                    <article class="paqueteDevuelto">
+                        <img class="fotoPaquete" src="/images/imageDefault.jpg" alt="Imagen De Producto">
+                        <p class="datoPaqueteDevuelto">Nombre Del Producto</p>
+                        <p class="datoPaqueteDevuelto">Código De Devolución</p>
+                        <div class="botonVerReclamo">
+                            <p class="verReclamo">Ver Reclamo</p>
+                        </div>
+                    </article>
+                </div>
             </div>
             <div class="reclamos">
-                <h1>no hay reclamos</h1>
+                <div class="nombre">
+                    <h1>Reclamos</h1>
+                </div>
+                <div class="contenedorReclamo">
+                    <h2 class="nombreUsuarioReclamo">Reclamo Hecho Por Usuario</h2>
+                    <div class="ventanaReclamo">
+                        <p class="reclamo">Este producto anda peor que los links de esta página. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, cupiditate, accusamus aperiam sit corporis maiores iusto dignissimos quod harum omnis doloremque dolores cumque, aliquid repellendus? Sequi velit nesciunt pariatur consequatur?</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

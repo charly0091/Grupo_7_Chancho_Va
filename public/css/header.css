@@ -9,7 +9,7 @@ header.contenedor div.contenedorHeader{
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 100vw;
+    width: 100%;
 }
 
 header.contenedor div.contenedorHeader div.menu div.barra{
