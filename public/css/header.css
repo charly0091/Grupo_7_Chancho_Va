@@ -54,6 +54,7 @@ header.contenedor div.contenedorHeader div.contenedorOculto {
 
 header.contenedor div.contenedorHeader div.contenedorOculto.active{
     display: block;
+    z-index: 1001;
 }
 
 header.contenedor div.contenedorHeader div.contenedorOculto div.user {
@@ -151,6 +152,7 @@ header.contenedor div.contenedorHeader div.buscador div.barraBuscadora.active{
     height: 85px;
     background: linear-gradient(93deg, #6a7efc, #ff5656);
     border-radius: 0 0 25px 25px;
+    z-index: 1001;
 }
 
 header.contenedor div.contenedorHeader div.buscador div.barraBuscadora input.busqueda{

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/pagoTargeta.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <title>Chancho va! </title>
+         <!-- FontAwesome-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+    </head>
+<body>
+    <%- include('../partials/header')  %>
+
+    <main class="contenedorTargeta">
+        <div class="contenedorPresentacion">
+            <div class="presentacion">
+                <div class="parrafoPresentacion">
+                    <p class="contenido">Complete con los datos de su targeta</p>
+                </div>
+            </div>
+        </div>
+        <div class="contenedorTargetas">
+            <div class="targeta">
+                <div class="targeta2">
+                    <div class="formularioDePago">
+                        <form class="formulario" action="">
+                            <div class="datos">
+                                <input class="input" type="text" placeholder="Ingrese su número de targeta">
+                            </div>
+                            <div class="datos">
+                                <input class="input" type="text" placeholder="Ingrese nombre y apellido">
+                            </div>
+                            <div class="datosChicos">
+                                <div class="datos2">
+                                    <select name="mes" id="mes" class="seleccion">
+                                        <option value="">Elegí Mes</option>
+                                        <option value="Enero">Enero</option>
+                                        <option value="Febrero">Febrero</option>
+                                        <option value="Marzo">Marzo</option>
+                                        <option value="Abril">Abril</option>
+                                        <option value="Mayo">Mayo</option>
+                                        <option value="Junio">Junio</option>
+                                        <option value="Julio">Julio</option>
+                                        <option value="Agosto">Agosto</option>
+                                        <option value="Septiembre">Septiembre</option>
+                                        <option value="Octubre">Octubre</option>
+                                        <option value="Noviembre">Noviembre</option>
+                                        <option value="Diciembre">Diciembre</option>
+                                    </select>
+                                </div>
+                                <div class="datos2">
+                                    <select name="anio" id="anio" class="seleccion">
+                                        <option value="">Elegí Año</option>
+                                        <option value="Enero">2023</option>
+                                        <option value="Febrero">2024</option>
+                                        <option value="Marzo">2025</option>
+                                        <option value="Abril">2026</option>
+                                        <option value="Mayo">2027</option>
+                                        <option value="Junio">2028</option>
+                                        <option value="Julio">2029</option>
+                                        <option value="Agosto">2030</option>
+                                        <option value="Septiembre">2031</option>
+                                        <option value="Octubre">2032</option>
+                                        <option value="Noviembre">2033</option>
+                                        <option value="Diciembre">2034</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="datos3">
+                                <input class="input" type="text" placeholder="CVV">
+                            </div>
+                            <div class="boton">
+                                <button type="submit" class="comprar">Terminar Compra</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('../partials/footer')  %>
+    <script src="/js/efecto.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url(header.css);
+@import url(footer.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+:root {
+    /*Paleta de colores*/
+    --rojo: #ff5656;
+    --gris: #edf2f6;
+    --azul: #6a7efc;
+    --negro: #494953;
+    /* Fuentes */
+    --fuente:'Source Sans Pro', sans-serif;  
+    /* Tamaños tipográficos */
+    --parrafos: 12px;
+    --titulos: 24px;
+    --precio: 18px;
+    --descuento: 16px;
+    --descripcion: 16px;
+}
+
+/* CARTA */
+
+main.contenedorMetodosDePago {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(/images/fondo.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.carta {
+    display: grid;
+    place-items: center;
+    position: relative;
+    height: 170px;
+    width: 250px;
+    background-color: #191919;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.carta::before {
+    content: "";
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    background: linear-gradient(#ffef0f, #b400fb);
+    animation: colores 5s linear infinite;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.carta::after {
+    content: "";
+    position: absolute;
+    background-color: #191919;
+    inset: 3px;
+    border-radius: 5px;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.carta div.metodoDePago {
+    position: absolute;
+    color: white;
+    z-index: 999;
+    font-size: 30px;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.carta div.metodoDePago a {
+    text-decoration: none;
+    color: white;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.carta div.icono {
+    position: absolute;
+    color: white;
+    z-index: 999;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.carta div.icono2 {
+    position: absolute;
+    color: white;
+    z-index: 999;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.carta div.icono3 {
+    position: absolute;
+    color: white;
+    z-index: 999;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago {
+    margin-top: -20px;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago.active {
+    display: block;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago2 {
+    margin-top: -20px;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago2.active {
+    display: block;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago3 {
+    margin-top: -20px;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago3.active {
+    display: block;
+    margin-bottom: 20px;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago p.explicacion {
+    font-size: 15px;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago2 p.explicacion {
+    font-size: 15px;
+}
+
+main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago3 p.explicacion {
+    font-size: 15px;
+}
+
+/* ANIMACIONES*/
+
+@keyframes colores {
+    0%{transform: rotate(0deg);}
+    0%{transform: rotate(360deg);}
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 810px) {
+    main.contenedorMetodosDePago {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.carta {
+        width: 340px;
+        height: 210px;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago {
+        width: 340px;
+        font-size: 30px;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago p.explicacion {
+        font-size: 20px;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago2 {
+        width: 340px;
+        font-size: 30px;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago2 p.explicacion {
+        font-size: 20px;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago3 {
+        width: 340px;
+        font-size: 30px;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago3 p.explicacion {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    main.contenedorMetodosDePago {
+        margin: 0 50px;
+        justify-content: space-around;
+        background: url(/images/fondo.jpg) repeat center top;
+        background-size: inherit;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta {
+        margin: 50px 90px;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.carta {
+        width: 400px;
+        height: 250px;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.carta div.metodoDePago a {
+        font-size: 45px;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago {
+        width: 400px;
+        font-size: 35px;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago p.explicacion {
+        font-size: 30px;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago2 {
+        width: 400px;
+        font-size: 35px;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago2 p.explicacion {
+        font-size: 30px;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago3 {
+        width: 400px;
+        font-size: 35px;
+    }
+
+    main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago3 p.explicacion {
+        font-size: 30px;
+    }
+}

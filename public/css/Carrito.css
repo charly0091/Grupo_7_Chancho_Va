@@ -126,6 +126,8 @@ div.pay {
   margin: 0.8rem 2rem;
   transition: all 1s ease;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
 .primary-button:hover{
