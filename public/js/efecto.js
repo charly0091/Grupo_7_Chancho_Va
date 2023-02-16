@@ -7,6 +7,8 @@ let menus = document.querySelector(".palabra")
 let producto = document.querySelector(".categoriaProductos")
 let iconoBuscardor = document.querySelector(".iconoBuscador")
 let barraBuscadora = document.querySelector(".barraBuscadora")
+let categorias2 = document.querySelector(".categorias2")
+let categoriaProductos2 = document.querySelector(".categoriaProductos2")
 
 
 barra.addEventListener("click", () => {
@@ -22,4 +24,8 @@ menus.addEventListener("click",() => {
 
 iconoBuscardor.addEventListener("click",() => {
     barraBuscadora.classList.toggle("active")
+})
+
+categorias2.addEventListener("click", () => {
+    categoriaProductos2.classList.toggle("active")
 })

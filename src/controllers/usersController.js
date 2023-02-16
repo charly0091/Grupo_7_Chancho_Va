@@ -15,11 +15,12 @@ module.exports = {
         res.render("users/register" , { style : "register.css" });
     },
     crear: (req, res) => {
-        let user = {
-            id: users.length + 1,
+        let newUser = {
+            id: req.body.id,
             email: req.body.email,
             password: req.body.password,
-            phone: req.body.phone,
+            password2: req.body.password2,
+            cel: req.body.cel
         }
         users.push(user);
         writeJson(users);

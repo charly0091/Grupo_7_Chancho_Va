@@ -7,13 +7,13 @@
     <%- include("../partials/header") %> 
     <main class="mainLogin">
         <div class="form-container">
-            <h2>Login</h2>
+            <h2 class="nombre">Login</h2>
             <hr>
-            <form action="" method="">
-                <div class="form">
+            <div class="contenedorFormulario">
+                <form class="formularioLogin" action="" method="">
                     <div class="input-container">
                         <p class="input-text">Dirección de correo electrónico.</p>
-                        <input class="input-style" type="email" name="email" placeholder="ej: veronikos@lomejor.com">
+                        <input class="input-style" type="email" name="email" placeholder="ej: veroperreointenso@lomejor.com">
                         <span class="error-message">Debe ingresar su email</span>
                     </div>
                     <div class="input-container">
@@ -29,17 +29,17 @@
                         <button type="submit" class="btn-submit"><a href="/admin/adminPerfil"> Ingresar</a></button>
                         <span class="error-message">Credenciales inválidas</span>
                     </div>
-                    <div class="resetPass">
-                        <p class="text-remember"><a href="/reset-password">¿Olvidaste tu contraseña?</a></p>
-                    </div>
-                    <p class="text-remember" id="noTienesCuenta">¿Aun no tienes cuenta?</p>
-                    <div class="button-container">
-                        <a href="register" class="btn-submit btn-acc">Crear cuenta</a>
+                    <div class="contenedorBotones">
+                        <div class="resetPass">
+                            <p class="text-remember"><a href="/reset-password">¿Olvidaste tu contraseña?</a></p>
+                        </div>
+                        <div class="registrate">
+                            <p class="text-remember" id="noTienesCuenta"><a href="/users/register">¿Aun no tienes cuenta?</a></p>
+                        </div>
                     </div>
 
-                    <p class="text-remember">Vuelve a la <a href="/">Pagina principal</a></p>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </main>
     <%- include("../partials/footer") %> 

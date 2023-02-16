@@ -4,7 +4,11 @@ header.contenedor {
     height: 80px;
 }
 
-header.contenedor div.contenedorHeader{
+header.contenedor div.contenedorHeaderDesktop {
+    display: none;
+}
+
+header.contenedor div.contenedorHeaderMobileTablet{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,7 +16,7 @@ header.contenedor div.contenedorHeader{
     width: 100%;
 }
 
-header.contenedor div.contenedorHeader div.menu div.barra{
+header.contenedor div.contenedorHeaderMobileTablet div.menu div.barra{
     width: 25px;
     height: 25px;
     margin-left: 20px;
@@ -20,7 +24,7 @@ header.contenedor div.contenedorHeader div.menu div.barra{
     margin-bottom: 7px;
 }
 
-header.contenedor div.contenedorHeader div.menu div.barra span{
+header.contenedor div.contenedorHeaderMobileTablet div.menu div.barra span{
     display: block;
     width: 100%;
     height: 2px;
@@ -30,20 +34,20 @@ header.contenedor div.contenedorHeader div.menu div.barra span{
     transform-origin: 0px 100%;
 }
 
-header.contenedor div.contenedorHeader div.menu div.barra span.activelinea1{
+header.contenedor div.contenedorHeaderMobileTablet div.menu div.barra span.activelinea1{
     transform: rotate(45deg) translate(-1px, 2px);   
 }
 
-header.contenedor div.contenedorHeader div.menu div.barra span.activelinea2{
+header.contenedor div.contenedorHeaderMobileTablet div.menu div.barra span.activelinea2{
     opacity: 0;
     margin-left: -50px;
 }
 
-header.contenedor div.contenedorHeader div.menu div.barra span.activelinea3 {
+header.contenedor div.contenedorHeaderMobileTablet div.menu div.barra span.activelinea3 {
     transform: rotate(-45deg) translate(-3px, 1px);
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto {
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto {
     position: absolute;
     top: 80px;
     display: none;
@@ -52,54 +56,54 @@ header.contenedor div.contenedorHeader div.contenedorOculto {
     border-radius: 0 0 25px 25px;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto.active{
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto.active{
     display: block;
     z-index: 1001;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.user {
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perfilCarrito div.user {
     display: flex;
     font-size: 20px;
     padding: 15px;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.user i{
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perfilCarrito div.user i{
     padding-right: 5px;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.carrito {
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perfilCarrito div.carrito {
     display: flex;
     font-size: 20px;
     padding: 15px;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.carrito i{
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perfilCarrito div.carrito i{
     padding-right: 5px;
     margin-left: -3px;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.pagos {
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.pagos {
     display: flex;
     font-size: 20px;
     padding: 15px;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.pagos i{
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.pagos i{
     padding-right: 5px;
     margin-left: 5px;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.pagos h5 {
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.pagos h5 {
     padding-left: 3px;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.ofertas {
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.ofertas {
     display: flex;
     font-size: 20px;
     padding: 15px;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.categorias {
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.categorias {
     display: flex;
     font-size: 20px;
     padding: 15px;
@@ -107,36 +111,37 @@ header.contenedor div.contenedorHeader div.contenedorOculto div.categorias {
 }
 
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.categorias div.flecha i{
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.categorias div.flecha i{
     padding-left: 10px;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.categoriaProductos{
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.categoriaProductos{
     font-size: 20px;
     padding: 5px 0px 0px 55px;
     display: none;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.categoriaProductos.active{
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.categoriaProductos.active{
     display: block;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.categoriaProductos h5{
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.categoriaProductos h5{
     padding-bottom: 5px;
+    margin: 10px;
 }
 
-header.contenedor div.contenedorHeader div.logo a img {
+header.contenedor div.contenedorHeaderMobileTablet div.logo a img {
     width: 100px;
     height: 100px;
     max-height: 150px;
     max-width: 150px;
 }
 
-header.contenedor div.contenedorHeader div.logo h3{
+header.contenedor div.contenedorHeaderMobileTablet div.logo h3{
     display: none;
 }
 
-header.contenedor div.contenedorHeader div.buscador div.barraBuscadora{
+header.contenedor div.contenedorHeaderMobileTablet div.buscador div.barraBuscadora{
     display: none;
     position: absolute;
     top: 80px;
@@ -145,7 +150,7 @@ header.contenedor div.contenedorHeader div.buscador div.barraBuscadora{
     margin-left: -160px;
 }
 
-header.contenedor div.contenedorHeader div.buscador div.barraBuscadora.active{
+header.contenedor div.contenedorHeaderMobileTablet div.buscador div.barraBuscadora.active{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,7 +160,7 @@ header.contenedor div.contenedorHeader div.buscador div.barraBuscadora.active{
     z-index: 1001;
 }
 
-header.contenedor div.contenedorHeader div.buscador div.barraBuscadora input.busqueda{
+header.contenedor div.contenedorHeaderMobileTablet div.buscador div.barraBuscadora input.busqueda{
     box-shadow: 0 0 5px;
     border: 1px solid lightgrey;
     border-radius: 20px;
@@ -165,33 +170,33 @@ header.contenedor div.contenedorHeader div.buscador div.barraBuscadora input.bus
     padding:0 15px 0;
 }
 
-header.contenedor div.contenedorHeader div.buscador div.iconoBuscador{
+header.contenedor div.contenedorHeaderMobileTablet div.buscador div.iconoBuscador{
     font-size: 30px;
     margin-right:20px;
     cursor: pointer;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.user h5 a{
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.user h5 a{
     text-decoration: none;
     color: black;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.carrito h5 a {
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.carrito h5 a {
     text-decoration: none;
     color: black;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.pagos h5 a {
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.pagos h5 a {
     text-decoration: none;
     color: black;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.ofertas h5 a {
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.ofertas h5 a {
     text-decoration: none;
     color: black;
 }
 
-header.contenedor div.contenedorHeader div.contenedorOculto div.categoriaProductos h5 a {
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.categoriaProductos h5 a {
     text-decoration: none;
     color: black;
 }
@@ -199,13 +204,14 @@ header.contenedor div.contenedorHeader div.contenedorOculto div.categoriaProduct
 /* MEDIA HEADER */
 
 @media (min-width: 768px) {
-    header.contenedor div.contenedorHeader div.buscador div.barraBuscadora.active {
+
+    header.contenedor div.contenedorHeaderMobileTablet div.buscador div.barraBuscadora.active {
         border-radius: 0 0 25px 25px;
         width: 500px;
         margin-left: -250px;
     }
 
-    header.contenedor div.contenedorHeader div.contenedorOculto {
+    header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto {
         width: 50%;
     }
 }
@@ -217,90 +223,187 @@ header.contenedor div.contenedorHeader div.contenedorOculto div.categoriaProduct
         height: 110px;
     }
 
-    header.contenedor div.contenedorHeader div.logo {
+    header.contenedor div.contenedorHeaderMobileTablet {
+        display: none;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 110px;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.logo {
         display: flex;
         flex-direction: column;
         max-width: 150px;
         justify-content: center;
         align-items: center;
-        margin-bottom: 15px;
-        margin-left: 15px;
+        margin: 0 0 5px 25px;
     }
 
-    header.contenedor div.contenedorHeader div.logo a {
-        margin-bottom: -15px;
-    }
-
-    header.contenedor div.contenedorHeader div.logo a img {
+    header.contenedor div.contenedorHeaderDesktop div.logo a img {
         height: 100px;
     }
 
-    header.contenedor div.contenedorHeader div.logo h3 {
+    header.contenedor div.contenedorHeaderDesktop div.logo h3 {
         display: flex;
+        margin-top: -15px;
+        margin-bottom: 5px;
     }
 
-    header.contenedor div.contenedorHeader div.buscador div.iconoBuscador {
-        display: none;
-    }
-
-    header.contenedor div.contenedorHeader div.buscador div.barraBuscadora {
-        display: block;
-        top: 30px;
-        width: 500px;
-        left: 48%;
-    }
-
-    header.contenedor div.contenedorHeader div.menu {
-        display: none;
-    }
-
-    header.contenedor div.contenedorHeader div.contenedorOculto{
+    header.contenedor div.contenedorHeaderDesktop div.buscador {
         display: flex;
         justify-content: center;
         align-items: center;
-        top: 55px;
-        left: 25%;
-        right: 25%;
-        background:none;
+        flex-direction: column;
     }
 
-    header.contenedor div.contenedorHeader div.contenedorOculto div.user {
-        position: absolute;
-        top: -30px;
-        right: -310px;
-        font-size: var(--titulos);
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.barraBuscadora {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 500px;
     }
 
-    header.contenedor div.contenedorHeader div.contenedorOculto div.carrito {
-        position: absolute;
-        top: -30px;
-        right: -195px;
-        font-size: var(--titulos);
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.barraBuscadora input.busqueda {
+        box-shadow: 0 0 5px;
+        border: 1px solid lightgrey;
+        border-radius: 20px;
+        width: 100%;
+        height:35px;
+        outline: none;
+        padding:0 15px 0;
+        margin-top: 25px;
     }
 
-    header.contenedor div.contenedorHeader div.contenedorOculto div.categorias {
-        margin-top: 6px;
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    header.contenedor div.contenedorHeader div.contenedorOculto div.ofertas {
-        margin-top: 2px;
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.pagos {
+        margin: 10px;
+        font-size: 20px;
     }
 
-    header.contenedor div.contenedorHeader div.contenedorOculto div.categoriaProductos.active{
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.pagos h5 a {
+        text-decoration: none;
+        color: black;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.ofertas {
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.ofertas h5 a {
+        text-decoration: none;
+        color: black;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.categorias2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.categorias2 div.flecha {
+        margin-left: 7px;
+        cursor: pointer;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.categorias2 div.categoriaProductos2 {
+        display: none;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.categorias2 div.categoriaProductos2.active {
         padding: 0;
         position: absolute;
         display: flex;
-        top: 50px;
-        left: 50%;
-        background-color: var(--rojo);
+        background-color: none;
         height: 35px;
         border-radius: 0 0 25px 25px;
+        right: -280px;
     }
 
-    header.contenedor div.contenedorHeader div.contenedorOculto div.categoriaProductos.active h5{
-        padding: 0 20px;
-
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.categorias2 div.categoriaProductos2 h5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+        height: 210px;
+        width: 210px;
+        background: linear-gradient(180deg, #ff5656, #edf2f6, #494953);
+        border-radius: 0 0 20px 20px;
+        font-size: 25px;
     }
+
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.categorias2 div.categoriaProductos2:hover h5 {
+        background: linear-gradient(180deg,#ff5656, #494953, #edf2f6);
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.categorias2 div.categoriaProductos2:hover h5 a {
+        color: white;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.categorias2 div.categoriaProductos2 h5 a {
+        text-decoration: none;
+        color: black;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.userCarrito {
+        display: flex;
+        margin-right: 25px;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.userCarrito div.user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 15px;
+        font-size: 25px;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.userCarrito div.user i {
+        margin-bottom: 1px;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.userCarrito div.user h5{
+        margin-top: 5px;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.userCarrito div.user h5 a {
+        text-decoration: none;
+        color: black;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.userCarrito div.carrito {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 15px;
+        font-size: 25px;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.userCarrito div.carrito h5 {
+        margin-top: 5px;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.userCarrito div.carrito h5 a {
+        text-decoration: none;
+        color: black;
+    }
+
 }
 
 

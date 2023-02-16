@@ -27,134 +27,142 @@
     font-family: var(--fuente);
 }
 
-
-
- 
-body {
-    width: 100vw;
-}
-
-.main2 {
+main.homeMain {
     width: 100%;
-    margin: 0 auto;
 }
 
-a {
-    display: inline;
+main.homeMain div.contenedorHome {
+    width: 100%;
+}
+
+main.homeMain div.contenedorHome nav.contenedorCarrusel {
+
+}
+
+main.homeMain div.contenedorHome nav.contenedorCarrusel section.homeCarrusel {
+    width: 100%;
+}
+
+main.homeMain div.contenedorHome nav.contenedorCarrusel section.homeCarrusel img.banner {
+    width: 100%;
+}
+
+main.homeMain div.contenedorHome  a {
     text-decoration: none;
+    color: black;
 }
 
-/* CARRUSEL*/
-
-.home__carrusel {
-    width: 100vw;
-}
-.home__carrusel img {
-   width: 100vw;
-}
-
-/* MENU TEMATICO*/
-
-.home__menu--tematico {
-    display: flex;    
-    flex-direction: column;
-    align-items: center; 
-    } 
-
-.home__menu--tematico img {
-    width: 90vw;
-}
-.home__menu--tematico img:hover {
-    box-shadow: 0 0 5px grey;
-    border-radius: 20px;
-}
-
-
-    /*PRODUCTOS*/
-.home__productos h2 {
+main.homeMain div.contenedorHome a h2.nombreSubCategoria {
     text-align: center;
     padding: 5px;  
     border-top: black solid 2px 0px;
     width: 100%;
     font-size: 24px;
-    background-color: var(--azul);
+    background: linear-gradient(360deg, #494953, #FF5656, #6A7EFC);
     margin: 2px 0px; 
-    color: #fff;
-    }
-    
+    animation-name: colores;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 
-section div.home__container--productos {
+main.homeMain div.contenedorHome section.homeMenuTematico {
+    display: flex;    
+    flex-direction: column;
+    align-items: center; 
     width: 100%;
-    justify-content: center;
-   
 }
 
-section div.home__container--productos img {
-   width: 150px;
-    height: 150px;
-    padding: 0%;
-
+main.homeMain div.contenedorHome section.homeMenuTematico article.contenedorCategoria {
+    width: 90%;
 }
 
+main.homeMain div.contenedorHome section.homeMenuTematico article.contenedorCategoria img.homeCategoria {
+    width: 100%;
+}
 
-section div.home__container--productos article.home__tarjeta--producto {
+main.homeMain div.contenedorHome section.homeMenuTematico article.contenedorCategoria img.homeCategoria:hover {
+    box-shadow: 0 0 5px grey;
+    border-radius: 20px;
+}
+
+main.homeMain div.contenedorHome section.homeProductos {
+    width: 100%;
     display: flex;
-    flex-direction: row;  
-    font-size:var(--descripcion);
+    align-items: center;
+    overflow: auto;
+    white-space: nowrap;
 }
 
-section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--img {
-   padding-left: 5px;
-   margin-bottom: 2px;   
-   padding-right: 3px;
+main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos {
+    width: 290px;
+    height: 400px;
+    border: 1px solid lightgray;
+    box-shadow: 0px 5px 5px;
+    border-radius: 10px;
+    margin: 10px;
 }
 
-section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--descripcion {
-    text-align: center;
-    margin: auto; 
-    padding: 3px; 
-    justify-content: space-around;
-    
+main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos article.homeTarjetaProducto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+   
+main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos article.homeTarjetaProducto div.homeTarjetaImagen {
+    width: 100%;
 }
 
-section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--descripcion h3 {
-    font-size: 18px;
-    margin: 4px;
+main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos article.homeTarjetaProducto div.homeTarjetaImagen a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--descripcion p.home_precio {
-    font-size: var(--precio);
+main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos article.homeTarjetaProducto div.homeTarjetaImagen a img.imagenJuego {
+    width: 250px;
+    height: 250px;
 }
 
-.home__tarjeta--descripcion .btn-agregarAlCarrito {
+main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos article.homeTarjetaProducto div.homeTarjetaDescripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos article.homeTarjetaProducto div.homeTarjetaDescripcion h3.nombreJuego {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos article.homeTarjetaProducto div.homeTarjetaDescripcion  p.juegoPrecio {
+    margin: 10px 0;
+}
+
+main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos article.homeTarjetaProducto div.homeTarjetaDescripcion a {
+    margin: 10px 0;
+}
+
+main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos article.homeTarjetaProducto div.homeTarjetaDescripcion a button.btnAgregarAlCarrito {
+    width: 200px;
+    height: 35px;
+    border: none;
+    box-shadow: 0 0 5px;
     border-radius: 15px;
+    font-size: 15px;
+    padding-bottom: 5px;
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
     font-weight: bold;
-    text-align: center;
-    background-color:var(--rojo);  
-    opacity: 0.8;
-    padding: 3px;  
-    height: 30px;
-    font-size: var(--descripcion);
-    box-shadow: 5px;
-    }
+    transition: all 1s ease;
+    cursor: pointer;
+}
 
-button.btn-agregarAlCarrito:hover{
+main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos article.homeTarjetaProducto div.homeTarjetaDescripcion a button.btnAgregarAlCarrito:hover {
     color: white;
-    background: linear-gradient(93deg,#ff5656, #6a7efc); 
-}
-
-.verMas {
-    position: absolute;
-    left: 0px;
-    color: #ff5656;
-    width: 100px;
-    padding: 0px;
-    margin: 0px;
-}
-
-img.verMas {
-    width: 100px !important ;
-    height: 50px !important ;
+    background: linear-gradient(93deg,#ff5656, #6a7efc);
 }
 
 /* BOTON WHATSAPP*/
@@ -197,436 +205,56 @@ img.verMas {
 
 /* TABLET */
  @media (min-width: 767px) {
-/*PRODUCTOS*/
-
-section div.home__container--productos {
-    display: flex;
-    flex-direction: row;   
-    flex-wrap: wrap;
-    justify-content: space-evenly ;      
-
-}
-.home__menu--tematico {
-    display: flex; 
-    flex-direction: row;   
-   justify-content: space-evenly;
-}
-
-.home__menu--tematico img {
-    width: 90%;
-    height: 370px;
-}
-
-.home__menu--tematico img:hover {
-    box-shadow: 0 0 5px grey;
-    border-radius: 20px;
-}
-
-.home__productos h2 {
-    text-align: center; 
-    border-top: black solid 1px;
-    font-size: 30px;
-    background-color: var(--azul) ;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    }
-
-
-    section div.home__container--productos {
-        display: flex;
-        flex-direction: row;   
-        flex-wrap: wrap;
-        justify-content: space-evenly; 
-    }
-
-    .home__productos h2 {
-        text-align: center; 
-        border-top: black solid 1px;
-        font-size: 30px;
-        background-color: var(--azul) ;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    section div.home__container--productos article.home__tarjeta--producto  {
-        display: inline-block;
-        justify-content: center;
-        margin: 10px;
-        padding: 5px;
-        height: 370px;
+    main.homeMain div.contenedorHome section.homeMenuTematico {
+        flex-direction: row;
         justify-content: space-evenly;
-        position: relative;
-        
     }
-
-    section div.home__container--productos article.home__tarjeta--producto:hover{
-        border: 1px solid grey;
-        box-shadow: 0 0 5px;
-        border-radius: 15px;
-    }
-
-    section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--img {
-        display: flex;
-        flex-direction: row;   
-        flex-wrap: wrap;
-        justify-content: flex-start;     
-          
-    }
-
-    section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--img img {
-        margin-top: 5px;
-        width: 230px;
-        height: 230px;
-        align-items: center;
-        justify-content: center;
+    main.homeMain div.contenedorHome nav.contenedorCarrusel section.homeCarrusel img.banner {
+        height: 250px;
     }
     
-    
-    .verMas {
-        position: absolute;
-        color: #ff5656;
-        top: 0;
-        right: 0;
-        width: 100px;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    img .verMas {
-        width: 100px;
-        height: 50px;
-    }
-
-    section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--descripcion {
-        flex: 1;
-        flex-wrap: wrap;
-        flex-direction: column;
-        text-align: center;
-        align-self: flex-end;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-    
+    main.homeMain div.contenedorHome section.homeMenuTematico article.contenedorCategoria {
+        margin: 15px;
     }
     
-    section div.home__container--productos article.home__tarjeta--producto p.home_precio {
-        font-size: 25px;    
-        padding: 8px;
+    main.homeMain div.contenedorHome section.homeMenuTematico article.contenedorCategoria img.homeCategoria {
+        height: 370px;
     }
-    .home__tarjeta--descripcion .btn-agregarAlCarrito {
-        border-radius: 20px;
-        font-weight: bold;
-        text-align: center;
-        background-color:var(--rojo);  
-        opacity: 0.8;
-        padding: 5px;  
-        width: 200px;
-        height: 40px;
-        font-size: var(--descripcion);
-        box-shadow: 5px;
-        margin-bottom: 5px;
-        }
     
-
-    button.btn-agregarAlCarrito:hover {
-    color: white;
-    background: linear-gradient(93deg,#ff5656, #6a7efc)
+    .container-btn-wp {
+        right: 10px;
+        padding: 10px;
     }
 
-    /* BOTON WHATSAPP*/
-
-.container-btn-wp{
-    background-color: #deeadd;
-    border: 1px solid #fff;
-    position: fixed;
-    z-index: 999;
-    border-radius: 50%;
-    bottom: 10px;
-    right: 10px;
-    padding: 10px;
-    transition: ease 0.3s;
-    animation: efecto 1.2s infinite;
-}
-
-.container-btn-wp:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-
-.btn-wp{
-    width: 80px;
-    transition: ease 1s;
-}
-
-@keyframes efecto{
-    0%{
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
-    }
-    100%{
-        box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+    .btn-wp {
+        width: 80px;
     }
 }
-
-
 /* DESKTOP*/
- @media (min-width: 992px) {
-    .home__carrusel img {
-        width: 100vw;
-        height: 250px;
-     }
-    
-     /*MENU TEMATICO*/
-
-    .home__menu--tematico {
-        display: flex; 
-        flex-direction: row;   
-       justify-content: space-evenly;
-    }
-
-    .home__menu--tematico img {
-        width: 90%;
-        height: 370px;
-    }
-
-    .home__menu--tematico img:hover {
-        box-shadow: 0 0 5px grey;
-        border-radius: 20px;
-    }
-
-    /*PRODUCTOS*/
-
-    section div.home__container--productos {
-        display: flex;
-        flex-direction: row;   
-        flex-wrap: wrap;
-        justify-content: space-evenly ;      
-
-    }
-    .home__productos h2 {
-        text-align: center; 
-        border-top: black solid 1px;
-        font-size: 30px;
-        background-color: var(--azul) ;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        }
-
-    section div.home__container--productos article.home__tarjeta--producto  {
-        display: inline-block;
-        justify-content: center;
-        margin: 10px;
-        padding: 5px;
-        height: 370px;
+ @media (min-width: 1039px) {
+    main.homeMain div.contenedorHome section.homeMenuTematico {
+        flex-direction: row;
         justify-content: space-evenly;
-        border: 1px solid grey;
-        box-shadow: 0 0 5px;
-        border-radius: 15px;
-    }
-  
-
-    section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--img {
-        display: flex;
-        flex-direction: row;   
-        flex-wrap: wrap;
-        justify-content: flex-start;   
-
-        
     }
 
-    section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--img img {
-        margin-top: 5px;
-        width: 230px;
-        height: 230px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--descripcion {
-        flex: 1;
-        flex-wrap: wrap;
-        flex-direction: column;
-        text-align: center;
-        align-self: flex-end;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-    
-    }
-    
-    section div.home__container--productos article.home__tarjeta--producto p.home_precio {
-        font-size: 25px;    
-        padding: 8px;
-    }
-    .home__tarjeta--descripcion .btn-agregarAlCarrito {
-        border-radius: 20px;
-        font-weight: bold;
-        text-align: center;
-        background-color:var(--rojo);  
-        opacity: 0.8;
-        padding: 5px;  
-        width: 200px;
-        height: 40px;
-        font-size: var(--descripcion);
-        box-shadow: 5px;
-        margin-bottom: 5px;
-        }
-    
-
-    button.btn-agregarAlCarrito:hover {
-    color: white;
-    background: linear-gradient(93deg,#ff5656, #6a7efc)
-    }
-    /*CARRUSEL*/
-
-    .home__carrusel img {
-        width: 100vw;
+    main.homeMain div.contenedorHome nav.contenedorCarrusel section.homeCarrusel img.banner {
         height: 250px;
-     }
-    
-     /*MENU TEMATICO*/
-
-    .home__menu--tematico {
-        display: flex; 
-        flex-direction: row;   
-       justify-content: space-evenly;
     }
 
-    .home__menu--tematico img {
-        width: 90%;
+    main.homeMain div.contenedorHome section.homeMenuTematico article.contenedorCategoria {
+        margin: 15px;
+    }
+
+    main.homeMain div.contenedorHome section.homeMenuTematico article.contenedorCategoria img.homeCategoria {
         height: 370px;
     }
 
-    .home__menu--tematico img:hover {
-        box-shadow: 0 0 5px grey;
-        border-radius: 20px;
-    }
-
-    /*PRODUCTOS*/
-
-    section div.home__container--productos {
+    main.homeMain div.contenedorHome section.homeProductos {
+        width: 100%;
         display: flex;
-        flex-direction: row;   
-        flex-wrap: wrap;
-        justify-content: space-evenly; 
-    }
-
-    .home__productos h2 {
-        text-align: center; 
-        border-top: black solid 1px;
-        font-size: 30px;
-        background-color: var(--azul) ;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    section div.home__container--productos article.home__tarjeta--producto  {
-        display: inline-block;
-        justify-content: center;
-        margin: 10px;
-        padding: 5px;
-        height: 370px;
-        justify-content: space-evenly;
-        position: relative;
-        
-    }
-
-    section div.home__container--productos article.home__tarjeta--producto:hover{
-        border: 1px solid grey;
-        box-shadow: 0 0 5px;
-        border-radius: 15px;
-    }
-
-    section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--img {
-        display: flex;
-        flex-direction: row;   
-        flex-wrap: wrap;
-        justify-content: flex-start;     
-          
-    }
-
-    section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--img img {
-        margin-top: 5px;
-        width: 230px;
-        height: 230px;
         align-items: center;
-        justify-content: center;
-    }
-    
-    
-    .verMas {
-        position: absolute;
-        color: #ff5656;
-        top: 0;
-        right: 0;
-        width: 100px;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    img .verMas {
-        width: 100px;
-        height: 50px;
-    }
-
-    section div.home__container--productos article.home__tarjeta--producto div.home__tarjeta--descripcion {
-        flex: 1;
         flex-wrap: wrap;
-        flex-direction: column;
-        text-align: center;
-        align-self: flex-end;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-    
     }
-    
-    section div.home__container--productos article.home__tarjeta--producto p.home_precio {
-        font-size: 25px;    
-        padding: 8px;
-    }
-    .home__tarjeta--descripcion .btn-agregarAlCarrito {
-        border-radius: 20px;
-        font-weight: bold;
-        text-align: center;
-        background-color:var(--rojo);  
-        opacity: 0.8;
-        padding: 5px;  
-        width: 200px;
-        height: 40px;
-        font-size: var(--descripcion);
-        box-shadow: 5px;
-        margin-bottom: 5px;
-        }
-    
-
-    button.btn-agregarAlCarrito:hover {
-    color: white;
-    background: linear-gradient(93deg,#ff5656, #6a7efc)
-    }
-
-    /* BOTON WHATSAPP*/
-
-.container-btn-wp{
-    background-color: #deeadd;
-    border: 1px solid #fff;
-    position: fixed;
-    z-index: 999;
-    border-radius: 50%;
-    bottom: 10px;
-    right: 10px;
-    padding: 10px;
-    transition: ease 0.3s;
-    animation: efecto 1.2s infinite;
-}
-
-.container-btn-wp:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-
-.btn-wp{
-    width: 80px;
-    transition: ease 1s;
 }
 
 @keyframes efecto{
@@ -636,6 +264,12 @@ section div.home__container--productos {
     100%{
         box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
     }
-}
-}
+} 
+
+@keyframes colores {
+    0%{color: #494953;}
+    25%{color: #edf2f6;}
+    50%{color: #494953;}
+    75%{color: #edf2f6;}
+    100%{color: #494953;}
 }
