@@ -16,10 +16,11 @@ module.exports = {
     },
     crear: (req, res) => {
         let newUser = {
+            id: req.body.id,
             email: req.body.email,
-            password: req.body.password,
-            password2: req.body.password2,
-            cel: req.body.cel
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            password: req.body.password
         }
         users.push(newUser);
         writeJson(users);

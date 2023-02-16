@@ -22,161 +22,264 @@
     box-sizing: border-box;
 }
 
-
-body{
-    font-family: 'source sans pro', sans-serif;
-    min-height: 100vh;
-    background: url(/images/fondo.jpg) no-repeat center center fixed;
+main.mainLogin {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    background: url(/images/fondo.jpg) no-repeat center;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 3rem 0 3rem;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    
-}
-
-
-a{
-    font-size: 0.8rem;
-    text-decoration: none;
-    color: var(--azul);
-}
-
-h2{
-    margin-bottom: 1rem;
-}
-
-hr{
-    background: var(--rojo);
-    height: 3px;
-    margin-bottom: 2rem;
-    
-}
-
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.input-text{
-    margin-bottom: 0.5rem;
-    font-size: 0.8rem;
-}
-
-.input-container , .button-container{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
     width: 100%;
-
 }
 
-.button-container{
-    text-align: center;
+main.mainLogin div.form-container {
+    width: 110%;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 12px var(--negro);
+    padding: 3rem;
+    backdrop-filter: blur(10px);
+    
 }
 
-.btn-submit{
-    background: var(--rojo);
-    border: 2px solid white;
-    border-radius: 0.8rem;
-    box-shadow: 5px 5px 12px rgb(40,40,40);
-    color: black;
-    font-size: 1rem;
+main.mainLogin div.form-container hr{
+    height: 3px;
+    background: linear-gradient(#ff5656, #edf2f6);
+    margin-bottom: 2rem;  
+}
+
+main.mainLogin div.form-container h2.nombre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0 20px;
+    width: 100%;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.input-container p {
+    margin-bottom: 7px;
+    font-size: 15px;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.input-container input.input-style {
+    box-shadow: 0 0 10px;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    max-width: 350px;
+    width: 100%;
+    height:30px;
+    outline: none;
+    padding:0 15px 0;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.input-container span.error-message {
+    color: red;
+    padding: 5px;
+    font-size: small;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.check {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.check label.text-remember {
+    padding: 0 5px 0;
+    font-size: 20px;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.button-container button.btn-submit {
+    width: 170px;
+    height: 50px;
+    border: none;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    font-size: 20px;
+    padding-bottom: 5px;
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
     font-weight: bold;
-    height: 2.4rem;
-    margin: 0.8rem 2rem;
-    text-transform: capitalize;
     transition: all 1s ease;
     cursor: pointer;
 }
 
-.btn-submit:hover{
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.button-container button.btn-submit a {
+    transition: all 1s ease;
+    text-decoration: none;
+    color: black;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.button-container button.btn-submit:hover {
     background: linear-gradient(93deg,#ff5656, #6a7efc);
-    border: 2px solid var(--rojo);
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.button-container button.btn-submit:hover a {
     color: white;
 }
 
-.btn-acc{
-    display: flex; ;
-    justify-content: center;
-    align-items: center;
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.button-container span.error-message {
+    color: red;
+    padding: 5px;
+    font-size: small;
 }
 
-.check{
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 1rem;
-}
-
-.checkbox{
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 0.5rem;
-}
-
-span.error-message{
-    color: tomato;
-    font-size: 0.8rem;
-}
-
-input.input-style{
-    border: 1px solid lightgray;
-    border-radius: 1.2rem;
-    height: 1.8rem;
-    padding: 0 0.5rem;
-    box-shadow: 0 0 10px;
-    max-width: 550px;
+    flex-direction: column;
     width: 100%;
-    outline: none;
-
+    margin-top: 35px;
 }
 
-input.input-style::placeholder{
-    color: lightgray;
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.resetPass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
 }
 
-input.input-style:focus{
-    border: 1px solid var(--rojo);
-    box-shadow: 0 0 10px var(--rojo);
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.resetPass p.text-remember {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    font-size: 13px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
 }
 
-.text-remember{
-    font-size: 0.8rem;
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.resetPass p.text-remember a {
+    transition: all 1s ease;
+    text-decoration: none;
+    color: black;
 }
 
-#noTienesCuenta{
-    margin-top: 1.5rem;
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.registrate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.registrate p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    font-size: 13px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.registrate p a {
+    transition: all 1s ease;
+    text-decoration: none;
+    color: black;
 }
 
 
 @media screen and (min-width: 769px) {
+
+    main.mainLogin div.form-container {
+        width: 80%;
+    }
+
+    main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.button-container {
+        margin: 30px 0;
+    }
+
+    main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 35px;
+    flex-direction: row;
+}
+
+    main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.resetPass p.text-remember {
+        border: none;
+        box-shadow: 0 0 5px;
+        border-radius: 15px;
+        background: linear-gradient(93deg, #6a7efc, #ff5656);
+        font-size: 13px;
+    }
+    
+    main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.resetPass p.text-remember:hover {
+        background: linear-gradient(93deg,#ff5656, #6a7efc);
+    }
+    
+    main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.resetPass p.text-remember:hover a {
+        color: white;
+    }
+    
+    main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.registrate p {
+        border: none;
+        box-shadow: 0 0 5px;
+        border-radius: 15px;
+        background: linear-gradient(93deg, #6a7efc, #ff5656);
+        font-size: 13px;
+    }
+
+    main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.registrate p:hover {
+        background: linear-gradient(93deg,#ff5656, #6a7efc);
+    }
+    
+    main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.registrate p:hover a {
+        color: white;
+    }
 
     body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     }
-
 }
 
 @media screen and (min-width: 992px){
 
-    body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    main.mainLogin div.form-container {
+        width: 80%;
+    }
+
+
+    main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.input-container input.input-style {
+        max-width: 450px;
+        height: 40px;
     }
 }

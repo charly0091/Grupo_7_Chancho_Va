@@ -67,9 +67,6 @@ main.registro div.contenedor form {
 }
 
 main.registro div.contenedor form div.contenedorFormularios {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
 }
 
@@ -175,4 +172,12 @@ main.registro div.contenedor form span a{
 }
 span.mensajeError {
     display: none;
+}
+@media (min-width: 1040.12px) {
+    main.registro div.contenedor form div.contenedorFormularios {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }

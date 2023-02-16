@@ -8,21 +8,23 @@
 
 @media screen and (min-width: 769px) {
     /* clase para el contenedor de login */
-    .mainLogin{
-        width: 100%;
+   /* .mainLogin{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
         border-radius: 1rem;
-        max-width: 400px;
         box-shadow: 0px 0px 12px var(--negro);
         padding: 3rem;
         backdrop-filter: blur(10px);
-    }
+    }*/
     /* clase para contenedores mas anchos */
-    .main2{
+    /*.main2{
         width: 100%;
         border-radius: 1rem;
         box-shadow: 0px 0px 12px var(--negro);
         padding: 3rem;
         backdrop-filter: blur(10px);
         max-width: 650px;
-    }
+    }*/
 }

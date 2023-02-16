@@ -1,7 +1,17 @@
+const fs = require("fs");
+const path = require("path");
+
+const productsFilePath = path.join(__dirname, "../data/productsDataBase.json");
+const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 module.exports = {
     
     main: (req, res) => {
-        res.render("main/home",{style: "home.css"})
+        let categoriasId = products.filter(categorias => categorias.subCategory === "in-sale");
+        let categoriasId2 = products.filter(categorias => categorias.subCategory === "visited")
+        res.render("main/home",{style: "home.css", categoriasId, categoriasId2})
     },
     about: (req, res) => {
         res.render("main/about" , { style : "styles.css" })
