@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/adminPerfilReturnedPackages.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <title>Chancho va! </title>
+         <!-- FontAwesome-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" /> 
+    </head>
+<body>
+    <%- include('../partials/header')  %>
+    <main class="userPerfilContainer">
+        <%- include("../partials/menuAdmin")%>
+        <div class="contenedorDatosUser">
+            <div class="paquetesDevueltos">
+                <div class="nombre">
+                    <h1>Paquetes Devueltos</h1>
+                </div>
+                <div class="contenedorPaquete">
+                    <h2 class="nombreUsuarioPaquete">Paquete Devuelto Por Usuario</h2>
+                    <article class="paqueteDevuelto">
+                        <img class="fotoPaquete" src="/images/imageDefault.jpg" alt="Imagen De Producto">
+                        <p class="datoPaqueteDevuelto">Nombre Del Producto</p>
+                        <p class="datoPaqueteDevuelto">Código De Devolución</p>
+                        <div class="botonVerReclamo">
+                            <p class="verReclamo">Ver Reclamo</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer')  %>
+    <script src="/js/admin.js"></script>
+    <script src="/js/efecto.js"></script>
+</body>
+</html>

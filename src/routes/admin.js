@@ -5,9 +5,17 @@ const controller = require("../controllers/adminController");
 router.get("/createProduct", controller.create);
 router.post("/createProduct", controller.store);
 // Editar Producto
-router.get("/editProduct", controller.edit);
-router.post("/editProduct", controller.edit);
+router.get("/editProduct/:id", controller.edit);
 // Perfil de Administrador
 router.get("/adminPerfil", controller.admin)
+router.get("/adminPerfilUsers", controller.adminUsersRegister)
+router.get("/adminPerfilQuestions", controller.adminUsersQuestions)
+router.get("/adminPerfilShipments", controller.adminUsersShipments)
+router.get("/adminPerfilReturnedPackages", controller.adminPerfilReturnedPackages)
+router.get("/adminPerfilClaims", controller.adminPerfilClaims)
+
+// Editar Perfil Administrador
+router.get("/adminPerfilEdit", controller.editRender)
+router.put("/adminPerfil", controller.editAdmin)
 
 module.exports = router;

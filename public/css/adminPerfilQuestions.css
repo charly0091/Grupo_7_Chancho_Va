@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url(header.css);
+@import url(footer.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+:root {
+    /*Paleta de colores*/
+    --rojo: #ff5656;
+    --gris: #edf2f6;
+    --azul: #6a7efc;
+    --negro: #494953;
+    /* Fuentes */
+    --fuente:'Source Sans Pro', sans-serif;  
+    /* Tamaños tipográficos */
+    --parrafos: 12px;
+    --titulos: 24px;
+    --precio: 18px;
+    --descuento: 16px;
+    --descripcion: 16px;
+}
+/* MENU IZQUIERDA */ 
+main.userPerfilContainer {
+    display: flex;
+}
+
+main.userPerfilContainer div.contenedorMenuUser {
+    width: 30%;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.fotoPerfil {
+    width: 100%;;
+    padding: 15px;
+    background: linear-gradient(90deg, #6a7efc ,#494953 );
+    display: flex;
+    justify-content: center;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.fotoPerfil img.foto {
+    height: 300px;
+    width: 300px;
+    cursor: pointer;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu {
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    background: linear-gradient(90deg, #6a7efc ,#494953 );
+    box-shadow: 0 0 3px;
+    cursor: pointer;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu:hover{
+    background: linear-gradient(90deg, #edf2f6 ,#ff5656 );
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu img.item {
+    height: 50px;
+    width: 50px;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu h4.nombreMenu {
+    font-size: 25px;
+    height: 100%;
+    width: 100%;
+}
+/* FIN MENU IZQUIERDA */ 
+
+/* BIENVENIDA USUARIO ADMIN */
+
+main.userPerfilContainer div.contenedorDatosUser {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    background: url(/images/fondo.jpg) no-repeat center;
+    background-size: cover;
+}
+/* FIN BIENVENIDA USUARIO ADMIN */
+
+/* PREGUNTAS DE USUARIOS */
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios h1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 45px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.nombre {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: colores;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background: linear-gradient(90deg, #494953, #ff5656);
+    border-radius: 0 0 10px 10px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.contenedorPreguntas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.contenedorPreguntas h2.nombreUsuario {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(360deg, #494953, #ff5656, #6a7efc);
+    border-radius: 10px 10px 10px 10px;
+    font-size: 30px;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.contenedorPreguntas article.preguntaProducto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(180deg, #edf2f6, #494953);
+    border-radius: 10px 10px 10px 10px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.contenedorPreguntas article.preguntaProducto img.fotoArticulo {
+    width: 130px;
+    height: 130px;
+    border-radius: 5px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.contenedorPreguntas article.preguntaProducto p.datoProducto {
+    font-size: 20px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.contenedorPreguntas article.preguntaProducto div.botonPregunta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.contenedorPreguntas article.preguntaProducto div.botonPregunta p.verPregunta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 60px;
+    border: none;
+    box-shadow: 0 0 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-bottom: 5px;
+    background: linear-gradient(360deg, #6a7efc, #ff5656, #494953);
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.contenedorPreguntas article.preguntaProducto div.botonPregunta p.verPregunta:hover {
+    color: white;
+    background: linear-gradient(360deg, #494953 ,#ff5656, #6a7efc);
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.contenedorRespuesta {
+    display: none;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.contenedorRespuesta.active {
+    width: 100%;
+    position: relative;
+    background:rgba(0, 0 , 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.contenedorRespuesta div.ventanaPregunta p.pregunta {
+    padding: 15px;
+    font-size: 18px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.contenedorRespuesta div.responder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 15px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.contenedorRespuesta div.responder input.input {
+    box-shadow: 0 0 10px;
+    border: 1px solid lightgrey;
+    border-radius: 5px 0 0 5px;
+    max-width: 500px;
+    height:50px;
+    outline: none;
+    padding:0 15px 0;
+    width: 80%;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.preguntasUsuarios div.contenedorRespuesta div.responder button.enviarRespuesta {
+    box-shadow: 0 0 10px;
+    border: 1px solid lightgrey;
+    border-radius: 0 5px 5px 0;
+    width: 100px;
+    height:50px;
+    outline: none;
+    padding:0 15px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* FIN PREGUNTAS DE USUARIOS */
+
+@keyframes colores {
+    0%{color: #494953;}
+    25%{color: #edf2f6;}
+    50%{color: #494953;}
+    75%{color: #edf2f6;}
+    100%{color: #494953;}
+}
+
+/* FIN ANIMACIONES */

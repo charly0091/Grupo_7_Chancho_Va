@@ -41,7 +41,7 @@ main.registro {
     padding: 2rem;
     background: url(/images/fondo.jpg) no-repeat center top;
     background-size: cover;
-    width: 100vw;
+    width: 100%;
 }
 
 
@@ -54,8 +54,7 @@ hr {
 }
 
 main.registro div.contenedor{
-    max-width: 350px;
-    width: 100%;
+    width: 80%;
 }
 
 main.registro div.contenedor h2 {
@@ -66,19 +65,39 @@ main.registro div.contenedor h2 {
     text-transform: uppercase;
 }
 
-main.registro div.contenedor form div.input {
+main.registro div.contenedor form.formularioRegistro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+main.registro div.contenedor form.formularioRegistro div.contenedorLineasFormulario {
+    width: 100%;
+}
+
+main.registro div.contenedor form.formularioRegistro div.contenedorLineasFormulario div.input {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 20px 0 20px;
+    width: 100%;
 }
 
-main.registro div.contenedor form div.input label {
+main.registro div.contenedor form.formularioRegistro div.contenedorLineasFormulario div.input label {
     margin-bottom: 7px;
 }
 
-main.registro div.contenedor form div.input input.estiloInput {
+main.registro div.contenedor form.formularioRegistro div.contenedorLineasFormulario div.input input.estiloInput {
     box-shadow: 0 0 10px;
     border: 1px solid lightgrey;
     border-radius: 20px;
@@ -89,47 +108,57 @@ main.registro div.contenedor form div.input input.estiloInput {
     padding:0 15px 0;
 }
 
-main.registro div.contenedor form div.input span.mensajeError {
+main.registro div.contenedor form.formularioRegistro div.contenedorLineasFormulario div.input span.mensajeError {
     color: red;
     padding: 5px;
     font-size: small;
 }
 
-main.registro div.contenedor form div.terminos {
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.terminos {
     display: flex;
     justify-content:center;
     align-items: center;
     flex-direction: column;
+
 }
 
-main.registro div.contenedor form div.terminos div{
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.terminos div{
     font-size: 0.8rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.5rem;;
 }
 
-main.registro div.contenedor form div.terminos label{
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.terminos label{
     padding: 0 5px 0;
+    font-size: 12px;
 }
 
-main.registro div.contenedor form div.terminos label a{
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.terminos label a{
     color: blue;
     text-decoration: none;
 }
 
-main.registro div.contenedor form div.terminos span.mensajeError {
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.terminos span.mensajeError {
     color: red;
-    font-size: small;
+    font-size: 12px;
     margin-bottom: 1rem;
 }
 
-main.registro div.contenedor form div.boton {
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.botonRL {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-main.registro div.contenedor form div.boton button{
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.botonRL div.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.boton button{
     width: 170px;
     height: 50px;
     border: none;
@@ -143,33 +172,98 @@ main.registro div.contenedor form div.boton button{
     cursor: pointer;
 }
 
-main.registro div.contenedor form div.boton button.registrar:hover{
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.boton button.registrar:hover{
     color: white;
     background: linear-gradient(93deg,#ff5656, #6a7efc);
 }
 
 
-main.registro div.contenedor form div.boton span.mensajeError {
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.boton span.mensajeError {
     color: red;
     font-size: small;
     padding: 5px;
 }
 
-main.registro div.contenedor form span a{
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones span.login {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 25px;
+    width: 170px;
+    height: 50px;
+    border: none;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    font-size: 20px;
+    padding-bottom: 5px;
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones span.login:hover {
+    background: linear-gradient(93deg,#ff5656, #6a7efc);
+}
+
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones span a{
     text-decoration: none;
+    color: black;
+    transition: all 1s ease;
+}
+
+main.registro div.contenedor form.formularioRegistro div.contenedorBotones span.login:hover a{
+    color: white;
 }
 
 /* MEDIA MAIN */
 
-@media (min-width: 1240px) {
+@media (min-width: 1040px) {
     main.registro {
         align-items: center;
         background: url(/images/fondo.jpg) no-repeat center ;
         background-size: cover;
+    }
+
+    main.registro div.contenedor form.formularioRegistro div.contenedorLineasFormulario {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    main.registro div.contenedor form.formularioRegistro div.contenedorLineasFormulario div.input label {
+        font-size: 20px;
+    }
+
+    main.registro div.contenedor form.formularioRegistro div.contenedorLineasFormulario div.input input.estiloInput {
+        max-width: 450px;
+        height: 40px;
+    }
+
+    main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.botonRL {
+        width: 100%;
+    }
+
+    main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.botonRL span.mensajeError{
+        color: red;
+        font-size: small;
+        padding: 5px;
+    }
+
+    main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.botonRL div.boton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.botonRL div.boton button {
+        margin: 0 30px;
+    }
+
+    main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.botonRL div.boton span {
+        margin: 0 30px;
     }
 }
 

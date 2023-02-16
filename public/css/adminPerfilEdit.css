@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url(header.css);
+@import url(footer.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+:root {
+    /*Paleta de colores*/
+    --rojo: #ff5656;
+    --gris: #edf2f6;
+    --azul: #6a7efc;
+    --negro: #494953;
+    /* Fuentes */
+    --fuente:'Source Sans Pro', sans-serif;  
+    /* Tamaños tipográficos */
+    --parrafos: 12px;
+    --titulos: 24px;
+    --precio: 18px;
+    --descuento: 16px;
+    --descripcion: 16px;
+}
+/* MENU IZQUIERDA */ 
+main.userPerfilContainer {
+    display: flex;
+}
+
+main.userPerfilContainer div.contenedorMenuUser {
+    width: 30%;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.fotoPerfil {
+    width: 100%;;
+    padding: 15px;
+    background: linear-gradient(90deg, #6a7efc ,#494953 );
+    display: flex;
+    justify-content: center;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.fotoPerfil img.foto {
+    height: 300px;
+    width: 300px;
+    cursor: pointer;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu {
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    background: linear-gradient(90deg, #6a7efc ,#494953 );
+    box-shadow: 0 0 3px;
+    cursor: pointer;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu:hover{
+    background: linear-gradient(90deg, #edf2f6 ,#ff5656 );
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu img.item {
+    height: 50px;
+    width: 50px;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu h4.nombreMenu {
+    font-size: 25px;
+    height: 100%;
+    width: 100%;
+}
+/* FIN MENU IZQUIERDA */ 
+
+/* BIENVENIDA USUARIO ADMIN */
+
+main.userPerfilContainer div.contenedorDatosUser {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    background: url(/images/fondo.jpg) no-repeat center;
+    background-size: cover;
+}
+
+
+/* PERFIL DEL ADMIN */
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin {
+    display: none;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin h1 {
+    padding-top: 15px;
+    padding-bottom:15px ;
+    font-size: 45px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin div.nombre {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: colores;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background: linear-gradient(90deg, #494953, #ff5656);
+    border-radius: 0 0 10px 10px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin div.formulario {
+    display: flex ;
+    
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin div.formulario form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin div.formulario form div.divInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 20px;
+    width: 50%;
+    padding-bottom: 50px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin div.formulario form div.divInput label.label {
+    margin-bottom: 7px;
+    font-size: 25px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin div.formulario form div.divInput input.input {
+    box-shadow: 0 0 10px;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    max-width: 500px;
+    height:40px;
+    outline: none;
+    padding:0 15px 0;
+    width: 80%;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin div.formulario form div.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin div.formulario form div.boton button.guardar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 50px;
+    border: none;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    font-size: 20px;
+    padding-bottom: 5px;
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin div.formulario form div.boton button.guardar:hover {
+    color: white;
+    background: linear-gradient(93deg,#ff5656, #6a7efc);
+}
+
+/* FIN PERFIL DEL ADMIN */
+
+@keyframes colores {
+    0%{color: #494953;}
+    25%{color: #edf2f6;}
+    50%{color: #494953;}
+    75%{color: #edf2f6;}
+    100%{color: #494953;}
+}
+
+/* FIN ANIMACIONES */

@@ -35,6 +35,6 @@ module.exports = {
         res.render("users/metodosDePago", { style : "metodosDePago.css"})
     },
     pago: (req, res) => {
-        res.render("users/pagoTargeta", { style : "pagoTargeta.css"})
+        res.render("users/pagoTarjeta", { style : "pagoTargeta.css"})
     },
 }

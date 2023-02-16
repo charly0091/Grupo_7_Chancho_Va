@@ -30,10 +30,43 @@ module.exports = {
     },
 
     edit: (req, res) => {
-        res.render("./admin/editProduct" , { style : "register.css" })
-    },
+		let productId = Number(req.params.id);
+		let productToEdit = products.find(product => product.id === productId);
+
+		res.render("admin/editProduct", {
+			productToEdit, 
+		})
+	},
 
     admin: (req, res) =>{
         res.render("./admin/adminPerfil")
+    },
+
+    editRender: (req, res) =>{
+        res.render("./admin/adminPerfilEdit")
+    },
+
+    editAdmin: (req, res) =>{
+        res.render("./admin/adminPerfilEdit")
+    },
+
+    adminUsersRegister: (req, res) =>{
+        res.render("./admin/adminPerfilUsers")
+    },
+
+    adminUsersQuestions: (req, res) =>{
+        res.render("./admin/adminPerfilQuestions")
+    },
+
+    adminUsersShipments: (req, res) =>{
+        res.render("./admin/adminPerfilShipments")
+    },
+
+    adminPerfilReturnedPackages: (req, res) =>{
+        res.render("./admin/adminPerfilReturnedPackages")
+    },
+
+    adminPerfilClaims: (req, res) =>{
+        res.render("./admin/adminPerfilClaims")
     },
 }

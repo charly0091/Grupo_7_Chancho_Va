@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/adminPerfil.css">
+        <link rel="stylesheet" href="/css/adminPerfilClaims.css">
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
         <title>Chancho va! </title>
          <!-- FontAwesome-->
@@ -13,15 +13,17 @@
 <body>
     <%- include('../partials/header')  %>
     <main class="userPerfilContainer">
-       <%- include("../partials/menuAdmin")  %>
+        <%- include("../partials/menuAdmin")%>
         <div class="contenedorDatosUser">
-            <div class="contenedorBienvenido">
-                <div class="bienvenido">
-                    <img class="animacionPoker corazon" src="/images/corazonPoker.PNG" alt="">
-                    <img class="animacionPoker pikas" src="/images/pikasPoker.PNG" alt="">
-                    <img class="animacionPoker trebol" src="/images/trebolPoker.PNG" alt="">
-                    <img class="animacionPoker diamante" src="/images/diamantePoker.PNG" alt="">
-                    <h1 class="inicio">Bienvenido Admin</h1>
+            <div class="reclamos">
+                <div class="nombre">
+                    <h1>Reclamos</h1>
+                </div>
+                <div class="contenedorReclamo">
+                    <h2 class="nombreUsuarioReclamo">Reclamo Hecho Por Usuario</h2>
+                    <div class="ventanaReclamo">
+                        <p class="reclamo">Este producto anda peor que los links de esta página. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, cupiditate, accusamus aperiam sit corporis maiores iusto dignissimos quod harum omnis doloremque dolores cumque, aliquid repellendus? Sequi velit nesciunt pariatur consequatur?</p>
+                    </div>
                 </div>
             </div>
         </div>
