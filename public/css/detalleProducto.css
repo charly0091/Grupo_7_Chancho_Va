@@ -127,11 +127,6 @@ img {
     padding: 1rem;
 }
 
-.articulo h3 {
-    justify-content: center;
-    text-align: center;
-}
-
 section.articulos {
     display: flex;
     flex-wrap: wrap;
@@ -144,6 +139,11 @@ section.articulos article.articulo {
     max-width: 320px;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+section.articulos article.articulo h3 {
+    justify-content: center;
+    text-align: center;
 }
 
 section.articulos article.articulo div.imagen-producto img {

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/adminPerfilQuestions.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <title>Chancho va! </title>
+         <!-- FontAwesome-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" /> 
+    </head>
+<body>
+    <%- include('../partials/header')  %>
+    <main class="userPerfilContainer">
+        <%- include("../partials/menuAdmin")%>
+        <div class="contenedorDatosUser">
+            <div class="preguntasUsuarios">
+                <div class="nombre">
+                    <h1>Preguntas de Usuarios</h1>
+                </div>
+                <div class="contenedorPreguntas">
+                    <h2 class="nombreUsuario">Usuario a hecho esta pregunta</h2>
+                    <article class="preguntaProducto">
+                        <img class="fotoArticulo" src="/images/imageDefault.jpg" alt="Imagen De Producto">
+                        <p class="datoProducto">Nombre Del Producto</p>
+                        <p class="datoProducto">Precio</p>
+                        <div class="botonPregunta">
+                            <p class="verPregunta">Ver pregunta</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="contenedorRespuesta">
+                    <div class="ventanaPregunta">
+                        <p class="pregunta">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis sed quasi maxime praesentium enim ex ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis sed quasi maxime praesentium enim ex ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis sed quasi maxime praesentium enim ex ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="responder">
+                        <input class="input" type="text" name="respuesta" placeholder="Responder Pregunta">
+                        <button type="submit" class="enviarRespuesta">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer')  %>
+    <script src="/js/efectosPanelAdmin/usersQuestions.js"></script>
+    <script src="/js/efecto.js"></script>
+</body>
+</html>

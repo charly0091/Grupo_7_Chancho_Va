@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/metodosDePago.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Chancho va! </title>
+     <!-- FontAwesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <%- include('../partials/header')  %>
+
+    <main class="contenedorMetodosDePago">
+        <div class="contenedorCarta">
+            <div class="carta">
+                <div class="metodoDePago">
+                    <a href="/users/pagoTarjeta">Tarjeta de Crédito</a>
+                </div>
+                <div class="icono">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+            </div>
+            <div class="datoMetodoDePago">
+                <p class="explicacion">Con su tarjeta de crédito usted podrá comprar con tranquilidad en cómodas cuotas y disfrutar de todas nuestras ofertas sin preocupación alguna.</p>
+            </div>
+        </div>
+        <div class="contenedorCarta">
+            <div class="carta">
+                <div class="metodoDePago">
+                    <a href="/users/pagoTarjeta">Tarjeta de Débito</a>
+                </div>
+                <div class="icono2">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+            </div>
+            <div class="datoMetodoDePago2">
+                <p class="explicacion">Con su tarjeta de débito usted podrá comprar con la tranquilidad de gastar lo justo y necesario y garantizar una diversión sin límites a su familia y amigos.</p>
+            </div>
+        </div>
+        <div class="contenedorCarta">
+            <div class="carta">
+                <div class="metodoDePago">
+                    <a href="/users/pagoMercadoPago">Mercado Pago</a>
+                </div>
+                <div class="icono3">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+            </div>
+            <div class="datoMetodoDePago3">
+                <p class="explicacion">A través de mercado pago usted podrá abonar con sus tarjetas vinculadas a la aplicación o usar el dinero que tiene en su cuenta sin complicaciones y siempre de la manera más segura.</p>
+            </div>
+        </div>
+    </main>
+
+    <%- include('../partials/footer')  %>
+    <script src="/js/efecto.js"></script>
+    <script src="/js/metodosDePago.js"></script>
+</body>
+</html>

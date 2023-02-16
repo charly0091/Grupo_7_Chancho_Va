@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head") %> 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/createProduct.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <title>Chancho va! </title>
+         <!-- FontAwesome-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+    </head>
 
 <body>
     <%- include("../partials/header") %> 
-  
-        <main class="registro">
-            <div class="contenedor">
-                <h2>Agregar producto</h2>
-                <hr>
-                <form method="POST" action="/createProduct">
-                    <div class="input">
-                        <label for="productName">Nombre del producto</label>
-                        <input class="estiloInput" type="text" name="productName" id="productName" placeholder="Nombre del producto" required>                
-                        <span class="mensajeError">Debe ingresar el nombre del producto</span>
+    <main class="registro">
+         <div class="contenedor">
+            <h2>Agregar producto</h2>
+            <hr>
+            <form method="POST" action="/admin/createProduct">
+                <div class="input">
+                    <label for="productName">Nombre del producto</label>
+                    <input class="estiloInput" type="text" name="productName" id="productName" placeholder="Nombre del producto" required>                
+                    <span class="mensajeError">Debe ingresar el nombre del producto</span>
+                </div>
+                <div class="input">
+                    <label for="productCategory">Categoria del producto</label>
+                    <input class="estiloInput" type="text" name="productCategory" id="productCategory" placeholder="Categoria del producto" required>                
+                    <span class="mensajeError">Debe ingresar la categoria del producto</span>
+                </div>
+                <div class="input">
+                    <label for="productPrice">Precio del producto</label>
+                    <input class="estiloInput" type="number" name="productPrice" id="productPrice" placeholder="Precio del producto"  step="0.01" min="0" required>                
+                    <span class="mensajeError">Debe ingresar el precio del producto</span>
+                </div>
+                <div class="div_file">
+                    <div class="file">
+                        <p class="texto">Cargar imagen</p>
+                        <input class="productPhoto" type="file"  accept=".jpg, .png"  id="productPhoto" name="productPhoto"  placeholder="Foto del producto" required>
                     </div>
-                    <div class="input">
-                        <label for="productDescription">Descripción del producto</label>
-                        <input class="estiloInput" type="text" name="productDescription" id="productDescription" placeholder="Descripción del producto" required> 
-                        <span class="mensajeError">Debe ingresar le descripcion del producto</span>
-                    </div>    
-                    <div class="input">
-                        <label for="productPhoto">Foto del producto</label>
-                        <input class="estiloInput" type="file"  accept=".jpg, .png"  id="productPhoto" name="productPhoto"  placeholder="Foto del producto" required>
-                        <span class="mensajeError">La extensión de la imágen no es compatible</span>
-                    </div>
-                    <div class="input">
-                        <label for="productCategory">Categoria del producto</label>
-                        <input class="estiloInput" type="text" name="productCategory" id="productCategory" placeholder="Categoria del producto" required>                
-                        <span class="mensajeError">Debe ingresar la categoria del producto</span>
-                    </div>
-                    <div class="input">
-                        <label for="productPrice">Precio del producto</label>
-                        <input class="estiloInput" type="number" name="productPrice" id="productPrice" placeholder="Precio del producto"  step="0.01" min="0" required>                
-                        <span class="mensajeError">Debe ingresar el precio del producto</span>
-                    </div>
-                   
-                    <div class="boton">
-                        <span class="mensajeError"> Debe completar todos los campos</span>
-                        <button type="submit" class="registrar">Crear</button>
-                    </div>
-                    
-                </form>
-            </div>
-        </main>
-        <%- include("../partials/footer") %> 
-        <script src="/js/efecto.js"></script>
+                </div>
+                <span class="mensajeError">La extensión de la imágen no es compatible</span>
+                <div class="input">
+                    <label for="productDescription">Descripción del producto</label>
+                    <textarea name="productDescription" class="estiloInput" cols="30" rows="10" required></textarea>
+                    <span class="mensajeError">Debe ingresar le descripcion del producto</span>
+                </div>    
+                <div class="boton">
+                    <span class="mensajeError"> Debe completar todos los campos</span>
+                    <button type="submit" class="registrar">Crear</button>
+                </div>       
+            </form>
+        </div>
+    </main>
+    <%- include("../partials/footer") %> 
+    <script src="/js/efecto.js"></script>
 </body>
 </html>

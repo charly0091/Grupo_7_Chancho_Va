@@ -1,7 +1,7 @@
 module.exports = {
     
     main: (req, res) => {
-        res.render("main/home" , { style : "home.css" })
+        res.render("main/home",{style: "home.css"})
     },
     about: (req, res) => {
         res.render("main/about" , { style : "styles.css" })

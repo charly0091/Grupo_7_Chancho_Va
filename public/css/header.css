@@ -9,7 +9,7 @@ header.contenedor div.contenedorHeader{
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 100vw;
+    width: 100%;
 }
 
 header.contenedor div.contenedorHeader div.menu div.barra{
@@ -54,6 +54,7 @@ header.contenedor div.contenedorHeader div.contenedorOculto {
 
 header.contenedor div.contenedorHeader div.contenedorOculto.active{
     display: block;
+    z-index: 1001;
 }
 
 header.contenedor div.contenedorHeader div.contenedorOculto div.user {
@@ -102,6 +103,7 @@ header.contenedor div.contenedorHeader div.contenedorOculto div.categorias {
     display: flex;
     font-size: 20px;
     padding: 15px;
+    cursor: pointer;
 }
 
 
@@ -150,6 +152,7 @@ header.contenedor div.contenedorHeader div.buscador div.barraBuscadora.active{
     height: 85px;
     background: linear-gradient(93deg, #6a7efc, #ff5656);
     border-radius: 0 0 25px 25px;
+    z-index: 1001;
 }
 
 header.contenedor div.contenedorHeader div.buscador div.barraBuscadora input.busqueda{
@@ -208,7 +211,7 @@ header.contenedor div.contenedorHeader div.contenedorOculto div.categoriaProduct
 }
 
 
-@media (min-width: 1240px) {
+@media (min-width: 1039px) {
 
     header.contenedor {
         height: 110px;
@@ -276,7 +279,7 @@ header.contenedor div.contenedorHeader div.contenedorOculto div.categoriaProduct
     }
 
     header.contenedor div.contenedorHeader div.contenedorOculto div.categorias {
-        margin-top: 6px
+        margin-top: 6px;
     }
 
     header.contenedor div.contenedorHeader div.contenedorOculto div.ofertas {

@@ -30,5 +30,11 @@ module.exports = {
     },
     resetPassword: (req, res) => {
         res.render("users/reset-password" , { style : "styles.css" })
-    }
+    },
+    metodosDePago: (req, res) => {
+        res.render("users/metodosDePago", { style : "metodosDePago.css"})
+    },
+    pago: (req, res) => {
+        res.render("users/pagoTarjeta", { style : "pagoTargeta.css"})
+    },
 }

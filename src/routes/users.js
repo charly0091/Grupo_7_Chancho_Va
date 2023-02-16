@@ -7,5 +7,7 @@ router.get("/register", controller.register);
 router.post("/register", controller.crear);
 router.get("/login", controller.login);
 router.get("/reset-password", controller.resetPassword);
+router.get("/metodosDePago", controller.metodosDePago);
+router.get("/pagoTarjeta", controller.pago)
 
 module.exports = router;

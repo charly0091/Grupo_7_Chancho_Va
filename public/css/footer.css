@@ -1,6 +1,6 @@
 footer{
     padding: 1rem;
-    width: 100vw;
+    width: 100%;
     background: var(--negro);
     color: white;
     display: flex;

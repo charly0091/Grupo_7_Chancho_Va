@@ -49,7 +49,7 @@ body {
 body {
   font-family: var(--base-font-family);
   font-weight: 300;
-  background-color: var(--light-gray);
+  background: url(/images/fondo.jpg) repeat center center scroll;
 }
 
 ul,
@@ -264,16 +264,25 @@ hr {
 }
 
 .buy-now-button {
-  background-color: var(--light-blue);
-  font-size: 1.6em;
+  background-color:var(--rojo);
+  font-size: var(--descripcion);
+  font-weight: bold;
   color: #ffffff;
+  opacity: 0.8;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
   padding: 15px;
   border-radius: 8px;
   border: none;
   margin-bottom: 15px;
+  box-shadow: 5px;
+}
+
+.buy-now-button:hover{
+  color: white;
+  background: linear-gradient(93deg,#ff5656, #6a7efc); 
 }
 
 .action-button {
@@ -289,12 +298,42 @@ hr {
 }
 
 .action-button.edit {
-  background-color: chocolate;
+  background-color: var(--azul);
 }
 .action-button.delete {
-  background-color: rgb(248, 69, 37);
+  background-color: var(--rojo);
 }
 
+/*====== Articles ======*/
+
+div.titulo {
+  text-align: center;
+  padding: 15px 0;
+}
+
+section.articulos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+section.articulos article.articulo {
+  width: 100%;
+  max-width: 320px;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+section.articulos article.articulo h3 {
+  justify-content: center;
+  text-align: center;
+  padding: 10px 0;
+}
+
+section.articulos article.articulo div.imagen-producto img {
+  width: 100%;
+}
 
 /*====== Formularios ======*/
 .form-label {
