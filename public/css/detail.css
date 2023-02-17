@@ -1,404 +1,394 @@
-@import url("bootstrap-grid.min.css");
-@import url("header.css");
-@import url("footer.css");
-
-/*====== Fonts ======*/
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap'); 
+@import url(header.css);
+@import url(footer.css);
 
 
-/*====== Variables ======*/
 :root {
-  --yellow: #EAC926;
-  --dark-blue: #03264C;
-  --light-blue: #1259c3;
-  --gray: #666666;
-  --light-gray: #ebebeb;
-  --green: #39b54a;
-  --base-font-family: 'Roboto', sans-serif;
-  --rojo: #FF5656;
-  --azul: #6A7EFC;
-  --negro: #494953;
-  --gris: #EDF2F6;
-    /* Fuente */
-
-    --fuente: 'Source Sans Pro', sans-serif;
-
-    /* Tamaños tipográficos */
-    --parrafos: 12px;
-    --titulos: 24px;
-    --precio: 18px;
-    --descuento: 16px;
-    --descripcion: 16px;
+    /* Variables de colores */
+    --rojo: #FF5656;
+    --azul: #6A7EFC;
+    --negro: #494953;
+    --gris: #edf2f6;
+    
+      /* Fuentes */
+      --fuente:'Source Sans Pro', sans-serif;  /* Tamaños tipográficos */
+      --parrafos: 12px;
+      --titulos: 24px;
+      --precio: 18px;
+      --descuento: 16px;
+      --descripcion: 16px;
 }
 
 
-/*====== Basics ======*/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--fuente);
 }
 
-html,
-body {
-  min-height: 100vh;
-  margin: 0;
-  font-size: 10px;
-}
-
-body {
-  font-family: var(--base-font-family);
-  font-weight: 300;
-  background: url(/images/fondo.jpg) repeat center center scroll;
-}
-
-ul,
-ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
-}
-
-figure {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  width: 100%;
-}
-
-input,
-textarea {
-  font-family: inherit;
-}
-
-hr {
-  border: none;
-  border-bottom: solid 1px var(--light-gray);
-}
-
-
-
-
-
-
-
-
-/*====== Banner ======*/
-.banner {
-  background-image: url(/images/img-home-banner.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 100px;
-}
-
-
-/*====== Products ======*/
-.products-wrapper {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.products-title {
-  font-size: 2.4em;
-  font-weight: 400;
-  color: var(--gray);
-}
-
-.product-box {
-  background-color: #ffffff;
-  border-radius: 5px;
-  overflow: hidden;
-  transition: 300ms;
-  margin: 20px 0;
-}
-
-.product-box a {
-  display: block;
-}
-
-.product-box_image {
-  border-bottom: 1px solid var(--light-gray);
-}
-
-.product-box_data {
-  padding: 15px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.product-box_data h2 {
-  font-size: 2.4em;
-  font-weight: 300;
-  margin: 0;
-}
-
-.product-box_data span {
-  font-size: 1.5em;
-  font-weight: 300;
-  color: var(--green);
-  margin: 0 0 0 10px;
-}
-
-.product-box_data p {
-  font-size: 1.5em;
-  width: 100%;
-  color: var(--gray);
-  margin: 0;
-  height: 0;
-  transition: 300ms;
-  overflow: hidden;
-}
-
-.product-box_data i {
-  color: var(--green);
-  font-size: 1.8em;
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  border: solid 1px;
-  border-radius: 50%;
-  position: absolute;
-  top: -15px;
-  right: 15px;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 300ms;
-}
-
-.product-box:hover {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-.product-box:hover p {
-  height: 40px;
-  margin-top: 15px;
-}
-
-.product-box:hover i {
-  transform: rotate(360deg);
-  box-shadow: 0 0 5px var(--green);
-}
-
-
-
-
-
-/*====== Product Detail ======*/
-.product-detail {
-  background-color: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.product-detail-img {
-  width: 70%;
-  display: block;
-  margin: auto;
-}
-
-.product-detail-info {
-  border-left: 1px solid var(--light-gray);
-  padding: 15px;
-  height: 100%;
-}
-
-.product-detail-title {
-  font-weight: 400;
-  font-size: 2.8em;
-}
-
-.product-detail-description {
-  padding: 15px;
-  font-size: 1.8em;
-  line-height: 1.5;
-}
-
-.product-detail-price {
-  font-size: 5.5em;
-  margin: 10px 0;
-}
-
-.small {
-  font-size: 1.8em;
-  color: var(--green);
-}
-
-.small span {
-  text-decoration: line-through;
-}
-
-.actions-list {
-  margin-bottom: 50px;
-}
-
-.actions-list li {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-  padding: 20px 0;
-}
-
-.actions-list i {
-  color: var(--green);
-  font-size: 2em;
-  margin-right: 15px;
-}
-
-.actions-list p {
-  color: var(--gray);
-  font-size: 1.7em;
-  margin: 0;
-}
-
-.buy-now-button {
-  background-color:var(--rojo);
-  font-size: var(--descripcion);
-  font-weight: bold;
-  color: #ffffff;
-  opacity: 0.8;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  padding: 15px;
-  border-radius: 8px;
-  border: none;
-  margin-bottom: 15px;
-  box-shadow: 5px;
-}
-
-.buy-now-button:hover{
-  color: white;
-  background: linear-gradient(93deg,#ff5656, #6a7efc); 
-}
-
-.action-button {
-  border: none;
-  border-radius: 8px;
-  font-size: 1.2em;
-  color: #ffffff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 30px;
-  margin-top: 15px;
-}
-
-.action-button.edit {
-  background-color: var(--azul);
-}
-.action-button.delete {
-  background-color: var(--rojo);
-}
-
-/*====== Articles ======*/
-
-div.titulo {
-  text-align: center;
-  padding: 15px 0;
-}
-
-section.articulos {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-section.articulos article.articulo {
-  width: 100%;
-  max-width: 320px;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-section.articulos article.articulo h3 {
-  justify-content: center;
-  text-align: center;
-  padding: 10px 0;
-}
-
-section.articulos article.articulo div.imagen-producto img {
-  width: 100%;
-}
-
-/*====== Formularios ======*/
-.form-label {
-  display: inline-block;
-  font-size: 1.6em;
-  margin: 10px 0;
-}
-
-.form-input {
-  display: block;
-  width: 100%;
-  height: 45px;
-  margin-bottom: 15px;
-  font-size: 1.5em;
-  border-radius: 8px;
-  border: none;
-  border: solid 1px var(--gray);
-  padding: 0 15px;
-}
-
-textarea.form-input {
-  min-height: 140px;
-  resize: vertical;
-  padding: 15px;
-}
-
-
-
-/*====== Media-Queries ======*/
-@media (min-width: 768px) {
-
-
-  .banner {
-    height: 320px;
-  }
-
-  .btn-toggle-navbar {
-    display: none;
-  }
-
-  .main-navbar,
-  .left-navbar,
-  .right-navbar {
+main.contenedorDetalles {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(/images/fondo.jpg) repeat center;
+    background-size: contain;
+    width: 100%;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle div.nombreProductoDetalle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle div.nombreProductoDetalle h2.nombreProducto {
+    margin: 15px 0px;
+    font-size: 27px;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 5px ;
+    max-width: 1250px;
+    backdrop-filter: blur(10px);
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.imagenDescripcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.imagenDescripcion img.imagenProducto {
+    width: 270px;
+    height: 270px;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.imagenDescripcion p.productoDescripcion {
+    margin: 15px;
+    font-size: 20px;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles h2.nombreProducto {
+    font-size: 40px;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.productosPrecioDescuento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.productosPrecioDescuento p.productosPrecioDescuentoTachado {
+    color: tomato;
+    text-decoration: line-through;
+    margin: 5px 15px;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.productosPrecioDescuento p.descuento {
+    color: #00a650;
+    margin: 5px 15px;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles p.productoPrecioFinal {
+    font-size: 40px;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.tarjetaInformacion {
+    color: #00a650;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.tarjetaInformacion i {
+    margin-right: 5px;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonComprar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 35px;
+    border: none;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    font-size: 15px;
+    padding-bottom: 5px;
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonComprar a {
+    text-decoration: none;
+    color: black;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonComprar:hover {
+    background: linear-gradient(93deg, #ff5656, #6a7efc);
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonComprar:hover a {
+    color: white;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonEditarEliminar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonEditarEliminar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 35px;
+    border: none;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    font-size: 15px;
+    padding-bottom: 5px;
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    margin:  15px 5px;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonEditarEliminar a:hover {
+    color: white;
+    background: linear-gradient(93deg , #ff5656 ,#6a7efc);
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonEditarEliminar form.formularioEliminar button.eliminar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 35px;
+    border: none;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    font-size: 15px;
+    padding-bottom: 5px;
+    background: tomato;
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+    margin: 15px 5px;
+}
+
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonEditarEliminar form.formularioEliminar button.eliminar:hover {
+    background: red;
+    color: white;
+}
+
+main.contenedorDetalles div.tituloProductosRelacionados {
+    text-align: center;
+    padding: 5px;  
+    border-top: black solid 2px 0px;
+    width: 100%;
+    font-size: 24px;
+    background: linear-gradient(360deg, #494953, #FF5656, #6A7EFC);
+    margin: 2px 0px; 
+    animation-name: colores;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin-top: 15px;
+}
+
+main.contenedorDetalles div.tituloProductosRelacionados h2.nombreTitulo {
+    font-size: 26px;
+}
+
+main.contenedorDetalles section.contenedorArticuloRelacionado {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+main.contenedorDetalles section.contenedorArticuloRelacionado div.contenedorArticulosRelacionados{
+    width: 290px;
+    height: 400px;
+    border: 1px solid lightgray;
+    box-shadow: 0px 5px 5px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+main.contenedorDetalles section.contenedorArticuloRelacionado div.contenedorArticulosRelacionados article.articuloRelacionado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main.contenedorDetalles section.contenedorArticuloRelacionado div.contenedorArticulosRelacionados article.articuloRelacionado div.imagenProductoRelacionado {
+    width: 100%;
+}
+
+main.contenedorDetalles section.contenedorArticuloRelacionado div.contenedorArticulosRelacionados article.articuloRelacionado div.imagenProductoRelacionado a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+}
+
+main.contenedorDetalles section.contenedorArticuloRelacionado div.contenedorArticulosRelacionados article.articuloRelacionado div.imagenProductoRelacionado a img.imagenRelacionada {
+    width: 250px;
+    height: 250px;
+}
+
+main.contenedorDetalles section.contenedorArticuloRelacionado div.contenedorArticulosRelacionados article.articuloRelacionado div.verMasProductoRelacionado {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-  }
+    width: 100%;
+}
 
-  .left-navbar a,
-  .right-navbar a {
-    border-bottom: none;
-  }
+main.contenedorDetalles section.contenedorArticuloRelacionado div.contenedorArticulosRelacionados article.articuloRelacionado div.verMasProductoRelacionado h3 {
+    margin: 25px 0;
+    font-size: 16px;
+}
 
-  .left-navbar a:hover,
-  .right-navbar a:hover {
-    color: var(--light-blue);
-  }
+main.contenedorDetalles section.contenedorArticuloRelacionado div.contenedorArticulosRelacionados article.articuloRelacionado div.verMasProductoRelacionado a {
+    margin: 10px 0;
+}
 
-  .left-navbar li {
-    margin-right: 15px;
-  }
+main.contenedorDetalles section.contenedorArticuloRelacionado div.contenedorArticulosRelacionados article.articuloRelacionado div.verMasProductoRelacionado a button.botonVerMas {
+    width: 200px;
+    height: 35px;
+    border: none;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    font-size: 15px;
+    padding-bottom: 5px;
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+} 
 
-  .right-navbar li {
-    margin-left: 15px;
-  }
+main.contenedorDetalles section.contenedorArticuloRelacionado div.contenedorArticulosRelacionados article.articuloRelacionado div.verMasProductoRelacionado a button.botonVerMas:hover {
+    color: white;
+    background: linear-gradient(93deg,#ff5656, #6a7efc);
+}
 
+@media (min-width: 768px) {
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto {
+        flex-direction: row;
+    }
+
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.imagenDescripcion img.imagenProducto{
+        width: 330px;
+        height: 330px;
+    }
+
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+
+@media (min-width: 1039px) {
+    main.contenedorDetalles section.contenedorArticuloRelacionado {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles {
+        margin-left: 50px;
+        margin-right: 100px;
+    }
+
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto {
+        height: 600px;
+    }
+
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.imagenDescripcion img.imagenProducto{
+        width: 430px;
+        height: 430px;
+    }
+
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles h2.nombreProducto {
+        margin: 10px 0;
+    }
+
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.productosPrecioDescuento {
+        margin: 10px 0;
+    }
+
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonComprar {
+        width: 300px;
+        height: 45px;
+    }
+
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonComprar a {
+        font-size: 25px;
+    }
+
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonEditarEliminar a {
+        width: 150px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonEditarEliminar {
+        margin: 20px 0;
+    }
+
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonEditarEliminar form.formularioEliminar button.eliminar {
+        width: 150px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+@keyframes colores {
+    0%{color: #494953;}
+    25%{color: #edf2f6;}
+    50%{color: #494953;}
+    75%{color: #edf2f6;}
+    100%{color: #494953;}
 }

@@ -10,7 +10,7 @@ module.exports = {
     
     main: (req, res) => {
         let categoriasId = products.filter(categorias => categorias.subCategory === "in-sale");
-        let categoriasId2 = products.filter(categorias => categorias.subCategory === "visited")
+        let categoriasId2 = products.filter(categorias => categorias.subCategory === "visited");
         res.render("main/home",{style: "home.css", categoriasId, categoriasId2})
     },
     about: (req, res) => {
