@@ -3,7 +3,7 @@ const router = express.Router();
 const controller = require("../controllers/adminController");
 // Crear Producto
 router.get("/createProduct", controller.create);
-router.post("/createProduct", controller.store);
+router.post("/products", controller.store);
 // Editar Producto
 router.get("/editProduct/:id", controller.edit);
 // Perfil de Administrador

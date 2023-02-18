@@ -39,8 +39,7 @@ main.mainLogin div.form-container {
     border-radius: 1rem;
     box-shadow: 0px 0px 12px var(--negro);
     padding: 3rem;
-    backdrop-filter: blur(10px);
-    
+    backdrop-filter: blur(10px); 
 }
 
 main.mainLogin div.form-container hr{

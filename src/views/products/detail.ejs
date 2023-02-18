@@ -5,125 +5,88 @@
 	<!-- Header -->
 	<%- include('../partials/header') %>
 	<!-- /Header -->
-
-	<!-- product detail -->
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Detalle del producto: <%= product.name %> </h2>
+    <main class="contenedorDetalles">
+		<div class="contenedorTarjetaDetalle">
+			<div class="nombreProductoDetalle">
+				<h2 class="nombreProducto">Detalle del producto: <%= product.name %> </h2>
 			</div>
-		</div>
-		<div class="product-detail">
-			<div class="row">
-				<div class="col-12 col-lg-8">
-					<img src="/images/imagesDataBase/<%= product.image %> " alt="product image" class="product-detail-img">
-					<p class="product-detail-description">
-						<%= product.description %> 
-					</p>
+			<article class="detallesProducto">
+				<div class="imagenDescripcion">
+					<img src="/images/imagesDataBase/<%= product.image %> " alt="product image" class="imagenProducto">
+					<p class="productoDescripcion"><%= product.description %></p>
 				</div>
-				<div class="col-12 col-lg-4">
-					<article class="product-detail-info">
-						<h2 class="product-detail-title"><%= product.name %> </h2>
-						<% if (product.discount != 0) { %>
-							<p class="product-detail-price small">
-								<span>$<%= product.price %> </span>
-								/
-								<b><%= product.discount %>  % OFF</b>
-							</p>
-							<p class="product-detail-price">
-								$<%= toThousand(product.price * (100 - product.discount) / 100)%> 
-							</p>
-						 
-						<% }else { %>
-							<p class="product-detail-price">
-								$<%= toThousand(product.price * (100 - product.discount) / 100)%> 
-							</p>
-							<% } %> 
-							
-
-						<ul class="actions-list">
-							<li>
-								<i class="fas fa-credit-card"></i>
-								<p>Pagá en 12 cuotas sin interes</p>
-							</li>
-							<li>
-								<i class="fas fa-store"></i>
-								<p>Retiro gratis en locales del vendedor</p>
-							</li>
-						</ul>
-
-						<a href="/users/metodosDePago" class="buy-now-button">COMPRAR AHORA</a>
-						<hr>
-
-						<a href="/admin/editProduct/<%= product.id %> " class="action-button edit">EDITAR PRODUCTO</a>
-						<form action="/products/delete/<%= product.id %>/?_method=DELETE" method="POST" style="display: inline-flex">
-							<button type="submit" class="action-button delete">ELIMINAR</button>
+				<div class="productoDetalles">
+					<h2 class="nombreProducto"><%= product.name %> </h2>
+					<% if (product.discount != 0) { %>
+						<div class="productosPrecioDescuento">
+							<p class="productosPrecioDescuentoTachado"><span>$<%= product.price %></span></p>
+							<p class="descuento"><%= product.discount %>%OFF</p>
+						</div>
+						<p class="productoPrecioFinal">$<%= toThousand(product.price * (100 - product.discount) / 100)%></p>
+					<% }else { %>
+						<p class="productoPrecioFinal">$<%= toThousand(product.price * (100 - product.discount) / 100)%></p>
+						<% } %> 
+					<div class="tarjetaInformacion">
+						<i class="fas fa-credit-card"></i>
+						<p class="informacion">Pagá en 12 cuotas sin interes</p>
+					</div>
+					<div class="tarjetaInformacion">
+						<i class="fas fa-store"></i>
+						<p class="informacion">Retiro gratis en locales del vendedor</p>
+					</div>
+					<div class="botonComprar">
+						<a href="/users/metodosDePago" class="comprar">COMPRAR AHORA</a>
+					</div>
+					<div class="botonEditarEliminar">
+						<a href="/admin/editProduct/<%= product.id %> " class="botonEditar">EDITAR PRODUCTO</a>
+						<form action="/products/delete/<%= product.id %>/?_method=DELETE" method="POST" class="formularioEliminar">
+							<button type="submit" class="eliminar">ELIMINAR</button>
 						</form>
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="tituloProductosRelacionados">
+			<h2 class="nombreTitulo">Ofertas</h2>
+		</div>
+		<section class="contenedorArticuloRelacionado">
+			<% categoriasId.forEach(product => { %>
+				<div class="contenedorArticulosRelacionados">
+					<article class="articuloRelacionado">
+						<div class="imagenProductoRelacionado">
+							<a href="/products/detail/<%= product.id %>"><img class="imagenRelacionada" src="/images/imagesDataBase/<%= product.image %> " alt="atr"></a>
+						</div>	
+						<div class="verMasProductoRelacionado">
+							<h3 class="nombreProductoRelacionado"><%= product.name %></h3>
+							<a href="/products/detail/<%= product.id %>"><button class="botonVerMas">Ver Mas</button></a>
+						</div>
 					</article>
 				</div>
-			</div>
+			<% }) %>
+		</section>
+		<div class="tituloProductosRelacionados">
+			<h2 class="nombreTitulo">Tambien te podria interesar</h2>
 		</div>
-	</div>
-	<div class="titulo">
-		<h2>Ofertas</h2>
-	</div>
-	<section class="articulos">
-		<article class="articulo">
-			<a href="">
-				<h3 class="nombre-articulo">ATR</h3>
-				<div class="imagen-producto">
-					<img class="imagen" src="/images/atr/atr1.webp" alt="atr">
+		<section class="contenedorArticuloRelacionado">
+			<% categoriasId2.forEach(product => { %>
+				<div class="contenedorArticulosRelacionados">
+					<article class="articuloRelacionado">
+						<div class="imagenProductoRelacionado">
+							<a href="/products/detail/<%= product.id %>"><img class="imagenRelacionada" src="/images/imagesDataBase/<%= product.image %> " alt="atr"></a>
+						</div>	
+						<div class="verMasProductoRelacionado">
+							<h3 class="nombreProductoRelacionado"><%= product.name %></h3>
+							<a href="/products/detail/<%= product.id %>"><button class="botonVerMas">Ver Mas</button></a>
+						</div>
+					</article>
 				</div>
-			</a>
-		</article>
-		<article class="articulo">
-			<a href="">
-				<h3 class="nombre-articulo">Decisiones de mierda</h3>
-				<div class="imagen-producto">
-					<img src="/images/decisiones-de-mierda/ddm1.webp" alt="Decisiones de mierda">
-				</div>
-			</a>
-		</article>
-		<article class="articulo">
-			<a href="">
-				<h3 class="nombre-articulo">HDP</h3>
-				<div class="imagen-producto">
-					<img src="/images/hdp/hdp1.webp" alt="hdp">
-				</div>
-			</a>
-		</article>
-	</section>
-	<div class="titulo">
-		<h2>Tambien te podria interesar</h2>
-	</div>
-	<section class="articulos">
-		<article class="articulo">
-			<a href="">
-				<h3 class="nombre-articulo">Ni lo testeamos un poco</h3>
-				<div class="imagen-producto">
-					<img src="/images/Ni-lo-testeamos-un-poco/nltup1.webp" alt="Ni lo testeamos un poco">
-				</div>
-			</a>
-		</article>
-		<article class="articulo">
-			<a href="">
-				<h3 class="nombre-articulo">Amigos de mierda</h3>
-				<div class="imagen-producto">
-					<img src="/images/amigos-de-mierda/adm1.webp" alt="amigos de mierda">
-				</div>
-			</a>
-		</article>
-		<article class="articulo">
-			<a href="">
-				<h3 class="nombre-articulo">Tomalo vos</h3>
-				<div class="imagen-producto">
-					<img src="/images/tomalo-vos/tv1.webp" alt="Tomalo vos">
-				</div>
-			</a>
-		</article>
-	</section>
-	<!-- /product detail -->
-    <%- include("../partials/footer") %> 
-    <script src="/js/efecto.js"></script>
+			<% }) %>
+		</section>
+		<!-- /product detail -->
+		<%- include("../partials/btn-wp") %> 
+		<%- include("../partials/footer") %> 
+		<script src="/js/efecto.js"></script>
+	</main>
+	<!-- product detail -->
 </body>
 </html>

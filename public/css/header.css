@@ -150,6 +150,12 @@ header.contenedor div.contenedorHeaderMobileTablet div.buscador div.barraBuscado
     margin-left: -160px;
 }
 
+div#texto {
+    z-index: 1002;
+    padding-right: 20px;
+}
+
+
 header.contenedor div.contenedorHeaderMobileTablet div.buscador div.barraBuscadora.active{
     display: flex;
     justify-content: center;
@@ -215,6 +221,7 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.cate
         width: 50%;
     }
 }
+
 
 
 @media (min-width: 1039px) {

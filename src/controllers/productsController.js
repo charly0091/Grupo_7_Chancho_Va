@@ -15,7 +15,11 @@ const controller = {
     }, */
     detail: (req, res) => {
         let product = products.find(product => product.id == req.params.id);
-        res.render("products/detail", { product, style : "detail.css" , toThousand});
+        let categoriasId = products.filter(categorias => categorias.subCategory === "in-sale");
+        categoriasId.length = 6 
+        let categoriasId2 = products.filter(categorias => categorias.subCategory === "visited");
+        categoriasId2.length = 6 
+        res.render("products/detail", { product, style : "detail.css" , toThousand, categoriasId, categoriasId2});
     },
     create: (req, res) => {
         res.render("./admin/createProduct")

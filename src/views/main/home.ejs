@@ -29,7 +29,7 @@
                     <div class="homeContainerProductos">
                         <article class="homeTarjetaProducto">               
                             <div class="homeTarjetaImagen">
-                                <a href="/products/detail/1"><img class="imagenJuego" src="/images/imagesDataBase/<%= products.image %>" alt="" ></a>
+                                <a href="/products/detail/<%= products.id %>"><img class="imagenJuego" src="/images/imagesDataBase/<%= products.image %>" alt="" ></a>
                             </div> 
                             <div class="homeTarjetaDescripcion">
                                 <h3 class="nombreJuego"><%= products.name %></h3>
@@ -46,7 +46,7 @@
                     <div class="homeContainerProductos">
                         <article class="homeTarjetaProducto">               
                             <div class="homeTarjetaImagen">
-                                <a href="/products/detail/1"><img class="imagenJuego" src="/images/imagesDataBase/<%= products.image %>" alt="" ></a>
+                                <a href="/products/detail/<%= products.id %>"><img class="imagenJuego" src="/images/imagesDataBase/<%= products.image %>" alt="" ></a>
                             </div> 
                             <div class="homeTarjetaDescripcion">
                                 <h3 class="nombreJuego"><%= products.name %></h3>
@@ -59,12 +59,9 @@
             </section>
         </div>
     </main>
-    <div class="container-btn-wp">
-        <a href="https://wa.me/987654321?" target="_blank">
-            <img class="btn-wp" src="/images/iconowp.png" alt="">
-        </a>
-    </div>
+    <%- include("../partials/btn-wp") %> 
     <%- include("../partials/footer") %> 
     <script src="js/efecto.js"></script>
+    <script src="js/vozAtexto.js"></script>
 </body>
 </html>
