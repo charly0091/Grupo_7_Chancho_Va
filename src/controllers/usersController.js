@@ -18,13 +18,13 @@ module.exports = {
         let newUser = {
             id: req.body.id,
             email: req.body.email,
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            password: req.body.password
+            password: req.body.password,
+            password2: req.body.password2,
+            cel: req.body.cel
         }
         users.push(newUser);
         writeJson(users);
-        res.send("usuario creado Exitosamente")
+        res.redirect("/users/login");
     },
     login: (req, res) => {
         res.render("users/login" , { style : "styles.css" })

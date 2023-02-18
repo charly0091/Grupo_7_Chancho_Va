@@ -7,12 +7,10 @@ const writeJson = (products) => {
     fs.writeFileSync(productDataPath, JSON.stringify(products), "utf8")
 }
 
-//const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 module.exports = {
     create: (req, res) => {
-        res.render("./admin/createProduct")
+        res.render("admin/createProduct")
     },
 
     store: (req, res) => {
@@ -33,11 +31,32 @@ module.exports = {
 		let productId = Number(req.params.id);
 		let productToEdit = products.find(product => product.id === productId);
 
-		res.render("admin/editProduct", {
-			productToEdit, 
-		})
+        if(productToEdit){
+            res.render("admin/editProduct", {
+                productToEdit, 
+            })
+        } else{
+            res.send("No se encontro el producto");
+        }
 	},
+    update: (req, res) => {
+        let productId = Number(req.params.id);
+        let productToEdit = products.find(product => product.id == productId);
+        productToEdit.id = productId;
+        productToEdit.name = req.body.name;
+        productToEdit.price = req.body.price;
+        productToEdit.discount = req.body.discount;
+        productToEdit.category = req.body.category;
+        productToEdit.description = req.body.description;
+        productToEdit.image = req.body.image;
+        
+        writeJson(products);
+        res.redirect("/admin/adminPerfil");
 
+
+
+	},
+    
     admin: (req, res) =>{
         res.render("./admin/adminPerfil")
     },
