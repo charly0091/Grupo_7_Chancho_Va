@@ -16,7 +16,7 @@
             <div class="contenedor">
                 <h2>Editar producto</h2>
                 <hr>
-                <form method="POST" action="/products">
+                <form method="POST" action="/admin/editProduct/<%= productToEdit.id %>?_method=PUT">
                     <div class="contenedorFormularios">
                         <div class="input">
                             <label for="name">Nombre del producto</label>
@@ -44,7 +44,7 @@
                     <div class="contenedorFormularios">
                         <div class="input">
                             <label for="image">Foto del producto</label>
-                            <input class="estiloInput" type="file"  accept=".jpg, .png"  id="image" name="image"  placeholder="Foto del producto" required>
+                            <input class="estiloInput" type="file"  accept=".jpg, .png"  id="image" name="image"  placeholder="Foto del producto">
                             <span class="mensajeError">La extensión de la imágen no es compatible</span>
                         </div>
                         <div class="input">
