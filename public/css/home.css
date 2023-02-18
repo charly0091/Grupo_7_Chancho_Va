@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap'); 
 @import url(header.css);
 @import url(footer.css);
+@import url(banner.css);
 
 
 :root {
@@ -32,14 +33,6 @@ main.homeMain {
 }
 
 main.homeMain div.contenedorHome {
-    width: 100%;
-}
-
-main.homeMain div.contenedorHome nav.contenedorCarrusel section.homeCarrusel {
-    width: 100%;
-}
-
-main.homeMain div.contenedorHome nav.contenedorCarrusel section.homeCarrusel img.banner {
     width: 100%;
 }
 
@@ -194,9 +187,6 @@ main.homeMain div.contenedorHome section.homeProductos div.homeContainerProducto
         flex-direction: row;
         justify-content: space-evenly;
     }
-    main.homeMain div.contenedorHome nav.contenedorCarrusel section.homeCarrusel img.banner {
-        height: 250px;
-    }
     
     main.homeMain div.contenedorHome section.homeMenuTematico article.contenedorCategoria {
         margin: 15px;
@@ -220,10 +210,6 @@ main.homeMain div.contenedorHome section.homeProductos div.homeContainerProducto
     main.homeMain div.contenedorHome section.homeMenuTematico {
         flex-direction: row;
         justify-content: space-evenly;
-    }
-
-    main.homeMain div.contenedorHome nav.contenedorCarrusel section.homeCarrusel img.banner {
-        height: 250px;
     }
 
     main.homeMain div.contenedorHome section.homeMenuTematico article.contenedorCategoria {

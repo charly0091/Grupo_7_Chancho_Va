@@ -1,0 +1,15 @@
+
+nav.contenedorCarrusel section.homeCarrusel {
+    width: 100%;
+}
+nav.contenedorCarrusel section.homeCarrusel img.banner {
+    width: 100%;
+    max-height: 300px;
+}
+
+@media (min-width: 767px) {
+
+    main.homeMain div.contenedorHome nav.contenedorCarrusel section.homeCarrusel img.banner {
+        height: 250px;
+    }   
+}

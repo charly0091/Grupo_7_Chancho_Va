@@ -298,37 +298,5 @@
         "subCategory": "visited",
         "description": "Raids es un jeugo ágil y fluido, con turnos cortos pero repletos de decisiones importantes, en los que vas a elegir a qué puerto llegar antes que los demás para así obetener sus beneficios. Pero cuidado, si otro llega junto a vos... habrá que luchar por esa fichita preciada.",
         "image": "raids.PNG"
-    },
-    {
-        "id": 31,
-        "name": "123",
-        "price": "1000",
-        "category": "bla",
-        "description": "lalalallaala",
-        "image": "Blue Cellphone Service Center Business Logo (1).png"
-    },
-    {
-        "id": 32,
-        "name": "123",
-        "price": "1000",
-        "category": "bla",
-        "description": "lalalallaala",
-        "image": "Blue Cellphone Service Center Business Logo (1).png"
-    },
-    {
-        "id": 33,
-        "name": "123",
-        "price": "1000",
-        "category": "bla",
-        "description": "lalalallaala",
-        "image": "Blue Cellphone Service Center Business Logo (1).png"
-    },
-    {
-        "id": 34,
-        "name": "123",
-        "price": "1000",
-        "category": "bla",
-        "description": "lalalallaala",
-        "image": "Blue Cellphone Service Center Business Logo (1).png"
     }
 ]

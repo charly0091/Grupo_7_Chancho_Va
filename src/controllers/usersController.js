@@ -22,7 +22,7 @@ module.exports = {
             password2: req.body.password2,
             cel: req.body.cel
         }
-        users.push(user);
+        users.push(newUser);
         writeJson(users);
         res.redirect("/users/login");
     },
