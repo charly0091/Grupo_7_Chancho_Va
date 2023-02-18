@@ -12,7 +12,7 @@ const writeJson = (products) => {
 
 module.exports = {
     create: (req, res) => {
-        res.render("./admin/createProduct")
+        res.render("admin/createProduct")
     },
 
     store: (req, res) => {
