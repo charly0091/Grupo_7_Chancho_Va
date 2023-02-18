@@ -33,9 +33,13 @@ module.exports = {
 		let productId = Number(req.params.id);
 		let productToEdit = products.find(product => product.id === productId);
 
-		res.render("admin/editProduct", {
-			productToEdit, 
-		})
+        if(productToEdit){
+            res.render("admin/editProduct", {
+                productToEdit, 
+            })
+        } else{
+            res.send("No se encontro el producto");
+        }
 	},
 
     admin: (req, res) =>{
