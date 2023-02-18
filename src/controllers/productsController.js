@@ -10,9 +10,6 @@ const controller = {
     products: (req, res) => {
         res.render("products")
     },
-    /* detail: (req, res) => {
-        res.render("products/detail" , { style : "detail.css" } )
-    }, */
     detail: (req, res) => {
         let product = products.find(product => product.id == req.params.id);
         let categoriasId = products.filter(categorias => categorias.subCategory === "in-sale");
@@ -28,10 +25,21 @@ const controller = {
          res.render("./admin/editProduct")
     },
     carrito: (req, res) => {
-        res.render("products/carrito" , { style : "carrito.css" })
-    }
- 
-    }
+        res.render("products/carrito" , { style : "carrito.css"})
+    },
+    familiares: (req, res) => {
+        let categoriasFamiliares = products.filter(categorias => categorias.category === 1);
+        res.render("products/familiares" , { style : "familiares.css", categoriasFamiliares})
+    },
+    estrategia: (req, res) => {
+        let categoriasEstrategia = products.filter(categorias => categorias.category === 2);
+        res.render("products/estrategia" , { style : "estrategia.css", categoriasEstrategia})
+    },
+    previa: (req, res) => {
+        let categoriasPrevia = products.filter(categorias => categorias.category === 3);
+        res.render("products/previa" , { style : "previa.css", categoriasPrevia})
+    },
+}
 
 
 
