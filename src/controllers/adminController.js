@@ -1,11 +1,7 @@
-const fs = require('fs');
-const path = require('path');
+const { validationResult } = require("express-validator");
+const { readJSON, writeJSON } = require("../data");
 
-const productDataPath = path.join(__dirname, "../data/productsDataBase.json");
-const products = JSON.parse(fs.readFileSync(productDataPath, "utf-8"));
-const writeJson = (products) => {
-    fs.writeFileSync(productDataPath, JSON.stringify(products), "utf8")
-}
+const products = readJSON("productsDataBase.json");
 
 
 module.exports = {
@@ -34,7 +30,7 @@ module.exports = {
             image:req.body.productPhoto,
 		}
 		products.push(newProduct);
-		writeJson(products)
+		writeJSON("productsDataBase.json")
     },
 
     edit: (req, res) => {
@@ -57,10 +53,11 @@ module.exports = {
         productToEdit.price = req.body.price;
         productToEdit.discount = req.body.discount;
         productToEdit.category = req.body.category;
+        productToEdit.subCategory = req.body.subCategory;
         productToEdit.description = req.body.description;
-        productToEdit.image = req.body.image;
+        productToEdit.image = req.file ? req.file.filename : null,
         
-        writeJson(products);
+        writeJSON("productsDataBase.json");
         res.redirect("/admin/adminPerfil");
 
 
