@@ -3,7 +3,7 @@ const router = express.Router();
 const controller = require("../controllers/adminController");
 // Crear Producto
 router.get("/createProduct", controller.create);
-router.post("/products", controller.store);
+router.post("/createProduct", controller.store);
 // Editar Producto
 router.get("/editProduct/:id", controller.edit);
 router.put("/editProduct/:id", controller.update);

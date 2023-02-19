@@ -12,6 +12,16 @@ module.exports = {
     create: (req, res) => {
         res.render("admin/createProduct")
     },
+       // let newProduct ={
+		//	id:lastId+1,
+		//	name:req.body.productName,
+		//	price:req.body.productPrice,
+		//	category:req.body.productCategory,
+		//	description:req.body.productDescription,
+          //  image:req.body.productPhoto,
+		//}
+       
+       
 
     store: (req, res) => {
         let lastId = products [products.length -1].id;
