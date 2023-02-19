@@ -17,7 +17,7 @@
          <div class="contenedor">
             <h2>Agregar producto</h2>
             <hr>
-            <form method="POST" action="/admin/createProduct">
+            <form method="POST" action="/admin/createProduct" enctype="multipart/form-data">
                 <div class="input">
                     <label for="productName">Nombre del producto</label>
                     <input class="estiloInput" type="text" name="productName" id="productName" placeholder="Nombre del producto" required>                
@@ -29,14 +29,24 @@
                     <span class="mensajeError">Debe ingresar la categoria del producto</span>
                 </div>
                 <div class="input">
+                    <label for="productCategory">Subcategoria del producto</label>
+                    <input class="estiloInput" type="text" name="productSubCategory" id="productSubCategory" placeholder="Subcategoria del producto" required>                
+                    <span class="mensajeError">Debe ingresar la subcategoria del producto</span>
+                </div>
+                <div class="input">
                     <label for="productPrice">Precio del producto</label>
                     <input class="estiloInput" type="number" name="productPrice" id="productPrice" placeholder="Precio del producto"  step="0.01" min="0" required>                
                     <span class="mensajeError">Debe ingresar el precio del producto</span>
                 </div>
+                <div class="input">
+                    <label for="productPrice">Descuento del producto</label>
+                    <input class="estiloInput" type="number" name="productDiscount" id="productDiscount" placeholder="Descuento del producto"  step="0.01" min="0" required>                
+                    <span class="mensajeError">Debe ingresar el descuento del producto</span>
+                </div>
                 <div class="div_file">
                     <div class="file">
                         <p class="texto">Cargar imagen</p>
-                        <input class="productPhoto" type="file"  accept=".jpg, .png"  id="productPhoto" name="productPhoto"  placeholder="Foto del producto" required>
+                        <input class="productPhoto" type="file"   id="productPhoto" name="productPhoto"  placeholder="Foto del producto" required>
                     </div>
                 </div>
                 <span class="mensajeError">La extensión de la imágen no es compatible</span>
@@ -44,7 +54,10 @@
                     <label for="productDescription">Descripción del producto</label>
                     <textarea name="productDescription" class="estiloInput" cols="30" rows="10" required></textarea>
                     <span class="mensajeError">Debe ingresar le descripcion del producto</span>
-                </div>    
+                </div>   
+                
+                
+
                 <div class="boton">
                     <span class="mensajeError"> Debe completar todos los campos</span>
                     <button type="submit" class="registrar">Crear</button>

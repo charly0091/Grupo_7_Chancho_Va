@@ -1,302 +1,303 @@
 [
-    {
-        "id": 1,
-        "name": "Red 7",
-        "price": 3990,
-        "discount": 10,
-        "category": 1,
-        "subCategory": "in-sale",
-        "description": "Red 7 es un juego de cartas compacto, rápido y fluido, para 2 a 4 jugadores, que exige a fondo tu ingenio para ganar. Las reglas son muy fáciles ...¡Lástima que cambian todo el tiempo!",
-        "image": "red7.PNG"
-    },
-    {
-        "id": 2,
-        "name": "Kingdomino",
-        "price": 6990,
-        "discount": 0,
-        "category": 1,
-        "subCategory": "visited",
-        "description": "Kingdominio es un juego de 2 a 4 jugadores en el que sos un rey ambicioso buscando nuevas tierras para expandir tu reino, ¡pero cada tierra nueva es una ficha de dominó muy especial! Vas a tener que ir conectando los terrenos con inteligencia para formar tus territorios y conseguir la mayor cantidad de puntos posibles.",
-        "image": "kingdomino.PNG"
-    },
-    {
-        "id": 3,
-        "name": "Yokai",
-        "price": 3990,
-        "discount": 15,
-        "category": 1,
-        "subCategory": "visited",
-        "description": "Yokai es un desafiante juego cooperativo en el que la comunicación entre jugadores esta limitada¡Deberán trabajar en equipo para apaciguar a estos seres legendarios y reunir a cada uno con su familia!",
-        "image": "yokai.PNG"
-    },
-    {
-        "id": 4,
-        "name": "Pistas Cruzadas",
-        "price": 4490,
-        "discount": 12,
-        "category": 1,
-        "subCategory": "visited",
-        "description": "Pistas Cruzadas es un juego party cooperativo para todo tipo de reuniones, en el que vas a pensar pistas para conectar pares de palabras y que tus compañeros adivinen qué palabras cruzaste. Cuantas más coordenadas de la grilla cubran, más van a puntuar y a creerse conectados telepáticamente.",
-        "image": "pistasCruzadas.PNG"
-    },
-    {
-        "id": 5,
-        "name": "Say My Name + Expansiones 2 Y 3",
-        "price": 11070,
-        "discount": 20,
-        "category": 1,
-        "subCategory": "visited",
-        "description": "En Say My Name el objetivo es adivinar la mayor cantidad de tarjetas lo más rápido posible, ¿como? Dándole pistas a tu equipo respetando las reglas de cada ronda",
-        "image": "sayMyName.PNG"
-    },
-    {
-        "id": 6,
-        "name": "King Of Tokyo: Power Up",
-        "price": 5990,
-        "discount": 0,
-        "category": 1,
-        "subCategory": "in-sale",
-        "description": "¡La lucha se potencia con PowerUp! Los moustros están mutando y evolucionan para sorprender a sus rivales. ¡La pelea nunca será la misma! Además, el hábil Pandakai se suma a los candidados a convertirse en ... ¡El verdadero Rey de Tokyo!",
-        "image": "kingOfTokyo.PNG"
-    },
-    {
-        "id": 7,
-        "name": "Takenoko",
-        "price": 14900,
-        "discount": 25,
-        "category": 1,
-        "subCategory": "in-sale",
-        "description": "Takenoko es un juego para 2 a 4 jugadores que te permite convertirte en el Jardinero del Emperador y cuidar su jardín y a su hambriento panda. Incluye más de 4 docenas de segmentos de bambú de plástico y 28 parcelas de jardín con arte increíble, que, sumadas a las miniaturas, logran una visión única sobre el arte de la jardinería de bambú que es tan preciosa como divertida.",
-        "image": "tekenoko.PNG"
-    },
-    {
-        "id": 8,
-        "name": "¡Toma 6!",
-        "price": 4490,
-        "discount": 0,
-        "category": 1,
-        "subCategory": "in-sale",
-        "description": "Toma 6 es un juego de cartas para 2 a 10 jugadores, en el que intentás ubicar cada una de tus 10 cartas en las hileras que hay en la mesa sin que tu carta sea la sexta de una fila. ¿Suena sencillo? Lo es. ¿Suena fácil? Para nada, ¡hay otros jugadores buscando lo mismo!",
-        "image": "toma6.PNG"
-    },
-    {
-        "id": 9,
-        "name": "Cartógrafos Héroes",
-        "price": 6990,
-        "discount": 7,
-        "category": 1,
-        "subCategory": "visited",
-        "description": "Cartógrafos Héroes es un juego roll and write donde todos los jugadores, a la vez y con los mismos recursos, tienen que crear un reino de la forma más eficiente posible. Tiene altísima rejugabilidad, gran valor para jugadores novatos y avanzados por igual y la posibilidad de ser jugado de uno a prácticamente todos los jugaadores que quieras.",
-        "image": "cartografosHeroes.PNG"
-    },
-    {
-        "id": 10,
-        "name": "Bandido",
-        "price": 3490,
-        "discount": 0,
-        "category": 1,
-        "subCategory": "visited",
-        "description": "Bandido es un juego de colocación de cartas rápido y tenso, en el que intentás que el bandido no se escape de prisión. Es un juego cooperativo: todos los jugadores ganan juntos, o son humillados por una pequeña cajita de cartulina.",
-        "image": "bandido.PNG"
-    },
-    {
-        "id": 11,
-        "name": "No Lo Testeamos Ni Un Poco",
-        "price": 3490,
-        "discount": 7,
-        "category": 2,
-        "subCategory": "visited",
-        "description": "Si buscás un juego lleno de estrategia...¡claramente no es este! En una partida TODO es posible: desde perder por un Piedra, Papel o Tijera hasta ganar por ser el más bajito.",
-        "image": "noLoTesteamosNiUnPoco.PNG"
-    },
-    {
-        "id": 12,
-        "name": "No Lo Testeamos Ni Un Poco: Drinking",
-        "price": 1790,
-        "discount": 0,
-        "category": 2,
-        "subCategory": "in-sale",
-        "description": "Una Expansión con cartas que convierten tu NLTNUP en un drinking game. Se puede usar con cualquier tipo de bebida (con o sin alcohol). ¡Jugar con moderación!",
-        "image": "noLoTesteamosNiUnPocoDrinking.PNG"
-    },
-    {
-        "id": 13,
-        "name": "Dungeons & Drinks",
-        "price": 6990,
-        "discount": 10,
-        "category": 2,
-        "subCategory": "in-sale",
-        "description": "Dungeons & Dinks, es un juego de 2 a 6 jugadores en el cual sos un héroe pasado de copas, que entra junto con sus amigos a un dungeon lleno de pelligros y monstruos que no molestaban a nadie",
-        "image": "dungeonAndDrinks.PNG"
-    },
-    {
-        "id": 14,
-        "name": "No Lo Testeamos Ni Un Poco Expansiones",
-        "price": 17630,
-        "discount": 20,
-        "category": 2,
-        "subCategory": "in-sale",
-        "description": "Se reparten 2 cartas a cada jugador. En tu turno robás 1 carta del mazo y jugás 1 carta de tu mano. Hacés lo que dice la carta que jugaste. Luego sigue el jugador a tu izquierda",
-        "image": "noLoTesteamosNiUnPocoMasExpansiones.PNG"
-    },
-    {
-        "id": 15,
-        "name": "HDP",
-        "price": 8990,
-        "discount": 3,
-        "category": 2,
-        "subCategory": "visited",
-        "description": "Un juego de humor políticamente incorrecto. Uno de esos juegos donde respondés una carta negra con cartas blancas. Mucho humor negro en una caja pequeña que ademas tiene un mono. Una vuelta más en mi espiral de decadencia y hedonismo. Un ataque de palometas.",
-        "image": "hdp.PNG"
-    },
-    {
-        "id": 16,
-        "name": "Prendete Fuego",
-        "price": 7490,
-        "discount": 0,
-        "category": 2,
-        "subCategory": "visited",
-        "description": "Prendete Fuego es un juego para personas capaces de hacer cualquier cosa con tal de ganar, y para los que quieren divertirse viéndolos.",
-        "image": "prendeteFuego.PNG"
-    },
-    {
-        "id": 17,
-        "name": "Tomalo Vos",
-        "price": 2490,
-        "discount": 0,
-        "category": 2,
-        "subCategory": "visited",
-        "description": "Un juego ideal para tus previas, en el que tu objetivo es lograr que tus amigos/as tomen más que vos.",
-        "image": "tomaloVos.PNG"
-    },
-    {
-        "id": 18,
-        "name": "Amigos De Mierda",
-        "price": 3490,
-        "discount": 5,
-        "category": 2,
-        "subCategory": "in-sale",
-        "description": "Amigos de Mierda es un juego ideal para romper amistades de toda la vida, caerle como el ojete a gente que acabás de conocer y/o arruinar cualquier tipo de reunión familiar.",
-        "image": "amigosDeMierda.PNG"
-    },
-    {
-        "id": 19,
-        "name": "Decisiones De Mierda",
-        "price": 3490,
-        "discount": 10,
-        "category": 2,
-        "subCategory": "in-sale",
-        "description": "¿Creés que tus amigos toman malas decisiones? Esperá a jugar Decisiones de Mierda De paso, vas a conocer nuevos aspectos (oscuros, muy oscuros) de tus amigos. Capaz te enteres que en el fondo son bastante mierdas,¡o capaz simplemente lo confirmes!",
-        "image": "decisionesDeMierda.PNG"
-    },
-    {
-        "id": 20,
-        "name": "HDP Expansiones Numéricas",
-        "price": 10740,
-        "discount": 15,
-        "category": 2,
-        "subCategory": "in-sale",
-        "description": "Un juego de humor políticamente incorrecto. Uno de esos juegos donde respondés una carta negra con cartas blancas. Mucho humor negro en una caja pequeña que ademas tiene un mono. Una vuelta más en mi espiral de decadencia y hedonismo. Un ataque de palometas. Con todas sus expanciones.",
-        "image": "hdp6.PNG"
-    },
-    {
-        "id": 21,
-        "name": "Descifrá El Código",
-        "price": 6990,
-        "discount": 10,
-        "category": 3,
-        "subCategory": "visited",
-        "description": "Hay un código oculto, compuesto por números de distintos colores. ¿Tu objetivo? Descubrirlo antes que los demás. Todos tienen una parte de la información: Vas a tener que elegir las preguntas mas efectivas para interrogar a tus rivales y descubrir qué es lo que saben ellos. Después, activá tu cerebro, usá la lógica... ¡Y descifrá el código antes que los demás!",
-        "image": "descifraElCodigo.PNG"
-    },
-    {
-        "id": 22,
-        "name": "Schotten Totten",
-        "price": 4490,
-        "discount": 0,
-        "category": 3,
-        "subCategory": "visited",
-        "description": "Schotten Totten es un jeugo para dos jugadores en el que manejás un clan escocés que está peleando por expandir su aldea. El buen uso de tus Guerreros y Especialistas son la clave de la vistoria.",
-        "image": "schottenTotten.PNG"
-    },
-    {
-        "id": 23,
-        "name": "Little Town",
-        "price": 9900,
-        "discount": 5,
-        "category": 3,
-        "subCategory": "visited",
-        "description": "Little Town es un juego de colocación de trabajadores fácil de aprender pero con mucha profundidad, en el que recolectás recursos y construís edificios con el objetivo de ser declarado el mejor arquitecto del pueblo.",
-        "image": "littleTown.PNG"
-    },
-    {
-        "id": 24,
-        "name": "Raccoon Tycoon",
-        "price": 15900,
-        "discount": 10,
-        "category": 3,
-        "subCategory": "in-sale",
-        "description": "Raccoon Tycoon es un juego de gestión de recursos y especulación económica, sencillo de explicar y con turnos rápidos. Vas a pasártela produciendo ítems y mirando de reojo los precios del mercado, preguntándote en cada turno si es el momento de vender antes que lo haga otro, o mejor de comprar e invertir.",
-        "image": "raccoonTycoon.PNG"
-    },
-    {
-        "id": 25,
-        "name": "Roll Player",
-        "price": 19900,
-        "discount": 7,
-        "category": 3,
-        "subCategory": "in-sale",
-        "description": "Tirá dados, armá tu personaje, equipalo para una aventura de fantasía medieval clásica y ganá puntos de reputación por haber creado al personaje perfecto.",
-        "image": "rollPlayer.PNG"
-    },
-    {
-        "id": 26,
-        "name": "Cartógrafos",
-        "price": 6990,
-        "discount": 0,
-        "category": 3,
-        "subCategory": "in-sale",
-        "description": "Cartógrafos es un juego roll & write donde todos los jugadores, con exactamente los mismos recursos, tienen que crear un reino de la forma m{as eficiente posible ",
-        "image": "cartografos.PNG"
-    },
-    {
-        "id": 27,
-        "name": "Ecos, Primer Continente",
-        "price": 15900,
-        "discount": 7,
-        "category": 3,
-        "subCategory": "visited",
-        "description": "En Ecos: Primer Continente, los jugadores van creando el planeta y poblándolo de especies, pero cada uno tiene su propia agenda y sus propias acciones disponibles. Simple de aprender, tiene muchísima profundida y una rejugabilidad enorme.",
-        "image": "ecosPrimerContinente.PNG"
-    },
-    {
-        "id": 28,
-        "name": "Montañas De La Locura",
-        "price": 14900,
-        "discount": 15,
-        "category": 3,
-        "subCategory": "visited",
-        "description": "Montañas De La Locura es un juego cooperativo de estrategia inspirado en la obra de H.P. Lovecraft (La llamada de Cthulhu, La sombra sobre Innsmouth), con mucha estrategia y algo de humor. Cada jugador se pone en la piel de un científico en búsqueda de las reliquias de una ciudad antigua. Solo el trabajo en equipo los salvará de no caer en ¡La locura!",
-        "image": "montañaDeLaLocura.PNG"
-    },
-    {
-        "id": 29,
-        "name": "Papillon",
-        "price": 15900,
-        "discount": 10,
-        "category": 3,
-        "subCategory": "visited",
-        "description": "Papillon es un juego muy competitivo con distintos caminos hacia la victoria. Eso sí: ganes o pierdas, al final vas a regodearte contemplando los jardínes florecidos (¡Salvo que te dé alergia!)",
-        "image": "papillon.PNG"
-    },
-    {
-        "id": 30,
-        "name": "Raids",
-        "price": 12900,
-        "discount": 7,
-        "category": 3,
-        "subCategory": "visited",
-        "description": "Raids es un jeugo ágil y fluido, con turnos cortos pero repletos de decisiones importantes, en los que vas a elegir a qué puerto llegar antes que los demás para así obetener sus beneficios. Pero cuidado, si otro llega junto a vos... habrá que luchar por esa fichita preciada.",
-        "image": "raids.PNG"
-    }
+   {
+      "id": 1,
+      "name": "Red 7",
+      "price": 3990,
+      "discount": 10,
+      "category": 1,
+      "subCategory": "in-sale",
+      "description": "Red 7 es un juego de cartas compacto, rápido y fluido, para 2 a 4 jugadores, que exige a fondo tu ingenio para ganar. Las reglas son muy fáciles ...¡Lástima que cambian todo el tiempo!",
+      "image": "red7.PNG"
+   },
+   {
+      "id": 2,
+      "name": "Kingdomino",
+      "price": 6990,
+      "discount": 0,
+      "category": 1,
+      "subCategory": "visited",
+      "description": "Kingdominio es un juego de 2 a 4 jugadores en el que sos un rey ambicioso buscando nuevas tierras para expandir tu reino, ¡pero cada tierra nueva es una ficha de dominó muy especial! Vas a tener que ir conectando los terrenos con inteligencia para formar tus territorios y conseguir la mayor cantidad de puntos posibles.",
+      "image": "kingdomino.PNG"
+   },
+   {
+      "id": 3,
+      "name": "Yokai",
+      "price": 3990,
+      "discount": 15,
+      "category": 1,
+      "subCategory": "visited",
+      "description": "Yokai es un desafiante juego cooperativo en el que la comunicación entre jugadores esta limitada¡Deberán trabajar en equipo para apaciguar a estos seres legendarios y reunir a cada uno con su familia!",
+      "image": "yokai.PNG"
+   },
+   {
+      "id": 4,
+      "name": "Pistas Cruzadas",
+      "price": 4490,
+      "discount": 12,
+      "category": 1,
+      "subCategory": "visited",
+      "description": "Pistas Cruzadas es un juego party cooperativo para todo tipo de reuniones, en el que vas a pensar pistas para conectar pares de palabras y que tus compañeros adivinen qué palabras cruzaste. Cuantas más coordenadas de la grilla cubran, más van a puntuar y a creerse conectados telepáticamente.",
+      "image": "pistasCruzadas.PNG"
+   },
+   {
+      "id": 5,
+      "name": "Say My Name + Expansiones 2 Y 3",
+      "price": 11070,
+      "discount": 20,
+      "category": 1,
+      "subCategory": "visited",
+      "description": "En Say My Name el objetivo es adivinar la mayor cantidad de tarjetas lo más rápido posible, ¿como? Dándole pistas a tu equipo respetando las reglas de cada ronda",
+      "image": "sayMyName.PNG"
+   },
+   {
+      "id": 6,
+      "name": "King Of Tokyo: Power Up",
+      "price": 5990,
+      "discount": 0,
+      "category": 1,
+      "subCategory": "in-sale",
+      "description": "¡La lucha se potencia con PowerUp! Los moustros están mutando y evolucionan para sorprender a sus rivales. ¡La pelea nunca será la misma! Además, el hábil Pandakai se suma a los candidados a convertirse en ... ¡El verdadero Rey de Tokyo!",
+      "image": "kingOfTokyo.PNG"
+   },
+   {
+      "id": 7,
+      "name": "Takenoko",
+      "price": 14900,
+      "discount": 25,
+      "category": 1,
+      "subCategory": "in-sale",
+      "description": "Takenoko es un juego para 2 a 4 jugadores que te permite convertirte en el Jardinero del Emperador y cuidar su jardín y a su hambriento panda. Incluye más de 4 docenas de segmentos de bambú de plástico y 28 parcelas de jardín con arte increíble, que, sumadas a las miniaturas, logran una visión única sobre el arte de la jardinería de bambú que es tan preciosa como divertida.",
+      "image": "tekenoko.PNG"
+   },
+   {
+      "id": 8,
+      "name": "¡Toma 6!",
+      "price": 4490,
+      "discount": 0,
+      "category": 1,
+      "subCategory": "in-sale",
+      "description": "Toma 6 es un juego de cartas para 2 a 10 jugadores, en el que intentás ubicar cada una de tus 10 cartas en las hileras que hay en la mesa sin que tu carta sea la sexta de una fila. ¿Suena sencillo? Lo es. ¿Suena fácil? Para nada, ¡hay otros jugadores buscando lo mismo!",
+      "image": "toma6.PNG"
+   },
+   {
+      "id": 9,
+      "name": "Cartógrafos Héroes",
+      "price": 6990,
+      "discount": 7,
+      "category": 1,
+      "subCategory": "visited",
+      "description": "Cartógrafos Héroes es un juego roll and write donde todos los jugadores, a la vez y con los mismos recursos, tienen que crear un reino de la forma más eficiente posible. Tiene altísima rejugabilidad, gran valor para jugadores novatos y avanzados por igual y la posibilidad de ser jugado de uno a prácticamente todos los jugaadores que quieras.",
+      "image": "cartografosHeroes.PNG"
+   },
+   {
+      "id": 10,
+      "name": "Bandido",
+      "price": 3490,
+      "discount": 0,
+      "category": 1,
+      "subCategory": "visited",
+      "description": "Bandido es un juego de colocación de cartas rápido y tenso, en el que intentás que el bandido no se escape de prisión. Es un juego cooperativo: todos los jugadores ganan juntos, o son humillados por una pequeña cajita de cartulina.",
+      "image": "bandido.PNG"
+   },
+   {
+      "id": 11,
+      "name": "No Lo Testeamos Ni Un Poco",
+      "price": 3490,
+      "discount": 7,
+      "category": 2,
+      "subCategory": "visited",
+      "description": "Si buscás un juego lleno de estrategia...¡claramente no es este! En una partida TODO es posible: desde perder por un Piedra, Papel o Tijera hasta ganar por ser el más bajito.",
+      "image": "noLoTesteamosNiUnPoco.PNG"
+   },
+   {
+      "id": 12,
+      "name": "No Lo Testeamos Ni Un Poco: Drinking",
+      "price": 1790,
+      "discount": 0,
+      "category": 2,
+      "subCategory": "in-sale",
+      "description": "Una Expansión con cartas que convierten tu NLTNUP en un drinking game. Se puede usar con cualquier tipo de bebida (con o sin alcohol). ¡Jugar con moderación!",
+      "image": "noLoTesteamosNiUnPocoDrinking.PNG"
+   },
+   {
+      "id": 13,
+      "name": "Dungeons & Drinks",
+      "price": 6990,
+      "discount": 10,
+      "category": 2,
+      "subCategory": "in-sale",
+      "description": "Dungeons & Dinks, es un juego de 2 a 6 jugadores en el cual sos un héroe pasado de copas, que entra junto con sus amigos a un dungeon lleno de pelligros y monstruos que no molestaban a nadie",
+      "image": "dungeonAndDrinks.PNG"
+   },
+   {
+      "id": 14,
+      "name": "No Lo Testeamos Ni Un Poco Expansiones",
+      "price": 17630,
+      "discount": 20,
+      "category": 2,
+      "subCategory": "in-sale",
+      "description": "Se reparten 2 cartas a cada jugador. En tu turno robás 1 carta del mazo y jugás 1 carta de tu mano. Hacés lo que dice la carta que jugaste. Luego sigue el jugador a tu izquierda",
+      "image": "noLoTesteamosNiUnPocoMasExpansiones.PNG"
+   },
+   {
+      "id": 15,
+      "name": "HDP",
+      "price": 8990,
+      "discount": 3,
+      "category": 2,
+      "subCategory": "visited",
+      "description": "Un juego de humor políticamente incorrecto. Uno de esos juegos donde respondés una carta negra con cartas blancas. Mucho humor negro en una caja pequeña que ademas tiene un mono. Una vuelta más en mi espiral de decadencia y hedonismo. Un ataque de palometas.",
+      "image": "hdp.PNG"
+   },
+   {
+      "id": 16,
+      "name": "Prendete Fuego",
+      "price": 7490,
+      "discount": 0,
+      "category": 2,
+      "subCategory": "visited",
+      "description": "Prendete Fuego es un juego para personas capaces de hacer cualquier cosa con tal de ganar, y para los que quieren divertirse viéndolos.",
+      "image": "prendeteFuego.PNG"
+   },
+   {
+      "id": 17,
+      "name": "Tomalo Vos",
+      "price": 2490,
+      "discount": 0,
+      "category": 2,
+      "subCategory": "visited",
+      "description": "Un juego ideal para tus previas, en el que tu objetivo es lograr que tus amigos/as tomen más que vos.",
+      "image": "tomaloVos.PNG"
+   },
+   {
+      "id": 18,
+      "name": "Amigos De Mierda",
+      "price": 3490,
+      "discount": 5,
+      "category": 2,
+      "subCategory": "in-sale",
+      "description": "Amigos de Mierda es un juego ideal para romper amistades de toda la vida, caerle como el ojete a gente que acabás de conocer y/o arruinar cualquier tipo de reunión familiar.",
+      "image": "amigosDeMierda.PNG"
+   },
+   {
+      "id": 19,
+      "name": "Decisiones De Mierda",
+      "price": 3490,
+      "discount": 10,
+      "category": 2,
+      "subCategory": "in-sale",
+      "description": "¿Creés que tus amigos toman malas decisiones? Esperá a jugar Decisiones de Mierda De paso, vas a conocer nuevos aspectos (oscuros, muy oscuros) de tus amigos. Capaz te enteres que en el fondo son bastante mierdas,¡o capaz simplemente lo confirmes!",
+      "image": "decisionesDeMierda.PNG"
+   },
+   {
+      "id": 20,
+      "name": "HDP Expansiones Numéricas",
+      "price": 10740,
+      "discount": 15,
+      "category": 2,
+      "subCategory": "in-sale",
+      "description": "Un juego de humor políticamente incorrecto. Uno de esos juegos donde respondés una carta negra con cartas blancas. Mucho humor negro en una caja pequeña que ademas tiene un mono. Una vuelta más en mi espiral de decadencia y hedonismo. Un ataque de palometas. Con todas sus expanciones.",
+      "image": "hdp6.PNG"
+   },
+   {
+      "id": 21,
+      "name": "Descifrá El Código",
+      "price": 6990,
+      "discount": 10,
+      "category": 3,
+      "subCategory": "visited",
+      "description": "Hay un código oculto, compuesto por números de distintos colores. ¿Tu objetivo? Descubrirlo antes que los demás. Todos tienen una parte de la información: Vas a tener que elegir las preguntas mas efectivas para interrogar a tus rivales y descubrir qué es lo que saben ellos. Después, activá tu cerebro, usá la lógica... ¡Y descifrá el código antes que los demás!",
+      "image": "descifraElCodigo.PNG"
+   },
+   {
+      "id": 22,
+      "name": "Schotten Totten",
+      "price": 4490,
+      "discount": 0,
+      "category": 3,
+      "subCategory": "visited",
+      "description": "Schotten Totten es un jeugo para dos jugadores en el que manejás un clan escocés que está peleando por expandir su aldea. El buen uso de tus Guerreros y Especialistas son la clave de la vistoria.",
+      "image": "schottenTotten.PNG"
+   },
+   {
+      "id": 23,
+      "name": "Little Town",
+      "price": 9900,
+      "discount": 5,
+      "category": 3,
+      "subCategory": "visited",
+      "description": "Little Town es un juego de colocación de trabajadores fácil de aprender pero con mucha profundidad, en el que recolectás recursos y construís edificios con el objetivo de ser declarado el mejor arquitecto del pueblo.",
+      "image": "littleTown.PNG"
+   },
+   {
+      "id": 24,
+      "name": "Raccoon Tycoon",
+      "price": 15900,
+      "discount": 10,
+      "category": 3,
+      "subCategory": "in-sale",
+      "description": "Raccoon Tycoon es un juego de gestión de recursos y especulación económica, sencillo de explicar y con turnos rápidos. Vas a pasártela produciendo ítems y mirando de reojo los precios del mercado, preguntándote en cada turno si es el momento de vender antes que lo haga otro, o mejor de comprar e invertir.",
+      "image": "raccoonTycoon.PNG"
+   },
+   {
+      "id": 25,
+      "name": "Roll Player",
+      "price": 19900,
+      "discount": 7,
+      "category": 3,
+      "subCategory": "in-sale",
+      "description": "Tirá dados, armá tu personaje, equipalo para una aventura de fantasía medieval clásica y ganá puntos de reputación por haber creado al personaje perfecto.",
+      "image": "rollPlayer.PNG"
+   },
+   {
+      "id": 26,
+      "name": "Cartógrafos",
+      "price": 6990,
+      "discount": 0,
+      "category": 3,
+      "subCategory": "in-sale",
+      "description": "Cartógrafos es un juego roll & write donde todos los jugadores, con exactamente los mismos recursos, tienen que crear un reino de la forma m{as eficiente posible ",
+      "image": "cartografos.PNG"
+   },
+   {
+      "id": 27,
+      "name": "Ecos, Primer Continente",
+      "price": 15900,
+      "discount": 7,
+      "category": 3,
+      "subCategory": "visited",
+      "description": "En Ecos: Primer Continente, los jugadores van creando el planeta y poblándolo de especies, pero cada uno tiene su propia agenda y sus propias acciones disponibles. Simple de aprender, tiene muchísima profundida y una rejugabilidad enorme.",
+      "image": "ecosPrimerContinente.PNG"
+   },
+   {
+      "id": 28,
+      "name": "Montañas De La Locura",
+      "price": 14900,
+      "discount": 15,
+      "category": 3,
+      "subCategory": "visited",
+      "description": "Montañas De La Locura es un juego cooperativo de estrategia inspirado en la obra de H.P. Lovecraft (La llamada de Cthulhu, La sombra sobre Innsmouth), con mucha estrategia y algo de humor. Cada jugador se pone en la piel de un científico en búsqueda de las reliquias de una ciudad antigua. Solo el trabajo en equipo los salvará de no caer en ¡La locura!",
+      "image": "montañaDeLaLocura.PNG"
+   },
+   {
+      "id": 29,
+      "name": "Papillon",
+      "price": 15900,
+      "discount": 10,
+      "category": 3,
+      "subCategory": "visited",
+      "description": "Papillon es un juego muy competitivo con distintos caminos hacia la victoria. Eso sí: ganes o pierdas, al final vas a regodearte contemplando los jardínes florecidos (¡Salvo que te dé alergia!)",
+      "image": "papillon.PNG"
+   },
+   {
+      "id": 30,
+      "name": "Raids",
+      "price": 12900,
+      "discount": 7,
+      "category": 3,
+      "subCategory": "visited",
+      "description": "Raids es un jeugo ágil y fluido, con turnos cortos pero repletos de decisiones importantes, en los que vas a elegir a qué puerto llegar antes que los demás para así obetener sus beneficios. Pero cuidado, si otro llega junto a vos... habrá que luchar por esa fichita preciada.",
+      "image": "raids.PNG"
+   }
+   
 ]

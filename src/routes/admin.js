@@ -7,7 +7,7 @@ const productAddValidator = require('../validations/productAddValidator');
 
 // Crear Producto
 router.get("/createProduct", controller.create);
-router.post("/createProduct", controller.store);
+router.post("/createProduct", uploadImageProduct.single('productPhoto'), controller.store);
 // Editar Producto
 router.get("/editProduct/:id", controller.edit);
 router.put("/editProduct/:id", controller.update);

@@ -8,16 +8,7 @@ module.exports = {
     create: (req, res) => {
         res.render("admin/createProduct")
     },
-       // let newProduct ={
-		//	id:lastId+1,
-		//	name:req.body.productName,
-		//	price:req.body.productPrice,
-		//	category:req.body.productCategory,
-		//	description:req.body.productDescription,
-          //  image:req.body.productPhoto,
-		//}
-       
-       
+            
 
     store: (req, res) => {
         let lastId = products [products.length -1].id;
@@ -25,12 +16,16 @@ module.exports = {
 			id:lastId+1,
 			name:req.body.productName,
 			price:req.body.productPrice,
+            discount:req.body.productDiscount,
 			category:req.body.productCategory,
+            subCategory:req.body.productSubCategory,
 			description:req.body.productDescription,
-            image:req.body.productPhoto,
+            image : req.file ? req.file.filename : null,
+
 		}
 		products.push(newProduct);
-		writeJSON("productsDataBase.json")
+		writeJSON("productsDataBase.json", products)
+        res.redirect("/admin/adminPerfil");
     },
 
     edit: (req, res) => {
@@ -57,7 +52,7 @@ module.exports = {
         productToEdit.description = req.body.description;
         productToEdit.image = req.file ? req.file.filename : null,
         
-        writeJSON("productsDataBase.json");
+        writeJSON("productsDataBase.json", products);
         res.redirect("/admin/adminPerfil");
 
 
