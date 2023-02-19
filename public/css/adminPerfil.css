@@ -25,6 +25,7 @@
     --descripcion: 16px;
 }
 /* MENU IZQUIERDA */ 
+
 main.userPerfilContainer {
     display: flex;
 }

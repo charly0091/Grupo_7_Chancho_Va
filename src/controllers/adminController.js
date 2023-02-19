@@ -1,17 +1,14 @@
-const fs = require('fs');
-const path = require('path');
+const { validationResult } = require("express-validator");
+const { readJSON, writeJSON } = require("../data");
 
-const productDataPath = path.join(__dirname, "../data/productsDataBase.json");
-const products = JSON.parse(fs.readFileSync(productDataPath, "utf-8"));
-const writeJson = (products) => {
-    fs.writeFileSync(productDataPath, JSON.stringify(products), "utf8")
-}
+const products = readJSON("productsDataBase.json");
 
 
 module.exports = {
     create: (req, res) => {
         res.render("admin/createProduct")
     },
+            
 
     store: (req, res) => {
         let lastId = products [products.length -1].id;
@@ -19,12 +16,16 @@ module.exports = {
 			id:lastId+1,
 			name:req.body.productName,
 			price:req.body.productPrice,
+            discount:req.body.productDiscount,
 			category:req.body.productCategory,
+            subCategory:req.body.productSubCategory,
 			description:req.body.productDescription,
-            image:req.body.productPhoto,
+            image : req.file ? req.file.filename : null,
+
 		}
 		products.push(newProduct);
-		writeJson(products)
+		writeJSON("productsDataBase.json", products)
+        res.redirect("/admin/adminPerfil");
     },
 
     edit: (req, res) => {
@@ -47,10 +48,11 @@ module.exports = {
         productToEdit.price = req.body.price;
         productToEdit.discount = req.body.discount;
         productToEdit.category = req.body.category;
+        productToEdit.subCategory = req.body.subCategory;
         productToEdit.description = req.body.description;
-        productToEdit.image = req.body.image;
+        productToEdit.image = req.file ? req.file.filename : null,
         
-        writeJson(products);
+        writeJSON("productsDataBase.json", products);
         res.redirect("/admin/adminPerfil");
 
 
