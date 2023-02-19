@@ -32,11 +32,11 @@ const controller = {
         res.render("products/familiares" , { style : "familiares.css", categoriasFamiliares})
     },
     estrategia: (req, res) => {
-        let categoriasEstrategia = products.filter(categorias => categorias.category === 2);
+        let categoriasEstrategia = products.filter(categorias => categorias.category === 3);
         res.render("products/estrategia" , { style : "estrategia.css", categoriasEstrategia})
     },
     previa: (req, res) => {
-        let categoriasPrevia = products.filter(categorias => categorias.category === 3);
+        let categoriasPrevia = products.filter(categorias => categorias.category === 2);
         res.render("products/previa" , { style : "previa.css", categoriasPrevia})
     },
 }
