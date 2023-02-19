@@ -20,41 +20,41 @@
                     <div class="contenedorFormularios">
                         <div class="input">
                             <label for="name">Nombre del producto</label>
-                            <input class="estiloInput" type="text" name="name" id="name" placeholder="Nombre del producto" required value="<%= productToEdit.name %>">                
+                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="name" id="name" placeholder="Nombre del producto" required value="<%= productToEdit.name %>">                
                             <span class="mensajeError">Debe ingresar el nombre del producto</span>
                         </div> 
                         <div class="input">
                             <label for="price">Precio del producto</label>
-                            <input class="estiloInput" type="number" name="price" id="price" placeholder="Precio del producto"  step="0.01" min="0" required value="<%= productToEdit.price %>">                
+                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="number" name="price" id="price" placeholder="Precio del producto"  step="0.01" min="0" required value="<%= productToEdit.price %>">                
                             <span class="mensajeError">Debe ingresar el precio del producto</span>
                         </div>
                     </div>
                     <div class="contenedorFormularios">
                         <div class="input">
                             <label for="discount">Descuento</label>
-                            <input class="estiloInput" type="number" name="discount" id="discount" placeholder="Precio del producto"  step="0.01" min="0" required value="<%= productToEdit.discount %>">                
+                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="number" name="discount" id="discount" placeholder="Precio del producto"  step="0.01" min="0" required value="<%= productToEdit.discount %>">                
                             <span class="mensajeError">Debe ingresar el precio del producto</span>
                         </div>
                         <div class="input">
                             <label for="category">Categoria del producto</label>
-                            <input class="estiloInput" type="text" name="category" id="category" placeholder="Categoria del producto" required value="<%= productToEdit.category %>">                
+                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="category" id="category" placeholder="Categoria del producto" required value="<%= productToEdit.category %>">                
                             <span class="mensajeError">Debe ingresar la categoria del producto</span>
                         </div>
                         <div class="input">
                             <label for="category">SubCategoria del producto</label>
-                            <input class="estiloInput" type="text" name="subCategory" id="subCategory" placeholder="Sub-categoria del producto" required value="<%= productToEdit.subCategory %>">                
+                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="subCategory" id="subCategory" placeholder="Sub-categoria del producto" required value="<%= productToEdit.subCategory %>">                
                             <span class="mensajeError">Debe ingresar la categoria del producto</span>
                         </div>
                     </div>
                     <div class="contenedorFormularios">
                         <div class="input">
                             <label for="image">Foto del producto</label>
-                            <input class="estiloInput" type="file"  accept=".jpg, .png"  id="image" name="image"  placeholder="Foto del producto">
+                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="file"  accept=".jpg, .png"  id="image" name="image"  placeholder="Foto del producto">
                             <span class="mensajeError">La extensión de la imágen no es compatible</span>
                         </div>
                         <div class="input">
                             <label for="description">Descripción del producto</label>
-                            <input class="estiloInput" type="text" name="description" id="description" placeholder="Descripción del producto" required value="<%= productToEdit.description %>">                
+                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="description" id="description" placeholder="Descripción del producto" required value="<%= productToEdit.description %>">                
                             <span class="mensajeError">Debe ingresar le descripcion del producto</span>
                         </div>   
                     </div>
