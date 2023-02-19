@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/adminPerfil.css">
-        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-        <title>Chancho va! </title>
-         <!-- FontAwesome-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" /> 
-    </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/adminPerfil.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <title>Chancho va! </title>
+  <!-- FontAwesome-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+</head>
+
 <body>
     <%- include('../partials/header')  %>
     <main class="userPerfilContainer">
-       <%- include("../partials/menuAdmin")  %>
+        <%- include("../partials/menuAdmin")  %>
         <div class="contenedorDatosUser">
-            <div class="contenedorBienvenido">
-                <div class="bienvenido">
-                    <img class="animacionPoker corazon" src="/images/corazonPoker.PNG" alt="">
-                    <img class="animacionPoker pikas" src="/images/pikasPoker.PNG" alt="">
-                    <img class="animacionPoker trebol" src="/images/trebolPoker.PNG" alt="">
-                    <img class="animacionPoker diamante" src="/images/diamantePoker.PNG" alt="">
-                    <h1 class="inicio">Bienvenido Admin</h1>
-                </div>
+        <div class="contenedorBienvenido">
+            <div class="bienvenido">
+                <img class="animacionPoker corazon" src="/images/corazonPoker.PNG" alt="">
+                <img class="animacionPoker pikas" src="/images/pikasPoker.PNG" alt="">
+                <img class="animacionPoker trebol" src="/images/trebolPoker.PNG" alt="">
+                <img class="animacionPoker diamante" src="/images/diamantePoker.PNG" alt="">
+                <h1 class="inicio">Bienvenido Admin</h1>
             </div>
-        </div>
-    </main>
-    <%- include('../partials/footer')  %>
-    <script src="/js/admin.js"></script>
-    <script src="/js/efecto.js"></script>
+      </div>
+    </div>
+  </main>
+
+  <audio id="myAudio" autoplay>
+    <source src="/audio/ms.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  
+<script>
+    var x = document.getElementById("myAudio");
+    
+    function enableAutoplay() { 
+      x.autoplay = true;
+      x.load();
+    }
+    </script> 
+    
+
+  <%- include('../partials/footer')  %>
+  <script src="/js/admin.js"></script>
+  <script src="/js/efecto.js"></script>
 </body>
+
 </html>

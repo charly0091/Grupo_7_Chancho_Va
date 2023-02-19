@@ -25,6 +25,19 @@
     --descripcion: 16px;
 }
 /* MENU IZQUIERDA */ 
+.btn-submit{
+    width: 170px;
+    height: 50px;
+    border: none;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    font-size: 20px;
+    padding-bottom: 5px;
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+}
 main.userPerfilContainer {
     display: flex;
 }
