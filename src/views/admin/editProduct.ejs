@@ -20,7 +20,7 @@
                     <div class="contenedorFormularios">
                         <div class="input">
                             <label for="name">Nombre del producto</label>
-                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="name" id="name" placeholder="Nombre del producto" required value="<%= locals.errors && errors.name ? old.name : productToEdit.name %>">                
+                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= locals.errors && errors.name ? old.name : productToEdit.name %>">                
                             <small class="text-danger ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%></small>
                         </div> 
                         <div class="input">

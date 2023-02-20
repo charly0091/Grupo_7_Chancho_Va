@@ -48,6 +48,10 @@ module.exports = {
     update: (req, res) => {
         let errors = validationResult(req);
 
+        if(req.fileError){
+            errors.errors.push({msg: req.fileError})
+        }
+
         if(errors.isEmpty()){
 
 
@@ -65,7 +69,7 @@ module.exports = {
         if(productToEdit.image == null){
             productToEdit.image = req.body.oldImage;
         } else{
-            fs.unlinkSync(`public/images/products/${req.body.oldImage}`);
+            fs.existsSync(`public/images/${req.body.oldImage}`) && fs.unlinkSync(`public/images/${req.body.oldImage}`);
         }
         
         writeJSON("productsDataBase.json", products);
