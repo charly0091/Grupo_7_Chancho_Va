@@ -25,7 +25,7 @@
                         </div> 
                         <div class="input">
                             <label for="price">Precio del producto</label>
-                            <input class="estiloInput <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" name="price" id="price" placeholder="Precio del producto" required value=" <%= locals.errors && errors.price ? old.price : productToEdit.price %>">                
+                            <input class="estiloInput <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" name="price" id="price" placeholder="Precio del producto" required value="<%=locals.errors && errors.price ? old.price : productToEdit.price %>">                
                             <small class="text-danger ms-2"><%= locals.errors && errors.price ? errors.price.msg : null%></small>
                         </div>
                     </div>
