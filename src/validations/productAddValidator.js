@@ -1,23 +1,41 @@
 const { check } = require("express-validator");
+const path = require("path");
 
 module.exports = [
     check("name")
-        .notEmpty().withMessage("El nombre es obligatorio").bail()
+        .notEmpty().withMessage("Debe ingresar el nombre del producto").bail()
         .isLength({ min: 3, max: 20 }).withMessage("El nombre debe tener entre 3 y 20 caracteres"),
 
-    check("category")
-        .notEmpty().withMessage("Debes indicar la categoría"),
+    check("price")
+        .notEmpty().withMessage("Debes indicar el precio del producto").bail()
+        .isInt({min:1}).withMessage("Debe ser un precio válido"),
 
-    check("brand")
-        .notEmpty().withMessage("Debes indicar la marca"),
+    check("discount")
+        .notEmpty().withMessage("Debes indicar el descuento del producto").bail()
+        .isInt({min:0,max:99}).withMessage("El descuento debe ser un número entre 0 y 99"),
+
+    check("category")
+        .notEmpty().withMessage("Debes indicar la categoría del producto").bail(),
+
+    check("subCategory")
+        .notEmpty().withMessage("Debes indicar la subcategoría del producto").bail(),
 
     check("description")
         .notEmpty().withMessage("La descripción es obligatoria").bail()
-        .isLength({ min: 20}).withMessage("La descripción debe tener mínimo 20 caracteres"),
-    
-    check("price")
-        .isInt({min:1}).withMessage("Debes indicar un precio"),
+        .isLength({ min: 20}).withMessage("La descripción debe tener mínimo 10 caracteres"),
 
-    check("discount")
-        .isInt({min:0,max:99}).withMessage("El descuento no puede ser más del 100%")
+    check("image")
+        .custom((value, { req }) => {
+            let file = req.file;
+            let acceptedExtensions = [".jpg", ".png", ".gif"];
+            if (!file) {
+                throw new Error("Tienes que subir una imagen");
+            } else {
+                let fileExtension = path.extname(file.originalname);
+                if (!acceptedExtensions.includes(fileExtension)) {
+                    throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(", ")}`);
+                }
+            }
+            return true;
+        })
 ];

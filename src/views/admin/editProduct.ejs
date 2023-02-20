@@ -20,42 +20,51 @@
                     <div class="contenedorFormularios">
                         <div class="input">
                             <label for="name">Nombre del producto</label>
-                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="name" id="name" placeholder="Nombre del producto" required value="<%= productToEdit.name %>">                
-                            <span class="mensajeError">Debe ingresar el nombre del producto</span>
+                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="name" id="name" placeholder="Nombre del producto" required value="<%= locals.errors && errors.name ? old.name : productToEdit.name %>">                
+                            <small class="text-danger ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%></small>
                         </div> 
                         <div class="input">
                             <label for="price">Precio del producto</label>
-                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="number" name="price" id="price" placeholder="Precio del producto"  step="0.01" min="0" required value="<%= productToEdit.price %>">                
-                            <span class="mensajeError">Debe ingresar el precio del producto</span>
+                            <input class="estiloInput <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" name="price" id="price" placeholder="Precio del producto" required value=" <%= locals.errors && errors.price ? old.price : productToEdit.price %>">                
+                            <small class="text-danger ms-2"><%= locals.errors && errors.price ? errors.price.msg : null%></small>
                         </div>
                     </div>
                     <div class="contenedorFormularios">
                         <div class="input">
                             <label for="discount">Descuento</label>
-                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="number" name="discount" id="discount" placeholder="Precio del producto"  step="0.01" min="0" required value="<%= productToEdit.discount %>">                
-                            <span class="mensajeError">Debe ingresar el precio del producto</span>
+                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="number" name="discount" id="discount" placeholder="Precio del producto"  step="0.01" min="0" required value="<%= locals.errors && errors.discount ? old.discount : productToEdit.discount %>">                
+                            <small class="text-danger ms-2"><%= locals.errors && errors.discount ? errors.discount.msg : null%></small>
                         </div>
                         <div class="input">
-                            <label for="category">Categoria del producto</label>
-                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="category" id="category" placeholder="Categoria del producto" required value="<%= productToEdit.category %>">                
-                            <span class="mensajeError">Debe ingresar la categoria del producto</span>
+                            <label for="category">Categoria</label>
+                            <select name="category" id="category" class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" required>
+                                <option value="" selected hidden>Categoria</option>
+                                <% categories.forEach(category=> { %>
+                                    <option value="<%= category %>" <%= category == productToEdit.category &&  'selected' %>><%= category %></option>
+                                <% }) %>
+                            </select>
+                            <small class="text-danger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%></small>
                         </div>
                         <div class="input">
-                            <label for="category">SubCategoria del producto</label>
-                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="subCategory" id="subCategory" placeholder="Sub-categoria del producto" required value="<%= productToEdit.subCategory %>">                
-                            <span class="mensajeError">Debe ingresar la categoria del producto</span>
+                            <label for="subCategory">Sub Categoria</label>
+                            <select name="subCategory" id="subCategory" class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" required>
+                                <option value="" selected hidden>Sub categoria</option>
+                                <% subCategories.forEach(subCategory=> { %>
+                                    <option value="<%= subCategory %>" <%= subCategory === productToEdit.subCategory && 'selected' %>><%= subCategory %></option>
+                                <% }) %>
+                            </select>
                         </div>
                     </div>
                     <div class="contenedorFormularios">
                         <div class="input">
                             <label for="image">Foto del producto</label>
                             <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="file"  accept=".jpg, .png"  id="image" name="image"  placeholder="Foto del producto">
-                            <span class="mensajeError">La extensión de la imágen no es compatible</span>
+                            <small class="text-danger ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%></small>
                         </div>
                         <div class="input">
                             <label for="description">Descripción del producto</label>
-                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="description" id="description" placeholder="Descripción del producto" required value="<%= productToEdit.description %>">                
-                            <span class="mensajeError">Debe ingresar le descripcion del producto</span>
+                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="description" id="description" placeholder="Descripción del producto" required value="<%= locals.errors && errors.description ? old.description : productToEdit.description %>">                
+                            <small class="text-danger ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%></small>
                         </div>   
                     </div>
                     <div class="boton">
