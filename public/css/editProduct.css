@@ -83,7 +83,8 @@ main.registro div.contenedor form div.input label {
     margin-bottom: 7px;
 }
 
-main.registro div.contenedor form div.input input.estiloInput {
+main.registro div.contenedor form div.input input.estiloInput,
+main.registro div.contenedor form div.input select {
     box-shadow: 0 0 10px;
     border: 1px solid lightgrey;
     border-radius: 20px;
