@@ -32,12 +32,12 @@
                     <div class="contenedorFormularios">
                         <div class="input">
                             <label for="discount">Descuento</label>
-                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="number" name="discount" id="discount" placeholder="Precio del producto"  step="0.01" min="0" required value="<%= locals.errors && errors.discount ? old.discount : productToEdit.discount %>">                
+                            <input class="estiloInput <%= locals.errors && errors.discount ? 'is-invalid' : null%>" type="number" name="discount" id="discount" placeholder="Precio del producto"  step="0.01" min="0" required value="<%= locals.errors && errors.discount ? old.discount : productToEdit.discount %>">                
                             <small class="text-danger ms-2"><%= locals.errors && errors.discount ? errors.discount.msg : null%></small>
                         </div>
                         <div class="input">
                             <label for="category">Categoria</label>
-                            <select name="category" id="category" class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" required>
+                            <select name="category" id="category" class="estiloInput <%= locals.errors && errors.category ? 'is-invalid' : null%>" required>
                                 <option value="" selected hidden>Categoria</option>
                                 <% categories.forEach(category=> { %>
                                     <option value="<%= category %>" <%= category == productToEdit.category &&  'selected' %>><%= category %></option>
@@ -47,7 +47,7 @@
                         </div>
                         <div class="input">
                             <label for="subCategory">Sub Categoria</label>
-                            <select name="subCategory" id="subCategory" class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" required>
+                            <select name="subCategory" id="subCategory" class="estiloInput <%= locals.errors && errors.subCategory ? 'is-invalid' : null%>" required>
                                 <option value="" selected hidden>Sub categoria</option>
                                 <% subCategories.forEach(subCategory=> { %>
                                     <option value="<%= subCategory %>" <%= subCategory === productToEdit.subCategory && 'selected' %>><%= subCategory %></option>
@@ -58,12 +58,12 @@
                     <div class="contenedorFormularios">
                         <div class="input">
                             <label for="image">Foto del producto</label>
-                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="file"  accept=".jpg, .png"  id="image" name="image"  placeholder="Foto del producto">
+                            <input class="estiloInput <%= locals.errors && errors.image ? 'is-invalid' : null%>" type="file"  accept=".jpg, .png"  id="image" name="image"  placeholder="Foto del producto">
                             <small class="text-danger ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%></small>
                         </div>
                         <div class="input">
                             <label for="description">Descripción del producto</label>
-                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="description" id="description" placeholder="Descripción del producto" required value="<%= locals.errors && errors.description ? old.description : productToEdit.description %>">                
+                            <input class="estiloInput <%= locals.errors && errors.description ? 'is-invalid' : null%>" type="text" name="description" id="description" placeholder="Descripción del producto" required value="<%= locals.errors && errors.description ? old.description : productToEdit.description %>">                
                             <small class="text-danger ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%></small>
                         </div>   
                     </div>

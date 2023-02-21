@@ -95,6 +95,18 @@ main.registro div.contenedor form div.input select {
     padding:0 15px 0;
 }
 
+.text-danger {
+    color: #dc3545 !important;
+  }  
+
+.is-invalid {
+    border-color: red;
+    background-color: #ffe6e6;
+    color: red;
+  }
+  
+  
+
 main.registro div.contenedor form div.input span.mensajeError {
     color: red;
     padding: 5px;
