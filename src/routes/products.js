@@ -12,7 +12,7 @@ router.get("/carrito", controller.carrito);
 router.get("/familiares", controller.familiares);
 router.get("/estrategia", controller.estrategia);
 router.get("/previa", controller.previa);
-
+router.delete("/delete/:id", controller.destroy);
 
 
 module.exports = router;

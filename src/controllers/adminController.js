@@ -1,7 +1,10 @@
 const { validationResult } = require("express-validator");
 const { readJSON, writeJSON } = require("../data");
+const fs = require("fs");
 
 const products = readJSON("productsDataBase.json");
+const categories = readJSON("categories.json");
+const subCategories = readJSON("subCategories.json");
 
 
 module.exports = {
@@ -46,12 +49,23 @@ module.exports = {
         if(productToEdit){
             res.render("admin/editProduct", {
                 productToEdit, 
+                categories,
+                subCategories
             })
         } else{
             res.send("No se encontro el producto");
         }
 	},
     update: (req, res) => {
+        let errors = validationResult(req);
+
+        if(req.fileError){
+            errors.errors.push({msg: req.fileError})
+        }
+
+        if(errors.isEmpty()){
+
+
         let productId = Number(req.params.id);
         let productToEdit = products.find(product => product.id == productId);
         productToEdit.id = productId;
@@ -61,10 +75,32 @@ module.exports = {
         productToEdit.category = req.body.category;
         productToEdit.subCategory = req.body.subCategory;
         productToEdit.description = req.body.description;
-        productToEdit.image = req.file ? req.file.filename : null,
+        productToEdit.image = req.file ? req.file.filename : productId.image;
+
+        if(productToEdit.image == null){
+            productToEdit.image = req.body.oldImage;
+        } else{
+            fs.existsSync(`public/images/${req.body.oldImage}`) && fs.unlinkSync(`public/images/${req.body.oldImage}`);
+        }
         
         writeJSON("productsDataBase.json", products);
         res.redirect("/admin/adminPerfil");
+        } else{
+            let productId = Number(req.params.id);
+		    let productToEdit = products.find(product => product.id === productId);
+
+            if(productToEdit){
+                res.render("admin/editProduct", {
+                    productToEdit, 
+                    categories,
+                    subCategories,
+                    errors: errors.mapped(),
+                    old: req.body,
+            })
+        } else{
+            res.send("No se encontro el producto");
+            }
+         }
 
 
 
