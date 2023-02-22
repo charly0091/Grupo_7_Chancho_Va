@@ -3,6 +3,7 @@ const path = require("path");
 
 const productsFilePath = path.join(__dirname, "../data/productsDataBase.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+const { writeJSON } = require("../data");
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -38,6 +39,17 @@ const controller = {
     previa: (req, res) => {
         let categoriasPrevia = products.filter(categorias => categorias.category === 2);
         res.render("products/previa" , { style : "previa.css", categoriasPrevia})
+    },
+    destroy: (req, res) => {
+        let productID = Number(req.params.id);
+        products.forEach(product => {
+            if(product.id === productID){
+                let productToDestroy = products.indexOf(product);
+                products.splice(productToDestroy, 1)
+            }
+        })
+        writeJSON("productsDataBase.json", products);
+        res.redirect('/');
     },
 }
 
