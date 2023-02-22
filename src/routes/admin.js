@@ -4,6 +4,9 @@ const controller = require("../controllers/adminController");
 const { uploadImageProduct } = require('../middlewares/upload');
 const productAddValidator = require('../validations/productAddValidator');
 
+// Productos
+router.get("/products", controller.products);
+router.delete("/delete/:id", controller.delete);
 
 // Crear Producto
 router.get("/createProduct", controller.create);

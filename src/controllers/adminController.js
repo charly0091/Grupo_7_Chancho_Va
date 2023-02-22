@@ -5,6 +5,17 @@ const products = readJSON("productsDataBase.json");
 
 
 module.exports = {
+    products: (req, res) => {
+        res.render("admin/products",{products})
+    },
+
+    delete:(req, res) => {
+        let productId = Number(req.params.id); 
+        let newProductsArray = products.filter(product => product.id !== productId)
+        writeJSON("productsDataBase.json", newProductsArray)
+        res.send("El producto fue destruido")
+    },
+
     create: (req, res) => {
         res.render("admin/createProduct")
     },

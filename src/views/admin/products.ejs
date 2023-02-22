@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head") %> 
+</head>
+<body>
+    <%- include("../partials/header") %> 
+    <%- include("../partials/banner") %> 
+    <main class="homeMain">
+        <div class="contenedorHome">    
+            <a href="/"><h2 class="nombreSubCategoria">Ofertas</h2></a>
+            <section class="homeProductos"> 
+                <% products.forEach(products => { %>
+                    <div class="homeContainerProductos">
+                        <article class="homeTarjetaProducto">               
+                            <div class="homeTarjetaImagen">
+                                <a href="/products/detail/<%= products.id %>"><img class="imagenJuego" src="/images/imagesDataBase/<%= products.image %>" alt="" ></a>
+                            </div> 
+                            <div class="homeTarjetaDescripcion">
+                                <h3 class="nombreJuego"><%= products.name %></h3>
+                                <p class="juegoPrecio">$<%= products.price %></p>
+                                <a href="/products/products/Carrito"><button class="btnAgregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
+                            </div>
+                        </article>
+                    </div> 
+                <% }) %>
+            </section>
+        </div>
+    </main>
+    <%- include("../partials/btn-wp") %> 
+    <%- include("../partials/footer") %> 
+    <script src="js/efecto.js"></script>
+    <script src="js/vozAtexto.js"></script>
+</body>
+</html>

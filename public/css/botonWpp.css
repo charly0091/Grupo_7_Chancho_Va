@@ -1,0 +1,30 @@
+
+.container-btn-wp{
+    background-color: #deeadd;
+    border: 1px solid #fff;
+    position: fixed;
+    z-index: 999;
+    border-radius:50%;
+    bottom: 10px;
+    padding: 15px;
+    transition: ease 0.3s;
+    animation: efecto 1.2s infinite;
+}
+
+.container-btn-wp:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.btn-wp{
+    width: 30px !important;
+    transition: ease 1s;
+    
+} 
+
+@media (min-width: 767px) {
+
+    .btn-wp {
+        width: 80px;
+    }
+}
