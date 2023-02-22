@@ -150,10 +150,10 @@ header.contenedor div.contenedorHeaderMobileTablet div.buscador div.barraBuscado
     margin-left: -160px;
 }
 
-div#texto {
+/*div#texto {
     z-index: 1002;
     padding-right: 20px;
-}
+}*/
 
 
 header.contenedor div.contenedorHeaderMobileTablet div.buscador div.barraBuscadora.active{
