@@ -8,7 +8,7 @@
     <main class="contenedorDetalles">
 		<div class="contenedorTarjetaDetalle">
 			<div class="nombreProductoDetalle">
-				<h2 class="nombreProducto">Detalle del producto: <%= product.name %> </h2>
+				<h2 class="nombreProducto"> <%= product.name %> </h2>
 			</div>
 			<article class="detallesProducto">
 				<div class="imagenDescripcion">
@@ -39,7 +39,7 @@
 					</div>
 					<div class="botonEditarEliminar">
 						<a href="/admin/editProduct/<%= product.id %> " class="botonEditar">EDITAR PRODUCTO</a>
-						<form action="/products/delete/<%= product.id %>/?_method=DELETE" method="POST" class="formularioEliminar">
+						<form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" class="formularioEliminar">
 							<button type="submit" class="eliminar">ELIMINAR</button>
 						</form>
 					</div>
