@@ -48,3 +48,21 @@
   - Dejar las tarjetas en revisión y no revisarlas días antes de la entrega del sprint.
   - Extender las reuniones, intentar que sean cortas y concisas.
 
+### Sprint 3
+
+## Hacer menos
+  - Procrastinacion.
+  - Testear que funcione el codigo antes de hacer el push.
+
+## Hacer mas
+  -Implementar lo visto en clase en el proyecto reuniones.
+
+## Seguir haciendo
+  - Implementar cosas fuera de lo pedido en el sprint.
+
+## empezar a hacer
+  - Ramas para no comprometer el codigo funcional del proyecto.
+
+## Dejar de hacer
+  - No mover las tarjetas de trello.
+
