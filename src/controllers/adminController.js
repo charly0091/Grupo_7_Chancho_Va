@@ -80,7 +80,7 @@ module.exports = {
         if(productToEdit.image == null){
             productToEdit.image = req.body.oldImage;
         } else{
-            fs.existsSync(`public/images/${req.body.oldImage}`) && fs.unlinkSync(`public/images/${req.body.oldImage}`);
+            fs.existsSync(`public/images/imagesDataBase/${req.body.oldImage}`) && fs.unlinkSync(`public/images/imagesDataBase/${req.body.oldImage}`);
         }
         
         writeJSON("productsDataBase.json", products);

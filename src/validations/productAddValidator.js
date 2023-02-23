@@ -22,9 +22,9 @@ module.exports = [
 
     check("description")
         .notEmpty().withMessage("La descripción es obligatoria").bail()
-        .isLength({ min: 20}).withMessage("La descripción debe tener mínimo 10 caracteres"),
+        .isLength({ min: 10}).withMessage("La descripción debe tener mínimo 10 caracteres"),
 
-    check("image")
+   /*  check("image")
         .custom((value, { req }) => {
             let file = req.file;
             let acceptedExtensions = [".jpg", ".png", ".gif"];
@@ -37,5 +37,5 @@ module.exports = [
                 }
             }
             return true;
-        })
+        }) */
 ];
