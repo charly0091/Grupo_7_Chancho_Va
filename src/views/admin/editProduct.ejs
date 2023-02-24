@@ -58,7 +58,7 @@
                     <div class="contenedorFormularios">
                         <div class="input">
                             <label for="image">Foto del producto</label>
-                            <input class="estiloInput <%= locals.errors && errors.image ? 'is-invalid' : null%>" type="file"  accept=".jpg, .png"  id="image" name="image"  placeholder="Foto del producto">
+                            <input class="estiloInput <%= locals.errors && errors.image ? 'is-invalid' : null%>" type="file" id="image" name="image"  placeholder="Foto del producto">
                             <small class="text-danger ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%></small>
                         </div>
                         <div class="input">

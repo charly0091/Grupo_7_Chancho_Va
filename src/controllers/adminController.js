@@ -75,12 +75,12 @@ module.exports = {
         productToEdit.category = req.body.category;
         productToEdit.subCategory = req.body.subCategory;
         productToEdit.description = req.body.description;
-        productToEdit.image = req.file ? req.file.filename : productId.image;
+        productToEdit.image = req.file ? req.file.filename : productToEdit.image;
 
         if(productToEdit.image == null){
             productToEdit.image = req.body.oldImage;
         } else{
-            fs.existsSync(`public/images/imagesDataBase/${req.body.oldImage}`) && fs.unlinkSync(`public/images/imagesDataBase/${req.body.oldImage}`);
+            fs.existsSync(`public/images/${req.body.oldImage}`) && fs.unlinkSync(`public/images/${req.body.oldImage}`);
         }
         
         writeJSON("productsDataBase.json", products);

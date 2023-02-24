@@ -12,7 +12,7 @@
 			</div>
 			<article class="detallesProducto">
 				<div class="imagenDescripcion">
-					<img src="/images/imagesDataBase/<%= product.image %> " alt="product image" class="imagenProducto">
+					<img src="/images/<%= product.image %> " alt="product image" class="imagenProducto">
 					<p class="productoDescripcion"><%= product.description %></p>
 				</div>
 				<div class="productoDetalles">
@@ -54,7 +54,7 @@
 				<div class="contenedorArticulosRelacionados">
 					<article class="articuloRelacionado">
 						<div class="imagenProductoRelacionado">
-							<a href="/products/detail/<%= product.id %>"><img class="imagenRelacionada" src="/images/imagesDataBase/<%= product.image %> " alt="atr"></a>
+							<a href="/products/detail/<%= product.id %>"><img class="imagenRelacionada" src="/images/<%= product.image %> " alt="atr"></a>
 						</div>	
 						<div class="verMasProductoRelacionado">
 							<h3 class="nombreProductoRelacionado"><%= product.name %></h3>
@@ -72,7 +72,7 @@
 				<div class="contenedorArticulosRelacionados">
 					<article class="articuloRelacionado">
 						<div class="imagenProductoRelacionado">
-							<a href="/products/detail/<%= product.id %>"><img class="imagenRelacionada" src="/images/imagesDataBase/<%= product.image %> " alt="atr"></a>
+							<a href="/products/detail/<%= product.id %>"><img class="imagenRelacionada" src="/images/<%= product.image %> " alt="atr"></a>
 						</div>	
 						<div class="verMasProductoRelacionado">
 							<h3 class="nombreProductoRelacionado"><%= product.name %></h3>

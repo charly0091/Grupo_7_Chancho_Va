@@ -2,9 +2,9 @@
    {
       "id": 1,
       "name": "Red 7",
-      "price": 3990,
-      "discount": 10,
-      "category": 1,
+      "price": "3990",
+      "discount": "10",
+      "category": "1",
       "subCategory": "in-sale",
       "description": "Red 7 es un juego de cartas compacto, rápido y fluido, para 2 a 4 jugadores, que exige a fondo tu ingenio para ganar. Las reglas son muy fáciles ...¡Lástima que cambian todo el tiempo!",
       "image": "red7.PNG"
@@ -132,12 +132,12 @@
    {
       "id": 14,
       "name": "No Lo Testeamos Ni Un Poco Expansiones",
-      "price": 17630,
-      "discount": 20,
-      "category": 2,
+      "price": "17630",
+      "discount": "20",
+      "category": "2",
       "subCategory": "in-sale",
       "description": "Se reparten 2 cartas a cada jugador. En tu turno robás 1 carta del mazo y jugás 1 carta de tu mano. Hacés lo que dice la carta que jugaste. Luego sigue el jugador a tu izquierda",
-      "image": "noLoTesteamosNiUnPocoMasExpansiones.PNG"
+      "image": "nolotesteamos.PNG"
    },
    {
       "id": 15,
@@ -298,5 +298,15 @@
       "subCategory": "visited",
       "description": "Raids es un jeugo ágil y fluido, con turnos cortos pero repletos de decisiones importantes, en los que vas a elegir a qué puerto llegar antes que los demás para así obetener sus beneficios. Pero cuidado, si otro llega junto a vos... habrá que luchar por esa fichita preciada.",
       "image": "raids.PNG"
+   },
+   {
+      "id": 31,
+      "name": "132",
+      "price": "132",
+      "discount": "132",
+      "category": "132",
+      "subCategory": "132",
+      "description": "132",
+      "image": null
    }
 ]
