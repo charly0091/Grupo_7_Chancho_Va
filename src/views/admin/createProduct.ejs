@@ -20,40 +20,50 @@
             <form method="POST" action="/admin/createProduct" enctype="multipart/form-data">
                 <div class="input">
                     <label for="productName">Nombre del producto</label>
-                    <input class="estiloInput" type="text" name="productName" id="productName" placeholder="Nombre del producto" required>                
-                    <span class="mensajeError">Debe ingresar el nombre del producto</span>
+                    <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="productName" id="productName" placeholder="Nombre del producto" value="<%= locals.errors && errors.name ? old.name : null %>">                
+                    <small class="text-danger ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%></small>
                 </div>
                 <div class="input">
-                    <label for="productCategory">Categoria del producto</label>
-                    <input class="estiloInput" type="text" name="productCategory" id="productCategory" placeholder="Categoria del producto" required>                
-                    <span class="mensajeError">Debe ingresar la categoria del producto</span>
+                    <label for="category">Categoria</label>
+                    <select name="productCategory" id="productCategory" class="estiloInput <%= locals.errors && errors.category ? 'is-invalid' : null%>">
+                        <option value="" selected hidden>Categoria</option>
+                        <% categories.forEach(category=> { %>
+                            <option value="<%= category %>"><%= category %></option>
+                        <% }) %>
+                    </select>
+                    <small class="text-danger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%></small>
                 </div>
                 <div class="input">
-                    <label for="productCategory">Subcategoria del producto</label>
-                    <input class="estiloInput" type="text" name="productSubCategory" id="productSubCategory" placeholder="Subcategoria del producto" required>                
-                    <span class="mensajeError">Debe ingresar la subcategoria del producto</span>
+                    <label for="subCategory">Sub Categoria</label>
+                    <select name="productSubCategory" id="productSubCategory" class="estiloInput <%= locals.errors && errors.subCategory ? 'is-invalid' : null%>" >
+                        <option value="" selected hidden>Sub categoria</option>
+                        <% subCategories.forEach(subCategory=> { %>
+                            <option value="<%= subCategory %>"><%= subCategory %></option>
+                        <% }) %>
+                    </select>
+                    <small class="text-danger ms-2"><%= locals.errors && errors.subcategory ? errors.subcategory.msg : null%></small>
                 </div>
                 <div class="input">
                     <label for="productPrice">Precio del producto</label>
-                    <input class="estiloInput" type="number" name="productPrice" id="productPrice" placeholder="Precio del producto"  step="0.01" min="0" required>                
-                    <span class="mensajeError">Debe ingresar el precio del producto</span>
+                    <input class="estiloInput <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" name="productPrice" id="productPrice" placeholder="Precio del producto"  step="0.01" min="0" value="<%=locals.errors && errors.price ? old.price : null %>">                
+                    <small class="text-danger ms-2"><%= locals.errors && errors.price ? errors.price.msg : null%></small>
                 </div>
                 <div class="input">
                     <label for="productPrice">Descuento del producto</label>
-                    <input class="estiloInput" type="number" name="productDiscount" id="productDiscount" placeholder="Descuento del producto"  step="0.01" min="0" required>                
-                    <span class="mensajeError">Debe ingresar el descuento del producto</span>
+                    <input class="estiloInput <%= locals.errors && errors.discount ? 'is-invalid' : null%>" type="number" name="productDiscount" id="productDiscount" placeholder="Descuento del producto"  step="0.01" min="0" value="<%= locals.errors && errors.discount ? old.discount : null %>">                
+                    <small class="text-danger ms-2"><%= locals.errors && errors.discount ? errors.discount.msg : null%></small>
                 </div>
                 <div class="div_file">
                     <div class="file">
                         <p class="texto">Cargar imagen</p>
-                        <input class="productPhoto" type="file"   id="productPhoto" name="productPhoto"  placeholder="Foto del producto">
+                        <input class="productPhoto <%= locals.errors && errors.image ? 'is-invalid' : null%>" type="file"   id="productPhoto" name="productPhoto"  placeholder="Foto del producto">
                     </div>
                 </div>
-                <span class="mensajeError">La extensión de la imágen no es compatible</span>
+                <small class="text-danger ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%></small>
                 <div class="input">
                     <label for="productDescription">Descripción del producto</label>
-                    <textarea name="productDescription" class="estiloInput" cols="30" rows="10" required></textarea>
-                    <span class="mensajeError">Debe ingresar le descripcion del producto</span>
+                    <textarea name="productDescription" class="estiloInput <%= locals.errors && errors.description ? 'is-invalid' : null%>" cols="30" rows="10" ><%= locals.errors && errors.description ? old.description : null %></textarea>
+                    <small class="text-danger ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%></small>
                 </div>   
                 
                 

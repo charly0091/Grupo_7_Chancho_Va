@@ -53,24 +53,28 @@
                                     <option value="<%= subCategory %>" <%= subCategory === productToEdit.subCategory && 'selected' %>><%= subCategory %></option>
                                 <% }) %>
                             </select>
+                            <small class="text-danger ms-2"><%= locals.errors && errors.subcategory ? errors.subcategory.msg : null%></small>
                         </div>
                     </div>
                     <div class="contenedorFormularios">
-                        <div class="input">
-                            <label for="image">Foto del producto</label>
-                            <input class="estiloInput <%= locals.errors && errors.image ? 'is-invalid' : null%>" type="file" id="image" name="image"  placeholder="Foto del producto">
-                            <small class="text-danger ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%></small>
+                        <div class="div_file">
+                            <div class="file">
+                                <p class="texto" for="image">Editar imagen</p>
+                                <input class="productPhoto editar <%= locals.errors && errors.image ? 'is-invalid' : null%>" type="file" id="image" name="image">
+                                <small class="text-danger ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%></small>
+                            </div>
                         </div>
                         <div class="input">
                             <label for="description">Descripción del producto</label>
-                            <input class="estiloInput <%= locals.errors && errors.description ? 'is-invalid' : null%>" type="text" name="description" id="description" placeholder="Descripción del producto" required value="<%= locals.errors && errors.description ? old.description : productToEdit.description %>">                
+                            <textarea class="estiloInput <%= locals.errors && errors.description ? 'is-invalid' : null%>" type="text" name="description" id="description" cols="30" rows="10" placeholder="Descripción del producto" required><%= locals.errors && errors.description ? old.description : productToEdit.description %></textarea>               
                             <small class="text-danger ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%></small>
                         </div>   
+                        <div class="boton">
+                            <span class="mensajeError"> Debe completar todos los campos</span>
+                            <button type="submit" class="registrar guardar">Guardar Cambios</button>
+                        </div>
                     </div>
-                    <div class="boton">
-                        <span class="mensajeError"> Debe completar todos los campos</span>
-                        <button type="submit" class="registrar">Guardar Cambios</button>
-                    </div>
+                    
                     
                 </form>
             </div>

@@ -20,7 +20,10 @@ module.exports = {
     },
 
     create: (req, res) => {
-        res.render("admin/createProduct")
+        res.render("admin/createProduct" , {
+            categories,
+            subCategories
+        })
     },
             
 

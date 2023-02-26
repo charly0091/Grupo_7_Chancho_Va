@@ -10,7 +10,7 @@ router.delete("/delete/:id", controller.delete);
 
 // Crear Producto
 router.get("/createProduct", controller.create);
-router.post("/createProduct", uploadImageProduct.single('productPhoto'), controller.store);
+router.post("/createProduct", uploadImageProduct.single('productPhoto'), productValidator, controller.store);
 // Editar Producto
 router.get("/editProduct/:id", controller.edit);
 router.put("/editProduct/:id", uploadImageProduct.single("image"), productValidator , controller.update);
