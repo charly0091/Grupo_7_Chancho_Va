@@ -75,7 +75,9 @@ module.exports = {
         productToEdit.category = req.body.category;
         productToEdit.subCategory = req.body.subCategory;
         productToEdit.description = req.body.description;
-        productToEdit.image = req.file ? req.file.filename : productToEdit.image;
+        req.body.oldImage = productToEdit.image;
+        productToEdit.image = req.file ? req.file.filename : null;
+
 
         if(productToEdit.image == null){
             productToEdit.image = req.body.oldImage;
