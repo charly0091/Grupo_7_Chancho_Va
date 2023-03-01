@@ -28,22 +28,35 @@ module.exports = {
             
 
     store: (req, res) => {
+
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()){
+
         let lastId = products [products.length -1].id;
 		let newProduct ={
 			id:lastId+1,
-			name:req.body.productName,
-			price:req.body.productPrice,
-            discount:req.body.productDiscount,
-			category:req.body.productCategory,
-            subCategory:req.body.productSubCategory,
-			description:req.body.productDescription,
+			name:req.body.name,
+			price:req.body.price,
+            discount:req.body.discount,
+			category:req.body.category,
+            subCategory:req.body.subCategory,
+			description:req.body.description,
             image : req.file ? req.file.filename : null,
 
 		}
 		products.push(newProduct);
 		writeJSON("productsDataBase.json", products)
         res.redirect("/admin/adminPerfil");
-    },
+    } else{
+        res.render("admin/createProduct", {
+            categories,
+            subCategories,
+            errors: errors.mapped(),
+            old: req.body,
+        })
+    }
+},
 
     edit: (req, res) => {
 		let productId = Number(req.params.id);

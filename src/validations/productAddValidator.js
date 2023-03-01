@@ -24,6 +24,7 @@ module.exports = [
         .notEmpty().withMessage("La descripción es obligatoria").bail()
         .isLength({ min: 5}).withMessage("La descripción debe tener mínimo 5 caracteres"),
 
+
      check("image")
         .custom((value, { req }) => {
             let file = req.file;

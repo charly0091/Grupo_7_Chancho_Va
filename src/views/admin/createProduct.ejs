@@ -20,37 +20,37 @@
             <form method="POST" action="/admin/createProduct" enctype="multipart/form-data">
                 <div class="input">
                     <label for="productName">Nombre del producto</label>
-                    <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="productName" id="productName" placeholder="Nombre del producto" value="<%= locals.errors && errors.name ? old.name : null %>">                
+                    <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= locals.old && locals.old.name ? locals.old.name : null %>">                
                     <small class="text-danger ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%></small>
                 </div>
                 <div class="input">
                     <label for="category">Categoria</label>
-                    <select name="productCategory" id="productCategory" class="estiloInput <%= locals.errors && errors.category ? 'is-invalid' : null%>">
+                    <select name="category" id="category" class="estiloInput <%= locals.errors && errors.category ? 'is-invalid' : null%>">
                         <option value="" selected hidden>Categoria</option>
                         <% categories.forEach(category=> { %>
-                            <option value="<%= category %>"><%= category %></option>
+                            <option value="<%= category %>" <%= category == old.category &&  'selected' %>><%= category %></option>
                         <% }) %>
                     </select>
                     <small class="text-danger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%></small>
                 </div>
                 <div class="input">
                     <label for="subCategory">Sub Categoria</label>
-                    <select name="productSubCategory" id="productSubCategory" class="estiloInput <%= locals.errors && errors.subCategory ? 'is-invalid' : null%>" >
+                    <select name="subCategory" id="subCategory" class="estiloInput <%= locals.errors && errors.subCategory ? 'is-invalid' : null%>" >
                         <option value="" selected hidden>Sub categoria</option>
                         <% subCategories.forEach(subCategory=> { %>
-                            <option value="<%= subCategory %>"><%= subCategory %></option>
+                            <option value="<%= subCategory %>" <%= subCategory == old.subCategory &&  'selected' %>><%= subCategory %></option>
                         <% }) %>
                     </select>
                     <small class="text-danger ms-2"><%= locals.errors && errors.subcategory ? errors.subcategory.msg : null%></small>
                 </div>
                 <div class="input">
-                    <label for="productPrice">Precio del producto</label>
-                    <input class="estiloInput <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" name="productPrice" id="productPrice" placeholder="Precio del producto"  step="0.01" min="0" value="<%=locals.errors && errors.price ? old.price : null %>">                
+                    <label for="price">Precio del producto</label>
+                    <input class="estiloInput <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" name="price" id="price" placeholder="Precio del producto"  step="0.01" min="0" value="<%= locals.old && locals.old.price ? locals.old.price : null %>">                
                     <small class="text-danger ms-2"><%= locals.errors && errors.price ? errors.price.msg : null%></small>
                 </div>
                 <div class="input">
-                    <label for="productPrice">Descuento del producto</label>
-                    <input class="estiloInput <%= locals.errors && errors.discount ? 'is-invalid' : null%>" type="number" name="productDiscount" id="productDiscount" placeholder="Descuento del producto"  step="0.01" min="0" value="<%= locals.errors && errors.discount ? old.discount : null %>">                
+                    <label for="discount">Descuento del producto</label>
+                    <input class="estiloInput <%= locals.errors && errors.discount ? 'is-invalid' : null%>" type="number" name="discount" id="discount" placeholder="Descuento del producto"  step="0.01" min="0" value="<%= locals.old && locals.old.discount ? locals.old.discount : null %>">                
                     <small class="text-danger ms-2"><%= locals.errors && errors.discount ? errors.discount.msg : null%></small>
                 </div>
                 <div class="div_file">
@@ -61,8 +61,8 @@
                 </div>
                 <small class="text-danger ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%></small>
                 <div class="input">
-                    <label for="productDescription">Descripción del producto</label>
-                    <textarea name="productDescription" class="estiloInput <%= locals.errors && errors.description ? 'is-invalid' : null%>" cols="30" rows="10" ><%= locals.errors && errors.description ? old.description : null %></textarea>
+                    <label for="description">Descripción del producto</label>
+                    <textarea name="description" class="estiloInput <%= locals.errors && errors.description ? 'is-invalid' : null%>" cols="30" rows="10" ><%= locals.old && locals.old.description ? locals.old.description : null %>"</textarea>
                     <small class="text-danger ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%></small>
                 </div>   
                 
