@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head") %> 
+</head>
+<body>
+    <%- include("../partials/header") %> 
+    <%- include("../partials/banner") %> 
+    <main class="homeMain">
+        <div class="contenedorHome">
+            <section class="homeMenuTematico">
+                <article class="contenedorCategoria">
+                    <a href="/products/familiares"><img class="homeCategoria" src="/images/juegos familiares.png" alt=""></a>
+                </article>
+                <article class="contenedorCategoria">
+                    <a href="/products/estrategia"><img class="homeCategoria" src="/images/juegos estrategia.png" alt=""></a>
+                </article>
+                <article class="contenedorCategoria">
+                    <a href="/products/previa"><img class="homeCategoria" src="/images/juegos previa.png" alt=""></a>
+                </article>
+            </section>      
+            <a href="/"><h2 class="nombreSubCategoria">Ofertas</h2></a>
+            <section class="homeProductos"> 
+                <% resultados.forEach(products => { %>
+                    <div class="homeContainerProductos">
+                        <article class="homeTarjetaProducto">               
+                            <div class="homeTarjetaImagen">
+                                <a href="/products/detail/<%= products.id %>"><img class="imagenJuego" src="/images/<%= products.image %>" alt="" ></a>
+                            </div> 
+                            <div class="homeTarjetaDescripcion">
+                                <h3 class="nombreJuego"><%= products.name %></h3>
+                                <p class="juegoPrecio">$<%= products.price %></p>
+                                <a href="/products/Carrito"><button class="btnAgregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
+                            </div>
+                        </article>
+                    </div> 
+                <% }) %>
+            </section>
+            
+        </div>
+    </main>
+    <%- include("../partials/btn-wp") %> 
+    <%- include("../partials/footer") %> 
+    <script src="js/efecto.js"></script>
+    <script src="js/vozAtexto.js"></script>
+    </body>
+</html>

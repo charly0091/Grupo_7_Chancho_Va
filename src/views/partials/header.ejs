@@ -12,12 +12,14 @@
             <h3 class="oculto">Juegos de mesa</h3>
         </div>
         <div class="buscador">
-            <div class="barraBuscadora">
-                <input class="busqueda" type="search" id="search-bar" placeholder="¿A qué queres jugar?" >
+            <form action="/search" method="GET" >
+                <div class="barraBuscadora">
+                    <input class="busqueda" type="search" id="search-bar" placeholder="¿A qué queres jugar?" >
+                    <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
                 <div id="texto">
                     <i id="voice-button" class="fa-solid fa-microphone"></i>
                 </div>
-                
+            </form>
             </div>
             <div class="iconoBuscador">
                 <i class="fa-solid fa-magnifying-glass"></i>

@@ -28,5 +28,10 @@ module.exports = {
   
     contact: (req, res) => {
         res.render("main/contact" , { style : "styles.css" })
+    },
+
+    search: (req, res) => {
+        let resultado = products.filter(producto => producto.name.toLowerCase().includes(req.query.keywords.toLowerCase()));
+        res.render("main/results", {resultado, toThousand})
     }
 }
