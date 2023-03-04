@@ -2,72 +2,72 @@
     {
         "id": 1,
         "email": "Vero@veronikos.com" ,
-        "password":"GotitasDeAmor" ,
+        "password":"123" ,
         "phone": "" ,
-        "admin": "true"
+        "rol": "admin"
     },
     {
         "id": 2,
         "email": "Nico@veronikos.com" ,
-        "password":"" ,
+        "password":"123" ,
         "phone": "" ,
-        "admin": "false"
+        "rol": "admin"
     },
     {
         "id": 3,
         "email": "Braian@veronikos.com" ,
-        "password":"" ,
+        "password":"123" ,
         "phone": "" ,
-        "admin": "false"
+        "rol": "admin"
     },
     {
         "id": 4,
         "email": "Javi@veronikos.com" ,
-        "password":"" ,
+        "password":"123" ,
         "phone": "" ,
-        "admin": "false"
+        "rol": "admin"
     },
     {
         "id": 5,
         "email": "Charly@veronikos.com" ,
-        "password":"" ,
+        "password":"123" ,
         "phone": "" ,
-        "admin": "false"
+        "rol": "admin"
     },
     {
         "id": 6,
         "email": "brenda@gmail.com",
         "password":"brenda123" ,
         "phone": "2235478514" ,
-        "admin": "false"
+        "rol": "user"
     },
     {
         "id": 7,
         "email": "elisabeth@gmail.com" ,
         "password":"eli123" ,
         "phone": "2236598744" ,
-        "admin": "false"
+        "rol": "user"
     },
     {
         "id": 8,
         "email": "mariano@gmail.com" ,
         "password":"mariano123" ,
         "phone": "2236789599" ,
-        "admin": "false"
+        "rol": "user"
     },
     {
         "id": 9,
         "email": "jose@gmail.com" ,
         "password":"jose123" ,
         "phone": "2234111124" ,
-        "admin": "false"
+        "rol": "user"
     },
     {
         "id": 10,
         "email": "tomas@gmail.com" ,
         "password":"tomas123" ,
         "phone": "2236699666" ,
-        "admin": "false"
+        "rol": "user"
     }
 ]
 
