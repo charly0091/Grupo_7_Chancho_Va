@@ -10,24 +10,25 @@
             <h2 class="nombre">Login</h2>
             <hr>
             <div class="contenedorFormulario">
-                <form class="formularioLogin" action="" method="">
+                <form class="formularioLogin" action="/users/login" method="POST">
                     <div class="input-container">
                         <p class="input-text">Dirección de correo electrónico.</p>
-                        <input class="input-style" type="email" name="email" placeholder="ej: veroperreointenso@lomejor.com">
-                        <span class="error-message">Debe ingresar su email</span>
+                        <input class="input-style <%= locals.errors && errors.email ? 'is-invalid' : null%>" type="email" name="email" placeholder="ej: veroperreointenso@lomejor.com" value="<%= locals.old && locals.old.email ? locals.old.email : null %>">
+                        <small class="text-danger ms-2"><%= locals.errors && errors.email ? errors.email.msg : null%></small>
                     </div>
                     <div class="input-container">
                         <p class="input-text">Contraseña.</p>
-                        <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña">
-                        <span class="error-message">Debe ingresar su contraseña</span>
+                        <input class="input-style <%= locals.errors && errors.password ? 'is-invalid' : null%>" type="password" name="password" placeholder="Ingrese su contraseña">
+                        <small class="text-danger ms-2"><%= locals.password && errors.password ? errors.password.msg : null%></small>
                     </div>
                     <div class="check">
                         <label class="text-remember" for="remember">Recordarme</label>
                         <input class="checkbox" type="checkbox" name="remember" id="remember">
+                        <small class="text-danger ms-2"><%= locals.remember && errors.remember ? errors.remember.msg : null%></small>
                     </div>
                     <div class="button-container">
-                        <button type="submit" class="btn-submit"><a href="/admin/adminPerfil"> Ingresar</a></button>
-                        <span class="error-message">Credenciales inválidas</span>
+                        <button type="submit" class="btn-submit">Ingresar</a></button>
+                        
                     </div>
                     <div class="contenedorBotones">
                         <div class="resetPass">
