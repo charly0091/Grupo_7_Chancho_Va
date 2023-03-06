@@ -1,13 +1,7 @@
-const fs = require('fs');
-const path = require('path');
-const usersDataPath = path.join(__dirname, "../data/usersDataBase.json");
-const users = JSON.parse(fs.readFileSync(usersDataPath, "utf-8"));
+const { readJSON, writeJSON } = require("../data");
+const users = readJSON("usersDataBase.json");
 const {validationResult} = require("express-validator");
 
-
-const writeJson = (users) => {
-    fs.writeFileSync(usersDataPath, JSON.stringify(users), "utf8")
-}
 
 
 module.exports = {
@@ -26,7 +20,7 @@ module.exports = {
             cel: req.body.cel
         }
         users.push(newUser);
-        writeJson(users);
+        writeJSON("usersDataBase.json" , users);
         res.redirect("/users/login");
     },
     login: (req, res) => {

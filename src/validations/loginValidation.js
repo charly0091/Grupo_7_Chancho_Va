@@ -1,5 +1,6 @@
 const { check, body } = require("express-validator");
-const path = require("path");
+const { readJSON, writeJSON } = require("../data");
+const users = readJSON("usersDataBase.json");
 
 module.exports = [
     check("email")
@@ -8,7 +9,6 @@ module.exports = [
 
         body("email")
         .custom((value) => {
-            let users = JSON.parse(fs.readFileSync(usersDataPath, "utf-8"));
             let userToLogin = users.find(user => user.email == value);
             if(userToLogin){
                 return true;
@@ -22,7 +22,6 @@ module.exports = [
 
     body("password")
         .custom((value, {req}) => {
-            let users = JSON.parse(fs.readFileSync(usersDataPath, "utf-8"));
             let userToLogin = users.find(user => user.email == req.body.email);
             if(userToLogin){
                 if(userToLogin.password == value){
@@ -31,7 +30,7 @@ module.exports = [
                     return false;
                 }
             } else {
-                return false;
+                return true;
             }
         }).withMessage("La contraseña es incorrecta")
 ];

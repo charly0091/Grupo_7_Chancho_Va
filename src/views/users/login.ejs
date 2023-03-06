@@ -18,8 +18,8 @@
                     </div>
                     <div class="input-container">
                         <p class="input-text">Contraseña.</p>
-                        <input class="input-style <%= locals.errors && errors.password ? 'is-invalid' : null%>" type="password" name="password" placeholder="Ingrese su contraseña">
-                        <small class="text-danger ms-2"><%= locals.password && errors.password ? errors.password.msg : null%></small>
+                        <input class="input-style <%= locals.errors && errors.password && !errors.email ? 'is-invalid' : null%>" type="password" name="password" placeholder="Ingrese su contraseña">
+                        <small class="text-danger ms-2"><%= locals.errors && errors.password ? errors.password.msg : null%></small>
                     </div>
                     <div class="check">
                         <label class="text-remember" for="remember">Recordarme</label>
