@@ -9,7 +9,7 @@ const subCategories = readJSON("subCategories.json");
 
 module.exports = {
     products: (req, res) => {
-        res.render("admin/products",{products})
+        res.render("admin/products",{products, session: req.session})
     },
 
     delete:(req, res) => {
@@ -22,7 +22,8 @@ module.exports = {
     create: (req, res) => {
         res.render("admin/createProduct" , {
             categories,
-            subCategories
+            subCategories,
+            session: req.session
         })
     },
             
@@ -54,6 +55,7 @@ module.exports = {
             subCategories,
             errors: errors.mapped(),
             old: req.body,
+            session: req.session
         })
     }
 },
@@ -66,7 +68,8 @@ module.exports = {
             res.render("admin/editProduct", {
                 productToEdit, 
                 categories,
-                subCategories
+                subCategories,
+                session: req.session
             })
         } else{
             res.send("No se encontro el producto");
@@ -114,6 +117,7 @@ module.exports = {
                     subCategories,
                     errors: errors.mapped(),
                     old: req.body,
+                    session: req.session
             })
         } else{
             res.send("No se encontro el producto");
@@ -125,34 +129,34 @@ module.exports = {
 	},
     
     admin: (req, res) =>{
-        res.render("./admin/adminPerfil")
+        res.render("./admin/adminPerfil" , {session: req.session})
     },
 
     editRender: (req, res) =>{
-        res.render("./admin/adminPerfilEdit")
+        res.render("./admin/adminPerfilEdit" , {session: req.session})
     },
 
     editAdmin: (req, res) =>{
-        res.render("./admin/adminPerfilEdit")
+        res.render("./admin/adminPerfilEdit" , {session: req.session})
     },
 
     adminUsersRegister: (req, res) =>{
-        res.render("./admin/adminPerfilUsers")
+        res.render("./admin/adminPerfilUsers" , {session: req.session})
     },
 
     adminUsersQuestions: (req, res) =>{
-        res.render("./admin/adminPerfilQuestions")
+        res.render("./admin/adminPerfilQuestions" , {session: req.session})
     },
 
     adminUsersShipments: (req, res) =>{
-        res.render("./admin/adminPerfilShipments")
+        res.render("./admin/adminPerfilShipments" , {session: req.session})
     },
 
     adminPerfilReturnedPackages: (req, res) =>{
-        res.render("./admin/adminPerfilReturnedPackages")
+        res.render("./admin/adminPerfilReturnedPackages" , {session: req.session})
     },
 
     adminPerfilClaims: (req, res) =>{
-        res.render("./admin/adminPerfilClaims")
+        res.render("./admin/adminPerfilClaims" , {session: req.session})
     },
 }

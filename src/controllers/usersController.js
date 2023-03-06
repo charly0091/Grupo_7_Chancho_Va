@@ -6,10 +6,10 @@ const {validationResult} = require("express-validator");
 
 module.exports = {
     users: (req, res) => {
-        res.render("users/construccion" , { style : "styles.css" })
+        res.render("users/construccion" , { style : "styles.css" , session: req.session })
     },
     register: (req, res) => {
-        res.render("users/register" , { style : "register.css" });
+        res.render("users/register" , { style : "register.css" , session: req.session })
     },
     crear: (req, res) => {
         let newUser = {
@@ -24,7 +24,7 @@ module.exports = {
         res.redirect("/users/login");
     },
     login: (req, res) => {
-        res.render("users/login" , { style : "styles.css" })
+        res.render("users/login" , { style : "styles.css" , session: req.session })
     },
     processLogin: (req, res) => {
         let errors = validationResult(req);
@@ -32,7 +32,12 @@ module.exports = {
             let userToLogin = users.find(user => user.email == req.body.email);
             if(userToLogin){
                 if(userToLogin.password == req.body.password){
-                    req.session.userLogged = userToLogin;
+                    req.session.userLogged = {
+                        id: userToLogin.id,
+                        email: userToLogin.email,
+                        avatar: userToLogin.avatar,
+                        rol: userToLogin.rol
+                    };
                     if(req.body.remember){
                         res.cookie("userEmail", req.body.email, {maxAge: 1000 * 60 * 60 * 24 * 7})
                     }
@@ -40,31 +45,34 @@ module.exports = {
                 } else {
                     res.render("users/login", {
                         old: req.body,
-                        style: "styles.css"
+                        style: "styles.css",
+                        session: req.session
                     })
                 }
             } else {
                 res.render("users/login", {
                     old: req.body,
-                    style: "styles.css"
+                    style: "styles.css",
+                    session: req.session
                 })
             }
         } else {
             res.render("users/login", {
                 errors: errors.mapped(),
                 old: req.body,
-                style: "styles.css"
+                style: "styles.css",
+                session: req.session
             })
         }
     },
     resetPassword: (req, res) => {
-        res.render("users/reset-password" , { style : "styles.css" })
+        res.render("users/reset-password" , { style : "styles.css" , session: req.session })
     },
     metodosDePago: (req, res) => {
-        res.render("users/metodosDePago", { style : "metodosDePago.css"})
+        res.render("users/metodosDePago", { style : "metodosDePago.css" , session: req.session})
     },
     pago: (req, res) => {
-        res.render("users/pagoTarjeta", { style : "pagoTargeta.css"})
+        res.render("users/pagoTarjeta", { style : "pagoTargeta.css" , session: req.session})
     },
     
 }

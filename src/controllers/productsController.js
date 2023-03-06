@@ -17,28 +17,28 @@ const controller = {
         categoriasId.length = 6 
         let categoriasId2 = products.filter(categorias => categorias.subCategory === "visited");
         categoriasId2.length = 6 
-        res.render("products/detail", { product, style : "detail.css" , toThousand, categoriasId, categoriasId2});
+        res.render("products/detail", { product, style : "detail.css" , toThousand, categoriasId, categoriasId2, session: req.session})
     },
     create: (req, res) => {
-        res.render("./admin/createProduct")
+        res.render("./admin/createProduct" , { style : "createProduct.css"})
     },
     edit: (req, res) => {
-         res.render("./admin/editProduct")
+         res.render("./admin/editProduct" , { style : "editProduct.css"}) 
     },
     carrito: (req, res) => {
-        res.render("products/carrito" , { style : "carrito.css"})
+        res.render("products/carrito" , { style : "carrito.css" , session: req.session})
     },
     familiares: (req, res) => {
         let categoriasFamiliares = products.filter(categorias => categorias.category === 1);
-        res.render("products/familiares" , { style : "familiares.css", categoriasFamiliares})
+        res.render("products/familiares" , { style : "familiares.css", categoriasFamiliares , session: req.session})
     },
     estrategia: (req, res) => {
         let categoriasEstrategia = products.filter(categorias => categorias.category === 3);
-        res.render("products/estrategia" , { style : "estrategia.css", categoriasEstrategia})
+        res.render("products/estrategia" , { style : "estrategia.css", categoriasEstrategia , session: req.session})
     },
     previa: (req, res) => {
         let categoriasPrevia = products.filter(categorias => categorias.category === 2);
-        res.render("products/previa" , { style : "previa.css", categoriasPrevia})
+        res.render("products/previa" , { style : "previa.css", categoriasPrevia , session: req.session})
     },
     destroy: (req, res) => {
         let productID = Number(req.params.id);
