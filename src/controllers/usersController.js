@@ -34,7 +34,7 @@ module.exports = {
         if(errors.isEmpty()){
             let userToLogin = users.find(user => user.email == req.body.email);
             if(userToLogin){
-                if(userToLogin.password == req.body.password){
+                if(bcrypt.compareSync(req.body.password , userToLogin.password)){
                     req.session.userLogged = {
                         id: userToLogin.id,
                         email: userToLogin.email,
