@@ -1,6 +1,7 @@
 const { readJSON, writeJSON } = require("../data");
 const users = readJSON("usersDataBase.json");
 const {validationResult} = require("express-validator");
+const bcrypt = require("bcryptjs");
 
 
 
