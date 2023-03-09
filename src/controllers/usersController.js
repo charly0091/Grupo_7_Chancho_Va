@@ -27,7 +27,9 @@ module.exports = {
         res.render("users/login" , { style : "styles.css" , session: req.session })
     },
     processLogin: (req, res) => {
+
         let errors = validationResult(req);
+
         if(errors.isEmpty()){
             let userToLogin = users.find(user => user.email == req.body.email);
             if(userToLogin){
@@ -38,9 +40,20 @@ module.exports = {
                         avatar: userToLogin.avatar,
                         rol: userToLogin.rol
                     };
+
+                    let cookieTime = (1000 * 60 * 60); /* mSeg * seg * min * hor * dia */
+
                     if(req.body.remember){
-                        res.cookie("userEmail", req.body.email, {maxAge: 1000 * 60 * 60 * 24 * 7})
+                        res.cookie("userEmail",
+                        req.body.email,
+                        {
+                            expires: new Date(Date.now() + cookieTime),
+                            httpOnly: true
+                        })
                     }
+
+                    res.locals.user = req.session.userLogged;
+
                     res.redirect("/");
                 } else {
                     res.render("users/login", {
@@ -64,6 +77,15 @@ module.exports = {
                 session: req.session
             })
         }
+    },
+    logout: (req,res) => {
+
+        req.session.destroy();
+
+        if(req.cookies.userEmail){
+            res.cookie("userEmail" , "" , { maxAge: -1})
+        }
+
     },
     resetPassword: (req, res) => {
         res.render("users/reset-password" , { style : "styles.css" , session: req.session })

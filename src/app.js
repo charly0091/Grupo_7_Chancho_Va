@@ -4,6 +4,7 @@ const port= process.env.PORT || 3000;
 const path = require('path');
 const methodOverride =  require('method-override');
 const session = require('express-session');
+const cookieParser = require("cookie-parser")
 
 app.use(express.static("public"));
 app.use(methodOverride('_method'));
@@ -14,6 +15,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }))
+app.use(cookieParser());
 
 
 /* Template engine config */
