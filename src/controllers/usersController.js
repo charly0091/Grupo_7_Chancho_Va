@@ -45,7 +45,7 @@ module.exports = {
 
                     if(req.body.remember){
                         res.cookie("userEmail",
-                        req.body.email,
+                        req.session.userLogged,
                         {
                             expires: new Date(Date.now() + cookieTime),
                             httpOnly: true
@@ -85,6 +85,8 @@ module.exports = {
         if(req.cookies.userEmail){
             res.cookie("userEmail" , "" , { maxAge: -1})
         }
+
+        res.redirect("/");
 
     },
     resetPassword: (req, res) => {

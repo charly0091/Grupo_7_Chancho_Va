@@ -1,6 +1,7 @@
 const { readJSON, writeJSON } = require("../data");
 const fs = require("fs");
 
+
 const products = readJSON("productsDataBase.json");
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
