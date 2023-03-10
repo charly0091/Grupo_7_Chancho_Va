@@ -25,6 +25,9 @@ module.exports = {
         res.redirect("/users/login");
     },
     login: (req, res) => {
+         if(req.session.userLogged){
+            return res.redirect("/");
+        }
         res.render("users/login" , { style : "styles.css" , session: req.session })
     },
     processLogin: (req, res) => {
