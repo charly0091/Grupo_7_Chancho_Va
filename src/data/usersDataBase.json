@@ -2,7 +2,7 @@
     {
         "id": 1,
         "email": "Vero@veronikos.com" ,
-        "password":"123" ,
+        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
         "phone": "" ,
         "rol": "admin",
         "avatar": "defaultImagePerfil.png"
@@ -10,7 +10,7 @@
     {
         "id": 2,
         "email": "Nico@veronikos.com" ,
-        "password":"123" ,
+        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
         "phone": "" ,
         "rol": "admin",
         "avatar": "defaultImagePerfil.png"
@@ -18,7 +18,7 @@
     {
         "id": 3,
         "email": "Braian@veronikos.com" ,
-        "password":"123" ,
+        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
         "phone": "" ,
         "rol": "admin",
         "avatar": "defaultImagePerfil.png"
@@ -26,7 +26,7 @@
     {
         "id": 4,
         "email": "Javi@veronikos.com" ,
-        "password":"123" ,
+        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
         "phone": "" ,
         "rol": "admin",
         "avatar": "defaultImagePerfil.png"
@@ -34,7 +34,7 @@
     {
         "id": 5,
         "email": "Charly@veronikos.com" ,
-        "password":"123" ,
+        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
         "phone": "" ,
         "rol": "admin",
         "avatar": "defaultImagePerfil.png"
@@ -42,7 +42,7 @@
     {
         "id": 6,
         "email": "brenda@gmail.com",
-        "password":"brenda123" ,
+        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
         "phone": "2235478514" ,
         "rol": "user",
         "avatar": "defaultImagePerfil.png"
@@ -50,7 +50,7 @@
     {
         "id": 7,
         "email": "elisabeth@gmail.com" ,
-        "password":"eli123" ,
+        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
         "phone": "2236598744" ,
         "rol": "user",
         "avatar": "defaultImagePerfil.png"
@@ -58,7 +58,7 @@
     {
         "id": 8,
         "email": "mariano@gmail.com" ,
-        "password":"mariano123" ,
+        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
         "phone": "2236789599" ,
         "rol": "user",
         "avatar": "defaultImagePerfil.png"
@@ -66,7 +66,7 @@
     {
         "id": 9,
         "email": "jose@gmail.com" ,
-        "password":"jose123" ,
+        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
         "phone": "2234111124" ,
         "rol": "user",
         "avatar": "defaultImagePerfil.png"
@@ -74,7 +74,7 @@
     {
         "id": 10,
         "email": "tomas@gmail.com" ,
-        "password":"tomas123" ,
+        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
         "phone": "2236699666" ,
         "rol": "user",
         "avatar": "defaultImagePerfil.png"
