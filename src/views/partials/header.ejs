@@ -95,11 +95,12 @@
                         <a href="/users/profile">Mis datos</a>
                         <a href="/users/logout">Cerrar sesión</a>
                         <% if (session.userLogged.rol === "admin") { %>
-                            <a href="/admin/index">ADMIN</a>
+                            <a href="/admin/adminPerfil">ADMIN</a>
                         <% } %>
                     </div>
                 <% } else {%>
-                    <a href="/users/login">Perfil<i class="fa-regular fa-user"></i></a>
+                    <i class="fa-regular fa-user"></i>
+                    <h5><a href="/users/login">Perfil</a></h5>
                 <% } %>
             </div>
             <div class="carrito">
