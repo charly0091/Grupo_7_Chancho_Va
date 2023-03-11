@@ -2,16 +2,23 @@ const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/usersController");
 const loginValidator = require("../validations/loginValidation");
+const userInSessionState = require("../middlewares/userInSessionState");
+const userSessionState = require("../middlewares/userSessionState");
 
 
 router.get("/", controller.users); 
-router.get("/register", controller.register);
+router.get("/register",userSessionState, controller.register);
 router.post("/register", controller.crear);
-router.get("/login" , controller.login);
+router.get("/login" ,userSessionState, controller.login);
 router.post("/login",loginValidator, controller.processLogin);
-router.get("/logout" , controller.logout);
-router.get("/reset-password", controller.resetPassword);
-router.get("/metodosDePago", controller.metodosDePago);
-router.get("/pagoTarjeta", controller.pago)
+router.get("/logout" ,userInSessionState, controller.logout);
+router.get("/reset-password",userInSessionState, controller.resetPassword);
+router.get("/metodosDePago",userInSessionState, controller.metodosDePago);
+router.get("/pagoTarjeta",userInSessionState, controller.pago);
+router.get("/userProfile",userInSessionState, controller.userProfile);
+router.get("/editUserProfile",userInSessionState, controller.editUserProfile);
+router.put("/userProfile", controller.editProfile);
+router.delete("/deleteProfile/:id",userInSessionState, controller.deleteProfile);
+
 
 module.exports = router;
