@@ -40,16 +40,6 @@
       "image": "pistasCruzadas.PNG"
    },
    {
-      "id": 5,
-      "name": "Say My Name + Expansiones 2 Y 3",
-      "price": 11070,
-      "discount": 20,
-      "category": 1,
-      "subCategory": "visited",
-      "description": "En Say My Name el objetivo es adivinar la mayor cantidad de tarjetas lo más rápido posible, ¿como? Dándole pistas a tu equipo respetando las reglas de cada ronda",
-      "image": "sayMyName.PNG"
-   },
-   {
       "id": 6,
       "name": "King Of Tokyo: Power Up",
       "price": 5990,
@@ -228,16 +218,6 @@
       "subCategory": "visited",
       "description": "Little Town es un juego de colocación de trabajadores fácil de aprender pero con mucha profundidad, en el que recolectás recursos y construís edificios con el objetivo de ser declarado el mejor arquitecto del pueblo.",
       "image": "littleTown.PNG"
-   },
-   {
-      "id": 24,
-      "name": "Raccoon Tycoon",
-      "price": 15900,
-      "discount": 10,
-      "category": 3,
-      "subCategory": "in-sale",
-      "description": "Raccoon Tycoon es un juego de gestión de recursos y especulación económica, sencillo de explicar y con turnos rápidos. Vas a pasártela produciendo ítems y mirando de reojo los precios del mercado, preguntándote en cada turno si es el momento de vender antes que lo haga otro, o mejor de comprar e invertir.",
-      "image": "raccoonTycoon.PNG"
    },
    {
       "id": 25,

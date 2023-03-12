@@ -113,5 +113,25 @@ module.exports = {
     pago: (req, res) => {
         res.render("users/pagoTarjeta", { style : "pagoTargeta.css" , session: req.session})
     },
+    userProfile: (req, res) => {
+        res.render("users/userProfile", { style : "styles.css" , session: req.session})
+    },
+    editUserProfile: (req, res) => {
+        res.render("users/editUserProfile", { style : "styles.css" , session: req.session})
+    },
+
+    editProfile: (req, res) => {
+        res.render("users/editProfile", { style : "styles.css" , session: req.session})
+    },
+
+    deleteProfile: (req, res) => {
+        res.render("users/deleteProfile", { style : "styles.css" , session: req.session})
+    }/*,
+    products: (req, res) => {
+        res.render("users/products",{products, session: req.session})
+    },*/
+
+
+    
     
 }

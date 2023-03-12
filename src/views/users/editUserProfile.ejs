@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/adminPerfilEdit.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <title>Chancho va! </title>
+         <!-- FontAwesome-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" /> 
+    </head>
+<body>
+    <%- include('../partials/header')  %>
+    <main class="userPerfilContainer">
+        <%- include("../partials/menuAdmin")%>
+        <div class="contenedorDatosUser">
+            <div class="perfilAdmin">  
+                <div class="nombre">
+                    <h1>Edición de Datos</h1>
+                </div>
+                <div class="formulario">
+                    <form action="">
+                        <div class="divInput">
+                            <label class="label" for="id">Nombre de Usuario</label>
+                            <input class="input" type="text" name="id" required>
+                        </div>
+                        <div class="divInput">
+                            <label class="label" for="email">E-mail</label>
+                            <input class="input" type="email" name="email" required>
+                        </div>
+                        <div class="divInput">
+                            <label class="label" for="firstName">Nombre</label>
+                            <input class="input" type="text" name="firstName" required>
+                        </div>
+                        <div class="divInput">
+                            <label class="label" for="lastName">Apellido</label>
+                            <input class="input" type="text" name="lastName" required>
+                        </div>
+                        <div class="divInput">
+                            <label class="label" for="password">Contraseña</label>
+                            <input class="input" type="password" name="password" required>
+                        </div>
+                        <div class="divInput">
+                            <label class="label" for="password2">Confirmar Contraseña</label>
+                            <input class="input" type="password" name="password2" required>
+                        </div>
+                        <div class="boton">
+                            <button type="submit" class="guardar">Guardar Cambios</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer')  %>
+    <script src="/js/admin.js"></script>
+    <script src="/js/efecto.js"></script>
+</body>
+</html>
