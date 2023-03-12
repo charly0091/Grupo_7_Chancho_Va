@@ -96,6 +96,17 @@ module.exports = {
     resetPassword: (req, res) => {
         res.render("users/reset-password" , { style : "styles.css" , session: req.session })
     },
+    deleteProfile: (req, res) => {
+        const userId = req.session.userLogged.id;
+        const filteredUsers = users.filter(user => user.id !== userId);
+        writeJSON("usersDataBase.json", filteredUsers);
+        req.session.destroy();
+        if(req.cookies.userEmail){
+          res.cookie("userEmail" , "" , { maxAge: -1})
+        }
+        res.redirect("/");
+      },
+      
     metodosDePago: (req, res) => {
         res.render("users/metodosDePago", { style : "metodosDePago.css" , session: req.session})
     },

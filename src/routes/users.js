@@ -13,5 +13,6 @@ router.get("/logout" , controller.logout);
 router.get("/reset-password", controller.resetPassword);
 router.get("/metodosDePago", controller.metodosDePago);
 router.get("/pagoTarjeta", controller.pago)
+router.delete("/delete/:id", controller.deleteProfile);
 
 module.exports = router;
