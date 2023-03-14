@@ -15,7 +15,7 @@ router.get("/logout" ,userInSessionState, controller.logout);
 router.get("/reset-password",userInSessionState, controller.resetPassword);
 router.get("/metodosDePago",userInSessionState, controller.metodosDePago);
 router.get("/pagoTarjeta",userInSessionState, controller.pago);
-router.get("/userProfile",userInSessionState, controller.userProfile);
+router.get("/profile",userInSessionState, controller.userProfile);
 router.get("/editUserProfile",userInSessionState, controller.editUserProfile);
 router.put("/userProfile", controller.editProfile);
 router.delete("/deleteProfile/:id",userInSessionState, controller.deleteProfile);

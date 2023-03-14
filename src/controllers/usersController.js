@@ -7,7 +7,7 @@ const bcrypt = require("bcryptjs");
 
 module.exports = {
     users: (req, res) => {
-        res.render("users/construccion" , { style : "styles.css" , session: req.session })
+        res.render("users/construccion" , { style : "styles.css" ,users, session: req.session })
     },
     register: (req, res) => {
         res.render("users/register" , { style : "register.css" , session: req.session })
@@ -28,7 +28,7 @@ module.exports = {
          if(req.session.userLogged){
             return res.redirect("/");
         }
-        res.render("users/login" , { style : "styles.css" , session: req.session })
+        res.render("users/login" , { style : "styles.css" ,  session: req.session })
     },
     processLogin: (req, res) => {
 
@@ -114,18 +114,27 @@ module.exports = {
         res.render("users/pagoTarjeta", { style : "pagoTargeta.css" , session: req.session})
     },
     userProfile: (req, res) => {
-        res.render("users/userProfile", { style : "styles.css" , session: req.session})
+    
+        res.render("users/profile", {users, session: req.session})
     },
     editUserProfile: (req, res) => {
-        res.render("users/editUserProfile", { style : "styles.css" , session: req.session})
+        res.render("users/editUserProfile", { style : "styles.css" ,users, session: req.session})
     },
 
     editProfile: (req, res) => {
-        res.render("users/editProfile", { style : "styles.css" , session: req.session})
+        res.render("users/editProfile", { style : "styles.css" ,users,session: req.session})
     },
 
     deleteProfile: (req, res) => {
-        res.render("users/deleteProfile", { style : "styles.css" , session: req.session})
+        let userID = Number(req.params.id);
+        users.forEach(user => {
+            if(user.id === userID){
+                let userToDestroy = users.indexOf(user);
+                users.splice(userToDestroy, 1)
+            }
+        })
+        writeJSON("usersDataBase.json", users);
+        res.send("La cuenta fue destruida")
     }/*,
     products: (req, res) => {
         res.render("users/products",{products, session: req.session})

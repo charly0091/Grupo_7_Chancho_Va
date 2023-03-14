@@ -5,6 +5,8 @@ const fs = require("fs");
 const products = readJSON("productsDataBase.json");
 const categories = readJSON("categories.json");
 const subCategories = readJSON("subCategories.json");
+const users = readJSON("usersDataBase.json");
+
 
 
 module.exports = {
@@ -129,7 +131,7 @@ module.exports = {
 	},
     
     admin: (req, res) =>{
-        res.render("./admin/adminPerfil" , {session: req.session})
+        res.render("./admin/adminPerfil" ,{session: req.session})
     },
 
     editRender: (req, res) =>{
