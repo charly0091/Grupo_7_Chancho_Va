@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/productsController");
 
-router.get("/", controller.products); 
+router.get("/", controller.products);
+router.get("/list", controller.list)
 router.get("/detail", controller.detail);
 router.get("/detail/:id", controller.detail);
 router.get("/create", controller.create);

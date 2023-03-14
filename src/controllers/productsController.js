@@ -11,6 +11,9 @@ const controller = {
     products: (req, res) => {
         res.render("products")
     },
+    list: (req, res) => {
+        res.render("products/listProducts")
+    },
     detail: (req, res) => {
         let product = products.find(product => product.id == req.params.id);
         let categoriasId = products.filter(categorias => categorias.subCategory === "in-sale");
