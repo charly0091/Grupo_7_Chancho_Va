@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap'); 
+@import url(header.css);
+@import url(footer.css);
 :root {
     /* Variables de colores */
     --rojo: #FF5656;
     --azul: #6A7EFC;
     --negro: #494953;
-    --gris: #EDF2F6;
+    --gris: #edf2f6;
     
       /* Fuentes */
-      --fuente:'Source Sans Pro', sans-serif;
-        /* Tamaños tipográficos */
+      --fuente:'Source Sans Pro', sans-serif;  /* Tamaños tipográficos */
       --parrafos: 12px;
       --titulos: 24px;
       --precio: 18px;
@@ -16,13 +17,12 @@
       --descripcion: 16px;
 }
 
-/* fuente */
-
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--fuente);
 }
 
 main.mainLogin {

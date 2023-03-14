@@ -164,6 +164,7 @@ main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.b
     font-weight: bold;
     transition: all 1s ease;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.boton button.registrar:hover{

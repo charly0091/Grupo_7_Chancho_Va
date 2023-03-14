@@ -16,7 +16,7 @@ module.exports = {
         let productId = Number(req.params.id); 
         let newProductsArray = products.filter(product => product.id !== productId)
         writeJSON("productsDataBase.json", newProductsArray)
-        res.send("El producto fue destruido")
+        res.redirect("/admin/products")
     },
 
     create: (req, res) => {
@@ -47,9 +47,9 @@ module.exports = {
 		}
 		products.push(newProduct);
 		writeJSON("productsDataBase.json", products)
-        res.redirect("/admin/adminPerfil");
+        res.redirect("/admin/products");
     } else{
-        res.render("admin/createProduct", {
+        res.render("admin/products", {
             categories,
             subCategories,
             errors: errors.mapped(),

@@ -1,6 +1,20 @@
 [
     {
         "id": 1,
+        "name": "Nicolas",
+        "last_name": "Sosa",
+        "email": "nicoss@mail.com",
+        "pass": "123456",
+        "avatar": "",
+        "rol": "ADMIN",
+        "tel": "1134801996",
+        "address": "La Calle Oculta 123456",
+        "postal_code": "",
+        "province": "",
+        "city": ""
+    },
+    {
+        "id": 1,
         "email": "Vero@veronikos.com",
         "password": "Vero123",
         "phone": ""
