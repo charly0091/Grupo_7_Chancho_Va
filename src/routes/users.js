@@ -18,7 +18,8 @@ router.get("/pagoTarjeta",userInSessionState, controller.pago);
 router.get("/profile",userInSessionState, controller.userProfile);
 router.get("/editUserProfile",userInSessionState, controller.editUserProfile);
 router.put("/userProfile", controller.editProfile);
-router.delete("/deleteProfile/:id",userInSessionState, controller.deleteProfile);
-
+router.delete("/deleteProfile/:id", controller.deleteProfile);
+router.get("/detail", userInSessionState,controller.detail);
+router.get("/detail/:id",userInSessionState, controller.detail);
 
 module.exports = router;

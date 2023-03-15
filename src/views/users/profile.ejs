@@ -14,7 +14,7 @@
 
 <body>
     <%- include('../partials/header')  %>
-    <%- include("../partials/menuAdmin")  %>
+    <%- include("../partials/menuUser")  %>
         <div class="contenedorDatosUser">
         <div class="contenedorBienvenido">
             <div class="bienvenido">
@@ -24,7 +24,7 @@
                 <img class="animacionPoker diamante" src="/images/diamantePoker.PNG" alt="">
               
                     
- <h1 class="inicio">Bienvenido </h1>        
+ <h1 class="inicio">Bienvenido <%= session.userLogged.email %> </h1>        
             </div>
       </div>
     </div>
