@@ -1,5 +1,4 @@
-const { readJSON, writeJSON } = require("../data");
-const users = readJSON("usersDataBase.json");
+const { readJSON, writeUsersJson, users } = require("../data");
 const {validationResult} = require("express-validator");
 const bcrypt = require("bcryptjs");
 
@@ -10,23 +9,20 @@ module.exports = {
         res.render("users/construccion" , { style : "styles.css" , session: req.session })
     },
     register: (req, res) => {
-        res.render("users/register" , { style : "register.css" , session: req.session })
+        res.render("users/register" , {session: req.session })
     },
     crearUsuario: (req, res) => {
-        return res.send(req.body)
-        /* let lastId = 0; */
-       /*  users.forEach(user => {
-            if (user.id > lastId) {
-                lastId = user.id;
-            }
-        }); */
+        let errors = validationResult(req);
+        
+        if (errors.isEmpty()) {
+            
         let newUser = {
             id: req.body.id,
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,
-            password: req.body.password,
-            avatar: "defaultImagePerfil.png",
+            password: bcrypt.hashSync( req.body.password, 10),
+            imagen: req.file ? req.file.filename : "defaultImagePerfil.png",
             rol: "USER",
             tel: "",
             address: "",
@@ -35,8 +31,16 @@ module.exports = {
             city:"" 
         }
         users.push(newUser);
-        writeJSON("usersDataBase.json" , users);
+        writeUsersJson(users);
         res.redirect("/users/login");
+
+        }else{
+            res.render("users/register", {
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session
+            })
+        }
     },
     login: (req, res) => {
          if(req.session.userLogged){

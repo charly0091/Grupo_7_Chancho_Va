@@ -108,6 +108,30 @@ main.registro div.contenedor form.formularioRegistro div.contenedorLineasFormula
     font-size: small;
 }
 
+main.registro div.contenedor div.contenedorForm form.formularioRegistro div.imagenUsuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 300px;
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .25);
+    color: var(--rojo);
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+}
+
+main.registro div.contenedor div.contenedorForm form.formularioRegistro div.imagenUsuario input.imagen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
 main.registro div.contenedor form.formularioRegistro div.contenedorBotones div.terminos {
     display: flex;
     justify-content:center;

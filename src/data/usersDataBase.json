@@ -1,87 +1,96 @@
 [
     {
         "id": 1,
-        "email": "Vero@veronikos.com" ,
-        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
-        "phone": "" ,
+        "email": "Vero@veronikos.com",
+        "password": "$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO",
+        "phone": "",
         "rol": "admin",
         "avatar": "defaultImagePerfil.png"
     },
     {
         "id": 2,
-        "email": "Nico@veronikos.com" ,
-        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
-        "phone": "" ,
+        "email": "Nico@veronikos.com",
+        "password": "$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO",
+        "phone": "",
         "rol": "admin",
         "avatar": "defaultImagePerfil.png"
     },
     {
         "id": 3,
-        "email": "Braian@veronikos.com" ,
-        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
-        "phone": "" ,
+        "email": "Braian@veronikos.com",
+        "password": "$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO",
+        "phone": "",
         "rol": "admin",
         "avatar": "defaultImagePerfil.png"
     },
     {
         "id": 4,
-        "email": "Javi@veronikos.com" ,
-        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
-        "phone": "" ,
+        "email": "Javi@veronikos.com",
+        "password": "$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO",
+        "phone": "",
         "rol": "admin",
         "avatar": "defaultImagePerfil.png"
     },
     {
         "id": 5,
-        "email": "Charly@veronikos.com" ,
-        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
-        "phone": "" ,
+        "email": "Charly@veronikos.com",
+        "password": "$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO",
+        "phone": "",
         "rol": "admin",
         "avatar": "defaultImagePerfil.png"
     },
     {
         "id": 6,
         "email": "brenda@gmail.com",
-        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
-        "phone": "2235478514" ,
+        "password": "$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO",
+        "phone": "2235478514",
         "rol": "user",
         "avatar": "defaultImagePerfil.png"
     },
     {
         "id": 7,
-        "email": "elisabeth@gmail.com" ,
-        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
-        "phone": "2236598744" ,
+        "email": "elisabeth@gmail.com",
+        "password": "$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO",
+        "phone": "2236598744",
         "rol": "user",
         "avatar": "defaultImagePerfil.png"
     },
     {
         "id": 8,
-        "email": "mariano@gmail.com" ,
-        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
-        "phone": "2236789599" ,
+        "email": "mariano@gmail.com",
+        "password": "$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO",
+        "phone": "2236789599",
         "rol": "user",
         "avatar": "defaultImagePerfil.png"
     },
     {
         "id": 9,
-        "email": "jose@gmail.com" ,
-        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
-        "phone": "2234111124" ,
+        "email": "jose@gmail.com",
+        "password": "$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO",
+        "phone": "2234111124",
         "rol": "user",
         "avatar": "defaultImagePerfil.png"
     },
     {
         "id": 10,
-        "email": "tomas@gmail.com" ,
-        "password":"$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO" ,
-        "phone": "2236699666" ,
+        "email": "tomas@gmail.com",
+        "password": "$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO",
+        "phone": "2236699666",
         "rol": "user",
         "avatar": "defaultImagePerfil.png"
+    },
+    {
+        "id": "el dibu",
+        "firstName": "Jorge Nicolas",
+        "lastName": "Sosa",
+        "email": "nicoomg96@gmail.com",
+        "password": "$2a$10$JsYQwuhIWDZiIlMz7ZgjceI6Bj8jobRgnY6hCxnlCSjf.iW6bWFKu",
+        "imagen": "1678929467925_image.png",
+        "rol": "USER",
+        "tel": "",
+        "address": "",
+        "postalCode": "",
+        "province": "",
+        "city": ""
     }
 ]
-
-
-
-
-
