@@ -60,9 +60,26 @@
 ## Seguir haciendo
   - Implementar cosas fuera de lo pedido en el sprint.
 
-## empezar a hacer
+## Empezar a hacer
   - Ramas para no comprometer el codigo funcional del proyecto.
 
 ## Dejar de hacer
   - No mover las tarjetas de trello.
 
+### Sprint 4
+
+## Seguir haciendo
+  - Implementar ramas
+
+## Hacer mas
+  - Mantener al tanto a nuestros compañeros del avance del trabajo.
+  - Respetar dias y horarios de las reuniones. Viernes 21 hs y Martes 21 hs. Fuera de sprint: Miercoles 21 hs.
+
+## Hacer menos
+  - Entregar a ultimo momento
+
+## Dejar de hacer
+  - Gosthear
+
+## EMPEZAR A HACER:
+  - Pull request
