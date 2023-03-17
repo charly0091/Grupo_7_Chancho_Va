@@ -69,17 +69,35 @@
 ### Sprint 4
 
 ## Seguir haciendo
-  - Implementar ramas
+  - Implementar ramas.
 
 ## Hacer mas
   - Mantener al tanto a nuestros compañeros del avance del trabajo.
-  - Respetar dias y horarios de las reuniones. Viernes 21 hs y Martes 21 hs. Fuera de sprint: Miercoles 21 hs.
+  - Respetar dias y horarios de las reuniones.
 
 ## Hacer menos
-  - Entregar a ultimo momento
+  - Entregar a ultimo momento.
 
 ## Dejar de hacer
-  - Gosthear
+  - Gosthear.
 
-## EMPEZAR A HACER:
-  - Pull request
+## Empezar a hacer
+  - Pull request.
+
+### Sprint 5
+
+## Seguir haciendo
+  - Aplicar los temas vistos en clase al proyecto fuera del sprint.
+
+## Hacer mas
+  - Repartir de manera correcta las tareas y de forma equitativa.
+
+## Hacer menos
+  - Dejar de confiarnos con el tiempo de sprint.
+  - Saltearse reuniones y no asistir.
+
+## Dejar de hacer
+  - Procrastinar.
+
+## Empezar a hacer
+  - Arrancar el sprint desde la fecha de inicio y terminar antes de la fecha de entrega.
