@@ -28,8 +28,28 @@
         <div class="contenedorOculto">
             <div class="perfilCarrito">
                 <div class="user">
-                    <i class="fa-regular fa-user"></i>
-                    <h5><a href="/users/login">Perfil</a></h5>
+                    <% if (typeof session.userLogged != "undefined") { %>
+                        <span class="sessionMobile"></span>
+                        <div class="sesionIniciada">
+                            <i class="fa-regular fa-user"></i>
+                            <h5><a href="">Perfil</a></h5>
+                            <div class="flecha">
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                        </div>
+                        <div class="menuUser">
+                            <a href="/users/profile">Mis datos</a>
+                            <a href="/users/logout">Cerrar sesión</a>
+                            <% if (session.userLogged.rol === "admin") { %>
+                                <a href="/admin/adminPerfil">ADMIN</a>
+                            <% } %>
+                        </div>
+                    <% } else {%>
+                        <div class="iniciarSesion">
+                            <i class="fa-regular fa-user"></i>
+                            <h5><a href="/users/login">Ingresa</a></h5>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="carrito">
                     <i class="fa-brands fa-opencart"></i>
