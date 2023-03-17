@@ -29,23 +29,27 @@
             <div class="perfilCarrito">
                 <div class="user">
                     <% if (typeof session.userLogged != "undefined") { %>
-                        <span class="session"></span>
-                        <i class="fa-regular fa-user"></i>
-                        <h5>Perfil</h5>
-                        <div class="flecha">
-                            <i class="fa-solid fa-caret-down"></i>
+                        <span class="sessionMobile"></span>
+                        <div class="sesionIniciada">
+                            <i class="fa-regular fa-user"></i>
+                            <h5><a href="">Perfil</a></h5>
+                            <div class="flecha">
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
                         </div>
-                        <div class="menu-user">
+                        <div class="menuUser">
                             <a href="/users/profile">Mis datos</a>
                             <a href="/users/logout">Cerrar sesión</a>
                             <% if (session.userLogged.rol === "admin") { %>
                                 <a href="/admin/adminPerfil">ADMIN</a>
                             <% } %>
                         </div>
-                        <% } else {%>
+                    <% } else {%>
+                        <div class="iniciarSesion">
                             <i class="fa-regular fa-user"></i>
                             <h5><a href="/users/login">Ingresa</a></h5>
-                        <% } %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="carrito">
                     <i class="fa-brands fa-opencart"></i>
@@ -83,7 +87,7 @@
             </div>
             <div class="subMenu">
                 <div class="pagos">
-                    <h5><a href="/admin/products">Productos</a></h5>
+                    <h5><a href="/products">Productos</a></h5>
                 </div>
                 <div class="ofertas">
                     <h5><a href="/admin/createProduct">Vender Producto</a></h5>

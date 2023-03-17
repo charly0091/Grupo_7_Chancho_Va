@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head") %> 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/register.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <title>Chancho va! </title>
+         <!-- FontAwesome-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+    
+    </head>
 <body>
     <%- include("../partials/header") %>
     <main class="registro">
@@ -8,53 +18,70 @@
             <div class="contenedorForm">
                 <h2>Registrate</h2>
                 <hr>
-                <form class="formularioRegistro" action="/users" method="POST">
+                <form class="formularioRegistro" action="/users/register" method="POST" enctype="multipart/form-data">
                     <div class="contenedorLineasFormulario">
                         <div class="input">
                             <label for="id">Nombre de usuario</label>
-                            <input class="estiloInput" type="text" name="id" id="id" required>
-                            <span class="mensajeError">Este nombre ya esta ocupado</span>
+                            <input class="estiloInput <%= locals.errors && errors.id ? 'is-invalid' : null%>" value="<%= locals.old && locals.old.id ? locals.old.id : null %>" type="text" name="id" id="id" >
+                            <% if (locals.errors && errors.id) { %>
+                                <span class="mensajeError"><%= errors.id.msg %> </span>
+                            <% } %>
                         </div>
                         <div class="input">
                             <label for="email">Correo electrónico</label>
-                            <input class="estiloInput" type="email" name="email" id="email" required>
-                            <span class="mensajeError">Debe ingresar correo electrónico</span>
+                            <input class="estiloInput <%= locals.errors && errors.email ? 'is-invalid' : null%>" value="<%= locals.old && locals.old.email ? locals.old.email : null %>" type="email" name="email" id="email" >
+                            <% if (locals.errors && errors.email) { %>
+                                <span class="mensajeError"><%= errors.email.msg %> </span>
+                            <% } %>
                         </div>
                     </div>
                     <div class="contenedorLineasFormulario">
                         <div class="input">
                             <label for="firstName">Nombre</label>
-                            <input class="estiloInput" type="text" name="firstName" id="firstName" required>
-                            <span class="mensajeError">Debe ingresar su nombre</span>
+                            <input class="estiloInput <%= locals.errors && errors.firstName ? 'is-invalid' : null%>" value="<%= locals.old && locals.old.firstName ? locals.old.firstName : null %>" type="text" name="firstName" id="firstName" >
+                            <% if (locals.errors && errors.firstName) { %>
+                                <span class="mensajeError"><%= errors.firstName.msg %> </span>
+                            <% } %>
                         </div>
                         <div class="input">
                             <label for="lastName">Apellido</label>
-                            <input class="estiloInput" type="text" name="lastName" id="lastName" required>
-                            <span class="mensajeError">Debe ingresar su apellido</span>
+                            <input class="estiloInput <%= locals.errors && errors.lastName ? 'is-invalid' : null%>" value="<%= locals.old && locals.old.lastName ? locals.old.lastName : null %>" type="text" name="lastName" id="lastName">
+                            <% if (locals.errors && errors.lastName) { %>
+                                <span class="mensajeError"><%= errors.lastName.msg %> </span>
+                            <% } %>
                         </div>
                     </div>
                     <div class="contenedorLineasFormulario">
                         <div class="input">
                             <label for="password">Contraseña</label>
-                            <input class="estiloInput" type="password" name="password" id="password" required>
-                            <span class="mensajeError">Debe ingresar una contraseña</span>
+                            <input class="estiloInput" type="password" name="password" id="password">
+                            <% if (locals.errors && errors.password) { %>
+                                <span class="mensajeError"><%= errors.password.msg %> </span>
+                            <% } %>
                         </div>
                         <div class="input">
                             <label for="password2">Confirme contraseña</label>
-                            <input class="estiloInput" type="password" id="password2" name="password2" required>
-                            <span class="mensajeError">Las contraseñas no son identicas</span>
+                            <input class="estiloInput" type="password" id="password2" name="password2">
+                            <% if (locals.errors && errors.password2) { %>
+                                <span class="mensajeError"><%= errors.password2.msg %> </span>
+                            <% } %>
                         </div>
+                    </div>
+                    <div class="imagenUsuario">
+                        <p>Agregar foto</p>
+                        <input class="imagen" type="file" name="imagen">
                     </div>
                     <div class="contenedorBotones">
                         <div class="terminos">
                             <div>
                                 <label for="recordar">  Acepto los <a href="/terms">términos y condiciones</a> </label>
-                                <input type="checkbox" name="terminos" id="recordar" required> 
+                                <input type="checkbox" name="terminos" id="recordar"> 
                             </div>
-                            <span class="mensajeError">Debe aceptar los términos y condiciones</span>
+                            <% if (locals.errors && errors.terminos) { %>
+                                <span class="mensajeError"><%= errors.terminos.msg %> </span>
+                            <% } %>
                         </div>
                         <div class="botonRL">
-                            <span class="mensajeError">Credenciales inválidas</span>
                             <div class="boton">
                                 <button type="submit" class="registrar">Continuar</button>
                                 <span class="login"><a href="/users/login">Ya tengo cuenta</a></span>

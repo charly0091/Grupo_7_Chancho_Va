@@ -207,23 +207,30 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.cate
     color: black;
 }
 
-.user {
-    position: relative;
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perfilCarrito div.user {
+    display: flex;
+    flex-direction: column;
+}
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perfilCarrito div.user div.iniciarSesion {
+    display: flex;
 }
 
-.menu-user {
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perfilCarrito div.user div.menuUser {
+    font-size: 20px;
+    padding: 5px 0px 0px 55px;
     display: none;
-    position: absolute;
-    font-size: 1.1rem;
-    width: 12rem;
-    background: linear-gradient(93deg, #6a7efc, #ff5656);
-    padding: 1rem;
-    border-radius: .5rem;
-    margin-left: -3rem;
-    margin-top: 1rem;
-    z-index: 1000;
-    top: 20px;
-    right: 1px;
+    margin-top: 5px;
+}
+
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perfilCarrito div.user div.menuUser.active {
+    display: flex;
+    flex-direction: column;
+}
+
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perfilCarrito div.user div.menuUser a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
 
 .menu-user a {
@@ -257,6 +264,20 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.cate
 }
 
 
+
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perfilCarrito div.user div.sesionIniciada {
+    display: flex;
+    box-shadow: 0 0 5px #00d900 0 0 25px #00d900 0 0 50px #00d900 0 0 100px #00d900;
+}
+
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perfilCarrito div.user div.sesionIniciada i {
+    box-shadow: 0 0 5px #00d900 0 0 25px #00d900 0 0 50px #00d900 0 0 100px #00d900;
+}
+
+header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perfilCarrito div.user div.sesionIniciada div.flecha {
+    margin-left: 7px;
+    cursor: pointer;
+}
 /* MEDIA HEADER */
 
 @media (min-width: 768px) {

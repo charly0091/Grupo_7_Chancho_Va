@@ -9,7 +9,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
     products: (req, res) => {
-        res.render("products")
+        res.render("products/products", { products, toThousand, session: req.session })
     },
     detail: (req, res) => {
         let product = products.find(product => product.id == req.params.id);
