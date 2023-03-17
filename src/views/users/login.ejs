@@ -24,7 +24,7 @@
                     <div class="check">
                         <label class="text-remember" for="remember">Recordarme</label>
                         <input class="checkbox" type="checkbox" name="remember" id="remember">
-                        <small class="text-danger ms-2"><%= locals.remember && errors.remember ? errors.remember.msg : null%></small>
+                        <small class="text-danger ms-2"><%= locals.errors && errors.remember ? errors.remember.msg : null%></small>
                     </div>
                     <div class="button-container">
                         <button type="submit" class="btn-submit">Ingresar</a></button>

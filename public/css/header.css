@@ -251,6 +251,12 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.cate
     left: 12px;
 }
 
+.contenedorHeaderMobileTablet div.contenedorOculto div.user i{
+    margin: 0;
+    cursor: pointer;
+}
+
+
 /* MEDIA HEADER */
 
 @media (min-width: 768px) {
