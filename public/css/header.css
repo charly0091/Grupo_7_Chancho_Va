@@ -233,6 +233,35 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perf
     cursor: pointer;
 }
 
+.menu-user-desktop {
+    display: none;
+    position: absolute;
+    font-size: 1.1rem;
+    width: 12rem;
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-left: -3rem;
+    margin-top: 1rem;
+    z-index: 1000;
+    top: 50px;
+    right: 120px;
+}
+
+.menu-user-desktop a {
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.user:hover .menu-user-desktop{
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 .menu-user a {
     color: black;
     text-decoration: none;
