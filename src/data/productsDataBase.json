@@ -52,9 +52,9 @@
    {
       "id": 6,
       "name": "King Of Tokyo: Power Up",
-      "price": 5990,
-      "discount": 0,
-      "category": 1,
+      "price": "5990",
+      "discount": "0",
+      "category": "1",
       "subCategory": "in-sale",
       "description": "¡La lucha se potencia con PowerUp! Los moustros están mutando y evolucionan para sorprender a sus rivales. ¡La pelea nunca será la misma! Además, el hábil Pandakai se suma a los candidados a convertirse en ... ¡El verdadero Rey de Tokyo!",
       "image": "kingOfTokyo.PNG"

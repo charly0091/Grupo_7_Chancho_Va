@@ -49,7 +49,7 @@ const controller = {
             }
         })
         writeJSON("productsDataBase.json", products);
-        res.redirect('/');
+        res.redirect('products');
     },
 }
 
