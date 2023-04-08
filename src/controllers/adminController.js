@@ -13,8 +13,7 @@ module.exports = {
         let productId = Number(req.params.id);
         let newProductsArray = products.filter(product => product.id !== productId)
         writeJSON("productsDataBase.json", newProductsArray)
-        res.redirect("/admin/products")
-        res.redirect("/admin/products")
+        res.redirect("/admin/products");
     },
     create: (req, res) => {
         res.render("admin/createProduct", {

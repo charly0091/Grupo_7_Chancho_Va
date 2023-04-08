@@ -94,19 +94,5 @@
         "phone": "2236699666",
         "rol": "user",
         "avatar": "defaultImagePerfil.png"
-    },
-    {
-        "id": "el dibu",
-        "firstName": "Jorge Nicolas",
-        "lastName": "Sosa",
-        "email": "nicoomg96@gmail.com",
-        "password": "$2a$10$oJJ2IPdFXdVetWxjppZ1s./mgwvsUYiS2Mn20crSKQE/c36lPaDFG",
-        "imagen": "1679018800370_image.png",
-        "rol": "USER",
-        "tel": "",
-        "address": "",
-        "postalCode": "",
-        "province": "",
-        "city": ""
     }
 ]
