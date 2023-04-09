@@ -19,12 +19,12 @@ const controller = {
         categoriasId2.length = 6 
         res.render("products/detail", { product, style : "detail.css" , toThousand, categoriasId, categoriasId2, session: req.session})
     },
-    create: (req, res) => {
+/*     create: (req, res) => {
         res.render("./admin/createProduct" , { style : "createProduct.css"})
     },
     edit: (req, res) => {
          res.render("./admin/editProduct" , { style : "editProduct.css"}) 
-    },
+    }, */
     carrito: (req, res) => {
         res.render("products/carrito" , { style : "carrito.css" , session: req.session})
     },
@@ -39,18 +39,7 @@ const controller = {
     previa: (req, res) => {
         let categoriasPrevia = products.filter(categorias => categorias.category === 2);
         res.render("products/previa" , { style : "previa.css", categoriasPrevia , session: req.session})
-    },
-    destroy: (req, res) => {
-        let productID = Number(req.params.id);
-        products.forEach(product => {
-            if(product.id === productID){
-                let productToDestroy = products.indexOf(product);
-                products.splice(productToDestroy, 1)
-            }
-        })
-        writeJSON("productsDataBase.json", products);
-        res.redirect('products');
-    },
+    }
 }
 
 

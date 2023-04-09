@@ -301,12 +301,22 @@
    },
    {
       "id": 31,
-      "name": "prueba",
-      "price": "1545",
-      "discount": "14",
-      "category": "2",
+      "name": "prueba4",
+      "price": "2500",
+      "discount": "50",
+      "category": "1",
       "subCategory": "in-sale",
       "description": "\"xzc\"sdasd",
+      "image": null
+   },
+   {
+      "id": 32,
+      "name": "prueba",
+      "price": "11400",
+      "discount": "14",
+      "category": "2",
+      "subCategory": "visited",
+      "description": "3sdfadfasd",
       "image": null
    }
 ]
