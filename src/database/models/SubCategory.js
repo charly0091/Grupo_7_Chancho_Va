@@ -17,6 +17,13 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
     const SUBCATEGORY = sequelize.define(alias, cols, config);
+
+    SUBCATEGORY.associate = (models) => {
+        SUBCATEGORY.hasMany(models.Product, {
+            as: "products",
+            foreignKey: "subCategory_id"
+        });
+    };
     
     return SUBCATEGORY;
 }
