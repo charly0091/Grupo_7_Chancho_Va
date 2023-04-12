@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = {
-    users : JSON.parse(fs.readFileSync(path.join(__dirname, "../data/usersDataBase.json"), "utf-8")),
-    admins : JSON.parse(fs.readFileSync(path.join(__dirname, "../data/adminRegistrados.json"), "utf-8")),
+    users : JSON.parse(fs.readFileSync(path.join(__dirname, "../old-database/usersDataBase.json"), "utf-8")),
+    admins : JSON.parse(fs.readFileSync(path.join(__dirname, "../old-database/adminRegistrados.json"), "utf-8")),
     readJSON : (json) => {
         return JSON.parse(fs.readFileSync(path.resolve(__dirname, json)))
     },

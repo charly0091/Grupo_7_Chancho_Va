@@ -1,5 +1,4 @@
-const { readJSON, writeJSON } = require("../data");
-const fs = require("fs");
+const { readJSON, writeJSON } = require("../old-database");
 
 
 const products = readJSON("productsDataBase.json");

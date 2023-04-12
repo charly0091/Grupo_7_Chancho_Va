@@ -1,5 +1,5 @@
 const { validationResult } = require("express-validator");
-const { readJSON, writeJSON } = require("../data");
+const { readJSON, writeJSON } = require("../old-database");
 const fs = require("fs");
 const products = readJSON("productsDataBase.json");
 const categories = readJSON("categories.json");

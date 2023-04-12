@@ -1,4 +1,4 @@
-const { readJSON, writeUsersJson, users } = require("../data");
+const { readJSON, writeUsersJson, users } = require("../old-database");
 const {validationResult} = require("express-validator");
 const bcrypt = require("bcryptjs");
 
