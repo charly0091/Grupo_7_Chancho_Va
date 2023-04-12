@@ -1,16 +1,28 @@
-const fs = require("fs");
+/*const fs = require("fs");
 const path = require("path");
 
 const productsFilePath = path.join(__dirname, "../old-database/productsDataBase.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 const { writeJSON } = require("../old-database");
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");*/
+const { Product, Category, Sequelize } = require("../database/models");
+//const { Op } = Sequelize;
+
 
 const controller = {
     products: (req, res) => {
-        res.render("products/products", { products, toThousand, session: req.session })
+        Product.findAll()
+
+        .then(products => {
+       return res.render("products/products", { 
+                products,               
+                session: req.session
+            })
+        })
+        .catch(error => console.log(error));
     },
+
     detail: (req, res) => {
         let product = products.find(product => product.id == req.params.id);
         let categoriasId = products.filter(categorias => categorias.subCategory === "in-sale");
