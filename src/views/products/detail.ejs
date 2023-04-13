@@ -22,9 +22,9 @@
 							<p class="productosPrecioDescuentoTachado"><span>$<%= product.price %></span></p>
 							<p class="descuento"><%= product.discount %>%OFF</p>
 						</div>
-						<p class="productoPrecioFinal">$<%= toThousand(product.price * (100 - product.discount) / 100)%></p>
+						<p class="productoPrecioFinal">$<%= (product.price * (100 - product.discount) / 100)%></p>
 					<% }else { %>
-						<p class="productoPrecioFinal">$<%= toThousand(product.price * (100 - product.discount) / 100)%></p>
+						<p class="productoPrecioFinal">$<%= (product.price * (100 - product.discount) / 100)%></p>
 						<% } %> 
 					<div class="tarjetaInformacion">
 						<i class="fas fa-credit-card"></i>
