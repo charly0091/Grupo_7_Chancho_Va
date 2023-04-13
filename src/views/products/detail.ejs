@@ -37,8 +37,7 @@
 					<div class="botonComprar">
 						<a href="/users/metodosDePago" class="comprar">COMPRAR AHORA</a>
 					</div>
-
-					<% if (session.userLogged.rol == "admin") { %>
+					<% if (session.userLogged.rol == "1") { %>
 						<div class="botonEditarEliminar">
 							<a href="/admin/editProduct/<%= product.id %> " class="botonEditar">EDITAR PRODUCTO</a>
 							<form action="/admin/delete/<%= product.id %>/?_method=DELETE" method="POST" class="formularioEliminar">
@@ -46,14 +45,14 @@
 							</form>
 						</div>
 					  <% } %>
-				</div>
+				</div>					
 			</article>
 		</div>
 		<div class="tituloProductosRelacionados">
 			<h2 class="nombreTitulo">Ofertas</h2>
 		</div>
 		<section class="contenedorArticuloRelacionado">
-			<% categoriasId.forEach(product => { %>
+			<% inSale.forEach(product => { %>
 				<div class="contenedorArticulosRelacionados">
 					<article class="articuloRelacionado">
 						<div class="imagenProductoRelacionado">
@@ -71,7 +70,7 @@
 			<h2 class="nombreTitulo">Tambien te podria interesar</h2>
 		</div>
 		<section class="contenedorArticuloRelacionado">
-			<% categoriasId2.forEach(product => { %>
+			<% visited.forEach(product => { %>
 				<div class="contenedorArticulosRelacionados">
 					<article class="articuloRelacionado">
 						<div class="imagenProductoRelacionado">
