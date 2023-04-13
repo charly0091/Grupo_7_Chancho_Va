@@ -51,11 +51,15 @@ module.exports = {
         })
         Promise.all([searchResult])
         .then(([searchResult]) => {
-        res.render("main/results", { 
-            searchResult, 
-            style: "styles.css" , 
-            session: req.session
-         })
+            if(searchResult.length != 0){
+                res.render("main/results", { 
+                    searchResult, 
+                    style: "styles.css" , 
+                    session: req.session
+                })
+            } else {
+                res.send("No hay resultados para tu busqueda")
+            }
         })
         .catch(error => res.send(error))
     }

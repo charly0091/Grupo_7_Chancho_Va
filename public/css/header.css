@@ -365,15 +365,24 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perf
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: row;
+    }
+
+    .contenedorBuscadorMenu {
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     header.contenedor div.contenedorHeaderDesktop div.buscador div.barraBuscadora {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         width: 500px;
+    } 
+
+    header.contenedor div.contenedorHeaderDesktop div.barraBuscadora, div.botonBuscador, input.botonMicro{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
     }
 
     header.contenedor div.contenedorHeaderDesktop div.buscador div.barraBuscadora input.busqueda {
@@ -511,7 +520,6 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perf
         text-decoration: none;
         color: black;
     }
-
 }
 
 
