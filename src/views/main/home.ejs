@@ -21,7 +21,7 @@
             </section>      
             <a href="/"><h2 class="nombreSubCategoria">Ofertas</h2></a>
             <section class="homeProductos"> 
-                <% categoriasId.forEach(products => { %>
+                <% inSale.forEach(products => { %>
                     <div class="homeContainerProductos">
                         <article class="homeTarjetaProducto">               
                             <div class="homeTarjetaImagen">
@@ -38,7 +38,7 @@
             </section>
             <a href="/"><h2 class="nombreSubCategoria">Mas Visitados</h2></a>
             <section class="homeProductos"> 
-                <% categoriasId2.forEach(products => { %>
+                <% visited.forEach(products => { %>
                     <div class="homeContainerProductos">
                         <article class="homeTarjetaProducto">               
                             <div class="homeTarjetaImagen">
