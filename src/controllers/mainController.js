@@ -1,5 +1,6 @@
 const {Product}  = require("../database/models");
-const {Op} = require("sequelize");
+const {Op, where} = require("sequelize");
+
 module.exports = {
     
     main: (req, res) => {
@@ -16,7 +17,12 @@ module.exports = {
         })
         Promise.all([inSale, visited])
         .then(([inSale, visited]) => {
-            res.render("main/home", {inSale, visited, style: "styles.css", session: req.session})
+            res.render("main/home", {
+                inSale,
+                visited, 
+                style: "styles.css",
+                session: req.session
+            })
         })
         .catch(error => res.send(error))
     },
@@ -45,7 +51,11 @@ module.exports = {
         })
         Promise.all([searchResult])
         .then(([searchResult]) => {
-        res.render("main/results", { searchResult, style: "styles.css" , session: req.session })
+        res.render("main/results", { 
+            searchResult, 
+            style: "styles.css" , 
+            session: req.session
+         })
         })
         .catch(error => res.send(error))
     }
