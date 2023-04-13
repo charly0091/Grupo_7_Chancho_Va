@@ -1,6 +1,5 @@
 const {Product}  = require("../database/models");
 const {Op} = require("sequelize");
-
 module.exports = {
     
     main: (req, res) => {
