@@ -1,5 +1,5 @@
 const {Product}  = require("../database/models");
-const {Op, where} = require("sequelize");
+const {Op} = require("sequelize");
 
 module.exports = {
     
@@ -16,7 +16,7 @@ module.exports = {
             }
         })
         Promise.all([inSale, visited])
-        .then(([inSale, visited]) => {
+        .then(([inSale,visited]) => {
             res.render("main/home", {
                 inSale,
                 visited, 
