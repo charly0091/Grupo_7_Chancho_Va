@@ -246,12 +246,12 @@ span.mensajeError {
     }
      .guardar{
         position: relative;
-        right: 270px;
-        top: 15px
+        right: 10vw;
+        top: 15px;
     } 
     .file{
         position: relative;
-        left: 270px;
+        left: 10vw;
         top:20px;
     }
 }

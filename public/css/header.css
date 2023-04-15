@@ -381,8 +381,7 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perf
 
     header.contenedor div.contenedorHeaderDesktop div.barraBuscadora, div.botonBuscador, input.botonMicro{
         display: inline-block;
-        vertical-align: middle;
-        margin-right: 10px;
+
     }
 
     header.contenedor div.contenedorHeaderDesktop div.buscador div.barraBuscadora input.busqueda {
