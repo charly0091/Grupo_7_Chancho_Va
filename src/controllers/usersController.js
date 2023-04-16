@@ -1,4 +1,4 @@
-const { readJSON, writeUsersJson, users } = require("../old-database");
+const {User} = require("../database/models");
 const {validationResult} = require("express-validator");
 const bcrypt = require("bcryptjs");
 
@@ -17,24 +17,19 @@ module.exports = {
         if (errors.isEmpty()) {
             
         let newUser = {
-            id: req.body.id,
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,
             password: bcrypt.hashSync( req.body.password, 10),
             imagen: req.file ? req.file.filename : "defaultImagePerfil.png",
-            rol: "USER",
-            tel: "",
-            address: "",
-            postalCode:"" ,
-            province:"" ,
-            city:"" 
         }
-        users.push(newUser);
-        writeUsersJson(users);
-        res.redirect("/users/login");
 
-        }else{
+        User.create(newUser)
+            .then(() => {
+                res.redirect("/users/login");
+            })
+            .catch(error => res.send(error))
+        } else {
             res.render("users/register", {
                 errors: errors.mapped(),
                 old: req.body,
@@ -52,54 +47,49 @@ module.exports = {
 
         let errors = validationResult(req);
 
-        if(errors.isEmpty()){
-            let userToLogin = users.find(user => user.email == req.body.email);
-            if(userToLogin){
-                if(bcrypt.compareSync(req.body.password , userToLogin.password)){
-                    req.session.userLogged = {
-                        id: userToLogin.id,
-                        email: userToLogin.email,
-                        avatar: userToLogin.avatar,
-                        rol: userToLogin.rol
-                    };
-
-                    let cookieTime = (1000 * 60 * 60); /* mSeg * seg * min * hor * dia */
-
-                    if(req.body.remember){
-                        res.cookie("userEmail",
-                        req.session.userLogged,
-                        {
-                            expires: new Date(Date.now() + cookieTime),
-                            httpOnly: true
-                        })
-                    }
-
-                    res.locals.user = req.session.userLogged;
-
-                    res.redirect("/");
-                } else {
-                    res.render("users/login", {
-                        old: req.body,
-                        style: "styles.css",
-                        session: req.session
-                    })
+        if (errors.isEmpty()) {
+            User.findOne({
+                where: {
+                    email: req.body.email
                 }
-            } else {
-                res.render("users/login", {
-                    old: req.body,
-                    style: "styles.css",
-                    session: req.session
-                })
-            }
+            })
+            .then(user => {
+                req.session.userLogged = {
+                    id: user.id,
+                    firstName: user.firstName,
+                    lastName: user.lastName,
+                    email: user.email,
+                    imagen: user.imagen,
+                    rol: user.rol,
+                }
+
+                let tiempoDeCookie = 1000 * 60 * 60 * 24 * 7; // 7 días
+
+                if(req.body.remember){
+                    res.cookie("userEmail" ,
+                     req.session.user ,
+                      {
+                        expires: new Date(Date.now() + tiempoDeCookie),
+                        httpOnly: true
+                     })
+                }
+
+                res.locals.user = req.session.user;
+
+                res.redirect("/");
+            })
+            .catch(error => res.send(error))
         } else {
             res.render("users/login", {
+                style: "styles.css",
                 errors: errors.mapped(),
                 old: req.body,
-                style: "styles.css",
                 session: req.session
             })
         }
     },
+
+
     logout: (req,res) => {
 
         req.session.destroy();

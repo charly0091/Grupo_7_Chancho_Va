@@ -1,6 +1,5 @@
 const { check, body } = require("express-validator");
-const { readJSON, writeJSON } = require("../old-database");
-const users = readJSON("usersDataBase.json");
+const {User} = require("../database/models");
 const bcrypt = require("bcryptjs")
 
 module.exports = [
@@ -10,7 +9,11 @@ module.exports = [
 
         body("email")
         .custom((value) => {
-            let userToLogin = users.find(user => user.email == value);
+            let userToLogin = User.findOne({
+                where: {
+                    email: value
+                }
+            })
             if(userToLogin){
                 return true;
             } else {
@@ -23,7 +26,11 @@ module.exports = [
 
     body("password")
         .custom((value, {req}) => {
-            let userToLogin = users.find(user => user.email == req.body.email);
+            let userToLogin = User.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
             if(userToLogin){
                 if(bcrypt.compareSync(value , userToLogin.password )){
                     return true;

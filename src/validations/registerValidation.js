@@ -1,10 +1,8 @@
 const { check, body } = require("express-validator");
-const { readJSON, writeJSON } = require("../old-database");
-const users = readJSON("usersDataBase.json");
-const bcrypt = require("bcryptjs")
+const {User} = require("../database/models");
 
 module.exports = [
-    check("id")
+    /* check("id")
     .notEmpty()
     .withMessage("el nombre de usuario el obligatorio"),
     
@@ -13,7 +11,7 @@ module.exports = [
         let user = users.find(user => user.id === value);
         return user === undefined;
     })
-    .withMessage("nombre de usuario ya esta en uso"),
+    .withMessage("nombre de usuario ya esta en uso"), */
 
     check("firstName")
     .notEmpty()
@@ -30,11 +28,19 @@ module.exports = [
     .withMessage("email invalido"),
 
     body("email")
-    .custom(value => {
-        let user = users.find(user => user.email === value);
-        return user === undefined;
+    .custom((value) => {
+        return User.findOne({
+            where: {
+                email: value
+            }
     })
-    .withMessage("email ya esta en uso"),
+    .then(user => {
+        if (user) {
+            return Promise.reject("Email ya registrado")
+        }
+    })
+    .catch(error => res.send(error))
+    }),
 
     check('password')
     .notEmpty()
