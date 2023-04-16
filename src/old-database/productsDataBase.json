@@ -301,10 +301,10 @@
    },
    {
       "id": 31,
-      "name": "prueba4",
-      "price": "2500",
-      "discount": "50",
-      "category": "1",
+      "name": "prueba7",
+      "price": "5000",
+      "discount": "20",
+      "category": "2",
       "subCategory": "in-sale",
       "description": "\"xzc\"sdasd",
       "image": null

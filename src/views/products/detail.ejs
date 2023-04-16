@@ -37,7 +37,7 @@
 					<div class="botonComprar">
 						<a href="/users/metodosDePago" class="comprar">COMPRAR AHORA</a>
 					</div>
-					<% if (session.userLogged && session.userLogged.rol == "admin") { %>
+					<% if (session.userLogged && session.userLogged.rol == 1) { %>
 						<div class="botonEditarEliminar">
 							<a href="/admin/editProduct/<%= product.id %> " class="botonEditar">EDITAR PRODUCTO</a>
 							<form action="/admin/delete/<%= product.id %>/?_method=DELETE" method="POST" class="formularioEliminar">

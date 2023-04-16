@@ -39,7 +39,6 @@ module.exports = [
             return Promise.reject("Email ya registrado")
         }
     })
-    .catch(error => res.send(error))
     }),
 
     check('password')

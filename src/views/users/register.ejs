@@ -20,13 +20,13 @@
                 <hr>
                 <form class="formularioRegistro" action="/users/register" method="POST" enctype="multipart/form-data">
                     <div class="contenedorLineasFormulario">
-                        <div class="input">
+                        <!-- <div class="input">
                             <label for="id">Nombre de usuario</label>
-                            <input class="estiloInput <%= locals.errors && errors.id ? 'is-invalid' : null%>" value="<%= locals.old && locals.old.id ? locals.old.id : null %>" type="text" name="id" id="id" >
-                            <% if (locals.errors && errors.id) { %>
-                                <span class="mensajeError"><%= errors.id.msg %> </span>
-                            <% } %>
-                        </div>
+                            <input class="estiloInput <%= //locals.errors && errors.id ? 'is-invalid' : null%>" value="<%=// locals.old && locals.old.id ? locals.old.id : null %>" type="text" name="id" id="id" >
+                            <% //if (locals.errors && errors.id) { %>
+                                <span class="mensajeError"><%= //errors.id.msg %> </span>
+                            <% //} %>
+                        </div> -->
                         <div class="input">
                             <label for="email">Correo electrónico</label>
                             <input class="estiloInput <%= locals.errors && errors.email ? 'is-invalid' : null%>" value="<%= locals.old && locals.old.email ? locals.old.email : null %>" type="email" name="email" id="email" >
@@ -70,7 +70,7 @@
                     <div class="imagenUsuario">
                         <p>Agregar foto</p>
                         <input class="imagen" type="file" name="imagen">
-                    </div>
+                    </div> 
                     <div class="contenedorBotones">
                         <div class="terminos">
                             <div>
