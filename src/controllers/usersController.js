@@ -53,41 +53,61 @@ module.exports = {
                     email: req.body.email
                 }
             })
-            .then(user => {
-                req.session.userLogged = {
-                    id: user.id,
-                    firstName: user.firstName,
-                    lastName: user.lastName,
-                    email: user.email,
-                    imagen: user.imagen,
-                    rol: user.rol,
+            .then(userToLogin => {
+                return res.send(userToLogin);
+                if(userToLogin){
+                    if(bcrypt.compareSync(req.body.password, userToLogin.password)){
+                        req.session.userLogged = {
+                            id: userToLogin.id,
+                            firstName: userToLogin.firstName,
+                            lastName: userToLogin.lastName,
+                            email: userToLogin.email,
+                            imagen: userToLogin.imagen,
+                            rol: userToLogin.rol
+                        };
+    
+                        let cookieTime = (1000 * 60 * 60); /* mSeg * seg * min * hor * dia */
+    
+                    if(req.body.remember){
+                        res.cookie("userEmail" ,
+                         req.session.userLogged ,
+                          {
+                            expires: new Date(Date.now() + cookieTime),
+                            httpOnly: true
+                         })
+                    }
+    
+                    res.locals.user = req.session.userLogged;
+    
+                    res.redirect("/");
+    
+                } else {
+                    res.render("users/login", {
+                        old: req.body,
+                        style: "styles.css",
+                        session: req.session
+                    })
                 }
-
-                let tiempoDeCookie = 1000 * 60 * 60 * 24 * 7; // 7 días
-
-                if(req.body.remember){
-                    res.cookie("userEmail" ,
-                     req.session.user ,
-                      {
-                        expires: new Date(Date.now() + tiempoDeCookie),
-                        httpOnly: true
-                     })
-                }
-
-                res.locals.user = req.session.user;
-
-                res.redirect("/");
-            })
-            .catch(error => res.send(error))
-        } else {
-            res.render("users/login", {
-                style: "styles.css",
-                errors: errors.mapped(),
-                old: req.body,
-                session: req.session
-            })
-        }
-    },
+            } else {
+                res.render("users/login", {
+                    old: req.body,
+                    style: "styles.css",
+                    session: req.session
+                })
+            }
+        })
+        .catch(error => res.send(error));
+            
+           
+    } else {
+        res.render("users/login", {
+            errors: errors.mapped(),
+            old: req.body,
+            style: "styles.css",
+            session: req.session
+        })
+    }
+},
 
 
     logout: (req,res) => {
