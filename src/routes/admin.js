@@ -6,7 +6,7 @@ const productValidator = require('../validations/productAddValidator');
 const adminSessionState = require('../middlewares/adminSessionState');
 
 // Productos
-router.get("/products", controller.products);
+router.get("/products",adminSessionState, controller.products);
 router.delete("/delete/:id", controller.delete);
 
 // Crear Producto

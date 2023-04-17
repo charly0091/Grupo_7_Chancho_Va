@@ -7,18 +7,7 @@ const {
 const { Op } = Sequelize;
 
 const controller = {
-  products: (req, res) => {
-    Product.findAll()
-
-      .then((products) => {
-        return res.render("products/products", {
-          products,
-          session: req.session,
-        });
-      })
-      .catch((error) => console.log(error));
-  },
-
+  
   detail: (req, res) => {
     let productId = Number(req.params.id);
     let product = Product.findByPk(productId);

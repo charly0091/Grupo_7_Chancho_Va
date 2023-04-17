@@ -1,108 +1,159 @@
+const {Product,Category,SubCategory} = require("../database/models");
 const { validationResult } = require("express-validator");
-const { readJSON, writeJSON } = require("../old-database");
-const fs = require("fs");
-const products = readJSON("productsDataBase.json");
-const categories = readJSON("categories.json");
-const subCategories = readJSON("subCategories.json");
+
+
+
 
 module.exports = {
     products: (req, res) => {
-        res.render("admin/products", { products, session: req.session })
-    },
+        Product.findAll()
+    
+          .then((products) => {
+            return res.render("admin/products", {
+              products,
+              session: req.session,
+            });
+          })
+          .catch((error) => console.log(error));
+      },
     delete: (req, res) => {
-        let productId = Number(req.params.id);
-        let newProductsArray = products.filter(product => product.id !== productId)
-        writeJSON("productsDataBase.json", newProductsArray)
-        res.redirect("/admin/products");
+        Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then((response) => {
+            if(response){
+            return res.redirect("/admin/products");
+            } else {
+                throw new Error("No se pudo eliminar el producto");
+            }
+        })
+        .catch(error => console.log(error));
     },
     create: (req, res) => {
+
+        let categories = Category.findAll();
+        let subCategories = SubCategory.findAll();
+
+        Promise.all([categories, subCategories])
+        .then(([categories, subCategories]) => {
+
         res.render("admin/createProduct", {
             categories,
             subCategories,
             session: req.session
         })
+    })
     },
     store: (req, res) => {
+
         let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            let lastId = products[products.length - 1].id;
-            let newProduct = {
-                id: lastId + 1,
+        
+        if(errors.isEmpty()){
+            Product.create({
+                name: req.body.name,
+                price: req.body.price,
+                discount: req.body.discount,
+                category_id: req.body.category,
+                subCategory_id: req.body.subCategory,
+                description: req.body.description,
+                image: req.file ? req.file.filename : null
+            })
+            .then(response => {
+                if(response){
+                    return res.redirect("/admin/products");
+                } else {
+                    throw new Error("No se pudo crear el producto");
+                }
+            })
+            .catch(error => console.log(error));
+        } else {
+
+            let categories = Category.findAll();
+            let subCategories = SubCategory.findAll();
+
+            Promise.all([categories, subCategories])
+            .then(([categories, subCategories]) => {
+
+                 res.render("admin/createProduct", {
+                    categories,
+                    subCategories,
+                    session: req.session,
+                    errors: errors.mapped(),
+                    old: req.body
+                })
+            })
+        }
+
+    },
+    edit: (req, res) => {
+        
+        let categories = Category.findAll();
+        let subCategories = SubCategory.findAll();
+        let productToEdit = Product.findByPk(req.params.id);
+
+        Promise.all([categories, subCategories, productToEdit])
+        .then(([categories, subCategories, productToEdit]) => {
+            if(productToEdit){
+                res.render("admin/editProduct", {
+                    productToEdit,
+                    categories,
+                    subCategories,
+                    session: req.session
+                })
+            } else {
+                res.send("No se encontro el producto");
+            }
+        })
+        .catch(error => console.log(error));
+    },
+    update: (req, res) => {
+        
+        let errors = validationResult(req);
+
+        let categories = Category.findAll();
+        let subCategories = SubCategory.findAll();
+        let productToEdit = Product.findByPk(req.params.id);
+        
+
+        if(errors.isEmpty()){
+            Product.update({
                 name: req.body.name,
                 price: req.body.price,
                 discount: req.body.discount,
                 category: req.body.category,
                 subCategory: req.body.subCategory,
                 description: req.body.description,
-                image: req.file ? req.file.filename : null,
-            }
-            products.push(newProduct);
-            writeJSON("productsDataBase.json", products)
-            res.redirect("/admin/adminPerfil");
+                image: req.file ? req.file.filename : null
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(response => {
+                if(response){
+                    return res.redirect("/admin/products");
+                } else {
+                    throw new Error("No se pudo actualizar el producto");
+                }
+            })
+            .catch(error => console.log(error));
         } else {
-            res.render("admin/createProduct", {
+            Promise.all([categories, subCategories, productToEdit])
+            .then(([categories, subCategories, productToEdit]) => {
+            res.render("admin/editProduct", {
                 categories,
                 subCategories,
                 errors: errors.mapped(),
                 old: req.body,
-                session: req.session
+                session: req.session,
+                productToEdit
             })
+        })
+        .catch(error => console.log(error));
         }
-    },
-    edit: (req, res) => {
-        let productId = Number(req.params.id);
-        let productToEdit = products.find(product => product.id === productId);
-        if (productToEdit) {
-            res.render("admin/editProduct", {
-                productToEdit,
-                categories,
-                subCategories,
-                session: req.session
-            })
-        } else {
-            res.send("No se encontro el producto");
-        }
-    },
-    update: (req, res) => {
-        let errors = validationResult(req);
-        if (req.fileError) {
-            errors.errors.push({ msg: req.fileError })
-        }
-        if (errors.isEmpty()) {
-            let productId = Number(req.params.id);
-            let productToEdit = products.find(product => product.id == productId);
-            productToEdit.id = productId;
-            productToEdit.name = req.body.name;
-            productToEdit.price = req.body.price;
-            productToEdit.discount = req.body.discount;
-            productToEdit.category = req.body.category;
-            productToEdit.subCategory = req.body.subCategory;
-            productToEdit.description = req.body.description;
-            req.body.oldImage = productToEdit.image;
-            productToEdit.image = req.file ? req.file.filename : null;
-            if (productToEdit.image == null) {
-                productToEdit.image = req.body.oldImage;
-            } else {
-                fs.existsSync(`public/images/${req.body.oldImage}`) && fs.unlinkSync(`public/images/${req.body.oldImage}`);
-            }
-            writeJSON("productsDataBase.json", products);
-            res.redirect("/admin/adminPerfil");
-        } else {
-            let productId = Number(req.params.id);
-            let productToEdit = products.find(product => product.id === productId);
-            if (productToEdit) {
-                res.render("admin/editProduct", {
-                    productToEdit,
-                    categories,
-                    subCategories,
-                    errors: errors.mapped(),
-                    old: req.body,
-                    session: req.session
-                })
-            } else {
-                res.send("No se encontro el producto");
-            }
-        }
+        
     },
     admin: (req, res) => {
         res.render("./admin/adminPerfil", { session: req.session })

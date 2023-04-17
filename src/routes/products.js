@@ -3,7 +3,6 @@ const router = express.Router();
 const controller = require("../controllers/productsController");
 const userInSessionState = require("../middlewares/userInSessionState")
 
-router.get("/", controller.products); 
 router.get("/detail/:id", controller.detail);
 router.get("/carrito",userInSessionState, controller.carrito);
 router.get("/familiares", controller.familiares);
