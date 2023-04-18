@@ -1,37 +1,30 @@
 const { check, body } = require("express-validator");
-const { readJSON, writeJSON } = require("../data");
-const users = readJSON("usersDataBase.json");
-const bcrypt = require("bcryptjs")
+const bcrypt = require("bcryptjs");
+const { User } = require("../database/models"); 
 
 module.exports = [
     check("email")
-        .notEmpty().withMessage("Debe ingresar un email").bail()
-        .isEmail().withMessage("Debe ingresar un email válido"),
+    .notEmpty()
+    .withMessage("El email es obligatorio").bail()
+    .isEmail()
+    .withMessage("Email inválido"),
 
-        body("email")
-        .custom((value) => {
-            let userToLogin = users.find(user => user.email == value);
-            if(userToLogin){
-                return true;
-            } else {
-                return false;
-            }
-        }).withMessage("El email no se encuentra registrado"),
-
-    check("password")
-        .notEmpty().withMessage("Debe ingresar una contraseña").bail(),
+    check('password')
+    .notEmpty()
+    .withMessage('Debes escribir tu contraseña'),
 
     body("password")
-        .custom((value, {req}) => {
-            let userToLogin = users.find(user => user.email == req.body.email);
-            if(userToLogin){
-                if(bcrypt.compareSync(value , userToLogin.password )){
-                    return true;
-                } else {
-                    return false;
-                }
-            } else {
-                return true;
+    .custom((value, { req }) => {
+        return User.findOne({
+            where: {
+                email: req.body.email,
             }
-        }).withMessage("La contraseña es incorrecta")
-];
+        })
+        .then((user) => {
+            if(!bcrypt.compareSync(value, user.dataValues.password)) {
+                return Promise.reject();
+            }
+        })
+        .catch(() => Promise.reject("Email o contraseña incorrecto"))
+    }),
+]

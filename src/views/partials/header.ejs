@@ -28,8 +28,28 @@
         <div class="contenedorOculto">
             <div class="perfilCarrito">
                 <div class="user">
-                    <i class="fa-regular fa-user"></i>
-                    <h5><a href="/users/login">Perfil</a></h5>
+                    <% if (typeof session.userLogged != "undefined") { %>
+                        <span class="sessionMobile"></span>
+                        <div class="sesionIniciada">
+                            <i class="fa-regular fa-user"></i>
+                            <h5><a href="">Perfil</a></h5>
+                            <div class="flecha">
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                        </div>
+                        <div class="menuUser">
+                            <a href="/users/profile">Mis datos</a>
+                            <a href="/users/logout">Cerrar sesión</a>
+                            <% if (session.userLogged.rol === "admin") { %>
+                                <a href="/admin/adminPerfil">ADMIN</a>
+                            <% } %>
+                        </div>
+                    <% } else {%>
+                        <div class="iniciarSesion">
+                            <i class="fa-regular fa-user"></i>
+                            <h5><a href="/users/login">Ingresa</a></h5>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="carrito">
                     <i class="fa-brands fa-opencart"></i>
@@ -60,11 +80,27 @@
             <a href="/"><img src="/images/sinfondo.png" alt="logo"></a>
             <h3 class="oculto">Juegos de mesa</h3>
         </div>
-        <div class="buscador">
+        <!-- <div class="buscador">
             <div class="barraBuscadora">
                 <input class="busqueda" type="search" placeholder="¿A qué queres jugar?" >
              
+            </div> -->
+            <div class="contenedorBuscadorMenu">
+            <div class="buscador">
+                <form action="/search" method="GET">
+                <div class="barraBuscadora">
+                    <input class="busqueda" type="search" id="search" name="search" placeholder="¿A qué queres jugar?" >
+                </div>
+                    <div class="botonBuscador">
+                        <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+                    <div id="texto" class="botonMicro">
+                        <i id="voice-button" class="fa-solid fa-microphone"></i>
+                    </div>
             </div>
+        <div class="buscador">
+            
             <div class="subMenu">
                 <div class="pagos">
                     <h5><a href="/admin/products">Productos</a></h5>
@@ -85,25 +121,24 @@
                 </div>
             </div>
         </div>
+    </div>
         <div class="userCarrito">
             <div class="user">
                 <% if (typeof session.userLogged != "undefined") { %>
                     <span class="session"></span>
-                 
-                    <h5><%= session.userLogged.email %> </h5>
-                    <a href="/users/profile"><img src="/images/<%= session.userLogged.avatar %>" alt="" width="50px" height="50px"></a>
-
-                    <div class="menu-user">
+                    <i class="fa-regular fa-user"></i>
+                    <h5><a href="/users/login">Perfil</a></h5>
+                    <div class="menu-user-desktop">
                         <a href="/users/profile">Mis datos</a>
                         <a href="/users/logout">Cerrar sesión</a>
-                        <% if (session.userLogged.rol === "admin") { %>
+                        <% if (session.userLogged.rol === 1) { %>
                             <a href="/admin/adminPerfil">ADMIN</a>
                         <% } %>
                     </div>
-                <% } else {%>
-                    <i class="fa-regular fa-user"></i>
-                    <h5><a href="/users/login">Ingresa</a></h5>
-                <% } %>
+                    <% } else {%>
+                        <i class="fa-regular fa-user"></i>
+                        <h5><a href="/users/login">Ingresa</a></h5>
+                    <% } %>
             </div>
             <div class="carrito">
                 <i class="fa-brands fa-opencart"></i>

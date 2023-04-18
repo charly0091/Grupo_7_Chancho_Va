@@ -7,7 +7,7 @@
       "category": "1",
       "subCategory": "in-sale",
       "description": "Red 7 es un juego de cartas compacto, rápido y fluido, para 2 a 4 jugadores, que exige a fondo tu ingenio para ganar. Las reglas son muy fáciles ...¡Lástima que cambian todo el tiempo!",
-      "image": "1677425422579_products_.png"
+      "image": "red7.PNG"
    },
    {
       "id": 2,
@@ -42,9 +42,9 @@
    {
       "id": 6,
       "name": "King Of Tokyo: Power Up",
-      "price": 5990,
-      "discount": 0,
-      "category": 1,
+      "price": "5990",
+      "discount": "0",
+      "category": "1",
       "subCategory": "in-sale",
       "description": "¡La lucha se potencia con PowerUp! Los moustros están mutando y evolucionan para sorprender a sus rivales. ¡La pelea nunca será la misma! Además, el hábil Pandakai se suma a los candidados a convertirse en ... ¡El verdadero Rey de Tokyo!",
       "image": "kingOfTokyo.PNG"
@@ -278,5 +278,25 @@
       "subCategory": "visited",
       "description": "Raids es un jeugo ágil y fluido, con turnos cortos pero repletos de decisiones importantes, en los que vas a elegir a qué puerto llegar antes que los demás para así obetener sus beneficios. Pero cuidado, si otro llega junto a vos... habrá que luchar por esa fichita preciada.",
       "image": "raids.PNG"
+   },
+   {
+      "id": 31,
+      "name": "prueba7",
+      "price": "5000",
+      "discount": "20",
+      "category": "2",
+      "subCategory": "in-sale",
+      "description": "\"xzc\"sdasd",
+      "image": null
+   },
+   {
+      "id": 32,
+      "name": "prueba",
+      "price": "11400",
+      "discount": "14",
+      "category": "2",
+      "subCategory": "visited",
+      "description": "3sdfadfasd",
+      "image": null
    }
 ]

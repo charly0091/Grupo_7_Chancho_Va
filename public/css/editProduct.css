@@ -134,10 +134,7 @@ main.registro div.contenedor form div.div_file{
     
 }
 
-.guardar{
-    position: relative;
-    right: 250px;
-}
+
 
 main.registro div.contenedor form div.file:hover {
     background: linear-gradient(93deg , #494953, #ff5656);
@@ -246,5 +243,15 @@ span.mensajeError {
         justify-content: center;
         align-items: center;
         width: 100%;
+    }
+     .guardar{
+        position: relative;
+        right: 10vw;
+        top: 15px;
+    } 
+    .file{
+        position: relative;
+        left: 10vw;
+        top:20px;
     }
 }

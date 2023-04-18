@@ -1,5 +1,4 @@
-const { readJSON, writeJSON } = require("../data");
-const users = readJSON("usersDataBase.json");
+const {User} = require("../database/models");
 const {validationResult} = require("express-validator");
 const bcrypt = require("bcryptjs");
 
@@ -14,19 +13,34 @@ module.exports = {
         res.render("users/detail", { users, style : "detail.css", session: req.session})
     },
     register: (req, res) => {
-        res.render("users/register" , { style : "register.css" , session: req.session })
+        res.render("users/register" , {session: req.session })
     },
-    crear: (req, res) => {
+    crearUsuario: (req, res) => {
+        let errors = validationResult(req);
+        
+        if (errors.isEmpty()) {
+            
         let newUser = {
-            id: req.body.id,
+            first_name: req.body.firstName,
+            last_name: req.body.lastName,
             email: req.body.email,
-            password: req.body.password,
-            password2: req.body.password2,
-            cel: req.body.cel
+            role_id : 2,
+            password: bcrypt.hashSync( req.body.password, 10),
+            avatar: req.file ? req.file.filename : "defaultImagePerfil.png",
         }
-        users.push(newUser);
-        writeJSON("usersDataBase.json" , users);
-        res.redirect("/users/login");
+
+        User.create(newUser)
+            .then(() => {
+                res.redirect("/users/login");
+            })
+            .catch(error => res.send(error))
+        } else {
+            res.render("users/register", {
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session
+            })
+        }
     },
     login: (req, res) => {
          if(req.session.userLogged){
@@ -38,54 +52,50 @@ module.exports = {
 
         let errors = validationResult(req);
 
-        if(errors.isEmpty()){
-            let userToLogin = users.find(user => user.email == req.body.email);
-            if(userToLogin){
-                if(bcrypt.compareSync(req.body.password , userToLogin.password)){
-                    req.session.userLogged = {
-                        id: userToLogin.id,
-                        email: userToLogin.email,
-                        avatar: userToLogin.avatar,
-                        rol: userToLogin.rol
-                    };
-
-                    let cookieTime = (1000 * 60 * 60); /* mSeg * seg * min * hor * dia */
-
-                    if(req.body.remember){
-                        res.cookie("userEmail",
-                        req.session.userLogged,
-                        {
-                            expires: new Date(Date.now() + cookieTime),
-                            httpOnly: true
-                        })
-                    }
-
-                    res.locals.user = req.session.userLogged;
-
-                    res.redirect("/");
-                } else {
-                    res.render("users/login", {
-                        old: req.body,
-                        style: "styles.css",
-                        session: req.session
-                    })
+        if (errors.isEmpty()) {
+            User.findOne({
+                where: {
+                    email: req.body.email
                 }
-            } else {
-                res.render("users/login", {
-                    old: req.body,
-                    style: "styles.css",
-                    session: req.session
-                })
-            }
+            })
+            .then(user => {
+                req.session.userLogged = {
+                    id: user.id,
+                    firstName: user.firstName,
+                    lastName: user.lastName,
+                    email: user.email,
+                    imagen: user.imagen,
+                    rol: user.role_id
+                }
+    
+                let cookieTime = (1000 * 60 * 60); /* mSeg * seg * min * hor * dia */
+    
+                if(req.body.remember){
+                    res.cookie("userEmail" ,
+                     req.session.userLogged ,
+                      {
+                        expires: new Date(Date.now() + cookieTime),
+                        httpOnly: true
+                     })
+                }
+
+                res.locals.user = req.session.userLogged;
+
+                res.redirect("/");
+            })
+            .catch(error => console.log(error))
         } else {
-            res.render("users/login", {
+            return res.render("users/login", {
                 errors: errors.mapped(),
                 old: req.body,
                 style: "styles.css",
                 session: req.session
             })
         }
-    },
+            
+},
+
+
     logout: (req,res) => {
 
         req.session.destroy();

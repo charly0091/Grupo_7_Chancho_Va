@@ -60,9 +60,44 @@
 ## Seguir haciendo
   - Implementar cosas fuera de lo pedido en el sprint.
 
-## empezar a hacer
+## Empezar a hacer
   - Ramas para no comprometer el codigo funcional del proyecto.
 
 ## Dejar de hacer
   - No mover las tarjetas de trello.
 
+### Sprint 4
+
+## Seguir haciendo
+  - Implementar ramas.
+
+## Hacer mas
+  - Mantener al tanto a nuestros compañeros del avance del trabajo.
+  - Respetar dias y horarios de las reuniones.
+
+## Hacer menos
+  - Entregar a ultimo momento.
+
+## Dejar de hacer
+  - Gosthear.
+
+## Empezar a hacer
+  - Pull request.
+
+### Sprint 5
+
+## Seguir haciendo
+  - Aplicar los temas vistos en clase al proyecto fuera del sprint.
+
+## Hacer mas
+  - Repartir de manera correcta las tareas y de forma equitativa.
+
+## Hacer menos
+  - Dejar de confiarnos con el tiempo de sprint.
+  - Saltearse reuniones y no asistir.
+
+## Dejar de hacer
+  - Procrastinar.
+
+## Empezar a hacer
+  - Arrancar el sprint desde la fecha de inicio y terminar antes de la fecha de entrega.

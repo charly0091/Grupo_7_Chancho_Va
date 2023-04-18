@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+  }
+  
+  .container {
+    min-height: 100%;
+    margin-bottom: -50px; /* Altura del footer */
+  }
+  
+  .content {
+    padding-bottom: 50px; /* Altura del footer */
+  }
+  
+  .footer {
+    height: 50px;
+  }

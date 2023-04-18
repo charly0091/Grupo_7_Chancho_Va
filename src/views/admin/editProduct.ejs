@@ -40,7 +40,7 @@
                             <select name="category" id="category" class="estiloInput <%= locals.errors && errors.category ? 'is-invalid' : null%>" required>
                                 <option value="" selected hidden>Categoria</option>
                                 <% categories.forEach(category=> { %>
-                                    <option value="<%= category %>" <%= category == productToEdit.category &&  'selected' %>><%= category %></option>
+                                    <option value="<%= category.id %>" <%= category.id == productToEdit.category_id &&  'selected' %>><%= category.name %></option>
                                 <% }) %>
                             </select>
                             <small class="text-danger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%></small>
@@ -50,7 +50,7 @@
                             <select name="subCategory" id="subCategory" class="estiloInput <%= locals.errors && errors.subCategory ? 'is-invalid' : null%>" required>
                                 <option value="" selected hidden>Sub categoria</option>
                                 <% subCategories.forEach(subCategory=> { %>
-                                    <option value="<%= subCategory %>" <%= subCategory === productToEdit.subCategory && 'selected' %>><%= subCategory %></option>
+                                    <option value="<%= subCategory.id %>" <%= subCategory.id == productToEdit.subCategory_id && 'selected' %>><%= subCategory.name %></option>
                                 <% }) %>
                             </select>
                             <small class="text-danger ms-2"><%= locals.errors && errors.subcategory ? errors.subcategory.msg : null%></small>

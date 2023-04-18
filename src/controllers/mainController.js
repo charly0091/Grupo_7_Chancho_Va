@@ -1,17 +1,30 @@
-const { readJSON, writeJSON } = require("../data");
-const fs = require("fs");
-
-
-const products = readJSON("productsDataBase.json");
-
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const {Product}  = require("../database/models");
+const {Op} = require("sequelize");
 
 module.exports = {
     
     main: (req, res) => {
-        let categoriasId = products.filter(categorias => categorias.subCategory === "in-sale");
-        let categoriasId2 = products.filter(categorias => categorias.subCategory === "visited");
-        res.render("main/home",{style: "home.css", categoriasId, categoriasId2, session: req.session})
+        
+        let inSale = Product.findAll({
+            where: {
+                subCategory_id: 1
+            }
+        })
+        let visited = Product.findAll({
+            where: {
+                subCategory_id: 2
+            }
+        })
+        Promise.all([inSale, visited])
+        .then(([inSale,visited]) => {
+            res.render("main/home", {
+                inSale,
+                visited, 
+                style: "styles.css",
+                session: req.session
+            })
+        })
+        .catch(error => res.send(error))
     },
     about: (req, res) => {
         res.render("main/about" , { style : "styles.css", session: req.session })
@@ -31,8 +44,24 @@ module.exports = {
     },
     search: (req, res) => {
         let search = req.query.search;
-        let searchResult = products.filter(product => product.name.toLowerCase().includes(search.toLowerCase()) || product.description.toLowerCase().includes(search.toLowerCase()));
-        res.render("main/results", { searchResult, search, toThousand, style: "styles.css" , session: req.session })
+        let searchResult = Product.findAll({
+            where: {
+                name: {[Op.like]: `%${search}%`}
+            }
+        })
+        Promise.all([searchResult])
+        .then(([searchResult]) => {
+            if(searchResult.length != 0){
+                res.render("main/results", { 
+                    searchResult, 
+                    style: "styles.css" , 
+                    session: req.session
+                })
+            } else {
+                res.send("No hay resultados para tu busqueda")
+            }
+        })
+        .catch(error => res.send(error))
     }
 
 };

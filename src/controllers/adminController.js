@@ -1,164 +1,182 @@
+const {Product,Category,SubCategory} = require("../database/models");
 const { validationResult } = require("express-validator");
-const { readJSON, writeJSON } = require("../data");
-const fs = require("fs");
 
-const products = readJSON("productsDataBase.json");
-const categories = readJSON("categories.json");
-const subCategories = readJSON("subCategories.json");
-const users = readJSON("usersDataBase.json");
 
 
 
 module.exports = {
     products: (req, res) => {
-        res.render("admin/products",{products, session: req.session})
-    },
-
-    delete:(req, res) => {
-        let productId = Number(req.params.id); 
-        let newProductsArray = products.filter(product => product.id !== productId)
-        writeJSON("productsDataBase.json", newProductsArray)
-        res.send("El producto fue destruido")
-    },
-
-    create: (req, res) => {
-        res.render("admin/createProduct" , {
-            categories,
-            subCategories,
-            session: req.session
+        Product.findAll()
+    
+          .then((products) => {
+            return res.render("admin/products", {
+              products,
+              session: req.session,
+            });
+          })
+          .catch((error) => console.log(error));
+      },
+    delete: (req, res) => {
+        Product.destroy({
+            where: {
+                id: req.params.id
+            }
         })
+        .then((response) => {
+            if(response){
+            return res.redirect("/admin/products");
+            } else {
+                throw new Error("No se pudo eliminar el producto");
+            }
+        })
+        .catch(error => console.log(error));
     },
-            
+    create: (req, res) => {
 
-    store: (req, res) => {
+        let categories = Category.findAll();
+        let subCategories = SubCategory.findAll();
 
-        let errors = validationResult(req);
+        Promise.all([categories, subCategories])
+        .then(([categories, subCategories]) => {
 
-        if(errors.isEmpty()){
-
-        let lastId = products [products.length -1].id;
-		let newProduct ={
-			id:lastId+1,
-			name:req.body.name,
-			price:req.body.price,
-            discount:req.body.discount,
-			category:req.body.category,
-            subCategory:req.body.subCategory,
-			description:req.body.description,
-            image : req.file ? req.file.filename : null,
-
-		}
-		products.push(newProduct);
-		writeJSON("productsDataBase.json", products)
-        res.redirect("/admin/adminPerfil");
-    } else{
         res.render("admin/createProduct", {
             categories,
             subCategories,
-            errors: errors.mapped(),
-            old: req.body,
             session: req.session
         })
-    }
-},
+    })
+    },
+    store: (req, res) => {
 
-    edit: (req, res) => {
-		let productId = Number(req.params.id);
-		let productToEdit = products.find(product => product.id === productId);
-
-        if(productToEdit){
-            res.render("admin/editProduct", {
-                productToEdit, 
-                categories,
-                subCategories,
-                session: req.session
-            })
-        } else{
-            res.send("No se encontro el producto");
-        }
-	},
-    update: (req, res) => {
         let errors = validationResult(req);
-
-        if(req.fileError){
-            errors.errors.push({msg: req.fileError})
-        }
-
-        if(errors.isEmpty()){
-
-
-        let productId = Number(req.params.id);
-        let productToEdit = products.find(product => product.id == productId);
-        productToEdit.id = productId;
-        productToEdit.name = req.body.name;
-        productToEdit.price = req.body.price;
-        productToEdit.discount = req.body.discount;
-        productToEdit.category = req.body.category;
-        productToEdit.subCategory = req.body.subCategory;
-        productToEdit.description = req.body.description;
-        req.body.oldImage = productToEdit.image;
-        productToEdit.image = req.file ? req.file.filename : null;
-
-
-        if(productToEdit.image == null){
-            productToEdit.image = req.body.oldImage;
-        } else{
-            fs.existsSync(`public/images/${req.body.oldImage}`) && fs.unlinkSync(`public/images/${req.body.oldImage}`);
-        }
         
-        writeJSON("productsDataBase.json", products);
-        res.redirect("/admin/adminPerfil");
-        } else{
-            let productId = Number(req.params.id);
-		    let productToEdit = products.find(product => product.id === productId);
+        if(errors.isEmpty()){
+            Product.create({
+                name: req.body.name,
+                price: req.body.price,
+                discount: req.body.discount,
+                category_id: req.body.category,
+                subCategory_id: req.body.subCategory,
+                description: req.body.description,
+                image: req.file ? req.file.filename : null
+            })
+            .then(response => {
+                if(response){
+                    return res.redirect("/admin/products");
+                } else {
+                    throw new Error("No se pudo crear el producto");
+                }
+            })
+            .catch(error => console.log(error));
+        } else {
 
-            if(productToEdit){
-                res.render("admin/editProduct", {
-                    productToEdit, 
+            let categories = Category.findAll();
+            let subCategories = SubCategory.findAll();
+
+            Promise.all([categories, subCategories])
+            .then(([categories, subCategories]) => {
+
+                 res.render("admin/createProduct", {
                     categories,
                     subCategories,
+                    session: req.session,
                     errors: errors.mapped(),
-                    old: req.body,
-                    session: req.session
+                    old: req.body
+                })
             })
-        } else{
-            res.send("No se encontro el producto");
+        }
+
+    },
+    edit: (req, res) => {
+        
+        let categories = Category.findAll();
+        let subCategories = SubCategory.findAll();
+        let productToEdit = Product.findByPk(req.params.id);
+
+        Promise.all([categories, subCategories, productToEdit])
+        .then(([categories, subCategories, productToEdit]) => {
+            if(productToEdit){
+                res.render("admin/editProduct", {
+                    productToEdit,
+                    categories,
+                    subCategories,
+                    session: req.session
+                })
+            } else {
+                res.send("No se encontro el producto");
             }
-         }
-
-
-
-	},
-    
-    admin: (req, res) =>{
-        res.render("./admin/adminPerfil" ,{session: req.session})
+        })
+        .catch(error => console.log(error));
     },
+    update: (req, res) => {
+        
+        let errors = validationResult(req);
 
-    editRender: (req, res) =>{
-        res.render("./admin/adminPerfilEdit" , {session: req.session})
+        let categories = Category.findAll();
+        let subCategories = SubCategory.findAll();
+        let productToEdit = Product.findByPk(req.params.id);
+        
+
+        if(errors.isEmpty()){
+            Product.update({
+                name: req.body.name,
+                price: req.body.price,
+                discount: req.body.discount,
+                category: req.body.category,
+                subCategory: req.body.subCategory,
+                description: req.body.description,
+                image: req.file ? req.file.filename : null
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(response => {
+                if(response){
+                    return res.redirect("/admin/products");
+                } else {
+                    throw new Error("No se pudo actualizar el producto");
+                }
+            })
+            .catch(error => console.log(error));
+        } else {
+            Promise.all([categories, subCategories, productToEdit])
+            .then(([categories, subCategories, productToEdit]) => {
+            res.render("admin/editProduct", {
+                categories,
+                subCategories,
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session,
+                productToEdit
+            })
+        })
+        .catch(error => console.log(error));
+        }
+        
     },
-
-    editAdmin: (req, res) =>{
-        res.render("./admin/adminPerfilEdit" , {session: req.session})
+    admin: (req, res) => {
+        res.render("./admin/adminPerfil", { session: req.session })
     },
-
-    adminUsersRegister: (req, res) =>{
-        res.render("./admin/adminPerfilUsers" , {session: req.session})
+    editRender: (req, res) => {
+        res.render("./admin/adminPerfilEdit", { session: req.session })
     },
-
-    adminUsersQuestions: (req, res) =>{
-        res.render("./admin/adminPerfilQuestions" , {session: req.session})
+    editAdmin: (req, res) => {
+        res.render("./admin/adminPerfilEdit", { session: req.session })
     },
-
-    adminUsersShipments: (req, res) =>{
-        res.render("./admin/adminPerfilShipments" , {session: req.session})
+    adminUsersRegister: (req, res) => {
+        res.render("./admin/adminPerfilUsers", { session: req.session })
     },
-
-    adminPerfilReturnedPackages: (req, res) =>{
-        res.render("./admin/adminPerfilReturnedPackages" , {session: req.session})
+    adminUsersQuestions: (req, res) => {
+        res.render("./admin/adminPerfilQuestions", { session: req.session })
     },
-
-    adminPerfilClaims: (req, res) =>{
-        res.render("./admin/adminPerfilClaims" , {session: req.session})
+    adminUsersShipments: (req, res) => {
+        res.render("./admin/adminPerfilShipments", { session: req.session })
+    },
+    adminPerfilReturnedPackages: (req, res) => {
+        res.render("./admin/adminPerfilReturnedPackages", { session: req.session })
+    },
+    adminPerfilClaims: (req, res) => {
+        res.render("./admin/adminPerfilClaims", { session: req.session })
     },
 }
