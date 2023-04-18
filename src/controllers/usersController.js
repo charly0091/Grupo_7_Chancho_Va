@@ -128,22 +128,24 @@ module.exports = {
         res.render("users/pagoTarjeta", { style : "pagoTargeta.css" , session: req.session})
     },
     userProfile: (req, res) => {
+      
+            let user = User.findByPk();    
     
-        res.render("users/profile", {users, style : "styles.css", session: req.session})
+        res.render("users/profile", {user,session: req.session})
     },
     editUserProfile: (req, res) => {
-        res.render("users/editUserProfile", { style : "styles.css" ,users, session: req.session})
+        let user = User.findByPk(); 
+        res.render("users/editUserProfile", { style : "styles.css" ,user, session: req.session})
     },
 
     editProfile: (req, res) => {
         let userId = Number(req.params.id);
-		let userToEdit = users.find(user => userId.id === userId);
+        let userToEdit = User.findByPk(userId);
 
         if(userToEdit){
             res.render("users/editProfile", {
                 style : "styles.css",
                 userToEdit, 
-                users,
                 session: req.session
             })
         } else{

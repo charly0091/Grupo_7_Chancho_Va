@@ -17,6 +17,7 @@ router.post("/login",loginValidator, controller.processLogin);
 router.get("/logout" , controller.logout);
 router.get("/reset-password",userInSessionState, controller.resetPassword);
 router.get("/metodosDePago",userInSessionState, controller.metodosDePago);
-router.get("/pagoTarjeta",userInSessionState, controller.pago)
-
+router.get("/pagoTarjeta",userInSessionState, controller.pago);
+router.get("/profile",userInSessionState, controller.userProfile);
+router.get("/editUserProfile",userInSessionState, controller.editUserProfile);
 module.exports = router;
