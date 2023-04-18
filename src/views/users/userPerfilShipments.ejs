@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/adminPerfilShipments.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <title>Chancho va! </title>
+         <!-- FontAwesome-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" /> 
+    </head>
+<body>
+    <%- include('../partials/header')  %>
+    <main class="userPerfilContainer">
+        <%- include("../partials/menuUser")%>
+        <div class="contenedorDatosUser">
+            <div class="enviosPendientes">
+                <div class="nombre">
+                    <h1>Envíos Pendientes</h1>
+                </div>
+                <div class="contenedorEnvios">
+                    <h2 class="nombreUsuarioEnvio">Envíos</h2>
+                    <article class="productoEnviar">
+                        <img class="fotoArticuloEnviar" src="/images/imageDefault.jpg" alt="Imagen De Producto">
+                        <p class="datoProductoEnviar">Nombre Del Producto</p>
+                        <p class="datoProductoEnviar">Tipo de Envío</p>
+                        <div class="botonEnvio">
+                            <p class="verEnvio">Ver Opciones De Envío</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="contenedorMediosEnvios">
+                    <div class="ventanaEnvio">
+                        <div class="botonEnviar">
+                            <p class="enviarPaquete">Moto Mensajería</p>
+                        </div>
+                        <div class="botonEnviar">
+                            <p class="enviarPaquete2">Correo Argentino</p>
+                        </div>
+                        <div class="botonEnviar">
+                            <p class="enviarPaquete3">Correo Privado</p>
+                        </div>
+                    </div>
+                    <div class="envioCorrecto">
+                        <p class="enviado">Producto Enviado Correctamente Muchas Gracias</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer')  %>
+    <script src="/js/efectosPanelAdmin/shipments.js"></script>
+    <script src="/js/efecto.js"></script>
+</body>
+</html>

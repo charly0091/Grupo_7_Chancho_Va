@@ -20,4 +20,9 @@ router.get("/metodosDePago",userInSessionState, controller.metodosDePago);
 router.get("/pagoTarjeta",userInSessionState, controller.pago);
 router.get("/profile",userInSessionState, controller.userProfile);
 router.get("/editUserProfile",userInSessionState, controller.editUserProfile);
+router.get("/userPerfilShipments",userInSessionState, controller.usersShipments);
+router.get("/userReturnedPackages",userInSessionState, controller.userReturnedPackages);
+router.get("/userClaims",userInSessionState, controller.userClaims);
+
+
 module.exports = router;

@@ -214,10 +214,19 @@ module.exports = {
         })
         writeJSON("usersDataBase.json", users);
         res.send("La cuenta fue destruida")
-    }/*,
+    },/*,
     products: (req, res) => {
         res.render("users/products",{products, session: req.session})
     },*/
+    usersShipments: (req, res) => {
+        res.render("./users/userPerfilShipments", { session: req.session })
+    },
+    userReturnedPackages: (req, res) => {
+        res.render("./users/userReturnedPackages", { session: req.session })
+    },
+    userClaims: (req, res) => {
+        res.render("./users/userClaims", { session: req.session })
+    },
 
 
     
