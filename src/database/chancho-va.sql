@@ -153,7 +153,7 @@ INSERT INTO `users` VALUES
 	(8, '','', 'mariano@gmail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png'),
 	(9, '','', 'jose@gmail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png'),
 	(10, '','', 'tomas@gmail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png'),
-	(11, '','', 'admin@mail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png'),
+	(11, '','', 'admin@mail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 1, 'defaultImagePerfil.png'),
 	(12, '','', 'user@mail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;

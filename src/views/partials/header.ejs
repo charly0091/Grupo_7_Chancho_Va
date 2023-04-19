@@ -102,12 +102,14 @@
         <div class="buscador">
             
             <div class="subMenu">
+                <% if (typeof session.userLogged != "undefined" && session.userLogged.rol == 1) { %>
                 <div class="pagos">
                     <h5><a href="/admin/products">Productos</a></h5>
                 </div>
                 <div class="ofertas">
                     <h5><a href="/admin/createProduct">Vender Producto</a></h5>
                 </div>
+                <% } %>
                 <div class="categorias2">
                     <h5 class="palabra">Categorías</h5>
                     <div class="flecha">
