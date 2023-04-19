@@ -1,4 +1,4 @@
-const {Product,Category,SubCategory} = require("../database/models");
+const {Product,Category,SubCategory,User} = require("../database/models");
 const { validationResult } = require("express-validator");
 
 
@@ -165,7 +165,15 @@ module.exports = {
         res.render("./admin/adminPerfilEdit", { session: req.session })
     },
     adminUsersRegister: (req, res) => {
-        res.render("./admin/adminPerfilUsers", { session: req.session })
+        User.findAll()
+    
+          .then((users) => {
+            return res.render("./admin/adminPerfilUsers", {
+              users,
+              session: req.session,
+            });
+          })
+          .catch((error) => console.log(error));
     },
     adminUsersQuestions: (req, res) => {
         res.render("./admin/adminPerfilQuestions", { session: req.session })
