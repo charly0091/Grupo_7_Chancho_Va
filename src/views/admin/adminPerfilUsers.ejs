@@ -24,47 +24,24 @@
                 </div>
                 <div class="contenedorDeTargetas">
                     <% users.forEach(user => { %>
-                    <div class="targetaUsuario">
-                        <figure class="cajaImagen">
-                            <img class="foto2" src="/images/defaultImagePerfil.png" alt="Imagen De Perfil">
-                        </figure>
-                        <article class="datos">
-                            <h2 class="nombre"><%= user.last_name %>, <%= user.first_name %></h2>
-                            <p class="dato">Email</p>
-                            <p class="dato"><%= user.email %></p>
-                            <p class="dato">Nombre</p>
-                            <p class="dato"><%= user.first_name %></p>
-                            <p class="dato">Apellido</p>
-                            <p class="dato"><%= user.last_name %></p>
-                            <!-- <p class="dato">Contraseña</p> -->
-                        </article>
-                    </div>
+                        <a href="/admin/userEdit/<%= user.id %>">
+                            <div class="targetaUsuario">
+                                <figure class="cajaImagen">
+                                    <img class="foto2" src="/images/defaultImagePerfil.png" alt="Imagen De Perfil">
+                                </figure>
+                                <article class="datos">
+                                    <h2 class="nombre"><%= user.last_name %>, <%= user.first_name %></h2>
+                                    <p class="dato">Email</p>
+                                    <p class="dato"><%= user.email %></p>
+                                    <p class="dato">Nombre</p>
+                                    <p class="dato"><%= user.first_name %></p>
+                                    <p class="dato">Apellido</p>
+                                    <p class="dato"><%= user.last_name %></p>
+                                    <!-- <p class="dato">Contraseña</p> -->
+                                </article>
+                            </div>
+                        </a>
                     <% }) %>
-                    <div class="usuarioGrande">
-                        <div class="targetaUsuarioGrande">
-                            <figure class="cajaImagenGrande">
-                                <img class="fotoGrande" src="/images/defaultImagePerfil.png" alt="Imagen De Perfil">
-                            </figure>
-                            <article class="datos">
-                                <h2 class="nombre">Nombre de Usuario</h2>
-                                <p class="dato">Email</p>
-                                <p class="dato">Nombre</p>
-                                <p class="dato">Apellido</p>
-                                <!-- <p class="dato">Contraseña</p> -->
-                            </article>
-                        </div>
-                        <div class="botones">
-                            <div class="boton">
-                                <button type="submit" class="borrar">Borrar Usuario</button>
-                            </div>
-                            <div class="boton">
-                                <button type="submit" class="guardar">Blanquear Contraseña</button>
-                            </div>
-                            <div class="boton">
-                                <button type="submit" class="guardar">Editar</button>
-                            </div>
-                        </div>   
-                    </div>
                 </div>
             </div>
         </div>

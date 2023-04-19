@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/userEdit.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <title>Chancho va! </title>
+         <!-- FontAwesome-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" /> 
+    </head>
+<body>
+    <%- include('../partials/header')  %>
+    <main class="userPerfilContainer">
+        <%- include("../partials/menuAdmin")%>
+        <div class="contenedorDatosUser">
+            <div class="usuariosRegistrados">
+                    <div class="usuarioGrande">
+                        <div class="targetaUsuarioGrande">
+                            <figure class="cajaImagenGrande">
+                                <img class="fotoGrande" src="/images/defaultImagePerfil.png" alt="Imagen De Perfil">
+                            </figure>
+                            <article class="datos">
+                                <h2 class="nombre"><%= user.last_name %>, <%= user.first_name %></h2>
+                                <p class="dato">Email: <%= user.email %></p> 
+                                <p class="dato">Nombre: <%= user.first_name %></p>
+                                <p class="dato">Apellido: <%= user.last_name %></p>
+                                <p class="dato">rol: <%= user.role_id %></p>
+                            </article>
+                        </div>
+                        <div class="botones">
+                            <div class="boton">
+                                <form action="/admin/userDelete/<%= user.id %>/?_method=DELETE" method="POST">
+                                    <button type="submit" class="borrar">Borrar Usuario</button>
+                                </form>
+                            </div>
+                            <div class="boton">
+                                <a href=""><button type="submit" class="guardar">Blanquear Contraseña</button></a>
+                            </div>
+                            <div class="boton">
+                                <a href="/admin/adminPerfilEdit/<%= user.id %>">
+                                    <button type="submit" class="guardar">Editar</button>
+                                </a>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer')  %>
+    <script src="/js/efectosPanelAdmin/usersRegister.js"></script>
+    <script src="/js/efecto.js"></script>
+</body>
+</html>

@@ -159,7 +159,18 @@ module.exports = {
         res.render("./admin/adminPerfil", { session: req.session })
     },
     editRender: (req, res) => {
-        res.render("./admin/adminPerfilEdit", { session: req.session })
+        User.findByPk(req.params.id)
+        .then(user => {
+            if(user){
+                res.render("./admin/adminPerfilEdit", {
+                user,
+                session: req.session
+            })
+        } else {
+            res.send("No se encontro el usuario");
+        }
+        })
+        .catch(error => console.log(error));
     },
     editAdmin: (req, res) => {
         res.render("./admin/adminPerfilEdit", { session: req.session })
@@ -187,4 +198,34 @@ module.exports = {
     adminPerfilClaims: (req, res) => {
         res.render("./admin/adminPerfilClaims", { session: req.session })
     },
+    userEdit: (req, res) => {
+        User.findByPk(req.params.id)
+        .then(user => {
+            if(user){
+            res.render("./admin/userEdit", {
+                user,
+                session: req.session
+
+            })
+        } else {
+            res.send("No se encontro el usuario");
+        }
+        })
+        .catch(error => console.log(error));
+    },
+    userDelete: (req, res) => {
+        User.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then((response) => {
+            if(response){
+            return res.redirect("/admin/adminPerfilUsers");
+            } else {
+                throw new Error("No se pudo eliminar el usuario");
+            }
+        })
+        .catch(error => console.log(error));
+    }
 }

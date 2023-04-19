@@ -24,9 +24,11 @@ router.get("/adminPerfilQuestions",adminSessionState, controller.adminUsersQuest
 router.get("/adminPerfilShipments",adminSessionState, controller.adminUsersShipments)
 router.get("/adminPerfilReturnedPackages",adminSessionState, controller.adminPerfilReturnedPackages)
 router.get("/adminPerfilClaims",adminSessionState, controller.adminPerfilClaims)
+router.get("/userEdit/:id",adminSessionState, controller.userEdit)
+router.delete("/userDelete/:id", controller.userDelete)
 
 // Editar Perfil Administrador
-router.get("/adminPerfilEdit",adminSessionState, controller.editRender)
+router.get("/adminPerfilEdit/:id",adminSessionState, controller.editRender)
 router.put("/adminPerfil", controller.editAdmin)
 
 module.exports = router;
