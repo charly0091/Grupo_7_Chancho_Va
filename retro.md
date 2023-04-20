@@ -101,3 +101,32 @@
 
 ## Empezar a hacer
   - Arrancar el sprint desde la fecha de inicio y terminar antes de la fecha de entrega.
+
+### Sprint 6
+
+## Seguir haciendo
+  - Aplicar lo visto en clase en el proyecto fuera de sprint.
+  - Arrancar el sprint desde la fecha de inicio.
+
+## Hacer mas
+  - Repartir de manera correcta las tareas.
+  - Realizar las tareas asignadas.
+  - Comunicar sobre el avance o problemas.
+  - Mover las tarjetas de trello.
+  - Agregar y tomar las tareas en el trello secundario.
+
+## Hacer menos
+  - Pushear los cambios y/o avances a ultimo momento.
+  - Dejar de confiarnos con el tiempo del sprint.
+  - Saltearse reuniones.
+
+## Dejar de hacer
+  - Procrastinar.
+  - Avisar inconvenientes cerca de la fecha de entrega.
+  - Ghostear (no clavar visto, y desaparecerse)
+
+## Empezar a hacer
+  - Cumplir con lo que se compromete (reuniones).
+  - Daily obligatoria por grupo oficial de wspp (comunicar el estado de la tarea).
+  - Agregar fecha limite en la tarea asignada para tener un mejor control de lo que se hace y lo que no.
+  - Todos los integrantes del equipo presentes en la asignación de tareas y en la realización de la retrospectiva.
