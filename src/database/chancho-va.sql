@@ -143,18 +143,18 @@ CREATE TABLE `users` (
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` VALUES
-	(1, '','', 'Vero@veronikos.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 1, 'defaultImagePerfil.png'),
-	(2, '','', 'Nico@veronikos.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 1, 'defaultImagePerfil.png'),
-	(3, '','', 'Braian@veronikos.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 1, 'defaultImagePerfil.png'),
-	(4, '','', 'Javi@veronikos.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 1, 'defaultImagePerfil.png'),
-	(5, '','', 'Charly@veronikos.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 1, 'defaultImagePerfil.png'),
-	(6, '','', 'brenda@gmail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png'),
-	(7, '','', 'elisabeth@gmail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png'),
-	(8, '','', 'mariano@gmail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png'),
-	(9, '','', 'jose@gmail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png'),
-	(10, '','', 'tomas@gmail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png'),
-	(11, '','', 'admin@mail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 1, 'defaultImagePerfil.png'),
-	(12, '','', 'user@mail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png');
+	(1, 'Veronica','Vargas', 'Vero@veronikos.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 1, 'defaultImagePerfil.png'),
+	(2, 'Nicolas','Sosa', 'Nico@veronikos.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 1, 'defaultImagePerfil.png'),
+	(3, 'Braian','Briseña', 'Braian@veronikos.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 1, 'defaultImagePerfil.png'),
+	(4, 'Javier','Arias', 'Javi@veronikos.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 1, 'defaultImagePerfil.png'),
+	(5, 'Carlos','Pinto', 'Charly@veronikos.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 1, 'defaultImagePerfil.png'),
+	(6, 'Brenda','Prueba', 'brenda@gmail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png'),
+	(7, 'Elisabeth','Prueba', 'elisabeth@gmail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png'),
+	(8, 'Mariano','Prueba', 'mariano@gmail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png'),
+	(9, 'Jose','Prueba', 'jose@gmail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png'),
+	(10, 'Tomas','Prueba', 'tomas@gmail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png'),
+	(11, 'Admin','Prueba', 'admin@mail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 1, 'defaultImagePerfil.png'),
+	(12, 'User','Prueba', 'user@mail.com', '$2a$10$NpDmFDe3uAOUo7xwZluyjuinPD/7RVJ3c5VWA7IzyHfvk8apX1cxO', 2, 'defaultImagePerfil.png');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 

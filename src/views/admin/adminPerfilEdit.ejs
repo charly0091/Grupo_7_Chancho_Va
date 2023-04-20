@@ -19,31 +19,42 @@
                 <div class="nombre">
                     <h1>Edición de Datos</h1>
                 </div>
+                <h2><%= user.email %></h2>
                 <div class="formulario">
-                    <form action="">
-                        <div class="divInput">
+                    <form action="/admin/adminPerfilEdit/<%= user.id %>?_method=PUT" method="POST">
+                        <!-- <div class="divInput">
                             <label class="label" for="id">Nombre de Usuario</label>
                             <input class="input" type="text" name="id" required>
                         </div>
                         <div class="divInput">
                             <label class="label" for="email">E-mail</label>
                             <input class="input" type="email" name="email" required>
-                        </div>
+                        </div> -->
                         <div class="divInput">
                             <label class="label" for="firstName">Nombre</label>
-                            <input class="input" type="text" name="firstName" required>
+                            <input class="input <%= locals.errors && errors.first_name ? 'is-invalid' : null%>" type="text" name="firstName" value="<%= locals.errors && errors.first_name ? old.first_name : user.first_name %>" required>
+                            <small class="text-danger ms-2"><%= locals.errors && errors.first_name ? errors.first_name.msg : null%></small>
                         </div>
                         <div class="divInput">
                             <label class="label" for="lastName">Apellido</label>
-                            <input class="input" type="text" name="lastName" required>
+                            <input class="input <%= locals.errors && errors.first_name ? 'is-invalid' : null%>" type="text" name="lastName" value="<%= locals.errors && errors.last_name ? old.last_name : user.last_name %>" required>
+                            <small class="text-danger ms-2"><%= locals.errors && errors.last_name ? errors.last_name.msg : null%></small>
                         </div>
-                        <div class="divInput">
+<!--                         <div class="divInput">
                             <label class="label" for="password">Contraseña</label>
                             <input class="input" type="password" name="password" required>
                         </div>
                         <div class="divInput">
                             <label class="label" for="password2">Confirmar Contraseña</label>
                             <input class="input" type="password" name="password2" required>
+                        </div> -->
+                        <div>
+                            <label for="rol">Rol</label>
+                            <select name="rol" id="rol" class="input <%= locals.errors && errors.subCategory ? 'is-invalid' : null%>">
+                                <option value="" selected hidden>Seleccione rol</option>
+                                <option value="1" <%= user.role_id == 1 &&  'selected' %>>Administrador</option>
+                                <option value="2" <%= user.role_id == 2 &&  'selected' %>>Usuario</option>
+                            </select>
                         </div>
                         <div class="boton">
                             <button type="submit" class="guardar">Guardar Cambios</button>

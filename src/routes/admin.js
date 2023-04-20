@@ -29,6 +29,6 @@ router.delete("/userDelete/:id", controller.userDelete)
 
 // Editar Perfil Administrador
 router.get("/adminPerfilEdit/:id",adminSessionState, controller.editRender)
-router.put("/adminPerfil", controller.editAdmin)
+router.put("/adminPerfilEdit/:id", controller.editAdmin)
 
 module.exports = router;

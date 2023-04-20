@@ -173,7 +173,41 @@ module.exports = {
         .catch(error => console.log(error));
     },
     editAdmin: (req, res) => {
-        res.render("./admin/adminPerfilEdit", { session: req.session })
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            User.update({
+                first_name: req.body.firstName,
+                last_name: req.body.lastName,
+                role_id: req.body.rol,
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(response => {
+                if(response){
+                    return res.redirect("/admin/adminPerfilUsers");
+                } else {
+                    throw new Error("No se pudo actualizar el usuario");
+                }
+            })
+            .catch(error => console.log(error));
+        } else {
+            User.findByPk(req.params.id)
+            .then(user => {
+                if(user){
+                    res.render("./admin/adminPerfilEdit", {
+                    user,
+                    session: req.session,
+                    errors: errors.mapped(),
+                    old: req.body
+                })
+            } else {
+                res.send("No se encontro el usuario");
+            }
+            })
+            .catch(error => console.log(error));
+        }
     },
     adminUsersRegister: (req, res) => {
         User.findAll()
