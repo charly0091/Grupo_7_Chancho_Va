@@ -147,7 +147,7 @@ main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin div.formulario 
     font-size: 25px;
 }
 
-main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin div.formulario form div.divInput input.input {
+main.userPerfilContainer div.contenedorDatosUser div.perfilAdmin div.formulario form div.divInput .input {
     box-shadow: 0 0 10px;
     border: 1px solid lightgrey;
     border-radius: 20px;

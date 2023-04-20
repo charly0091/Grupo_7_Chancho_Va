@@ -157,6 +157,8 @@ module.exports = {
         
         let errors = validationResult(req);
         if(errors.isEmpty()){
+            req.session.userLogged.firstName = req.body.firstName;
+            req.session.userLogged.lastName = req.body.lastName;
             User.update({
                 first_name: req.body.firstName,
                 last_name: req.body.lastName,

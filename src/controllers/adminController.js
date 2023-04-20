@@ -58,7 +58,7 @@ module.exports = {
                 category_id: req.body.category,
                 subCategory_id: req.body.subCategory,
                 description: req.body.description,
-                image: req.file ? req.file.filename : null
+                image: req.file ? req.file.filename : "imageDefault.jpg"
             })
             .then(response => {
                 if(response){
