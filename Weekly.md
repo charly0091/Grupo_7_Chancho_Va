@@ -27,3 +27,14 @@ Se hizo la ruta post y el controlador para poder loguearse, lo cual hace que rec
 ## ¿Tuvimos impedimentos?
 
 Si, con las validaciones respecto al header y los formularios de registro/login. Se nos complicó también el hecho de abarcar muchas tareas a la vez, y por culpa de eso no terminábamos de lograr el objetivo de una tarea, que ya rompiamos lo hecho hasta el momento en otra tarea. Además, una mención honorable a nuestro querido amigo y enemigo Edesur, el cual nos quitó horas y nos hizo perder muchas horas de avance.
+
+### Sprint 6
+
+## ¿Qué hicimos en las semanas?
+
+Se realizó el diagrama para la base de datos, y el script para su creación. Después incluimos los datos que teniamos en los Json para crear y cargar los datos con el mismo script. Se inicializó sequelize y su configuración en conjunto con sus modelos para que funcione correctamente, con esto también se actualizaron los controladores y las rutas para que las vistas queden funcionales. Se hicieron tareas "secundarias" que tenemos en un trello aparte para pulir el proyecto y arreglar estilos.
+
+
+## ¿Tuvimos impedimentos?
+
+El script dio algunas complicaciones, demasiado prueba y error a la hora de la creación. Logramos dejarlo a tono para que esté completo en base a nuestra vieja database. También tuvimos algunos problemas respecto de los controladores en cuanto a como pasar las subcategorias, ya que solo podiamos hacerlo por la FK y no por su nombre por medio de la relación de tablas. De igual forma, nada que no se peuda solucionar. Tuvimos problemas en cuanto a estilos de las vistas, con algunas cosas que no quedaban en su lugar y se rompian al momento de interactuar con ellas.
