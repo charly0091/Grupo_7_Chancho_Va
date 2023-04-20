@@ -48,8 +48,8 @@
                             <label class="label" for="password2">Confirmar Contraseña</label>
                             <input class="input" type="password" name="password2" required>
                         </div> -->
-                        <div>
-                            <label for="rol">Rol</label>
+                        <div class="divInput">
+                            <label class="label" for="rol">Rol</label>
                             <select name="rol" id="rol" class="input <%= locals.errors && errors.subCategory ? 'is-invalid' : null%>">
                                 <option value="" selected hidden>Seleccione rol</option>
                                 <option value="1" <%= user.role_id == 1 &&  'selected' %>>Administrador</option>
