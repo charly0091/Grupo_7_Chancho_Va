@@ -497,10 +497,12 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perf
         margin-top: 5px;
     }
 
-    header.contenedor div.contenedorHeaderDesktop div.userCarrito div.user h5 a {
+    header.contenedor div.contenedorHeaderDesktop div.userCarrito a {
         text-decoration: none;
         color: black;
     }
+
+
 
     header.contenedor div.contenedorHeaderDesktop div.userCarrito div.carrito {
         display: flex;

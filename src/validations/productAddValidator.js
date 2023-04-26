@@ -8,7 +8,7 @@ module.exports = [
 
     check("price")
         .notEmpty().withMessage("Debes indicar el precio del producto").bail()
-        .isInt({min:1}).withMessage("Debe ser un precio válido"),
+        .isFloat().withMessage("Debe ser un precio válido"),
 
     check("discount")
         .notEmpty().withMessage("Debes indicar el descuento del producto").bail()
