@@ -15,7 +15,7 @@ router.post("/createProduct", uploadImageProduct.single('productPhoto'), product
 
 // Editar Producto
 router.get("/editProduct/:id",adminSessionState, controller.edit);
-router.put("/editProduct/:id", uploadImageProduct.single("image"), productValidator , controller.update);
+router.put("/editProduct/:id", uploadImageProduct.single("productPhoto"), productValidator , controller.update);
 
 // Perfil de Administrador
 router.get("/adminPerfil",adminSessionState, controller.admin)

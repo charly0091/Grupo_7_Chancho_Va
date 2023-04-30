@@ -1,5 +1,7 @@
 const {Product,Category,SubCategory,User} = require("../database/models");
 const { validationResult } = require("express-validator");
+const fs = require("fs");
+const path = require("path");
 
 
 
@@ -17,6 +19,14 @@ module.exports = {
           .catch((error) => console.log(error));
       },
     delete: (req, res) => {
+
+        Product.findByPk(req.params.id)
+        .then((product) => {
+            if (fs.existsSync(path.join(__dirname, "../../public/images", product.image)) && product.image != "imageDefault.jpg") {
+                fs.unlinkSync(path.join(__dirname, "../../public/images", product.image));
+            }
+        })
+
         Product.destroy({
             where: {
                 id: req.params.id
@@ -70,6 +80,10 @@ module.exports = {
             .catch(error => console.log(error));
         } else {
 
+            if (req.file) {
+				fs.unlinkSync( path.join(__dirname, "../../public/images", req.file.filename))
+			}
+
             let categories = Category.findAll();
             let subCategories = SubCategory.findAll();
 
@@ -116,8 +130,26 @@ module.exports = {
         let subCategories = SubCategory.findAll();
         let productToEdit = Product.findByPk(req.params.id);
         
+        
 
         if(errors.isEmpty()){
+
+            Product.findByPk(req.params.id)
+            .then((product) => {
+				if (req.file) {
+					if (
+						fs.existsSync(
+							path.join(__dirname, "../../public/images", product.image)
+						) &&
+						product.image != "imageDefault.jpg"
+					) {
+						fs.unlinkSync(
+							path.join(__dirname, "../../public/images", product.image)
+						);
+					}
+				}
+            })
+            
             Product.update({
                 name: req.body.name,
                 price: req.body.price,
@@ -125,7 +157,7 @@ module.exports = {
                 category: req.body.category,
                 subCategory: req.body.subCategory,
                 description: req.body.description,
-                image: req.file ? req.file.filename : null
+                image: req.file ? req.file.filename : req.body.oldImage
             }, {
                 where: {
                     id: req.params.id
@@ -140,6 +172,11 @@ module.exports = {
             })
             .catch(error => console.log(error));
         } else {
+
+            if (req.file) {
+				fs.unlinkSync( path.join(__dirname, "../../public/images", req.file.filename))
+			}
+
             Promise.all([categories, subCategories, productToEdit])
             .then(([categories, subCategories, productToEdit]) => {
             res.render("admin/editProduct", {

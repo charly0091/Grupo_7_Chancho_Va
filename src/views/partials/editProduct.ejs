@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/editProduct.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Chancho va! </title>
+     <!-- FontAwesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <%- include("../partials/header") %>
+        <main class="registro">
+            <div class="contenedor">
+                <h2>Editar producto</h2>
+                <hr>
+                <form method="POST" action="/admin/editProduct/<%= productToEdit.id %>?_method=PUT" enctype="multipart/form-data">
+                    <div class="contenedorFormularios">
+                        <div class="input">
+                            <label for="name">Nombre del producto</label>
+                            <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= locals.errors && errors.name ? old.name : productToEdit.name %>">                
+                            <small class="text-danger ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%></small>
+                        </div> 
+                        <div class="input">
+                            <label for="price">Precio del producto</label>
+                            <input class="estiloInput <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" name="price" id="price" placeholder="Precio del producto" required value="<%=locals.errors && errors.price ? old.price : productToEdit.price %>">                
+                            <small class="text-danger ms-2"><%= locals.errors && errors.price ? errors.price.msg : null%></small>
+                        </div>
+                    </div>
+                    <div class="contenedorFormularios">
+                        <div class="input">
+                            <label for="discount">Descuento</label>
+                            <input class="estiloInput <%= locals.errors && errors.discount ? 'is-invalid' : null%>" type="number" name="discount" id="discount" placeholder="Precio del producto"  step="0.01" min="0" required value="<%= locals.errors && errors.discount ? old.discount : productToEdit.discount %>">                
+                            <small class="text-danger ms-2"><%= locals.errors && errors.discount ? errors.discount.msg : null%></small>
+                        </div>
+                        <div class="input">
+                            <label for="category">Categoria</label>
+                            <select name="category" id="category" class="estiloInput <%= locals.errors && errors.category ? 'is-invalid' : null%>" required>
+                                <option value="" selected hidden>Categoria</option>
+                                <% categories.forEach(category=> { %>
+                                    <option value="<%= category.id %>" <%= category.id == productToEdit.category_id &&  'selected' %>><%= category.name %></option>
+                                <% }) %>
+                            </select>
+                            <small class="text-danger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%></small>
+                        </div>
+                        <div class="input">
+                            <label for="subCategory">Sub Categoria</label>
+                            <select name="subCategory" id="subCategory" class="estiloInput <%= locals.errors && errors.subCategory ? 'is-invalid' : null%>" required>
+                                <option value="" selected hidden>Sub categoria</option>
+                                <% subCategories.forEach(subCategory=> { %>
+                                    <option value="<%= subCategory.id %>" <%= subCategory.id == productToEdit.subCategory_id && 'selected' %>><%= subCategory.name %></option>
+                                <% }) %>
+                            </select>
+                            <small class="text-danger ms-2"><%= locals.errors && errors.subcategory ? errors.subcategory.msg : null%></small>
+                        </div>
+                    </div>
+                    <div class="contenedorFormularios">
+                        <div class="div_file">
+                            <div class="file">
+                                <p class="texto" for="image">Editar imagen</p>
+                                <input class="productPhoto editar <%= locals.errors && errors.image ? 'is-invalid' : null%>" type="file" id="image" name="image">
+                                <small class="text-danger ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%></small>
+                            </div>
+                        </div>
+                        <div class="input">
+                            <label for="description">Descripción del producto</label>
+                            <textarea class="estiloInput <%= locals.errors && errors.description ? 'is-invalid' : null%>" type="text" name="description" id="description" cols="30" rows="10" placeholder="Descripción del producto" required><%= locals.errors && errors.description ? old.description : productToEdit.description %></textarea>               
+                            <small class="text-danger ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%></small>
+                        </div>   
+                        <div class="boton">
+                            <span class="mensajeError"> Debe completar todos los campos</span>
+                            <button type="submit" class="registrar guardar">Guardar Cambios</button>
+                        </div>
+                    </div>
+                    
+                    
+                </form>
+            </div>
+        </main>
+        <%- include("../partials/footer") %> 
+</body>
+</html>
