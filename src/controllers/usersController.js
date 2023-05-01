@@ -65,7 +65,7 @@ module.exports = {
                     firstName: user.first_name,
                     lastName: user.last_name,
                     email: user.email,
-                    imagen: user.imagen,
+                    avatar: user.avatar,
                     rol: user.role_id
                 }
     
@@ -119,9 +119,8 @@ module.exports = {
     },
     userProfile: (req, res) => {
       
-            let user = User.findByPk();    
-    
-        res.render("users/profile", {user,session: req.session})
+        res.render("users/profile", {session: req.session})
+
     },
     editUserProfile: (req, res) => {
         res.render("users/editUserProfile", { style : "styles.css" , session: req.session})
