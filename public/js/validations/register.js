@@ -6,14 +6,14 @@ function validarEmail(email) {
     fetch("/api/users/list")
       .then(response => response.json())
       .then(data => {
-        const existeEmail = data.some(usuario => usuario.email === email);
+        const existeEmail = data.find(user => user.email == email);
         if (existeEmail) {
           return true;
         } 
         return false;
       })
       .catch(error => {
-        alert("Ha habido un error al comprobar el correo electrónico.");
+        console.log("Ha habido un error al comprobar el correo electrónico.");
         console.error(error);
       });
   }
@@ -42,7 +42,7 @@ let
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
     regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,50}$/;
 
-    $email.addEventListener('blur', () => {
+    $email.addEventListener('blur', (e) => {
         switch (true) {
             case !$email.value.trim():
                 $emailErrors.innerText = 'El campo email es obligatorio';
@@ -52,10 +52,10 @@ let
                 $emailErrors.innerText = 'Debe ingresar un email válido';
                 $email.classList.add('is-invalid')
                 break
-            case !validarEmail($email.value):
-                $emailErrors.innerText = 'El email ya está registrado';
-                $email.classList.add('is-invalid')
-                break
+            //case validarEmail($email.value):
+            //    $emailErrors.innerText = 'El email ya está registrado';
+            //    $email.classList.add('is-invalid')
+            //    break
             default:
                 $email.classList.remove('is-invalid');
                 $email.classList.add('is-valid');
