@@ -31,11 +31,16 @@ const productsRouter = require('./routes/products');
 const usersRouter = require('./routes/users');
 const adminRouter = require('./routes/admin');
 
+/* APIs Routers */
+const apiUsersRouter = require('./routes/api/users');
+
 /* Routers Middlewares */
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
+
+app.use('/api/users', apiUsersRouter);
 
 
 

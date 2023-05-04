@@ -4,11 +4,11 @@ const path = require("path");
 module.exports = [
     check("name")
         .notEmpty().withMessage("Debe ingresar el nombre del producto").bail()
-        .isLength({ min: 3, max: 50 }).withMessage("El nombre debe tener entre 3 y 50 caracteres"),
+        .isLength({ min: 5, max: 50 }).withMessage("El nombre debe tener entre 5 y 50 caracteres"),
 
     check("price")
         .notEmpty().withMessage("Debes indicar el precio del producto").bail()
-        .isFloat().withMessage("Debe ser un precio válido"),
+        .isFloat({min:0}).withMessage("El precio debe ser mayor a $0"),
 
     check("discount")
         .notEmpty().withMessage("Debes indicar el descuento del producto").bail()
@@ -22,14 +22,14 @@ module.exports = [
 
     check("description")
         .notEmpty().withMessage("La descripción es obligatoria").bail()
-        .isLength({ min: 5}).withMessage("La descripción debe tener mínimo 5 caracteres"),
+        .isLength({ min: 20}).withMessage("La descripción debe tener mínimo 20 caracteres"),
 
 
      check("image")
         .custom((value, { req }) => {
             let file = req.file;
             if(file){
-                let acceptedExtensions = [".jpg", ".png", ".gif"];
+                let acceptedExtensions = [".jpg", "jpeg" ,".png", ".gif"];
                 let fileExtension = path.extname(file.originalname);
                 if (!acceptedExtensions.includes(fileExtension)) {
                     throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(", ")}`);

@@ -5,7 +5,8 @@ const loginValidator = require("../validations/loginValidation");
 const uploadImageUser = require("../middlewares/uploadImageUser");
 const registerValidator = require("../validations/registerValidation")
 const userSessionState = require("../middlewares/userSessionState");
-const userInSessionState = require("../middlewares/userInSessionState")
+const userInSessionState = require("../middlewares/userInSessionState");
+const editUserValidator = require("../validations/editUserValidator");
 
 
 router.get("/", controller.users); 
@@ -19,7 +20,7 @@ router.get("/reset-password",userInSessionState, controller.resetPassword);
 router.get("/metodosDePago",userInSessionState, controller.metodosDePago);
 router.get("/pagoTarjeta",userInSessionState, controller.pago);
 router.get("/profile",userInSessionState, controller.userProfile);
-router.get("/editUserProfile",userInSessionState, controller.editUserProfile);
+router.get("/editUserProfile",userInSessionState,editUserValidator, controller.editUserProfile);
 router.put("/editUserProfile/:id", controller.editUser);
 router.get("/userPerfilShipments",userInSessionState, controller.usersShipments);
 router.get("/userReturnedPackages",userInSessionState, controller.userReturnedPackages);

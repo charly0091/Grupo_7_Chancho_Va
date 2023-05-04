@@ -4,6 +4,7 @@ const controller = require("../controllers/adminController");
 const { uploadImageProduct } = require('../middlewares/upload');
 const productValidator = require('../validations/productAddValidator');
 const adminSessionState = require('../middlewares/adminSessionState');
+const perfilEditValidator = require("../validations/perfilEditValidator");
 
 // Productos
 router.get("/products",adminSessionState, controller.products);
@@ -28,7 +29,7 @@ router.get("/userEdit/:id",adminSessionState, controller.userEdit)
 router.delete("/userDelete/:id", controller.userDelete)
 
 // Editar Perfil Administrador
-router.get("/adminPerfilEdit/:id",adminSessionState, controller.editRender)
+router.get("/adminPerfilEdit/:id",adminSessionState, perfilEditValidator, controller.editRender)
 router.put("/adminPerfilEdit/:id", controller.editAdmin)
 
 module.exports = router;

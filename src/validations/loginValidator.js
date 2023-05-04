@@ -5,7 +5,7 @@ module.exports = [
   
     check("email")
     .notEmpty()
-    .withMessage("El email es obligatorio")
+    .withMessage("El email es obligatorio").bail()
     .isEmail()
     .withMessage("Email inválido"),
 

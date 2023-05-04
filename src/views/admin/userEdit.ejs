@@ -19,14 +19,14 @@
                     <div class="usuarioGrande">
                         <div class="targetaUsuarioGrande">
                             <figure class="cajaImagenGrande">
-                                <img class="fotoGrande" src="/images/defaultImagePerfil.png" alt="Imagen De Perfil">
+                                <img class="fotoGrande" src="/images/perfilUser/<%= user.avatar %>" alt="Imagen De Perfil">
                             </figure>
                             <article class="datos">
                                 <h2 class="nombre"><%= user.last_name %>, <%= user.first_name %></h2>
                                 <p class="dato">Email: <%= user.email %></p> 
                                 <p class="dato">Nombre: <%= user.first_name %></p>
                                 <p class="dato">Apellido: <%= user.last_name %></p>
-                                <p class="dato">rol: <%= user.role_id %></p>
+                                <p class="dato">rol: <%= user.role_id == 1 ? "admin" : "user" %></p>
                             </article>
                         </div>
                         <div class="botones">

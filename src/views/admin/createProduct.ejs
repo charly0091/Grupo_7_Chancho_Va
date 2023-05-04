@@ -41,7 +41,7 @@
                             <option value="<%= subCategory.id %>" <%= locals.old && subCategory.id == old.subCategory ? 'selected' : null %>><%= subCategory.name %></option>
                         <% }) %>
                     </select>
-                    <small class="text-danger ms-2"><%= locals.errors && errors.subcategory ? errors.subcategory.msg : null%></small>
+                    <small class="text-danger ms-2"><%= locals.errors && errors.subCategory ? errors.subCategory.msg : null%></small>
                 </div>
                 <div class="input">
                     <label for="price">Precio del producto</label>

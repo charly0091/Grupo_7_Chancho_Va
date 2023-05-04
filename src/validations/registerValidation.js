@@ -15,11 +15,19 @@ module.exports = [
 
     check("firstName")
     .notEmpty()
-    .withMessage("el nombre es obligatorio"),
+    .withMessage("el nombre es obligatorio").bail()
+    .isLength({
+        min: 2,
+    })
+    .withMessage("El nombre debe tener al menos 2 caracteres"),
 
     check("lastName")
     .notEmpty()
-    .withMessage("el apellido es obligatorio"),
+    .withMessage("el apellido es obligatorio").bail()
+    .isLength({
+        min: 2,
+    })
+    .withMessage("El apellido debe tener al menos 2 caracteres"),
 
     check("email")
     .notEmpty()
@@ -38,16 +46,16 @@ module.exports = [
         if (user) {
             return Promise.reject("Email ya registrado")
         }
-    })
+        })
     }),
 
     check('password')
     .notEmpty()
     .withMessage('Debes escribir tu contraseña').bail()
     .isLength({
-        min: 6,
+        min: 8,
     })
-    .withMessage('La contraseña debe tener como mínimo 6 caracteres'),
+    .withMessage('La contraseña debe tener como mínimo 8 caracteresss'),
 
     body('password2')
     .custom((value, {req}) => value !== req.body.password ? false : true)
@@ -55,5 +63,18 @@ module.exports = [
 
     check('terminos')
     .isString('on')
-    .withMessage('Debes aceptar los términos y condiciones')
+    .withMessage('Debes aceptar los términos y condiciones'),
+
+    check("image")
+    .custom((value, { req }) => {
+        let file = req.file;
+        if(file){
+            let acceptedExtensions = [".jpg", ".jpeg" , ".png", ".gif"];
+            let fileExtension = path.extname(file.originalname);
+            if (!acceptedExtensions.includes(fileExtension)) {
+                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(", ")}`);
+            }
+        } 
+        return true;
+    })
 ]

@@ -158,9 +158,12 @@ module.exports = {
         if(errors.isEmpty()){
             req.session.userLogged.firstName = req.body.firstName;
             req.session.userLogged.lastName = req.body.lastName;
+            req.session.userLogged.avatar = req.file ? req.file.filename : req.session.userLogged.avatar;
+            
             User.update({
                 first_name: req.body.firstName,
                 last_name: req.body.lastName,
+                avatar: req.file ? req.file.filename : req.session.userLogged.avatar
             }, {
                 where: {
                     id: req.session.userLogged.id

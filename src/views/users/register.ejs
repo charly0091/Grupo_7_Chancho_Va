@@ -18,7 +18,7 @@
             <div class="contenedorForm">
                 <h2>Registrate</h2>
                 <hr>
-                <form class="formularioRegistro" action="/users/register" method="POST" enctype="multipart/form-data">
+                <form id="form" class="formularioRegistro" action="/users/register" method="POST" enctype="multipart/form-data">
                     <div class="contenedorLineasFormulario">
                         <!-- <div class="input">
                             <label for="id">Nombre de usuario</label>
@@ -30,6 +30,7 @@
                         <div class="input">
                             <label for="email">Correo electrónico</label>
                             <input class="estiloInput <%= locals.errors && errors.email ? 'is-invalid' : null%>" value="<%= locals.old && locals.old.email ? locals.old.email : null %>" type="email" name="email" id="email" >
+                            <span id="emailErrors"></span>
                             <% if (locals.errors && errors.email) { %>
                                 <span class="mensajeError"><%= errors.email.msg %> </span>
                             <% } %>
@@ -39,6 +40,7 @@
                         <div class="input">
                             <label for="firstName">Nombre</label>
                             <input class="estiloInput <%= locals.errors && errors.firstName ? 'is-invalid' : null%>" value="<%= locals.old && locals.old.firstName ? locals.old.firstName : null %>" type="text" name="firstName" id="firstName" >
+                            <span class="error" id="nameErrors"></span>
                             <% if (locals.errors && errors.firstName) { %>
                                 <span class="mensajeError"><%= errors.firstName.msg %> </span>
                             <% } %>
@@ -46,6 +48,7 @@
                         <div class="input">
                             <label for="lastName">Apellido</label>
                             <input class="estiloInput <%= locals.errors && errors.lastName ? 'is-invalid' : null%>" value="<%= locals.old && locals.old.lastName ? locals.old.lastName : null %>" type="text" name="lastName" id="lastName">
+                            <span id="lastnameErrors"></span>
                             <% if (locals.errors && errors.lastName) { %>
                                 <span class="mensajeError"><%= errors.lastName.msg %> </span>
                             <% } %>
@@ -55,6 +58,7 @@
                         <div class="input">
                             <label for="password">Contraseña</label>
                             <input class="estiloInput" type="password" name="password" id="password">
+                            <span id="passErrors"></span>
                             <% if (locals.errors && errors.password) { %>
                                 <span class="mensajeError"><%= errors.password.msg %> </span>
                             <% } %>
@@ -62,6 +66,7 @@
                         <div class="input">
                             <label for="password2">Confirme contraseña</label>
                             <input class="estiloInput" type="password" id="password2" name="password2">
+                            <span id="pass2Errors"></span>
                             <% if (locals.errors && errors.password2) { %>
                                 <span class="mensajeError"><%= errors.password2.msg %> </span>
                             <% } %>
@@ -69,14 +74,19 @@
                     </div>
                     <div class="imagenUsuario">
                         <p>Agregar foto</p>
-                        <input class="imagen" type="file" name="imagen">
-                    </div> 
+                        <input class="imagen" type="file" name="imagen" id="image">
+                        <% if (locals.errors && errors.imagen) { %>
+                            <span class="mensajeError"><%= errors.imagen.msg %> </span>
+                            <% } %>
+                        </div> 
+                        <span id="fileErrors"></span>
                     <div class="contenedorBotones">
                         <div class="terminos">
                             <div>
                                 <label for="recordar">  Acepto los <a href="/terms">términos y condiciones</a> </label>
                                 <input type="checkbox" name="terminos" id="recordar"> 
                             </div>
+                            <span id="termsErrors"></span>
                             <% if (locals.errors && errors.terminos) { %>
                                 <span class="mensajeError"><%= errors.terminos.msg %> </span>
                             <% } %>
@@ -86,6 +96,7 @@
                                 <button type="submit" class="registrar">Continuar</button>
                                 <span class="login"><a href="/users/login">Ya tengo cuenta</a></span>
                             </div>
+                            <span id="submitErrors"></span>
                         </div>
                     </div>
                 </form>
@@ -94,5 +105,6 @@
     </main>
     <%- include("../partials/footer") %>
     <script src="/js/efecto.js"></script>
+    <script src="/js/validations/register.js"></script>
 </body>
 </html>
