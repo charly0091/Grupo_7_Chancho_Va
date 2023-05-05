@@ -135,7 +135,7 @@ let
         }
     })
 
-    $pass2.addEventListener('blur', () => {
+     $pass2.addEventListener('blur', () => {
         switch (true) {
             case !$pass2.value.trim():
                 $pass2Errors.innerText = 'Debes reingresar la contraseña';

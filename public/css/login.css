@@ -98,6 +98,20 @@ main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin 
     font-size: small;
 }
 
+.is-valid {
+    color: rgb(19, 151, 147);
+    padding: 5px;
+    font-size: small;
+   
+}
+.is-invalid {
+    color: red;
+    padding: 3px;
+    font-size: small;
+    
+}
+
+
 main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.check {
     display: flex;
     justify-content:center;
