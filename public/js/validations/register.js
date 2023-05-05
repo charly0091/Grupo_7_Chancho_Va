@@ -2,21 +2,26 @@ let qs = (elemento) => {
     return document.querySelector(elemento);
 }
 
-function validarEmail(email) {
-    fetch("/api/users/list")
-      .then(response => response.json())
-      .then(data => {
-        const existeEmail = data.find(user => user.email == email);
-        if (existeEmail) {
-          return true;
-        } 
+async function validarEmail(email) {
+    try {
+      const response = await fetch("/api/users/list");
+      const data = await response.json();
+      const existeEmail = data.find(user => user.email == email);
+      if (existeEmail) {
+        console.log(existeEmail);
+        return true;
+      } else {
+        console.log("retorno false");
         return false;
-      })
-      .catch(error => {
-        console.log("Ha habido un error al comprobar el correo electrónico.");
-        console.error(error);
-      });
+      }
+    } catch (error) {
+      console.log("Ha habido un error al comprobar el correo electrónico.");
+      console.error(error);
+      throw error;
+    }
   }
+
+
 
 window.addEventListener('load', () => {
     
@@ -42,27 +47,34 @@ let
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
     regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,50}$/;
 
-    $email.addEventListener('blur', (e) => {
-        switch (true) {
+    $email.addEventListener('blur', async (e) => {
+        try {
+          const resultado = await validarEmail($email.value);
+      
+          switch (true) {
             case !$email.value.trim():
-                $emailErrors.innerText = 'El campo email es obligatorio';
-                $email.classList.add('is-invalid')
-                break;
+              $emailErrors.innerText = 'El campo email es obligatorio';
+              $email.classList.add('is-invalid')
+              break;
             case !regExEmail.test($email.value):
-                $emailErrors.innerText = 'Debe ingresar un email válido';
-                $email.classList.add('is-invalid')
-                break
-            //case validarEmail($email.value):
-            //    $emailErrors.innerText = 'El email ya está registrado';
-            //    $email.classList.add('is-invalid')
-            //    break
+              $emailErrors.innerText = 'Debe ingresar un email válido';
+              $email.classList.add('is-invalid')
+              break
+            case resultado:
+              $emailErrors.innerText = 'El email ya está registrado';
+              $email.classList.add('is-invalid')
+              break
             default:
-                $email.classList.remove('is-invalid');
-                $email.classList.add('is-valid');
-                $emailErrors.innerText = ''
-                break;
+              $email.classList.remove('is-invalid');
+              $email.classList.add('is-valid');
+              $emailErrors.innerText = ''
+              break;
+          }
+        } catch (error) {
+          console.error(error);
         }
-    })
+      });
+      
 
     $inputName.addEventListener('blur', () => {
         switch (true) {
