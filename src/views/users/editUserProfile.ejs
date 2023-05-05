@@ -20,7 +20,7 @@
                     <h1><%= session.userLogged.email %></h1>
                 </div>
                 <div class="formulario">
-                    <form action="/users/editUserProfile/<%= session.userLogged.id %>?_method=PUT" method="POST">
+                    <form id="form" action="/users/editUserProfile/<%= session.userLogged.id %>?_method=PUT" method="POST">
                         <!-- <div class="divInput">
                             <label class="label" for="id">Nombre de Usuario</label>
                             <input class="input" type="text" name="id" required>
@@ -31,13 +31,15 @@
                         </div> -->
                         <div class="divInput">
                             <label class="label" for="firstName">Nombre</label>
-                            <input class="input <%= locals.errors && errors.first_name ? 'is-invalid' : null%>" type="text" name="firstName" value="<%= locals.errors && errors.first_name ? old.first_name :  session.userLogged.firstName %>">
+                            <input class="input <%= locals.errors && errors.first_name ? 'is-invalid' : null%>" type="text" name="firstName" id="firstName" value="<%= locals.errors && errors.first_name ? old.first_name :  session.userLogged.firstName %>">
                             <small class="text-danger ms-2"><%= locals.errors && errors.first_name ? errors.first_name.msg : null%></small>
+                            <span id="firstNameErrors"></span> 
                         </div>
                         <div class="divInput">
                             <label class="label" for="lastName">Apellido</label>
-                            <input class="input <%= locals.errors && errors.first_name ? 'is-invalid' : null%>" type="text" name="lastName" value="<%= locals.errors && errors.last_name ? old.last_name :  session.userLogged.lastName %>">
+                            <input class="input <%= locals.errors && errors.first_name ? 'is-invalid' : null%>" type="text" name="lastName" id="lastName" value="<%= locals.errors && errors.last_name ? old.last_name :  session.userLogged.lastName %>">
                             <small class="text-danger ms-2"><%= locals.errors && errors.last_name ? errors.last_name.msg : null%></small>
+                            <span id="lastNameErrors"></span> 
                         </div>
                         <!-- <div class="divInput">
                             <label class="label" for="password">Contraseña</label>
@@ -53,11 +55,13 @@
                             <div class="file">
                                 <p class="texto">Cargar imagen</p>
                                 <input class="productPhoto <%= locals.errors && errors.image ? 'is-invalid' : null%>" type="file"   id="productPhoto" name="productPhoto"  placeholder="Foto del producto">
+                                <span id="fileErrors"></span> 
                             </div>
                         </div>
                         <div class="boton">
                             <button type="submit" class="guardar">Guardar Cambios</button>
                         </div>
+                        <span id="submitErrors"></span>
 
                     </form>
                 </div>
@@ -67,5 +71,6 @@
     <%- include('../partials/footer')  %>
     <script src="/js/admin.js"></script>
     <script src="/js/efecto.js"></script>
+    <script src="/js/validations/editUser.js"></script>
 </body>
 </html>

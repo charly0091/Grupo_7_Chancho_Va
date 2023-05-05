@@ -21,7 +21,7 @@
                 </div>
                 <h2><%= user.email %></h2>
                 <div class="formulario">
-                    <form action="/admin/adminPerfilEdit/<%= user.id %>?_method=PUT" method="POST">
+                    <form id="form" action="/admin/adminPerfilEdit/<%= user.id %>?_method=PUT" method="POST">
                         <!-- <div class="divInput">
                             <label class="label" for="id">Nombre de Usuario</label>
                             <input class="input" type="text" name="id" required>
@@ -32,13 +32,15 @@
                         </div> -->
                         <div class="divInput">
                             <label class="label" for="firstName">Nombre</label>
-                            <input class="input <%= locals.errors && errors.first_name ? 'is-invalid' : null%>" type="text" name="firstName" value="<%= locals.errors && errors.first_name ? old.first_name : user.first_name %>" required>
+                            <input id="firstName" class="input <%= locals.errors && errors.first_name ? 'is-invalid' : null%>" type="text" name="firstName" value="<%= locals.errors && errors.first_name ? old.first_name : user.first_name %>" required>
                             <small class="text-danger ms-2"><%= locals.errors && errors.first_name ? errors.first_name.msg : null%></small>
+                            <span id="firstNameErrors"></span> 
                         </div>
                         <div class="divInput">
                             <label class="label" for="lastName">Apellido</label>
-                            <input class="input <%= locals.errors && errors.first_name ? 'is-invalid' : null%>" type="text" name="lastName" value="<%= locals.errors && errors.last_name ? old.last_name : user.last_name %>" required>
+                            <input id="lastName" class="input <%= locals.errors && errors.first_name ? 'is-invalid' : null%>" type="text" name="lastName" value="<%= locals.errors && errors.last_name ? old.last_name : user.last_name %>" required>
                             <small class="text-danger ms-2"><%= locals.errors && errors.last_name ? errors.last_name.msg : null%></small>
+                            <span id="lastNameErrors"></span> 
                         </div>
 <!--                         <div class="divInput">
                             <label class="label" for="password">Contraseña</label>
@@ -50,15 +52,18 @@
                         </div> -->
                         <div class="divInput">
                             <label class="label" for="rol">Rol</label>
-                            <select name="rol" id="rol" class="input <%= locals.errors && errors.subCategory ? 'is-invalid' : null%>">
+                            <select name="rol" id="rol" class="input <%= locals.errors && errors.rol ? 'is-invalid' : null%>">
                                 <option value="" selected hidden>Seleccione rol</option>
                                 <option value="1" <%= user.role_id == 1 &&  'selected' %>>Administrador</option>
                                 <option value="2" <%= user.role_id == 2 &&  'selected' %>>Usuario</option>
                             </select>
+                            <small class="text-danger ms-2"><%= locals.errors && errors.rol ? errors.rol.msg : null%></small>
+                            <span id="rolErrors"></span> 
                         </div>
                         <div class="boton">
                             <button type="submit" class="guardar">Guardar Cambios</button>
                         </div>
+                        <span id="submitErrors"></span>
                     </form>
                 </div>
             </div>
@@ -67,5 +72,6 @@
     <%- include('../partials/footer')  %>
     <script src="/js/admin.js"></script>
     <script src="/js/efecto.js"></script>
+    <script src="/js/validations/editUserAdmin.js"></script>
 </body>
 </html>

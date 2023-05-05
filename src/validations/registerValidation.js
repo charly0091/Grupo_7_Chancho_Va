@@ -65,7 +65,7 @@ module.exports = [
     .isString('on')
     .withMessage('Debes aceptar los términos y condiciones'),
 
-    check("image")
+    check("imagen")
     .custom((value, { req }) => {
         let file = req.file;
         if(file){

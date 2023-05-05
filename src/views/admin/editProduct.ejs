@@ -17,11 +17,12 @@
          <div class="contenedor">
             <h2>Editar producto</h2>
             <hr>
-            <form method="POST" action="/admin/editProduct/<%= productToEdit.id %>?_method=PUT" enctype="multipart/form-data">
+            <form id="form" method="POST" action="/admin/editProduct/<%= productToEdit.id %>?_method=PUT" enctype="multipart/form-data">
                 <div class="input">
                     <label for="productName">Nombre del producto</label>
                     <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= locals.errors && errors.name ? old.name : productToEdit.name %>">                
                     <small class="text-danger ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%></small>
+                    <span id="nameErrors"></span>  
                 </div>
                 <div class="input">
                     <label for="category">Categoria</label>
@@ -32,6 +33,7 @@
                         <% }) %>
                     </select>
                     <small class="text-danger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%></small>
+                    <span id="categoryErrors"></span> 
                 </div>
                 <div class="input">
                     <label for="subCategory">Sub Categoria</label>
@@ -42,16 +44,19 @@
                         <% }) %>
                     </select>
                     <small class="text-danger ms-2"><%= locals.errors && errors.subcategory ? errors.subcategory.msg : null%></small>
+                    <span id="subCategoryErrors"></span> 
                 </div>
                 <div class="input">
                     <label for="price">Precio del producto</label>
                     <input class="estiloInput <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" name="price" id="price" placeholder="Precio del producto"  step="0.01" min="0" value="<%=locals.errors && errors.price ? old.price : productToEdit.price %>">                
                     <small class="text-danger ms-2"><%= locals.errors && errors.price ? errors.price.msg : null%></small>
+                    <span id="priceErrors"></span> 
                 </div>
                 <div class="input">
                     <label for="discount">Descuento del producto</label>
                     <input class="estiloInput <%= locals.errors && errors.discount ? 'is-invalid' : null%>" type="number" name="discount" id="discount" placeholder="Descuento del producto"  step="0.01" min="0" value="<%= locals.errors && errors.discount ? old.discount : productToEdit.discount %>">                
                     <small class="text-danger ms-2"><%= locals.errors && errors.discount ? errors.discount.msg : null%></small>
+                    <span id="discountErrors"></span> 
                 </div>
                 <div class="div_file">
                     <div class="file">
@@ -61,10 +66,12 @@
                     </div>
                 </div>
                 <small class="text-danger ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%></small>
+                <span id="imageErrors"></span> 
                 <div class="input">
                     <label for="description">Descripción del producto</label>
-                    <textarea name="description" class="estiloInput <%= locals.errors && errors.description ? 'is-invalid' : null%>" cols="30" rows="10" ><%= locals.errors && errors.description ? old.description : productToEdit.description %></textarea>
+                    <textarea id="description" name="description" class="estiloInput <%= locals.errors && errors.description ? 'is-invalid' : null%>" cols="30" rows="10" ><%= locals.errors && errors.description ? old.description : productToEdit.description %></textarea>
                     <small class="text-danger ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%></small>
+                    <span id="descriptionErrors"></span> 
                 </div>   
                 
                 
@@ -72,11 +79,13 @@
                 <div class="boton">
                     <span class="mensajeError"> Debe completar todos los campos</span>
                     <button type="submit" class="registrar">Guardar Cambios</button>
-                </div>       
+                </div>  
+                <span id="submitErrors"></span>     
             </form>
         </div>
     </main>
     <%- include("../partials/footer") %> 
     <script src="/js/efecto.js"></script>
+    <script src="/js/validations/createProduct.js"></script>
 </body>
 </html>

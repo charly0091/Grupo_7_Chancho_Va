@@ -15,11 +15,13 @@ window.addEventListener('load', () => {
         $priceErrors = qs('#priceErrors'),
         $discount = qs('#discount'),
         $discountErrors = qs('#discountErrors'),
-        $file = qs('#image'),
+        $file = qs('#productPhoto'),
         $fileErrors = qs('#imageErrors'),
+        $imgPreview = qs('#img-preview'),
         $description = qs('#description'),
         $descriptionErrors = qs('#descriptionErrors'),
         $form = qs('#form'),
+        $submitErrors = qs('#submitErrors'),
         regExNumber = /^[0-9]*$/,
         regExFloat = /^[0-9]*[.,]?[0-9]*$/,
         regExDescription = /^.{20,}$/
@@ -30,9 +32,9 @@ window.addEventListener('load', () => {
                 $NameErrors.innerHTML = 'El campo nombre es obligatorio';
                 $Name.classList.add('is-invalid')
                 break;
-            case $inputName.value.trim().length < 2:
-                $nameErrors.innerText = 'El campo nombre debe tener al menos 2 caracteres';
-                $inputName.classList.add('is-invalid')
+            case $Name.value.trim().length < 5:
+                $NameErrors.innerText = 'El campo nombre debe tener al menos 5 caracteres';
+                $Name.classList.add('is-invalid')
                 break;
             default:
                 $Name.classList.remove('is-invalid');
@@ -103,11 +105,11 @@ window.addEventListener('load', () => {
                 $discount.classList.add('is-invalid')
                 break;
             case $discount.value < 0:
-                $discountErrors.innerHTML = 'El campo descuento debe ser mayor a 0';
+                $discountErrors.innerHTML = 'El campo descuento debe 0 o mayor';
                 $discount.classList.add('is-invalid')
                 break;
-            case $discount.value > 99:
-                $discountErrors.innerHTML = 'El campo descuento debe ser menor a 99';
+            case $discount.value > 100:
+                $discountErrors.innerHTML = 'El campo descuento no puede superar el 100%';
                 $discount.classList.add('is-invalid')
                 break;
             default:
@@ -171,16 +173,11 @@ window.addEventListener('load', () => {
             /* element.dispatchEvent(new Event("blur")) */
         }
 
-        if(!$terms.checked){
-            $terms.classList.add('is-invalid');
-            $termsErrors.innerHTML = "Debes aceptar las bases y condiciones"
-        }
-
         let elementosConErrores = document.querySelectorAll(".is-invalid");
         let errores = elementosConErrores.length > 0; 
 
         if(errores) {
-            submitErrors.innerText = "Hay errores en el formulario"
+            $submitErrors.innerText = "Hay errores en el formulario"
         } else {
             $form.submit()
         }

@@ -4,7 +4,7 @@ const controller = require("../controllers/adminController");
 const { uploadImageProduct } = require('../middlewares/upload');
 const productValidator = require('../validations/productAddValidator');
 const adminSessionState = require('../middlewares/adminSessionState');
-const perfilEditValidator = require("../validations/perfilEditValidator");
+const perfilEditValidator = require("../validations/editUserValidator");
 
 // Productos
 router.get("/products",adminSessionState, controller.products);

@@ -17,10 +17,11 @@
          <div class="contenedor">
             <h2>Agregar producto</h2>
             <hr>
-            <form method="POST" action="/admin/createProduct" enctype="multipart/form-data">
+            <form id="form" method="POST" action="/admin/createProduct" enctype="multipart/form-data">
                 <div class="input">
                     <label for="productName">Nombre del producto</label>
-                    <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= locals.old && locals.old.name ? locals.old.name : null %>">                
+                    <input class="estiloInput <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= locals.old && locals.old.name ? locals.old.name : null %>">   
+                    <span id="nameErrors"></span>             
                     <small class="text-danger ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%></small>
                 </div>
                 <div class="input">
@@ -32,6 +33,7 @@
                         <% }) %>
                     </select>
                     <small class="text-danger ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%></small>
+                    <span id="categoryErrors"></span> 
                 </div>
                 <div class="input">
                     <label for="subCategory">Sub Categoria</label>
@@ -42,16 +44,19 @@
                         <% }) %>
                     </select>
                     <small class="text-danger ms-2"><%= locals.errors && errors.subCategory ? errors.subCategory.msg : null%></small>
+                    <span id="subCategoryErrors"></span> 
                 </div>
                 <div class="input">
                     <label for="price">Precio del producto</label>
                     <input class="estiloInput <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" name="price" id="price" placeholder="Precio del producto"  step="0.01" min="0" value="<%= locals.old && locals.old.price ? locals.old.price : null %>">                
                     <small class="text-danger ms-2"><%= locals.errors && errors.price ? errors.price.msg : null%></small>
+                    <span id="priceErrors"></span> 
                 </div>
                 <div class="input">
                     <label for="discount">Descuento del producto</label>
                     <input class="estiloInput <%= locals.errors && errors.discount ? 'is-invalid' : null%>" type="number" name="discount" id="discount" placeholder="Descuento del producto"  step="0.01" min="0" value="<%= locals.old && locals.old.discount ? locals.old.discount : null %>">                
                     <small class="text-danger ms-2"><%= locals.errors && errors.discount ? errors.discount.msg : null%></small>
+                    <span id="discountErrors"></span> 
                 </div>
                 <div class="div_file">
                     <div class="file">
@@ -60,10 +65,12 @@
                     </div>
                 </div>
                 <small class="text-danger ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%></small>
+                <span id="imageErrors"></span> 
                 <div class="input">
                     <label for="description">Descripción del producto</label>
-                    <textarea name="description" class="estiloInput <%= locals.errors && errors.description ? 'is-invalid' : null%>" cols="30" rows="10" ><%= locals.old && locals.old.description ? locals.old.description : null %></textarea>
+                    <textarea id="description" name="description" class="estiloInput <%= locals.errors && errors.description ? 'is-invalid' : null%>" cols="30" rows="10" ><%= locals.old && locals.old.description ? locals.old.description : null %></textarea>
                     <small class="text-danger ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%></small>
+                    <span id="descriptionErrors"></span> 
                 </div>   
                 
                 
@@ -72,10 +79,12 @@
                     <span class="mensajeError"> Debe completar todos los campos</span>
                     <button type="submit" class="registrar">Crear</button>
                 </div>       
+                <span id="submitErrors"></span>
             </form>
         </div>
     </main>
     <%- include("../partials/footer") %> 
     <script src="/js/efecto.js"></script>
+    <script src="/js/validations/createProduct.js"></script>
 </body>
 </html>

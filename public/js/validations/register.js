@@ -41,6 +41,7 @@ let
     $terms = qs('#recordar'),
     $termsErrors = qs('#termsErrors'),
     $form = qs('#form'),
+    $submitErrors = qs('#submitErrors'),
     $imgPreview = qs('#img-preview')
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
     regExDNI = /^[0-9]{7,8}$/,
@@ -203,7 +204,7 @@ let
         let errores = elementosConErrores.length > 0; 
 
         if(errores) {
-            submitErrors.innerText = "Hay errores en el formulario"
+            $submitErrors.innerText = "Hay errores en el formulario"
         } else {
             $form.submit()
         }

@@ -12,7 +12,7 @@ module.exports = [
 
     check("discount")
         .notEmpty().withMessage("Debes indicar el descuento del producto").bail()
-        .isInt({min:0,max:99}).withMessage("El descuento debe ser un número entre 0 y 99"),
+        .isInt({min:0,max:100}).withMessage("El descuento debe ser un número entre 0 y 100"),
 
     check("category")
         .notEmpty().withMessage("Debes indicar la categoría del producto").bail(),
@@ -25,7 +25,7 @@ module.exports = [
         .isLength({ min: 20}).withMessage("La descripción debe tener mínimo 20 caracteres"),
 
 
-     check("image")
+     check("productPhoto")
         .custom((value, { req }) => {
             let file = req.file;
             if(file){
