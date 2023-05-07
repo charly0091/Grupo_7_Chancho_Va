@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url(header.css);
+@import url(footer.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+:root {
+    /*Paleta de colores*/
+    --rojo: #ff5656;
+    --gris: #edf2f6;
+    --azul: #6a7efc;
+    --negro: #494953;
+    /* Fuentes */
+    --fuente:'Source Sans Pro', sans-serif;  
+    /* Tamaños tipográficos */
+    --parrafos: 12px;
+    --titulos: 24px;
+    --precio: 18px;
+    --descuento: 16px;
+    --descripcion: 16px;
+}
+/* MENU IZQUIERDA */ 
+
+main.userPerfilContainer {
+    display: flex;
+}
+
+main.userPerfilContainer div.contenedorMenuUser {
+    width: 30%;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.fotoPerfil {
+    width: 100%;;
+    padding: 15px;
+    background: linear-gradient(90deg, #6a7efc ,#494953 );
+    display: flex;
+    justify-content: center;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.fotoPerfil img.foto {
+    height: 300px;
+    width: 300px;
+    cursor: pointer;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu {
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    background: linear-gradient(90deg, #6a7efc ,#494953 );
+    box-shadow: 0 0 3px;
+    cursor: pointer;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu:hover{
+    background: linear-gradient(90deg, #edf2f6 ,#ff5656 );
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu img.item {
+    height: 50px;
+    width: 50px;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+main.userPerfilContainer div.contenedorMenuUser div.menuPerfil div.menu h4.nombreMenu {
+    font-size: 25px;
+    height: 100%;
+    width: 100%;
+}
+/* FIN MENU IZQUIERDA */ 
+
+/* BIENVENIDA USUARIO ADMIN */
+
+main.userPerfilContainer div.contenedorDatosUser {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    background: url(/images/fondo.jpg) no-repeat center;
+    background-size: cover;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.contenedorBienvenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido img.animacionPoker {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido img.corazon {
+    top: 10%;
+    left: 10%;
+    animation-name: movimientoLeft;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido img.pikas {
+    top: 9%;
+    right: 10%;
+    animation-name: movimientoRight;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido img.trebol {
+    bottom: 10%;
+    left: 10%;
+    animation-name: movimientoLeft;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido img.diamante {
+    bottom: 10%;
+    right: 10%;
+    animation-name: movimientoRight;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido h1.inicio {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 0 0 25px;
+    background: linear-gradient(90deg, #494953, #edf2f6);
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido h1.inicio:hover {
+    background: linear-gradient(90deg,#edf2f6,  #494953);
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido h1.inicio p {
+    display: none;
+}
+
+main.userPerfilContainer div.contenedorDatosUser div.bienvenido.active {
+    display: none;
+}
+
+/* FIN BIENVENIDA USUARIO ADMIN */
+
+/* ANIMACIONES */
+
+@keyframes movimientoLeft{
+    0%{opacity: 0;}
+    15%{opacity: 0.5;
+        transform: translateY(-50px);}
+    30%{opacity: 1;
+        transform: translateY(50px);}
+    45%{transform: translateY(-50px);
+        transform:rotate(-180deg);}
+    60%{transform: translateY(50px);
+        transform:rotate(180deg);}
+    75%{transform: translateY(-50px);}
+    90%{transform: translateY(50px);}
+    100%{transform: translateY(-50px);}
+}
+
+@keyframes movimientoRight {
+    0%{opacity: 0;}
+    15%{opacity: 0.5;
+        transform: translateY(-50px);}
+    30%{opacity: 1;
+        transform: translateY(50px);}
+    45%{transform: translateY(-50px);
+        transform:rotate(180deg);}
+    60%{transform: translateY(50px);
+        transform:rotate(-180deg);}
+    75%{transform: translateY(-50px);}
+    90%{transform: translateY(50px);}
+    100%{transform: translateY(-50px);}
+}
+
+main.mainLogin {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    background: url(/images/fondo.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+}
+
+main.mainLogin div.form-container {
+    width: 110%;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 12px var(--negro);
+    padding: 3rem;
+    backdrop-filter: blur(10px); 
+}
+
+main.mainLogin div.form-container hr{
+    height: 3px;
+    background: linear-gradient(#ff5656, #edf2f6);
+    margin-bottom: 2rem;  
+}
+
+main.mainLogin div.form-container h2.nombre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0 20px;
+    width: 100%;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.input-container p {
+    margin-bottom: 7px;
+    font-size: 15px;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.input-container input.input-style {
+    box-shadow: 0 0 10px;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    max-width: 350px;
+    width: 100%;
+    height:30px;
+    outline: none;
+    padding:0 15px 0;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.input-container span.error-message {
+    color: red;
+    padding: 5px;
+    font-size: small;
+}
+
+.is-valid {
+    color: rgb(19, 151, 147);
+    padding: 5px;
+    font-size: small;
+   
+}
+.is-invalid {
+    color: red;
+    padding: 3px;
+    font-size: small;
+    
+}
+
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.check {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.check label.text-remember {
+    padding: 0 5px 0;
+    font-size: 20px;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.button-container button.btn-submit {
+    width: 170px;
+    height: 50px;
+    border: none;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    font-size: 20px;
+    padding-bottom: 5px;
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.button-container button.btn-submit a {
+    transition: all 1s ease;
+    text-decoration: none;
+    color: black;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.button-container button.btn-submit:hover {
+    background: linear-gradient(93deg,#ff5656, #6a7efc);
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.button-container button.btn-submit:hover a {
+    color: white;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.button-container span.error-message {
+    color: red;
+    padding: 5px;
+    font-size: small;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 35px;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.resetPass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.resetPass p.text-remember {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    font-size: 13px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.resetPass p.text-remember a {
+    transition: all 1s ease;
+    text-decoration: none;
+    color: black;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.registrate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.registrate p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    font-size: 13px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.registrate p a {
+    transition: all 1s ease;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* FIN ANIMACIONES */

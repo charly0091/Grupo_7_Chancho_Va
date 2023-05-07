@@ -123,7 +123,7 @@ module.exports = {
 
     },
     editUserProfile: (req, res) => {
-        res.render("users/editUserProfile", { style : "styles.css" , session: req.session})
+        res.render("users/editUserProfile", { session: req.session})
     },
 
     editProfile: (req, res) => {
@@ -186,6 +186,9 @@ module.exports = {
                 })
         }
 
+    },
+    deleteAccount: (req, res) => {
+        res.render("users/deleteAccount" , {session: req.session })
     },
     deleteUserProfile: (req, res) => {
 		req.session.destroy();
