@@ -23,6 +23,9 @@
 						<form action="/users/delete/<%= session.userLogged.id %>/?_method=DELETE" method="POST" class="formularioEliminar">
 							<button type="submit" class="eliminar">ELIMINAR</button>
 						</form>
+
+						<form class="row g-3" action="/users/delete/<%= session.userLogged.id%>?_method=DELETE" method="POST">
+							<button type="submit" class="btn btn-danger">Eliminarme</button>
 					</div>
 				</div>
 			</article>

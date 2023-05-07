@@ -25,7 +25,11 @@
         </div> -->
         <div class="menu">
             <img class="item" src="/images/fichasinfondo.png" alt="item">
-            <a href="/users/delete"><h4 class="nombreMenu">Eliminar usuario</h4></a>
+          
+          
+           
+            <form  action="/users/delete/<%= session.userLogged.id%>?_method=DELETE" method="POST">               
+               <button type="submit">Eliminarme</button>
         </div>
     </div>
 </div>

@@ -186,8 +186,37 @@ module.exports = {
                 })
         }
 
-    }
-
-    
-    
-}
+    },
+    deleteUserProfile: (req, res) => {
+		req.session.destroy();
+		if (req.cookies.userEmail) {
+			res.cookie("userEmail", "", { maxAge: -1 });
+		}
+		User.findByPk(req.params.id)
+			.then((User) => {
+				User.destroy({
+					where: {
+						id: req.params.id,
+					},
+				})
+                
+					.then(() => {
+						if (
+							fs.existsSync(
+								path.join(__dirname, "../../public/images/avatar", userLogged.avatar)
+							) &&
+							userLogged.avatar !== "defaultImagePerfil.png"
+						) {
+							fs.unlinkSync(
+								path.join(__dirname, "../../public/images/avatar", userLogged.avatar)
+							);
+						}
+					})
+					.catch((error) => console.log(error));
+				res.redirect("/");
+			})
+			.catch((error) => console.log(error));
+	}
+   
+            
+                            }
