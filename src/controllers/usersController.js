@@ -123,7 +123,7 @@ module.exports = {
 
     },
     editUserProfile: (req, res) => {
-        res.render("users/editUserProfile", { style : "styles.css" , session: req.session})
+        res.render("users/editUserProfile", { session: req.session})
     },
 
     editProfile: (req, res) => {
@@ -186,8 +186,40 @@ module.exports = {
                 })
         }
 
+    },
+    deleteAccount: (req, res) => {
+        res.render("users/deleteAccount" , {session: req.session })
+    },
+    deleteUserProfile: (req, res) => {
+		req.session.destroy();
+		if (req.cookies.userEmail) {
+			res.cookie("userEmail", "", { maxAge: -1 });
+		}
+		User.findByPk(req.params.id)
+			.then((User) => {
+				User.destroy({
+					where: {
+						id: req.params.id,
+					},
+				})
+                
+					.then(() => {
+						if (
+							fs.existsSync(
+								path.join(__dirname, "../../public/images/avatar", userLogged.avatar)
+							) &&
+							userLogged.avatar !== "defaultImagePerfil.png"
+						) {
+							fs.unlinkSync(
+								path.join(__dirname, "../../public/images/avatar", userLogged.avatar)
+							);
+						}
+					})
+					.catch((error) => console.log(error));
+				res.redirect("/");
+			})
+			.catch((error) => console.log(error));
     }
-
-    
-    
 }
+        
+   

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/deleteAccount.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <title>Chancho va! </title>
+  <!-- FontAwesome-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <%- include('../partials/header')  %>
+    <main class="userPerfilContainer">
+    <%- include("../partials/menuUser")  %>   
+       <div class="contenedorDatosUser">
+        <main class="mainLogin">
+            <div class="form-container">
+                <h2 class="nombre">Eliminar mi cuenta</h2>
+                <hr>
+                <div class="contenedorFormulario">
+                    <form class="formularioLogin"  id="login_form"  action="/users/delete/<%= session.userLogged.id%>?_method=DELETE" method="POST">
+                        <div class="input-container">
+                            <p class="input-text">Dirección de correo electrónico.</p>                       
+                            <input id="email" class="input-style <%= locals.errors && errors.email ? 'is-invalid' : null%>" type="email" name="email" placeholder="ej: veroperreointenso@lomejor.com" value="<%= locals.old && locals.old.email ? locals.old.email : null %>">
+                           
+                            <small id="errorEmail" class="text-danger ms-2"><%= locals.errors && errors.email ? errors.email.msg : null%></small>
+                        </div>
+                        <div class="input-container">
+                            <p class="input-text">Contraseña.</p>
+                            <input id="password" class="input-style <%= locals.errors && errors.password && !errors.email ? 'is-invalid' : null%>" type="password" name="password" placeholder="Ingrese su contraseña">
+            
+                            <small id="passError" class="text-danger ms-2"><%= locals.errors && errors.password ? errors.password.msg : null%></small>
+                        </div>
+                    
+                        <div class="button-container">
+                            <span id="submitErrors"  class="text-danger ms-2" ></span>
+                            <button type="submit" class="btn-submit">Eliminar cuenta</a></button>
+                          
+                        </div>
+                        <div class="contenedorBotones">
+                            <div class="resetPass">
+                                <p class="text-remember"><a href="/users/reset-password">¿Olvidaste tu contraseña?</a></p>
+                            </div>
+                         
+                        </div>
+    
+                    </form>
+                </div>
+            </div>
+        </main>
+      </div>
+    </div>
+  </main>
+  
+  <audio id="myAudio" autoplay>
+    <source src="/audio/ms.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  
+<script>
+    var x = document.getElementById("myAudio");
+    
+    function enableAutoplay() { 
+      x.autoplay = true;
+      x.load();
+    }
+    </script> 
+    
+
+  <%- include('../partials/footer')  %>
+  <script src="/js/admin.js"></script>
+  <script src="/js/efecto.js"></script>
+</body>
+
+</html>
