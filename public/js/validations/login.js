@@ -1,26 +1,3 @@
-/*async function iniciarSesion() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-  
-    try {
-      const response = await fetch(`/api/users/${email}`);
-      const userData = await response.json();
-  
-      if (userData && userData.password === password) {
-        // La contraseña es correcta, continuar con el inicio de sesión
-        console.log("Inicio de sesión exitoso");
-      } else {
-        // La contraseña no coincide, mostrar un mensaje de error
-        console.log("Contraseña incorrecta");
-      }
-    } catch (error) {
-      // Hubo un error al buscar al usuario en la base de datos
-      console.error(error);
-      console.log("Ocurrió un error al iniciar sesión");
-    }
-  }
-*/
-  
 let qs = (elemento) => {
     return document.querySelector(elemento);
 }
@@ -61,10 +38,10 @@ window.addEventListener("load", () => {
                     $passwordErrors.innerText = 'Debe ingresar su contraseña';
                     $inputPassword.classList.add('is-invalid')
                     break;
-                case !regExPass.test( $inputPassword.value):
+             /*   case !regExPass.test( $inputPassword.value):
                     $passwordErrors.innerText = 'Ingrese nuevamente su contraseña';
                     $inputPassword.classList.add('is-invalid')
-                    break
+                    break*/
                 default:
                      $inputPassword.classList.remove('is-invalid');
                      $inputPassword.classList.add('is-valid');
