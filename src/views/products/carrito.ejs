@@ -16,6 +16,11 @@
                 <img src="/images/juegos estrategia.png" class="product" alt="juego de estrategia">
                 <p>Juegos de Estrategia</p>
                 <input type="number" class="quantity" placeholder="1" min="1" max="19"></input>
+                <!-- <div class="quantity-container">
+                    <button id="decrementar">-</button>
+                    <span id="cantidad">1</span>
+                    <button id="incrementar">+</button>
+                </div> -->
                 <p class="price">$7,00</p>
                 <p class="delete">eliminar</p>
             </div>
@@ -23,6 +28,7 @@
                 <img src="/images/juegos previa.png" class="product" alt="juego de previa">
                 <p>Juegos de Previa</p>
                 <input type="number" class="quantity" placeholder="1" min="1" max="19"></input>
+                <!-- no agrego acá el mismo código de arriba, porque solo funciona para un producto. Tengo que arreglarlo.-->
                 <p class="price">$13,00</p>
                 <p class="delete">eliminar</p>
             </div>
@@ -30,6 +36,7 @@
                 <img src="/images/juegos familiares.png" class="product" alt="juegos de familia">
                 <p>Juegos Familiares</p>
                 <input type="number" class="quantity" placeholder="1" min="1" max="19"></input>
+                <!-- no agrego acá el mismo código de arriba, porque solo funciona para un producto. Tengo que arreglarlo.-->
                 <p class="price">$30,00</p>
                 <p class="delete">eliminar</p>
             </div>
@@ -55,7 +62,8 @@
     </section>
 
     <%- include("../partials/footer") %> 
-    <script src="/js/efecto.js"></script>
+		<script src="/js/efecto.js"></script>
+    <!-- <script src="/js/cantidadCarrito.js"></script> -->
 </body>
 
 </html>
