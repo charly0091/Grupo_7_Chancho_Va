@@ -395,6 +395,11 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perf
         margin-top: 25px;
     }
 
+    header.contenedor div.contenedorHeaderDesktop div.buscador .botonBuscador i{
+        background-color: white;
+        border: none;
+    }
+
     header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu {
         display: flex;
         justify-content: center;

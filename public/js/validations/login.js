@@ -38,10 +38,10 @@ window.addEventListener("load", () => {
                     $passwordErrors.innerText = 'Debe ingresar su contraseña';
                     $inputPassword.classList.add('is-invalid')
                     break;
-             /*   case !regExPass.test( $inputPassword.value):
+/*                 case !regExPass.test( $inputPassword.value):
                     $passwordErrors.innerText = 'Ingrese nuevamente su contraseña';
                     $inputPassword.classList.add('is-invalid')
-                    break*/
+                    break */
                 default:
                      $inputPassword.classList.remove('is-invalid');
                      $inputPassword.classList.add('is-valid');
