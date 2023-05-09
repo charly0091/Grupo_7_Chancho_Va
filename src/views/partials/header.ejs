@@ -20,10 +20,10 @@
                     <i id="voice-button" class="fa-solid fa-microphone"></i>
                 </div>
             </form>
-            </div>
-            <div class="iconoBuscador">
+        </div>
+        <div class="iconoBuscador">
                 <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+        </div>
         </div>
         <div class="contenedorOculto">
             <div class="perfilCarrito">
@@ -87,17 +87,25 @@
             </div> -->
             <div class="contenedorBuscadorMenu">
             <div class="buscador">
-                <form action="/search" method="GET">
-                <div class="barraBuscadora">
-                    <input class="busqueda" type="search" id="search" name="search" placeholder="¿A qué queres jugar?" >
-                </div>
+               <!--  <form action="/search" method="GET">
+                    <div class="barraBuscadora">
+                        <input class="busqueda" type="search" id="search" name="search" placeholder="¿A qué queres jugar?" >
+                    </div>
                     <div class="botonBuscador">
                         <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
                     </div>
-                </form>
-                    <div id="texto" class="botonMicro">
-                        <i id="voice-button" class="fa-solid fa-microphone"></i>
+                </form> -->
+                <!-- <div id="texto" class="botonMicro">
+                    <i id="voice-button" class="fa-solid fa-microphone"></i>
+                </div> -->
+                <form action="/search" method="GET">
+                  <div class="barraBuscadora">
+                    <div class="input-wrapper">
+                      <input class="busqueda" type="search" id="search" name="search" placeholder="¿A qué queres jugar?">
+                      <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
                     </div>
+                  </div>
+                </form>                  
             </div>
         <div class="buscador">
             

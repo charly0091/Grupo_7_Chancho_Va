@@ -23,3 +23,16 @@
 @import url(vistaProductos.css);
 @import url(body.css);
 @import url(userProfile.css);
+
+.is-valid {
+    color: rgb(19, 151, 147);
+    padding: 5px;
+    font-size: small;
+   
+}
+.is-invalid {
+    color: red;
+    padding: 3px;
+    font-size: small;
+    
+}

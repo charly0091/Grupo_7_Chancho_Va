@@ -20,7 +20,7 @@
                     <h1><%= session.userLogged.email %></h1>
                 </div>
                 <div class="formulario">
-                    <form id="form" action="/users/editUserProfile/<%= session.userLogged.id %>?_method=PUT" method="POST">
+                    <form id="form" action="/users/editUserProfile/<%= session.userLogged.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         <!-- <div class="divInput">
                             <label class="label" for="id">Nombre de Usuario</label>
                             <input class="input" type="text" name="id" required>

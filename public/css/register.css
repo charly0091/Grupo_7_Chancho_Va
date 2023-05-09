@@ -26,6 +26,19 @@
 
 /* MAIN */
 
+.is-valid {
+    color: rgb(19, 151, 147);
+    padding: 5px;
+    font-size: small;
+   
+}
+.is-invalid {
+    color: red;
+    padding: 3px;
+    font-size: small;
+    
+}
+
 main.registro {
     box-sizing: border-box;
     display: flex;

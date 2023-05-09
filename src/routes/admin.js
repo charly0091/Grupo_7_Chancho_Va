@@ -5,6 +5,7 @@ const { uploadImageProduct } = require('../middlewares/upload');
 const productValidator = require('../validations/productAddValidator');
 const adminSessionState = require('../middlewares/adminSessionState');
 const perfilEditValidator = require("../validations/editUserValidator");
+const uploadImageUser = require("../middlewares/uploadImageUser");
 
 // Productos
 router.get("/products",adminSessionState, controller.products);
@@ -30,6 +31,6 @@ router.delete("/userDelete/:id", controller.userDelete)
 
 // Editar Perfil Administrador
 router.get("/adminPerfilEdit/:id",adminSessionState, perfilEditValidator, controller.editRender)
-router.put("/adminPerfilEdit/:id", controller.editAdmin)
+router.put("/adminPerfilEdit/:id",uploadImageUser.single("productPhoto") ,controller.editAdmin)
 
 module.exports = router;
