@@ -38,3 +38,13 @@ Se realizó el diagrama para la base de datos, y el script para su creación. De
 ## ¿Tuvimos impedimentos?
 
 El script dio algunas complicaciones, demasiado prueba y error a la hora de la creación. Logramos dejarlo a tono para que esté completo en base a nuestra vieja database. También tuvimos algunos problemas respecto de los controladores en cuanto a como pasar las subcategorias, ya que solo podiamos hacerlo por la FK y no por su nombre por medio de la relación de tablas. De igual forma, nada que no se peuda solucionar. Tuvimos problemas en cuanto a estilos de las vistas, con algunas cosas que no quedaban en su lugar y se rompian al momento de interactuar con ellas.
+
+### Sprint 7
+
+## ¿Qué hicimos en las semanas?
+
+Agregamos las validaciones correspondientes al login, se agregó también la funcionalidad de eliminar cuenta que solo faltaría pulir (tiene su vista propia). Creamos las validaciones del front y back del lado del admin. Se arregló algunos formularios los cuales fallaban y ahora se puede agregar y editar imagenes, se arreglaron detalles y estilos de varias vistas. 
+
+## ¿Tuvimos impedimentos?
+
+Se tuvo complicaciones en cuanto a los tiempos y el contenido visto en clase. Al crear las validaciones del login se complicó el utilizar usuarios y contraseñas ya creadas pero despues de una ardua jornada tuvo solución.
