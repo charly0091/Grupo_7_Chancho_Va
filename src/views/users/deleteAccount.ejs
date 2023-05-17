@@ -22,7 +22,7 @@
                 <h2 class="nombre">Eliminar mi cuenta</h2>
                 <hr>
                 <div class="contenedorFormulario">
-                    <form class="formularioLogin"  id="login_form"  action="/users/delete/<%= session.userLogged.id%>?_method=DELETE" method="POST">
+                    <form class="formularioLogin"  id="delete_form"  action="/users/delete/<%= session.userLogged.id%>?_method=DELETE" method="POST">
                         <div class="input-container">
                             <p class="input-text">Dirección de correo electrónico.</p>                       
                             <input id="email" class="input-style <%= locals.errors && errors.email ? 'is-invalid' : null%>" type="email" name="email" placeholder="ej: veroperreointenso@lomejor.com" value="<%= locals.old && locals.old.email ? locals.old.email : null %>">
@@ -74,6 +74,7 @@
   <%- include('../partials/footer')  %>
   <script src="/js/admin.js"></script>
   <script src="/js/efecto.js"></script>
+  <script src="/js/validations/deleteAccount.js"></script>
 </body>
 
 </html>

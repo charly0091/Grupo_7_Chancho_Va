@@ -191,6 +191,9 @@ module.exports = {
         res.render("users/deleteAccount" , {session: req.session })
     },
     deleteUserProfile: (req, res) => {
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
 		req.session.destroy();
 		if (req.cookies.userEmail) {
 			res.cookie("userEmail", "", { maxAge: -1 });
@@ -221,5 +224,5 @@ module.exports = {
 			.catch((error) => console.log(error));
     }
 }
-        
+}  
    

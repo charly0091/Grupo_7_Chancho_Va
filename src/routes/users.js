@@ -7,6 +7,7 @@ const registerValidator = require("../validations/registerValidation")
 const userSessionState = require("../middlewares/userSessionState");
 const userInSessionState = require("../middlewares/userInSessionState");
 const editUserValidator = require("../validations/editUserValidator");
+const deleteAccountValidator = require("../validations/deleteAccountValidator");
 
 
 router.get("/", controller.users); 
@@ -30,7 +31,7 @@ router.get("/userReturnedPackages",userInSessionState, controller.userReturnedPa
 router.get("/userClaims",userInSessionState, controller.userClaims);
 
 router.get("/deleteAccount", controller.deleteAccount);
-router.delete("/delete/:id", controller.deleteUserProfile);
+router.delete("/delete/:id", deleteAccountValidator, controller.deleteUserProfile);
 
 //router.get("/reset-password",userInSessionState, controller.resetPassword);
 //router.put("/reset-password/:id", controller.processChangePassword);
