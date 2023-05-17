@@ -24,7 +24,7 @@ router.get("/pagoTarjeta",userInSessionState, controller.pago);
 router.get("/profile",userInSessionState, controller.userProfile);
 
 router.get("/editUserProfile",userInSessionState,editUserValidator, controller.editUserProfile);
-router.put("/editUserProfile/:id", controller.editUser);
+router.put("/editUserProfile/:id",uploadImageUser.single("productPhoto"), controller.editUser);
 
 router.get("/userPerfilShipments",userInSessionState, controller.usersShipments);
 router.get("/userReturnedPackages",userInSessionState, controller.userReturnedPackages);

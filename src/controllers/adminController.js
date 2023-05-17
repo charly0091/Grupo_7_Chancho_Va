@@ -216,6 +216,7 @@ module.exports = {
                 first_name: req.body.firstName,
                 last_name: req.body.lastName,
                 role_id: req.body.rol,
+                avatar: req.file ? req.file.filename : req.body.oldAvatar
             }, {
                 where: {
                     id: req.params.id

@@ -1,4 +1,38 @@
 /* HEADER */
+
+header .barraBuscadora {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  header  .input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  header input[type=search] {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  header  button[type=submit] {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    color: #555;
+  }
+  
+  header  .fa-search {
+    font-size: 20px;
+  }
+  
+
 header.contenedor {
     background-color: var(--rojo);
     height: 80px;
