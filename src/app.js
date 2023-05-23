@@ -32,17 +32,19 @@ const usersRouter = require('./routes/users');
 const adminRouter = require('./routes/admin');
 
 /* APIs Routers */
-const apiUsersRouter = require('./routes/api/users');
-const apiProductsRouter = require('./routes/api/products');
+/* const apiUsersRouter = require('./routes/api/users');
+const apiProductsRouter = require('./routes/api/products'); */
+const apiRouter = require("./routes/api");
 
 /* Routers Middlewares */
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
+app.use("/api", apiRouter);
 
-app.use('/api/users', apiUsersRouter);
-app.use('/api/products', apiProductsRouter);
+/* app.use('/api/users', apiUsersRouter);
+app.use('/api/products', apiProductsRouter); */
 
 
 
