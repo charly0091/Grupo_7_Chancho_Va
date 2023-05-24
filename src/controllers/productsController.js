@@ -1,3 +1,5 @@
+const path = require("path");
+
 const {
   Product,
   Category,
@@ -5,6 +7,8 @@ const {
   Sequelize,
 } = require("../database/models");
 const { Op } = Sequelize;
+
+
 
 const controller = {
   
@@ -98,6 +102,16 @@ const controller = {
           categoriasPrevia,
           session: req.session,
         });
+      })
+      .catch((error) => console.log(error));
+  },
+  image: (req, res) => {
+    
+    let productId = Number(req.params.id);
+
+    let product = Product.findByPk(productId)
+      .then((product) => {
+        res.sendFile(path.resolve(__dirname, "../../public/images/" + product.image));
       })
       .catch((error) => console.log(error));
   },

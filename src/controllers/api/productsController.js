@@ -5,7 +5,12 @@ module.exports = {
     getAll: async (req, res) => {
         try {
             
-            const PRODUCTS = await Product.findAll();
+            const PRODUCTS = await Product.findAll({
+                include: [
+                        { association: "categories" },
+                        { association: "subcategories" }
+                    ]
+            });
 
             const countByCategory = {};
             
@@ -19,8 +24,17 @@ module.exports = {
               }
             
             const RESPONSE = {
-                endpoint: "/product",
-                products: PRODUCTS,
+                endpoint: "/products",
+                products: PRODUCTS.map((product) => {
+                    return {
+                        id: product.id,
+                        name: product.name,
+                        description: product.description,
+                        category_id: product.categories,
+                        subcategory_id: product.subcategories,
+                        detail: `http://localhost:3000/products/detail/${product.id}`,
+                    };
+                }),
                 total: PRODUCTS.length,
                 countByCategory
             };
@@ -35,12 +49,18 @@ module.exports = {
         const PRODUCT_ID = req.params.id;
 
         try {
-            const PRODUCT = await Product.findByPk(PRODUCT_ID);
+            const PRODUCT = await Product.findByPk(PRODUCT_ID, {
+                include: [
+                    { association: "categories" },
+                    { association: "subcategories" }
+                ]
+            });
 
             if (PRODUCT !== null){
                 const RESPONSE = {
                     endpoint: `/product/${PRODUCT_ID}`,
                     data: PRODUCT,
+                    imageURL: `http://localhost:3000/products/image/${PRODUCT_ID}`
                 }
 
                 return res.status(200).json(RESPONSE);

@@ -8,5 +8,6 @@ router.get("/carrito",userInSessionState, controller.carrito);
 router.get("/familiares", controller.familiares);
 router.get("/estrategia", controller.estrategia);
 router.get("/previa", controller.previa);
+router.get("/image/:id", controller.image);
 
 module.exports = router;
