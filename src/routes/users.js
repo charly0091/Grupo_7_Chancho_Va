@@ -32,6 +32,8 @@ router.get("/userClaims",userInSessionState, controller.userClaims);
 router.get("/deleteAccount", controller.deleteAccount);
 router.delete("/delete/:id", controller.deleteUserProfile);
 
+router.get("/image/:id", controller.image);
+
 //router.get("/reset-password",userInSessionState, controller.resetPassword);
 //router.put("/reset-password/:id", controller.processChangePassword);
 

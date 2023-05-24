@@ -2,6 +2,7 @@ const {User} = require("../database/models");
 const {validationResult} = require("express-validator");
 const bcrypt = require("bcryptjs");
 const session = require("express-session");
+const path = require("path");
 
 
 
@@ -219,7 +220,16 @@ module.exports = {
 				res.redirect("/");
 			})
 			.catch((error) => console.log(error));
-    }
+    },
+    image: (req, res) => {
+        let userID = Number(req.params.id);
+
+    User.findByPk(userID)
+      .then((user) => {
+        res.sendFile(path.resolve(__dirname, "../../public/images/perfilUser/" + user.avatar));
+      })
+      .catch((error) => console.log(error));
+  },
 }
         
    

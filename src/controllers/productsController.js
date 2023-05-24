@@ -109,7 +109,7 @@ const controller = {
     
     let productId = Number(req.params.id);
 
-    let product = Product.findByPk(productId)
+    Product.findByPk(productId)
       .then((product) => {
         res.sendFile(path.resolve(__dirname, "../../public/images/" + product.image));
       })
