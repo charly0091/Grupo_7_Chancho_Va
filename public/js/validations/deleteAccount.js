@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
             $passwordErrors = qs("#passError")
             regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,50}$/;
             regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-            loginForm = qs("#login_form");
+            deleteForm = qs("#delete_form");
            
         
 
@@ -50,7 +50,7 @@ window.addEventListener("load", () => {
             }
         }) 
 
-        loginForm.addEventListener("submit", (event) => {
+        deleteForm.addEventListener("submit", (event) => {
             event.preventDefault();
             const FORM_ELEMENTS = event.target.elements;
     
@@ -68,7 +68,7 @@ window.addEventListener("load", () => {
             if(errores) {
                 submitErrors.innerText = "Se ha detectado errores en el ingreso."
             } else {
-                 loginForm.submit()
+                 deleteForm.submit()
             }
          })
     
