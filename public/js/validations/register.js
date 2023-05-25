@@ -145,6 +145,10 @@ let
                 $pass2Errors.innerText = 'Las contraseñas no coinciden';
                 $pass2.classList.add('is-invalid')
                 break;
+            case !regExPass.test($pass2.value):
+                $pass2Errors.innerText = 'La contraseña debe tener entre 8 y 50 caracteres, al menos un dígito, una minúscula y una mayúscula.';
+                $pass2.classList.add('is-invalid')
+                break;
             default:
                 $pass2.classList.remove('is-invalid');
                 $pass2.classList.add('is-valid');
@@ -186,6 +190,12 @@ let
     $form.addEventListener("submit", (event) => {
         event.preventDefault();
         const FORM_ELEMENTS = event.target.elements;
+
+        if( $pass2.value != $pass.value) {
+        
+            $pass2Errors.innerText = 'Las contraseñas no coinciden';
+            $pass2.classList.add('is-invalid');
+        }
 
         for (let index = 0; index < FORM_ELEMENTS.length - 1; index++) {
             const element = FORM_ELEMENTS[index];
