@@ -223,16 +223,17 @@ module.exports = {
 				res.redirect("/");
 			})
 			.catch((error) => console.log(error));
-    },
+    }
+},
     image: (req, res) => {
         let userID = Number(req.params.id);
 
-    User.findByPk(userID)
-      .then((user) => {
-        res.sendFile(path.resolve(__dirname, "../../public/images/perfilUser/" + user.avatar));
-      })
-      .catch((error) => console.log(error));
-  },
+        User.findByPk(userID)
+        .then((user) => {
+            res.sendFile(path.resolve(__dirname, "../../public/images/perfilUser/" + user.avatar));
+        })
+        .catch((error) => console.log(error));
+    },
 }
-}  
+
    
