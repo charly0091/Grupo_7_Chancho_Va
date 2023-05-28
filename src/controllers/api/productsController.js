@@ -34,7 +34,7 @@ module.exports = {
                         description: product.description,
                         category_id: product.categories,
                         subcategory_id: product.subcategories,
-                        detail: `http://localhost:3000/products/detail/${product.id}`,
+                        detail: `http://localhost:3001/products/detail/${product.id}`,
                     };
                 }),
                 total: PRODUCTS.length,
@@ -62,7 +62,7 @@ module.exports = {
                 const RESPONSE = {
                     endpoint: `/product/${PRODUCT_ID}`,
                     data: PRODUCT,
-                    imageURL: `http://localhost:3000/products/image/${PRODUCT_ID}`
+                    imageURL: `http://localhost:3001/products/image/${PRODUCT_ID}`
                 }
 
                 return res.status(200).json(RESPONSE);
@@ -147,10 +147,10 @@ module.exports = {
             const totalPages = Math.ceil(count / limit); // Calcula el total de páginas
         
             // Verifica si hay una próxima página
-            const nextPage = page < totalPages ? `http://localhost:3000/api/products/?page=${page + 1}` : null;
+            const nextPage = page < totalPages ? `http://localhost:3001/api/products/?page=${page + 1}` : null;
         
             // Verifica si hay una página anterior
-            const previousPage = page > 1 ? `http://localhost:3000/api/products/?page=${page - 1}` : null;
+            const previousPage = page > 1 ? `http://localhost:3001/api/products/?page=${page - 1}` : null;
         
             // Crea la respuesta JSON con los productos y los enlaces a las páginas siguiente y anterior
             const response = {
@@ -162,7 +162,7 @@ module.exports = {
                         description: product.description,
                         category_id: product.categories,
                         subcategory_id: product.subcategories,
-                        detail: `http://localhost:3000/products/detail/${product.id}`,
+                        detail: `http://localhost:3001/products/detail/${product.id}`,
                     };
                 }),
                 total: count,

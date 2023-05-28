@@ -17,7 +17,7 @@ const RESPONSE = {
                         first_name: user.first_name,
                         last_name: user.last_name,
                         email: user.email,
-                        detail: `http://localhost:3000/api/users/${user.id}`
+                        detail: `http://localhost:3001/api/users/${user.id}`
                     }
                 })
             }
@@ -48,7 +48,7 @@ const RESPONSE = {
                     first_name: USER.first_name,
                     last_name: USER.last_name,
                     email: USER.email,
-                    image: `http://localhost:3000/users/image/${USER_ID}`,
+                    image: `http://localhost:3001/users/image/${USER_ID}`,
                 }
             
             }   
@@ -80,10 +80,10 @@ const RESPONSE = {
             const totalPages = Math.ceil(count / limit); // Calcula el total de páginas
 
              // Verifica si hay una próxima página
-             const nextPage = page < totalPages ? `http://localhost:3000/api/users/?page=${page + 1}` : null;
+             const nextPage = page < totalPages ? `http://localhost:3001/api/users/?page=${page + 1}` : null;
         
              // Verifica si hay una página anterior
-             const previousPage = page > 1 ? `http://localhost:3000/api/users/?page=${page - 1}` : null;
+             const previousPage = page > 1 ? `http://localhost:3001/api/users/?page=${page - 1}` : null;
 
             const RESPONSE = {
                 meta: {
@@ -97,7 +97,7 @@ const RESPONSE = {
                         first_name: user.first_name,
                         last_name: user.last_name,
                         email: user.email,
-                        detail: `http://localhost:3000/api/users/${user.id}`
+                        detail: `http://localhost:3001/api/users/${user.id}`
                     }
                 }),
                 nextPage,
