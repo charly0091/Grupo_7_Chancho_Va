@@ -27,7 +27,7 @@ module.exports = {
             
             const RESPONSE = {
                 endpoint: "/products",
-                products: PRODUCTS.map((product) => {
+                data: PRODUCTS.map((product) => {
                     return {
                         id: product.id,
                         name: product.name,
@@ -62,7 +62,7 @@ module.exports = {
                 const RESPONSE = {
                     endpoint: `/product/${PRODUCT_ID}`,
                     data: PRODUCT,
-                    imageURL: `http://localhost:3001/products/image/${PRODUCT_ID}`
+                    imageURL: `http://localhost:3001/products/image/${PRODUCT}`
                 }
 
                 return res.status(200).json(RESPONSE);
@@ -165,7 +165,7 @@ module.exports = {
                         detail: `http://localhost:3001/products/detail/${product.id}`,
                     };
                 }),
-                total: count,
+                count,
                 countByCategory,
                 nextPage,
                 previousPage

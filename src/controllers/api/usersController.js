@@ -6,11 +6,8 @@ module.exports = {
             const USERS = await User.findAll();
             
 const RESPONSE = {
-                meta: {
-                    status: 200,
-                    count: USERS.length,
-                    url: "/api/users"
-                },
+                count: USERS.length,
+                endpoint: "/users",
                 data: USERS.map(user => {
                     return {
                         id: user.id,
@@ -86,12 +83,8 @@ const RESPONSE = {
              const previousPage = page > 1 ? `http://localhost:3001/api/users/?page=${page - 1}` : null;
 
             const RESPONSE = {
-                meta: {
-                    status: 200,
-                    count,
-                    url: "/api/users"
-                },
-                data: users.map(user => {
+                count,
+                users: users.map(user => {
                     return {
                         id: user.id,
                         first_name: user.first_name,

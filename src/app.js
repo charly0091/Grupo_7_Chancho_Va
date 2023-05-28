@@ -5,7 +5,8 @@ const path = require('path');
 const methodOverride =  require('method-override');
 const session = require('express-session');
 const cookieParser = require("cookie-parser");
-const cookieCheck = require("./middlewares/cookieCheck")
+const cookieCheck = require("./middlewares/cookieCheck");
+const cors = require("cors");
 
 app.use(express.static("public"));
 app.use(methodOverride('_method'));
@@ -18,6 +19,7 @@ app.use(session({
 }))
 app.use(cookieParser());
 app.use(cookieCheck);
+app.use(cors());
 
 
 /* Template engine config */
