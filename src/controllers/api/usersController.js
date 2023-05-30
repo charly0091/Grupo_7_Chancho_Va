@@ -90,7 +90,7 @@ const RESPONSE = {
                         first_name: user.first_name,
                         last_name: user.last_name,
                         email: user.email,
-                        detail: `http://localhost:3001/api/users/${user.id}`
+                        detail: `http://localhost:3001/users/image/${user.id}`
                     }
                 }),
                 nextPage,
