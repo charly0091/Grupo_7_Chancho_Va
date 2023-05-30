@@ -393,6 +393,7 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perf
         display: flex;
         margin-top: -15px;
         margin-bottom: 5px;
+        z-index: 1005;
     }
 
     header.contenedor div.contenedorHeaderDesktop div.buscador {
@@ -499,6 +500,7 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perf
         background: linear-gradient(180deg, #ff5656, #edf2f6, #494953);
         border-radius: 0 0 20px 20px;
         font-size: 25px;
+        z-index: 1005;
     }
 
     header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.categorias2 div.categoriaProductos2:hover h5 {
