@@ -156,3 +156,29 @@
 ## Empezar a hacer
   - Repartir de manera correcta las tareas.
   - Todos los integrantes del equipo presentes en la asignación de tareas y en la realización de la retrospectiva.
+
+### Sprint 8
+
+## Seguir haciendo
+  - Aplicar lo visto en clase en el proyecto fuera de sprint.
+  - Arrancar el sprint desde la fecha de inicio o antes si es posible.
+  - Mover las tarjetas de trello.
+
+## Hacer mas
+  - Realizar las tareas asignadas.
+  - Comunicar sobre el avance o problemas.
+  - Agregar y realizar las tareas en el trello secundario.
+
+## Hacer menos
+  - Pushear los cambios y/o avances a ultimo momento.
+  - Dejar de confiarnos con el tiempo del sprint.
+  - Saltearse reuniones.
+
+## Dejar de hacer
+  - Avisar inconvenientes cerca de la fecha de entrega.
+  - Ghostear (no clavar visto, y desaparecerse).
+
+## Empezar a hacer
+  - Repartir de manera correcta las tareas.
+  - Todos los integrantes del equipo presentes en la asignación de tareas y en la realización de la retrospectiva.
+
