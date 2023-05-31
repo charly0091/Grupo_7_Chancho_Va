@@ -190,6 +190,11 @@ main.userPerfilContainer div.contenedorDatosUser div.paquetesDevueltos div.conte
     background: linear-gradient(360deg, #494953 ,#ff5656, #6a7efc);
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 /* FIN PAQUETES DEVUELTOS */
 
 @keyframes colores {

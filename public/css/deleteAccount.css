@@ -163,6 +163,11 @@ main.userPerfilContainer div.contenedorDatosUser div.bienvenido.active {
     display: none;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 /* FIN BIENVENIDA USUARIO ADMIN */
 
 /* ANIMACIONES */
@@ -396,6 +401,11 @@ main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin 
 
 main.mainLogin div.form-container div.contenedorFormulario form.formularioLogin div.contenedorBotones div.registrate p a {
     transition: all 1s ease;
+    text-decoration: none;
+    color: black;
+}
+
+a{
     text-decoration: none;
     color: black;
 }

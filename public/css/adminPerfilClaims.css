@@ -161,6 +161,10 @@ main.userPerfilContainer div.contenedorDatosUser div.reclamos div.contenedorRecl
     font-size: 18px;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
 /* FIN RECLAMOS */
 
 /* ANIMACIONES */

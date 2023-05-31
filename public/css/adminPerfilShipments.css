@@ -316,6 +316,11 @@ main.userPerfilContainer div.contenedorDatosUser div.enviosPendientes div.conten
     color: white;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 /* FIN ENVIOS PENDIENTES */
 
 @keyframes colores {
