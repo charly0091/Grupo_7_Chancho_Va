@@ -61,8 +61,14 @@ const RESPONSE = {
     pagedUsers: async (req, res) => {
 
         try {
-            const page = parseInt(req.query.page) || 1; // Obtén el parámetro "page" de la URL (si está presente)
-            const limit = 10; // Define el número de resultados por página
+            let page = parseInt(req.query.page) || -1; // Obtén el parámetro "page" de la URL (si está presente)
+            let limit = 10; // Define el número de resultados por página
+
+            if(page === -1){
+                limit = 1000000;
+                page = 1;
+            }
+
         
             const offset = (page - 1) * limit; // Calcula el offset basado en la página actual y los resultados por página
         
