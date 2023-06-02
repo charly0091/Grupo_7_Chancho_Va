@@ -65,7 +65,7 @@
             <div class="categorias">
                 <h5 class="palabra">Categorías</h5>
                 <div class="flecha">
-                    <i class="fa-solid fa-caret-down"></i>
+                    <i id="fechaCat" class="fa-solid fa-caret-down"></i>
                 </div>
             </div>
             <div class="categoriaProductos">
@@ -146,8 +146,10 @@
                         <% } %>
                     </div>
                     <% } else {%>
-                        <i class="fa-regular fa-user"></i>
-                        <h5><a href="/users/login">Ingresa</a></h5>
+                        <a href="/users/login">
+                            <i class="fa-regular fa-user"></i>
+                            <h5>Ingresa</h5>
+                        </a>
                     <% } %>
             </div>
             <div class="carrito">

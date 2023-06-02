@@ -81,6 +81,7 @@ main.homeMain div.contenedorHome section.homeProductos {
     align-items: center;
     overflow: auto;
     white-space: nowrap;
+    justify-content: space-around;
 }
 
 main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos {
