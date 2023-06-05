@@ -5,8 +5,8 @@ let qs = (elemento) => {
 async function validarEmail(email) {
     try {
       const response = await fetch("/api/users");
-      const {data} = await response.json();
-      const existeEmail = data.find(user => user.email == email);
+      const {users} = await response.json();
+      const existeEmail = users.find(user => user.email == email);
       if (existeEmail) {
         console.log(existeEmail);
         return true;

@@ -494,8 +494,8 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perf
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 40px;
-        height: 210px;
+        margin: 32px;
+        height: 50px;
         width: 210px;
         background: linear-gradient(180deg, #ff5656, #edf2f6, #494953);
         border-radius: 0 0 20px 20px;
@@ -503,11 +503,12 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perf
         z-index: 1005;
     }
 
-    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.categorias2 div.categoriaProductos2:hover h5 {
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.categorias2 div.categoriaProductos2 h5:hover {
         background: linear-gradient(180deg,#ff5656, #494953, #edf2f6);
+           
     }
 
-    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.categorias2 div.categoriaProductos2:hover h5 a {
+    header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.categorias2 div.categoriaProductos2 h5:hover a{
         color: white;
     }
 
@@ -561,6 +562,10 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perf
     header.contenedor div.contenedorHeaderDesktop div.userCarrito div.carrito h5 a {
         text-decoration: none;
         color: black;
+    }
+
+    header.contenedor div.contenedorHeaderDesktop div.userCarrito a{
+        text-align: center;
     }
 }
 
