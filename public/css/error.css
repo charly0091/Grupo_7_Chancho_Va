@@ -1,0 +1,23 @@
+* {
+    font-family: var(--fuente);
+    background: linear-gradient(93deg,#ff5656, #6a7efc);
+    color: rgb(248, 242, 242);
+    text-align: center;
+    justify-content: center;
+    animation-name: colores;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /*background: url(/images/fondo.jpg) no-repeat center top;
+    background-size: cover;*/
+   
+}
+img{
+    width: 350px;
+    height: 350px ;
+    background: transparent;
+}
+a{
+   text-decoration: none;
+   background-color: transparent;
+}

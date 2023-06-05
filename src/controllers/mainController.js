@@ -62,6 +62,9 @@ module.exports = {
             }
         })
         .catch(error => res.send(error))
-    }
+    },
+    error: (req, res) => {
+        res.render("main/error" , { style : "error.css", session: req.session })
+}
 
 };
