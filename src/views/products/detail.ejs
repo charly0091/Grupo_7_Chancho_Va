@@ -34,9 +34,11 @@
 						<i class="fas fa-store"></i>
 						<p class="informacion">Retiro gratis en locales del vendedor</p>
 					</div>
+					<a href="/users/metodosDePago" class="comprar">
 					<div class="botonComprar">
-						<a href="/users/metodosDePago" class="comprar">COMPRAR AHORA</a>
+						COMPRAR AHORA
 					</div>
+				</a>
 					<% if (session.userLogged && session.userLogged.rol == 1) { %>
 						<div class="botonEditarEliminar">
 							<a href="/admin/editProduct/<%= product.id %> " class="botonEditar">EDITAR PRODUCTO</a>

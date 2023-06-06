@@ -494,13 +494,15 @@ header.contenedor div.contenedorHeaderMobileTablet div.contenedorOculto div.perf
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 32px;
+        margin: 3px;
+        margin-top: 32px;
         height: 50px;
         width: 210px;
         background: linear-gradient(180deg, #ff5656, #edf2f6, #494953);
         border-radius: 0 0 20px 20px;
         font-size: 25px;
         z-index: 1005;
+       
     }
 
     header.contenedor div.contenedorHeaderDesktop div.buscador div.subMenu div.categorias2 div.categoriaProductos2 h5:hover {

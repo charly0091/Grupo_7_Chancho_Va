@@ -129,7 +129,7 @@ main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto di
     margin-right: 5px;
 }
 
-main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonComprar {
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles a.comprar div.botonComprar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,16 +147,16 @@ main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto di
     margin-top: 10px;
 }
 
-main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonComprar a {
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles a.comprar div.botonComprar {
     text-decoration: none;
     color: black;
 }
 
-main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonComprar:hover {
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles a.comprar div.botonComprar:hover {
     background: linear-gradient(93deg, #ff5656, #6a7efc);
 }
 
-main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonComprar:hover a {
+main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles a.comprar div.botonComprar:hover  {
     color: white;
 }
 
@@ -334,6 +334,7 @@ main.contenedorDetalles section.contenedorArticuloRelacionado div.contenedorArti
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 
     main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles {
@@ -358,12 +359,12 @@ main.contenedorDetalles section.contenedorArticuloRelacionado div.contenedorArti
         margin: 10px 0;
     }
 
-    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonComprar {
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles a.comprar div.botonComprar {
         width: 300px;
         height: 45px;
     }
 
-    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles div.botonComprar a {
+    main.contenedorDetalles div.contenedorTarjetaDetalle article.detallesProducto div.productoDetalles a.comprar div.botonComprar  {
         font-size: 25px;
     }
 
@@ -383,6 +384,11 @@ main.contenedorDetalles section.contenedorArticuloRelacionado div.contenedorArti
         font-size: 18px;
     }
 }
+
+a{
+    text-decoration: none;
+}
+
 
 @keyframes colores {
     0%{color: #494953;}
