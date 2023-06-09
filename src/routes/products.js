@@ -9,5 +9,7 @@ router.get("/familiares", controller.familiares);
 router.get("/estrategia", controller.estrategia);
 router.get("/previa", controller.previa);
 router.get("/image/:id", controller.image);
+router.get("/ofertas", controller.ofertas);
+router.get("/productsList", controller.productsList);
 
 module.exports = router;

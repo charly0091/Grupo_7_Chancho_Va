@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/vistaProductos.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <title>Chancho va! </title>
+         <!-- FontAwesome-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <%- include("../partials/header") %> 
+    <%- include("../partials/banner") %> 
+    <main class="homeMain">
+        <div class="contenedorHome">    
+            <a href="/"><h2 class="nombreSubCategoria">Listado de Productos</h2></a>
+            <section class="homeProductos"> 
+                <% products.forEach(products => { %>
+                    <div class="homeContainerProductos">
+                        <article class="homeTarjetaProducto">               
+                            <div class="homeTarjetaImagen">
+                                <a href="/products/detail/<%= products.id %>"><img class="imagenJuego" src="/images/<%= products.image %>" alt="" ></a>
+                            </div> 
+                            <div class="homeTarjetaDescripcion">
+                                <h3 class="nombreJuego"><%= products.name %></h3>
+                                <p class="juegoPrecio">$<%= products.price %></p>
+                                <a href="/products/products/Carrito"><button class="btnAgregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
+                            </div>
+                        </article>
+                    </div> 
+                <% }) %>
+            </section>
+        </div>
+    </main>
+    <%- include("../partials/btn-wp") %> 
+    <%- include("../partials/footer") %> 
+    <script src="js/efecto.js"></script>
+    <script src="js/vozAtexto.js"></script>
+</body>
+</html>

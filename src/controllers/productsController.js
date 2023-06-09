@@ -115,6 +115,38 @@ const controller = {
       })
       .catch((error) => console.log(error));
   },
-};
 
+ofertas: (req, res) => {
+  let inSale = Product.findAll({
+    where: {
+        subCategory_id: 1
+    }
+})
+/*let visited = Product.findAll({
+    where: {
+        subCategory_id: 2
+    }
+})*/
+Promise.all([inSale])
+.then(([inSale]) => {
+    res.render("products/ofertas", {
+        inSale,
+        style: "styles.css",
+        session: req.session
+    })
+})
+.catch(error => res.send(error))
+},
+productsList: (req, res) => {
+  Product.findAll()
+
+    .then((products) => {
+      return res.render("products/productsList", {
+        products,
+        session: req.session,
+      });
+    })
+    .catch((error) => console.log(error));
+}
+  }
 module.exports = controller;

@@ -199,6 +199,7 @@ header.contenedor div.contenedorHeaderMobileTablet div.buscador div.barraBuscado
     background: linear-gradient(93deg, #6a7efc, #ff5656);
     border-radius: 0 0 25px 25px;
     z-index: 1001;
+    margin-top: 0px;
 }
 
 header.contenedor div.contenedorHeaderMobileTablet div.buscador div.barraBuscadora input.busqueda{

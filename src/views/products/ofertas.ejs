@@ -1,263 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chancho Va!</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="CSS/home.css">
-
+<%- include("../partials/head") %> 
 </head>
 <body>
-    <header>
-        <div class="head">
-            <a href="/"><img src="/image/sinfondo.png" alt="logo"></a>
-            <h3 class="oculto">Juegos de mesa</h3>
-        </div>
-        <div class="menu">
-            <div class="barra">
-               <span class="linea1"></span>
-               <span class="linea2"></span>
-               <span class="linea3"></span>
-            </div>
-        </div>
-        <div class="buscador">
-            <input class="busqueda" type="text" placeholder="¿A qué queres jugar?" >
-        </div>
-        <div class="lista">
-            <ul>
-                <li><a href="/categorias">Categorías</a></li>
-                <li><a href="/ofertas">Ofertas</a></li>
-                <li><a href="/envios">Envíos</a></li>
-                <li><a href="/ayuda">Cómo comprar</a></li>
-                <li><a href="/pago">Métodos de pago</a></li>
-            </ul>
-        </div>
-        <div class="item">
-            <div class="usuario">
-                <a href="/perfil"><i class="fa-regular fa-user"></i></a>
-            </div>
-            <div class="carrito">
-                <a href="/carrito"><i class="fa-brands fa-opencart"></i></a>
-            </div>
-            <div class="prueba">
-                   <div class="link"> 
-                       <a href="/login">Ingresa</a>
-                   </div>
-                   <div class="signUp">
-                    <a href="/perfil"><i class="fa-regular fa-user"></i></a>
-                   </div>
-                   <div class="imagen-oculta">
-                      <div class="contenedor">
-                          <a href="/home"><img src="/image/sinfondo.png" alt="logo"></a>
-                          <h3 class="oculto">Juegos de mesa</h3>
-                      </div>
-                   </div>
-            </div>
-        </div>
-    </header>
-        <nav>        
-        <section class="home__carrusel">
-            <a href="/"><img src="/images/envio.png" alt=""></a>
-
-        </section>
-    </nav>
-    <main class="home__main">
-        <section class="home__menu--tematico">
-            <article>
-                <a href="/familiares.html"><img src="/images/juegos familiares.png" alt=""></a>
-            </article>
-            <article>
-                <a href="/estrategia.html"><img src="/images/juegos estrategia.png" alt=""></a>
-            </article>
-            <article>
-                <a href="/previa.html"><img src="/images/juegos previa.png" alt=""></a>
-            </article>
-        </section>      
-
-        <section class="home__productos"> 
-            <a href="/ofertas"><h2>Ofertas</h2></a>
-            <div class="home__container--productos">
-            <article class="home__tarjeta--producto">               
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/red.png" alt=""></a></div>
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>  
-                <div class="home__tarjeta--descripcion">
-                <h3>Red7</h3>
-                <p class="home_precio">$3.990</p>
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                </div>
-            </article>
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/nolotesteamos.png" alt=""></a></div>
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>  
-                <div class="home__tarjeta--descripcion">
-                <h3>No lo testeamos ni un poco</h3>
-                <p class="home_precio">$3.590</p>                
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                </div>
-            </article>
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/littletown.png" alt=""></a></div>
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>  
-                <div class="home__tarjeta--descripcion">
-                <h3>Little Town</h3>
-                <p class="home_precio">$3.960</p>
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                 </div>    
-            </article>
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/misty.png" alt=""></a></div>   
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>      
-                <div class="home__tarjeta--descripcion">
-                <h3>Misty</h3>
-                <p class="home_precio">$2.565,50</p>
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                </div>
-            </article>
-        </section>
-
-        <section  class="home__productos"> 
-            <div class="home__container--productos">
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/twister.png" alt=""></a></div> 
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>        
-                <div class="home__tarjeta--descripcion">
-                <h3>Twister</h3>
-                <p class="home_precio">$6.395,82</p>
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                </div>
-            </article>
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/topgram.png" alt=""></a></div>
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>  
-                <div class="home__tarjeta--descripcion">
-                <h3>Topgram</h3>
-                <p class="home_precio">$1.522,52</p>                
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                </div>
-            </article>
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/descifraElCodigo.png" alt=""></a></div>
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>  
-                <div class="home__tarjeta--descripcion">
-                <h3>Descifra el codigo</h3>
-                <p class="home_precio">$6.990</p>
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                 </div>    
-            </article>
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/red.png" alt=""></a></div>  
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>       
-                <div class="home__tarjeta--descripcion">
-                <h3>Red7</h3>
-                <p class="home_precio">$1234</p>
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                </div>
-            </article>
-        </section>
-
-        <section class="home__productos"> 
-            <div class="home__container--productos">
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/loteria.png" alt=""></a></div>  
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>       
-                <div class="home__tarjeta--descripcion">
-                <h3>Loteria Familiar</h3>
-                <p class="home_precio">$1.626,24</p>
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                </div>
-            </article>
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/ajedrez.png" alt=""></a></div>
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>  
-                <div class="home__tarjeta--descripcion">
-                <h3>Ajedrez</h3>
-                <p class="home_precio">$3.872,00</p>                
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                </div>
-            </article>
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/damas.png" alt=""></a></div>
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>  
-                <div class="home__tarjeta--descripcion">
-                <h3>Damas</h3>
-                <p class="home_precio">$1.626,24</p>
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                 </div>    
-            </article>
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/toma6.png" alt=""></a></div>    
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>     
-                <div class="home__tarjeta--descripcion">
-                <h3>Toma 6</h3>
-                <p class="home_precio">$4.490</p>
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                </div>
-            </article>
-        </section>
-
-        <section class="home__productos"> 
-            <div class="home__container--productos">
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/primerosNumeros.png" alt=""></a></div>  
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>       
-                <div class="home__tarjeta--descripcion">
-                <h3>Mis primeros numeros</h3>
-                <p class="home_precio">$2.611,19</p>
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                </div>
-            </article>
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/kariba.png" alt=""></a></div>
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>  
-                <div class="home__tarjeta--descripcion">
-                <h3>Kariba</h3>
-                <p class="home_precio">$3.490</p>                
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                </div>
-            </article>
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/domino.png" alt=""></a></div>
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt=""></a>  
-                <div class="home__tarjeta--descripcion">
-                <h3>Kingdomino</h3>
-                <p class="home_precio">$6.990</p>
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                 </div>    
-            </article>
-            <article class="home__tarjeta--producto">
-                <div class="home__tarjeta--img">
-                <a href="/detalleProducto"><img src="/images/tucano.png" alt=""></a></div>   
-                <a href="/detalleProducto"><img class="verMas" src="/images/verMas3.png" alt="" ></a>      
-                <div class="home__tarjeta--descripcion">
-                <h3>Tucano</h3>
-                <p class="home_precio">$3.490</p>
-                <a href="/carrito"><button class="btn-agregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
-                </div>
-            </article>
-        </section>
-
+    <%- include("../partials/header") %>
+    <%- include("../partials/banner") %> 
+    <main class="homeMain">
+      <div class="contenedorHome">
+            <section class="homeMenuTematico">
+                <article class="contenedorCategoria">
+                    <a href="/products/familiares"><img class="homeCategoria" src="/images/juegos familiares.png" alt=""></a>
+                </article>
+                <article class="contenedorCategoria">
+                    <a href="/products/estrategia"><img class="homeCategoria" src="/images/juegos estrategia.png" alt=""></a>
+                </article>
+                <article class="contenedorCategoria">
+                    <a href="/products/previa"><img class="homeCategoria" src="/images/juegos previa.png" alt=""></a> 
+                </article>
+            </section>  
+            
+            <a href="/"><h2 class="nombreSubCategoria">Ofertas</h2></a>
+            <section class="homeProductos"> 
+                <% inSale.forEach(products => { %>
+                    <div class="homeContainerProductos">
+                        <article class="homeTarjetaProducto">               
+                            <div class="homeTarjetaImagen">
+                                <a href="/products/detail/<%= products.id %>"><img class="imagenJuego" src="/images/<%= products.image %>" alt="" ></a>
+                            </div> 
+                            <div class="homeTarjetaDescripcion">
+                                <h3 class="nombreJuego"><%= products.name %></h3>
+                                <p class="juegoPrecio">$<%= products.price %></p>
+                                <a href="/products/Carrito"><button class="btnAgregarAlCarrito"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button></a>
+                            </div>
+                        </article>
+                    </div> 
+                <% }) %>
+            </section>  
+    </div>
     </main>
     
     <%- include("../partials/btn-wp") %> 
     <%- include("../partials/footer") %> 
-    <script src="/efecto.js"></script>
+    <script src="js/efecto.js"></script>
+    <script src="js/vozAtexto.js"></script>
 </body>
 </html>
