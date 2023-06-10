@@ -143,6 +143,7 @@ productsList: (req, res) => {
     .then((products) => {
       return res.render("products/productsList", {
         products,
+        style: "styles.css",
         session: req.session,
       });
     })
