@@ -201,6 +201,7 @@ form div.div_file{
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    margin-left: 510px;
 }
 
 form div.file:hover {
