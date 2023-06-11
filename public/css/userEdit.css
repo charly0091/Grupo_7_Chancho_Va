@@ -95,7 +95,10 @@ main.userPerfilContainer div.contenedorDatosUser {
     background: url(/images/fondo.jpg) no-repeat center;
     background-size: cover;
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
 /* USUARIOS REGISTRADOS */
 
 main.userPerfilContainer div.contenedorDatosUser div.usuariosRegistrados {
