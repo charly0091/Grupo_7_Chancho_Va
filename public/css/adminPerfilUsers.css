@@ -168,7 +168,7 @@ main.userPerfilContainer div.contenedorDatosUser div.usuariosRegistrados div.con
 
 main.userPerfilContainer div.contenedorDatosUser div.usuariosRegistrados div.contenedorDeTargetas div.targetaUsuario figure.cajaImagen img.foto2 {
     width: 100%;
-    height: 100%;
+    height: 200px;
     border-radius: 25px 25px 0 0;
 }
 
@@ -188,6 +188,12 @@ main.userPerfilContainer div.contenedorDatosUser div.usuariosRegistrados div.con
 main.userPerfilContainer div.contenedorDatosUser div.usuariosRegistrados div.contenedorDeTargetas div.targetaUsuario article.datos p.dato {
     font-size: 15px;
     padding: 3px;
+    font-weight: 450;
+}
+main.userPerfilContainer div.contenedorDatosUser div.usuariosRegistrados div.contenedorDeTargetas div.targetaUsuario article.datos p.label {
+    font-size: 18px;
+    padding: 3px;
+    font-weight: 900;
 }
 
 main.userPerfilContainer div.contenedorDatosUser div.usuariosRegistrados div.contenedorDeTargetas div.usuarioGrande{

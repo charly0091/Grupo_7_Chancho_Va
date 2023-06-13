@@ -48,14 +48,12 @@ const controller = {
     });
   },
   familiares: (req, res) => {
-    const categoryId = req.params.id;
+    
 
-    Product.findAll(categoryId, {
-      include: [
-        {
-          association: "categories",
-        },
-      ],
+    Product.findAll({
+      where : {
+        category_id: 1
+      },
     })
       .then((categoriasFamiliares) => {
         return res.render("products/familiares", {
@@ -70,12 +68,10 @@ const controller = {
   estrategia: (req, res) => {
     const categoryId = req.params.id;
 
-    Product.findAll(categoryId, {
-      include: [
-        {
-          association: "categories",
-        },
-      ],
+    Product.findAll({
+      where : {
+        category_id: 3
+      },
     })
       .then((categoriasEstrategia) => {
         return res.render("products/estrategia", {
@@ -87,14 +83,10 @@ const controller = {
       .catch((error) => console.log(error));
   },
   previa: (req, res) => {
-    const categoryId = req.params.id;
-
-    Product.findAll(categoryId, {
-      include: [
-        {
-          association: "categories",
-        },
-      ],
+    Product.findAll({
+      where : {
+        category_id: 2
+      },
     })
       .then((categoriasPrevia) => {
         return res.render("products/previa", {

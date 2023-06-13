@@ -43,6 +43,9 @@ module.exports = {
                 session: req.session
             })
         }
+
+        
+
     },
     login: (req, res) => {
          if(req.session.userLogged){

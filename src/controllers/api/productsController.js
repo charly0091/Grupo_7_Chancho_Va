@@ -138,12 +138,12 @@ module.exports = {
             //array donde se va a guardar la cantidad de productos por categoría
             const countByCategory = {};
             //recorre el array de productos y cuenta la cantidad de productos por categoría
-            for (const producto of PRODUCTS) {
-                const { category_id } = producto;
-                if (countByCategory.hasOwnProperty(category_id)) {
-                    countByCategory[category_id]++;
+            for (const producto of products) {
+                const name  = producto.categories.name;
+                if (countByCategory.hasOwnProperty(name)) {
+                    countByCategory[name]++;
                 } else {
-                    countByCategory[category_id] = 1;
+                    countByCategory[name] = 1;
                 }
             }
         

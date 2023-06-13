@@ -13,7 +13,7 @@
                 <form class="formularioLogin"  id="login_form" action="/users/login" method="POST">
                     <div class="input-container">
                         <p class="input-text">Dirección de correo electrónico.</p>                       
-                        <input id="email" class="input-style <%= locals.errors && errors.email ? 'is-invalid' : null%>" type="email" name="email" placeholder="ej: veroperreointenso@lomejor.com" value="<%= locals.old && locals.old.email ? locals.old.email : null %>">
+                        <input id="email" class="input-style <%= locals.errors && errors.email ? 'is-invalid' : null%>" type="email" name="email" placeholder="ej: veronikos@lomejor.com" value="<%= locals.old && locals.old.email ? locals.old.email : null %>">
                        
                         <small id="errorEmail" class="text-danger ms-2"><%= locals.errors && errors.email ? errors.email.msg : null%></small>
                     </div>

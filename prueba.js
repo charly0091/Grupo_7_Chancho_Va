@@ -1,52 +1,43 @@
-/*
- * Completa la función 'odernarPedidos' a continuación.
- *
- * La función debe retornar un ARREGLO DE OBJETOS.
- * La función recibe un ARREGLO DE OBJETOS 'pedidos' por parámetro.
- *
- * No modifiques nada por fuera del cuerpo de la función.
- */
+/* 3️⃣ ACTIONS 3️⃣ */
 
-let pedidos = [
-    {nombre: "Pedro",
-    pedido: {
-        nombre: "Pizza",
-        precio: 1000
-        }
-    },
-    {nombre: "Juan",
-    pedido: {
-        nombre: "Hamburguesa",
-        precio: 800
-        }
-    },
-    {nombre: "Pablo",
-    pedido: {
-        nombre: "Empanada",
-        precio: 200
-        }
-    },
-    {nombre:'Franco',
-     pedido: {
-        nombre:'Fernet',
-         precio: 260
-        }
+// 📢 Puedes utilizar axios si lo deseas, solo debes importarlo 📢
+// 📢 Recuerda RETORNAR las peticiones que hagan tus action-creators 📢
+// Ej: return fetch(...) o return axios(...)
+
+export const GET_ALL_DEPORTES = "GET_ALL_DEPORTES";
+export const GET_DEPORTE_DETAIL = "GET_DEPORTE_DETAIL";
+export const CREATE_DEPORTE = "CREATE_DEPORTE";
+export const DELETE_DEPORTE = "DELETE_DEPORTE";
+
+// 🟢 getAllDeportes:
+// Esta función debe realizar una petición al Back-End. Luego despachar una action con la data recibida.
+// End-Point: 'http://localhost:3001/deportes'.
+import axios from "axios";
+
+export const getAllDeportes = () => {
+    return function (dispatch) {
+        axios("http://localhost:3001/deportes%22")
+            .then(response => response.data)
+            .then(data => dispatch({ type: GET_ALL_DEPORTES, payload: response.data }))
     }
-]
 
-function ordenarPedidos(pedidos) {
-    // Tu código aquí:
-    let pedidosOrdenados = []
-    for (let i = 0; i < pedidos.length; i++) {
-        let pedido = pedidos[i]
-        let precio = pedido.pedido.precio
-        let j = 0
-        while (j < pedidosOrdenados.length && pedidosOrdenados[j].pedido.precio < precio) {
-            j++
-        }
-        pedidosOrdenados.splice(j, 0, pedido)
-    }
-    return pedidosOrdenados
-}
+};
 
-console.log(ordenarPedidos(pedidos))
+// 🟢 getDeporteDetail:
+// Esta función debe hacer una petición al Back-End. Ten en cuenta que tiene que recibir la variable "id" por
+// parámetro. Luego despachar una action con la data recibida.
+// End-Point: 'http://localhost:3001/deportes/:id'.
+export const getDeporteDetail = (id) => { };
+
+// 🟢 createDeporte:
+// Esta función debe recibir una variable "deportes" por parámetro.
+// Luego retornar una action que, en su propiedad payload:
+//    - haga un spread operator de la variable deportes, para copiar todo su contenido.
+//    - tenga una nueva propiedad "id" igual a la variable de abajo, pero con un incremento +1.
+// Descomenta esta variable cuando la necesites.
+// let id = 1;
+export const createDeporte = (deportes) => { };
+
+// 🟢 deleteDeporte:
+// Esta función debe retornar una action. En su propiedad "payload" guardarás el ID recibido por parámetro.
+export const deleteDeporte = (id) => { };

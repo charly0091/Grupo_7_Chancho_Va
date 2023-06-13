@@ -21,6 +21,24 @@ async function validarEmail(email) {
     }
   }
 
+  function onSearch(id) {
+    fetch("https://rickandmortyapi.com/api/character/" + id)
+    .then((response) => response.json())
+    .then(( data ) => {
+       if (data.id) {
+          alert('entro')
+          setCharacters((oldChars) => [...oldChars, data]);
+       } else {
+          alert('¡No hay personajes con este ID!');
+       }
+    })
+    .catch((error) => {
+         alert('¡Hubo un error!');
+         console.error(error);
+     }
+    );
+ }
+
 
 
 window.addEventListener('load', () => {
