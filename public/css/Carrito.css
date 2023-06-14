@@ -72,6 +72,7 @@ nav div.methods {
   display: flex;
   justify-content: space-evenly;
   font-weight: bold;
+  align-items: center;
 }
 
 section section div input.quantity {
