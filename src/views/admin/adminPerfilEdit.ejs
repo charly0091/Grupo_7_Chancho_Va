@@ -32,13 +32,13 @@
                         </div> -->
                         <div class="divInput">
                             <label class="label" for="firstName">Nombre</label>
-                            <input id="firstName" class="input <%= locals.errors && errors.first_name ? 'is-invalid' : null%>" type="text" name="firstName" value="<%= locals.errors && errors.first_name ? old.first_name : user.first_name %>" required>
+                            <input id="firstName" class="input <%= locals.errors && errors.first_name ? 'is-invalid' : null%>" type="text" name="firstName" value="<%= locals.errors && errors.first_name ? old.first_name : user.first_name %>" disabled>
                             <small class="text-danger ms-2"><%= locals.errors && errors.first_name ? errors.first_name.msg : null%></small>
                             <span id="firstNameErrors"></span> 
                         </div>
                         <div class="divInput">
                             <label class="label" for="lastName">Apellido</label>
-                            <input id="lastName" class="input <%= locals.errors && errors.first_name ? 'is-invalid' : null%>" type="text" name="lastName" value="<%= locals.errors && errors.last_name ? old.last_name : user.last_name %>" required>
+                            <input id="lastName" class="input <%= locals.errors && errors.first_name ? 'is-invalid' : null%>" type="text" name="lastName" value="<%= locals.errors && errors.last_name ? old.last_name : user.last_name %>" disabled>
                             <small class="text-danger ms-2"><%= locals.errors && errors.last_name ? errors.last_name.msg : null%></small>
                             <span id="lastNameErrors"></span> 
                         </div>
@@ -60,13 +60,13 @@
                             <small class="text-danger ms-2"><%= locals.errors && errors.rol ? errors.rol.msg : null%></small>
                             <span id="rolErrors"></span> 
                         </div>
-                        <div class="div_file">
+                        <!-- <div class="div_file">
                             <div class="file">
                                 <p class="texto">Editar imagen</p>
                                 <input class="productPhoto <%= locals.errors && errors.image ? 'is-invalid' : null%>" type="file"   id="productPhoto" name="productPhoto"  placeholder="Foto del producto">
                                 <span id="fileErrors"></span> 
                             </div>
-                        </div>
+                        </div> -->
                         <div class="boton">
                             <button type="submit" class="guardar">Guardar Cambios</button>
                         </div>

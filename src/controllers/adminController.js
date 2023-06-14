@@ -213,8 +213,8 @@ module.exports = {
         let errors = validationResult(req);
         if(errors.isEmpty()){
             User.update({
-                first_name: req.body.firstName,
-                last_name: req.body.lastName,
+/*                 first_name: req.body.firstName,
+                last_name: req.body.lastName, */
                 role_id: req.body.rol,
                 avatar: req.file ? req.file.filename : req.body.oldAvatar
             }, {

@@ -27,6 +27,13 @@
 
 /* CARTA */
 
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 848px;
+}
+
 main.contenedorMetodosDePago {
     display: flex;
     justify-content: center;
@@ -180,8 +187,10 @@ main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago3 p.explica
 
 @media (min-width: 810px) {
     main.contenedorMetodosDePago {
+        display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 
     main.contenedorMetodosDePago div.contenedorCarta div.carta {
@@ -215,9 +224,13 @@ main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago3 p.explica
     main.contenedorMetodosDePago div.contenedorCarta div.datoMetodoDePago3 p.explicacion {
         font-size: 20px;
     }
+
+    
 }
 
 @media (min-width: 1024px) {
+
+
 
     main.contenedorMetodosDePago {
         margin: 0 50px;
