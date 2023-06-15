@@ -3,7 +3,7 @@ const searchBar = document.getElementById("search-bar");
 const voiceButton = document.getElementById("voice-button");
 
 // Agregamos un evento click al botón de reconocimiento de voz
-voiceButton.addEventListener("click", () => {
+searchBar.addEventListener("click", () => {
   // Creamos un objeto de reconocimiento de voz
   const recognition = new webkitSpeechRecognition();
 

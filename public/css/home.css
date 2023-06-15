@@ -46,9 +46,9 @@ main.homeMain div.contenedorHome a h2.nombreSubCategoria {
     padding: 5px;  
     border-top: black solid 2px 0px;
     width: 100%;
-    font-size: 24px;
+    font-size: 44px;
     background: linear-gradient(360deg, #494953, #FF5656, #6A7EFC);
-    margin: 2px 0px; 
+    margin: 25px 0px; 
     animation-name: colores;
     animation-duration: 8s;
     animation-iteration-count: infinite;
@@ -123,12 +123,13 @@ main.homeMain div.contenedorHome section.homeProductos div.homeContainerProducto
 }
 
 main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos article.homeTarjetaProducto div.homeTarjetaDescripcion h3.nombreJuego {
-    margin: 10px 0;
-    font-size: 16px;
+    margin: 3px 0;
+    font-size: 18px;
 }
 
 main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos article.homeTarjetaProducto div.homeTarjetaDescripcion  p.juegoPrecio {
-    margin: 10px 0;
+    font-size: 22px;
+    margin: 4px 0;
 }
 
 main.homeMain div.contenedorHome section.homeProductos div.homeContainerProductos article.homeTarjetaProducto div.homeTarjetaDescripcion a {

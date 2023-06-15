@@ -37,6 +37,6 @@ flechaCat.addEventListener("click", () => {
     producto.classList.toggle("active")
 })
 
-flecha.addEventListener("click", () => {
+/* flecha.addEventListener("click", () => {
     menuUser.classList.toggle("active")
-})
+}) */
